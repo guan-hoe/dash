@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 878.84,
+ "bias": {
+  "en": "Bearish · back below $903",
+  "zh": "偏空 · 再度跌破 $903"
+ },
+ "read": [
+  {
+   "en": "Micron fell 5.6% on Oct 16 to $878.84, trading between $875.08 and $907.50. It is below its falling 5-day ($933.3), 10-day ($992.9) and 30-day ($1,014.3) averages and the rising 100-day ($977.5), and above the 200-day ($717.8). MACD has been below its signal since Oct 6 and is below zero with a widening histogram, Parabolic SAR has been bearish since Oct 7 ($1,052.3), and RSI is 34.",
+   "zh": "美光 10月16日下跌 5.6%，收于 $878.84，盘中区间 $875.08–907.50。股价位于下行的 5 日（$933.3）、10 日（$992.9）和 30 日均线（$1,014.3）以及上行的 100 日均线（$977.5）下方，200 日均线（$717.8）上方。MACD 自 10月6日起位于信号线及零轴下方，柱状图扩大，抛物线 SAR 自 10月7日起看空（$1,052.3），RSI 为 34。"
+  },
+  {
+   "en": "Oct 15's reclaim failed; the close fell under $929, $903 (Sep 14 low) and $888 (Aug 24 low), now resistance; the $858 Oct 15 low held. Resistance is $888–907 (Aug 24 low, Oct 16 high), then $929–933 (Oct 13 low, 5-day) and $978 (100-day). Support is $854–858 (Jun 9, Oct 15 lows), then $804 (Jul 17 low). A close below $854 would open $804.",
+   "zh": "10月15日的收复未能延续：收盘重新跌破 $929、$903（9月14日低点）和 $888（8月24日低点），三者转为阻力；10月15日低点 $858 守住。阻力为 $888–907（8月24日低点、10月16日高点），其次 $929–933（10月13日低点、5 日均线）和 $978（100 日均线）。支撑为 $854–858（6月9日及10月15日低点），其次 $804（7月17日低点）。若收盘跌破 $854，下一目标看 $804。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    903,
+    {
+     "en": "Sep 14 low, broken; Aug 24 low $888, Oct 16 high $907.5",
+     "zh": "9月14日低点（已失守）；8月24日低点 $888、10月16日高点 $907.5"
+    }
+   ],
+   [
+    931,
+    {
+     "en": "Oct 13 low and 5-day average ($929–933)",
+     "zh": "10月13日低点及5日均线（$929–933）"
+    }
+   ],
+   [
+    978,
+    {
+     "en": "100-day average",
+     "zh": "100日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    858,
+    {
+     "en": "Oct 15 low; Jun 9 low $854",
+     "zh": "10月15日低点；6月9日低点 $854"
+    }
+   ],
+   [
+    804,
+    {
+     "en": "Jul 17 low",
+     "zh": "7月17日低点"
+    }
+   ],
+   [
+    738,
+    {
+     "en": "Jul 29 low",
+     "zh": "7月29日低点"
+    }
+   ]
+  ]
+ }
+}

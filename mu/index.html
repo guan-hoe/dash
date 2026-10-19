@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Micron Technology MU Dashboard</title>
+<meta name="description" content="Micron Technology (NASDAQ: MU) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: MU</span>
+  <span class="bar-px" id="barPx">$1,029.00</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Micron Technology, Inc. · Common stock · Boise, Idaho</div>
+      <h1 data-ih="title">Memory is the bottleneck, and <em>Micron collects the toll</em>.</h1>
+      <p data-i="lede" class="lede">AI servers need more DRAM, HBM and flash than the industry can make. Micron's quarterly revenue went from $11.3B to $54.2B in a year at an 87% gross margin, and management sees supply staying tight through 2028. The catch: memory has always been cyclical, and capex is climbing fast.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$1,029.00</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$1.16T</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$180–1,255</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E</span></div><div class="v">~7×</div><div class="s"><span data-i="s_val">Q1 guide EPS $38.15 × 4 · trailing GAAP ~14×</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q1 FY27 guide</span></div><div class="v">$61.5B</div><div class="s"><span data-i="s_an">±$1.5B · EPS $38.15 · GM ~86%</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Mid-Dec</div><div class="s"><span data-i="s_er">Q1 FY27 · date not yet announced</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. Micron rose more than five-fold over the past year as memory prices surged.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="MU daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">2.23</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Micron's fiscal year ends around September 1, and FQ4 2026 had 14 weeks. The last bar is company guidance at the midpoint.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q4 FY26</span></div><div class="v">$54.2B</div><div class="s"><span data-i="sc0">+379% YoY · 14-week quarter</span></div></div><div class="cell"><div class="k"><span data-i="kc1">DRAM</span></div><div class="v">$39.8B</div><div class="s"><span data-i="sc1">+343% YoY</span></div></div><div class="cell"><div class="k"><span data-i="kc2">NAND</span></div><div class="v">$14.1B</div><div class="s"><span data-i="sc2">+526% YoY</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Gross margin</span></div><div class="v">87.0%</div><div class="s"><span data-i="sc3">non-GAAP · 45.7% a year ago</span></div></div><div class="cell"><div class="k"><span data-i="kc4">FY26 revenue</span></div><div class="v">$133.2B</div><div class="s"><span data-i="sc4">vs $37.4B in FY25</span></div></div><div class="cell"><div class="k"><span data-i="kc5">FY27 committed</span></div><div class="v">&gt;75%</div><div class="s"><span data-i="sc5">of shipments under customer agreements</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">Supply stays tight</h3><p data-i="w0p">Management expects memory supply and demand to be much tighter in 2027 and 2028 than in 2026, with no line of sight to balance. 26 strategic customer agreements cover about 35% of output through 2030.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">HBM pricing reset</h3><p data-i="w1p">HBM prices for calendar 2027 were raised significantly to close the profit gap with conventional DRAM. Over 75% of FY27 shipments are already committed.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Capex step-up</h3><p data-i="w2p">About $25B of capex in the first half of FY27, including ~$11.5B in Q1, mostly cleanrooms that produce from late 2028. Cost per bit is guided up by double digits in Q1.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Capital returns</h3><p data-i="w3p">Micron plans to return 100% of excess cash, mostly through buybacks, with larger returns starting Dec 9, 2026. It holds $73.5B of cash and investments.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w4h">The cycle turns</h3><p data-i="w4p">Memory has always swung from shortage to glut. The 86.25% gross margin guided for Q1 is the first guide in this cycle below the prior quarter's actual.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Volatility</h3><p data-i="w5p">The stock is up more than five-fold in a year with a beta above 2. Daily swings are large, so position sizing matters.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="MU" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Mid-Dec 2026</div><h3 data-i="c0h">Q1 FY27 earnings</h3><p data-i="c0p">Guide: $61.5B ±$1.5B revenue, ~86.25% non-GAAP gross margin, EPS $38.15 ±$1.00.</p></div></div><div class="item"><div><div class="date">Dec 9, 2026</div><h3 data-i="c1h">Larger capital returns</h3><p data-i="c1p">Micron said its increased capital return starts on this date.</p></div></div><div class="item"><div><div class="date">Late Mar 2027</div><h3 data-i="c2h">Q2 FY27 earnings</h3><p data-i="c2p">Date not yet announced; second-quarter results usually come in late March.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://sayer.news/article/micron-posts-record-q4-raises-guide-as-scas-lock-supply-sees-memory-tight-through-2028-2c1064d5" target="_blank" rel="noopener">Q4 FY26 results and Q1 FY27 guidance (Sayer)</a></li><li><a href="https://quantabundance.com/articles/mu-q4-2026-earnings-recap" target="_blank" rel="noopener">Q4 FY26 recap: FY26 cash flow and deposits</a></li><li><a href="https://insiderfinance.io/news/micron-earnings-show-record-quarter-and-tight-supply" target="_blank" rel="noopener">FY27 capex and capital return plans</a></li><li><a href="https://fool.com/earnings/call-transcripts/2026/10/01/micron-mu-q4-2026-earnings-call-transcript" target="_blank" rel="noopener">Q4 FY26 earnings call transcript</a></li><li><a href="https://signalstack.news/blog/micron-fiscal-q4-2026-results" target="_blank" rel="noopener">Five-quarter 8-K summary</a></li><li><a href="https://stockanalysis.com/stocks/mu/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0000723125" target="_blank" rel="noopener">SEC EDGAR filings (CIK 723125)</a></li><li><a href="https://finance.yahoo.com/quote/MU" target="_blank" rel="noopener">Price, market cap and beta: Yahoo Finance and Financial Modeling Prep, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Micron Technology, Inc..</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "mu", SHARES = 1129400000.0, TV = "NASDAQ:MU";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q1 FY22", "Dec 2021", 7687, 46.38, 34.79, 2.04], ["Q2 FY22", "Mar 2022", 7786, 47.21, 32.76, 2.0], ["Q3 FY22", "Jun 2022", 8642, 46.69, 34.7, 2.34], ["Q4 FY22", "Sep 2022", 6643, 39.47, 22.6, 1.36], ["Q1 FY23", "Dec 2022", 4085, 21.86, -4.8, -0.18], ["Q2 FY23", "Mar 2023", 3693, -32.66, -60.03, -2.12], ["Q3 FY23", "Jun 2023", 3752, -17.8, -43.95, -1.73], ["Q4 FY23", "Aug 2023", 4010, -10.8, -36.7, -1.31], ["Q1 FY24", "Nov 2023", 4726, -0.74, -23.87, -1.12], ["Q2 FY24", "Feb 2024", 5824, 18.53, 3.28, 0.71], ["Q3 FY24", "May 2024", 6811, 26.9, 10.56, 0.3], ["Q4 FY24", "Aug 2024", 7750, 35.32, 19.65, 0.79], ["Q1 FY25", "Nov 2024", 8709, 38.44, 24.96, 1.67], ["Q2 FY25", "Feb 2025", 8053, 36.79, 22.02, 1.41], ["Q3 FY25", "May 2025", 9301, 37.72, 23.32, 1.68], ["Q4 FY25", "Aug 2025", 11315, 44.67, 32.64, 2.83], ["Q1 FY26", "Nov 2025", 13643, 56.04, 44.98, 4.6], ["Q2 FY26", "Feb 2026", 23860, 74.41, 67.62, 12.07], ["Q3 FY26", "May 2026", 41456, 84.56, 80.37, 24.67], ["Q4 FY26", "Sep 2026", 54229, 86.76, 80.68, 32.87]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q1 FY27e", 61500, "Nov 2026 \u00b7 guidance midpoint", "2026\u5e7411\u6708 \u00b7 \u6307\u5f15\u4e2d\u503c"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "FY26 Q4", "sc0": "同比 +379% · 14周季度", "kc1": "DRAM", "sc1": "同比 +343%", "kc2": "NAND", "sc2": "同比 +526%", "kc3": "毛利率", "sc3": "非GAAP · 一年前 45.7%", "kc4": "FY26 营收", "sc4": "FY25 为 374 亿", "kc5": "FY27 已锁定", "sc5": "出货量已签客户协议", "w0h": "供应持续紧张", "w0p": "管理层预计 2027、2028 年内存供需将比 2026 年更紧，看不到平衡时点。26 份战略客户协议覆盖至 2030 年约 35% 产量。", "w1h": "HBM 重新定价", "w1p": "2027 年 HBM 价格大幅上调，以缩小与普通 DRAM 的利润差距。FY27 逾 75% 出货已锁定。", "w2h": "资本开支上升", "w2p": "FY27 上半年资本开支约 250 亿美元（Q1 约 115 亿），主要是 2028 年底起投产的洁净室。Q1 每比特成本预计上升两位数。", "w3h": "股东回报", "w3p": "美光计划将全部超额现金（主要以回购）回馈股东，自 2026年12月9日起加大回报。现金及投资 735 亿美元。", "w4h": "周期反转", "w4p": "内存行业历来在短缺与过剩之间摆动。Q1 指引毛利率 86.25%，是本轮周期首次低于上季实际。", "w5h": "波动", "w5p": "股价一年涨逾五倍，贝塔值高于 2。日内波动大，仓位控制很重要。", "c0h": "FY27 第一季财报", "c0p": "指引：营收 615 亿 ±15 亿美元，非GAAP毛利率约 86.25%，每股 $38.15 ±$1.00。", "c1h": "加大股东回报", "c1p": "美光表示自该日起加大资本回报。", "c2h": "FY27 第二季财报", "c2p": "日期未公布；第二季业绩通常在3月下旬发布。", "eyebrow": "美光科技 · 普通股 · 爱达荷州博伊西", "title": "内存成了瓶颈，<em>美光坐收过路费</em>。", "lede": "AI 服务器所需的 DRAM、HBM 和闪存超出全行业产能。美光季度营收一年内由 113 亿美元增至 542 亿美元，毛利率 87%，管理层预计供应紧张将持续到 2028 年。隐忧是：内存一向具周期性，而资本开支正快速上升。", "k_val": "市盈率", "s_val": "Q1 指引每股 $38.15 × 4 · GAAP 历史约 14 倍", "k_an": "FY27 Q1 指引", "s_an": "±15 亿 · 每股 $38.15 · 毛利率约 86%", "s_er": "FY27 第一季 · 日期未公布", "sub_price": "每日收盘价与50日均线。随内存价格飙升，美光股价一年内涨逾五倍。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。美光财年约在9月1日结束，FY26 第四季为14周。最后一根柱为公司指引中值。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Micron Technology, Inc. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

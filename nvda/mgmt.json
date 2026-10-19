@@ -1,0 +1,63 @@
+{
+ "ticker": "NVDA",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 FY2027 (July quarter)",
+  "zh": "2027 财年第二季（7 月季度）"
+ },
+ "reported": "2026-08-26",
+ "timing": "amc",
+ "pre_close": 209.66,
+ "react": {
+  "date": "2026-08-27",
+  "close": 227.98,
+  "pct": 8.7
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 214.13,
+  "pct": 2.1
+ },
+ "review": {
+  "en": [
+   "Revenue of $96.2B (+106%) beat the guide midpoint by $5.2B, with data center at $89.0B (+117%). The Q3 guide of $108B was about $3.8B above consensus, and management projected roughly 70% growth in fiscal 2028 versus about 44% expected; Vera Rubin is in full production and AWS committed to 2 million more GPUs. The soft spot was margin: CFO Colette Kress guided gross margin to 74% from 75%, bottoming at 71–72% in Q4, as memory prices soar, and supply commitments jumped to $279B.",
+   "Shares dipped 2% right after the release on the margin guide, then turned positive and closed up 8.7% the next day, adding over $400B in value and ending a four-quarter run of post-earnings declines. Profit-taking trimmed 4.6% the following session, and the mid-September AI-slowdown scare pulled it back near $211 before it recovered to about 9% above the pre-report close."
+  ],
+  "zh": [
+   "营收 962 亿美元（+106%），较指引中值高出 52 亿美元，数据中心营收 890 亿美元（+117%）。第三季指引 1,080 亿美元，高于预期约 38 亿；管理层预计 2028 财年增长约 70%，远超市场预期的约 44%；Vera Rubin 已全面量产，AWS 承诺再采购 200 万颗 GPU。短板在毛利率：CFO 科莱特·克雷斯指引毛利率由 75% 降至 74%，第四季触底于 71–72%，原因是内存价格飙升；供应承诺增至 2,790 亿美元。",
+   "发布后因毛利率指引一度下跌 2%，随后翻红，次日收涨 8.7%，市值增加逾 4,000 亿美元，终结连续四个季度财报后下跌的纪录。下一交易日获利了结下跌 4.6%，9 月中旬 AI 放缓担忧又令股价回落至约 211 美元，之后回升至较财报前收盘高约 9%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Jensen Huang",
+   "zh": "黄仁勋"
+  },
+  "since": "1993",
+  "bio": {
+   "en": "Co-founded NVIDIA in 1993 and has been CEO ever since, after designing chips at LSI Logic and AMD. Turned a graphics-card maker into the dominant supplier of AI accelerators and the world's most valuable chip company.",
+   "zh": "1993 年联合创办英伟达并一直担任 CEO，此前在 LSI Logic 和 AMD 从事芯片设计。将一家显卡公司打造成 AI 加速器的主导供应商和全球市值最高的芯片公司。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Colette Kress",
+   "zh": "科莱特·克雷斯"
+  },
+  "since": "2013",
+  "bio": {
+   "en": "CFO since 2013. Previously senior VP and CFO of Cisco's business technology and operations finance organization, with earlier finance roles at Microsoft and Texas Instruments.",
+   "zh": "2013 年起任 CFO。此前任思科业务技术与运营财务部门高级副总裁兼 CFO，更早在微软和德州仪器担任财务职务。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 FY27 margin guide",
+   "u": "https://tech-quire.com/articles/nvidia-q2-fy2027-record-earnings-data-center-96-billion-august-2026"
+  },
+  {
+   "t": "Why the stock rose (INDmoney)",
+   "u": "https://www.indmoney.com/blog/us-stocks/nvda-stock-rises-nvidia-q2-earnings-analysis"
+  }
+ ]
+}

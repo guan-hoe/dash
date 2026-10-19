@@ -1,0 +1,63 @@
+{
+ "ticker": "ROK",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q3 FY2026 (June quarter)",
+  "zh": "2026 财年第三季（6 月季度）"
+ },
+ "reported": "2026-08-04",
+ "timing": "bmo",
+ "pre_close": 480.98,
+ "react": {
+  "date": "2026-08-04",
+  "close": 445.23,
+  "pct": -7.4
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 426.23,
+  "pct": -11.4
+ },
+ "review": {
+  "en": [
+   "Sales rose 8% (10% organic) to $2.31B and adjusted EPS of $3.49 (+22%) beat $3.38, and Rockwell raised full-year guidance for the second quarter running. CEO Blake Moret pointed to life sciences, where production of oral GLP-1 drugs is driving automation demand. CFO Christian Rothe warned that inflation, including memory-chip costs, has grown from a single-digit-million to a double-digit-million headwind, that lifecycle services remain weak, and that software and control margins will dip to about 33% next quarter.",
+   "Despite the beat, the stock fell 7.4% on the day: with shares near 50 times earnings after a 24% gain this year, investors focused on rising costs and the margin dip. It kept drifting lower to $410 by Sep 17, 15% below the pre-report close, before recovering part of the way. It remains about 10% below its pre-report level."
+  ],
+  "zh": [
+   "销售额增长 8%（内生增长 10%）至 23.1 亿美元，经调整每股收益 3.49 美元（+22%）高于 3.38 美元预期，并连续第二个季度上调全年指引。CEO 布雷克·莫雷特指出生命科学领域口服 GLP-1 药物的生产正带动自动化需求。CFO 克里斯蒂安·罗特提醒，包括内存芯片在内的通胀压力已由数百万美元级扩大至数千万美元级，生命周期服务仍然疲弱，软件与控制业务下季利润率将降至约 33%。",
+   "尽管超预期，股价当天仍下跌 7.4%：年内已涨 24%、市盈率接近 50 倍，投资者聚焦成本上升和利润率下滑。此后持续走低至 9 月 17 日的 410 美元，较财报前收盘低 15%，随后部分回升，目前仍低约 10%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Blake Moret",
+   "zh": "布雷克·莫雷特"
+  },
+  "since": "2016",
+  "bio": {
+   "en": "Joined Rockwell in 1985 straight out of Georgia Tech and has spent his whole career there, running the Control Products & Solutions business before becoming CEO in 2016 and chairman in 2018.",
+   "zh": "1985 年从佐治亚理工毕业后加入罗克韦尔，整个职业生涯都在公司度过，曾执掌控制产品与解决方案业务，2016 年出任 CEO，2018 年兼任董事长。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Christian Rothe",
+   "zh": "克里斯蒂安·罗特"
+  },
+  "since": "2024",
+  "bio": {
+   "en": "CFO since August 2024. Spent the previous 13 years at Graco, the industrial equipment maker, in senior finance and strategy roles; University of Minnesota MBA.",
+   "zh": "2024 年 8 月起任 CFO。此前在工业设备制造商固瑞克（Graco）工作 13 年，担任财务与战略要职；明尼苏达大学 MBA。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q3 FY26 call transcript",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/11/rockwell-automation-rok-q3-2026-earnings-call-transcript"
+  },
+  {
+   "t": "Q3 FY26 reaction",
+   "u": "https://investing.com/news/company-news/rockwell-automation-q3-fy26-slides-strong-beat-guidance-raised-93CH-4835042"
+  }
+ ]
+}

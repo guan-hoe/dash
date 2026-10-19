@@ -1,0 +1,67 @@
+{
+ "ticker": "MRVL",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 FY2027 (July quarter)",
+  "zh": "2027 财年第二季（7 月季度）"
+ },
+ "reported": "2026-08-27",
+ "timing": "amc",
+ "pre_close": 241.45,
+ "react": {
+  "date": "2026-08-28",
+  "close": 216.62,
+  "pct": -10.3
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 227.83,
+  "pct": -5.6
+ },
+ "review": {
+  "en": [
+   "Record revenue of $2.739B (+37%) and non-GAAP EPS of $0.94 both edged past estimates; data center was 79% of sales and grew 46%. Management raised its revenue outlook for this fiscal year and next, and CEO Matt Murphy said AI bookings remain exceptionally robust with growth set to accelerate through the year. The weak spot was a gross-margin guide that disappointed investors. Dan Durn, formerly CFO of Adobe and Applied Materials, took over as CFO in June.",
+   "The stock slid about 8% after hours and closed 10.3% lower the next day, then reached $206 on Sep 2, 14% below the pre-report close, as investors focused on margins rather than growth. The recovery came with the AI-chip rebound in late September and the Oct 6 investor day, where Marvell raised its fiscal 2028 revenue target to about $20B and the stock gained 5.8%. It now trades well above its pre-report price."
+  ],
+  "zh": [
+   "营收创纪录达 27.39 亿美元（+37%），非 GAAP 每股收益 0.94 美元，均小幅超预期；数据中心占营收 79%，增长 46%。管理层上调本财年及下财年营收展望，CEO 马特·墨菲表示 AI 订单依然异常强劲，增长将在年内进一步加速。短板在于毛利率指引令投资者失望。前 Adobe 及应用材料 CFO 丹·杜恩于 6 月接任 CFO。",
+   "盘后下跌约 8%，次日收跌 10.3%，9 月 2 日跌至 206 美元，较财报前收盘低 14%，投资者聚焦利润率而非增长。9 月下旬 AI 芯片股反弹，加上 10 月 6 日投资者日将 2028 财年营收目标上调至约 200 亿美元，股价当天上涨 5.8%，目前明显高于财报前价位。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Matt Murphy",
+   "zh": "马特·墨菲"
+  },
+  "since": "2016",
+  "bio": {
+   "en": "CEO since 2016 after more than 20 years at Maxim Integrated, where he ran business units and worldwide sales. Turned Marvell into a data-center chip company built on custom AI silicon, optical DSPs and networking.",
+   "zh": "2016 年起任 CEO，此前在美信半导体（Maxim）工作二十多年，负责业务部门及全球销售。将 Marvell 转型为以定制 AI 芯片、光通信 DSP 和网络芯片为核心的数据中心芯片公司。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Dan Durn",
+   "zh": "丹·杜恩"
+  },
+  "since": "2026",
+  "bio": {
+   "en": "CFO since June 15, 2026, succeeding Willem Meintjes. Previously CFO of Adobe from 2021, and before that CFO of Applied Materials and of GlobalFoundries, bringing three decades in chip and software finance.",
+   "zh": "2026 年 6 月 15 日接替威廉·明特杰斯出任 CFO。此前自 2021 年起任 Adobe CFO，更早担任应用材料和格芯的 CFO，在半导体与软件财务领域有三十年经验。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 FY27 call transcript",
+   "u": "https://www.marketbeat.com/earnings/reports/2026-8-27-marvell-technology-group-ltd-stock/"
+  },
+  {
+   "t": "Margin guide and stock (Motley Fool)",
+   "u": "https://fool.com/investing/2026/08/28/marvell-s-ai-bookings-are-stellar-but-its-gross-margin-guide-is-what-moved-the-stock"
+  },
+  {
+   "t": "Oct 6 investor day",
+   "u": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-6-213004153.html"
+  }
+ ]
+}

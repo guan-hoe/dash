@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 529.05,
+ "bias": {
+  "en": "Uptrend pausing · SAR flipped bearish",
+  "zh": "上升趋势暂歇 · SAR 翻空"
+ },
+ "read": [
+  {
+   "en": "Microsoft fell 1.9% on Oct 16 to $529.05, reversing from $543.81. It slipped below its 5-day ($537.4) and 10-day ($532.9) averages and stays above the 30-day ($512.1), 100-day ($455.4) and 200-day ($435.3), all rising. MACD has been above its signal since Oct 1 and is above zero, but the histogram is fading toward a cross, Parabolic SAR flipped bearish on Oct 16 ($551.15), and RSI is 57.",
+   "zh": "微软 10月16日自 $543.81 回落，收盘下跌 1.9%，报 $529.05。股价跌破 5 日（$537.4）和 10 日均线（$532.9），仍位于 30 日（$512.1）、100 日（$455.4）和 200 日均线（$435.3）上方，各均线均上行。MACD 自 10月1日起位于信号线上方并在零轴之上，但柱状图收窄、趋近交叉，抛物线 SAR 于 10月16日转为看空（$551.15），RSI 为 57。"
+  },
+  {
+   "en": "The $537 and $531 supports both broke and the SAR flipped bearish. Resistance is $533–537 (10 and 5-day averages, Oct 9 high), then $544 (Oct 16 high) and $551–554 (Oct 13 high, SAR, October 2025 record). Support is $524.4 (Oct 16 low), then $512 (30-day) and $486 (Sep 10 low). A close below $512 would open $486.",
+   "zh": "$537 和 $531 支撑均告失守，SAR 转为看空。阻力为 $533–537（10 日和 5 日均线、10月9日高点），其次 $544（10月16日高点）和 $551–554（10月13日高点、SAR、2025年10月纪录高点）。支撑为 $524.4（10月16日低点），其次 $512（30 日均线）和 $486（9月10日低点）。若收盘跌破 $512，下一目标看 $486。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    535,
+    {
+     "en": "10 and 5-day averages ($532.9–537.4); Oct 9 high $537",
+     "zh": "10日和5日均线（$532.9–537.4）；10月9日高点 $537"
+    }
+   ],
+   [
+    544,
+    {
+     "en": "Oct 16 high",
+     "zh": "10月16日高点"
+    }
+   ],
+   [
+    552,
+    {
+     "en": "Oct 13 high and SAR $551; record $553.7 (Oct 2025)",
+     "zh": "10月13日高点及SAR $551；纪录高点 $553.7（2025年10月）"
+    }
+   ]
+  ],
+  "s": [
+   [
+    524.4,
+    {
+     "en": "Oct 16 low",
+     "zh": "10月16日低点"
+    }
+   ],
+   [
+    512,
+    {
+     "en": "30-day average",
+     "zh": "30日均线"
+    }
+   ],
+   [
+    486,
+    {
+     "en": "Sep 10 low",
+     "zh": "9月10日低点"
+    }
+   ]
+  ]
+ }
+}

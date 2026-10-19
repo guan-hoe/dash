@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Options · Stock Dashboards</title>
+<meta name="description" content="A weekly 5-delta cash-secured put book on up to five dashboard stocks, $1M capital, momentum-filtered and mean-variance weighted, with 10-delta covered calls after assignment. Two-year backtest, premium collected, drawdowns and the events behind the gains and losses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{--bg:#f3f5f7;--panel:#fff;--line:#d9dee5;--ink:#141a22;--muted:#5a6573;--accent:#0b6fb8;--accent-soft:#e3eff8;--up:#13804b;--down:#c2362b;
+  --s-book:#0b6fb8;--s-spy:#8a94a1;--put:#0b6fb8;--call:#b86e00;--int:#9aa6b4;--ev:#7c5cc4;--warn:#b86e00;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;--f-body:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;
+  --s-book:#4fa8e8;--s-spy:#7d8896;--put:#4fa8e8;--call:#e0a33a;--int:#5d6978;--ev:#a78bfa;--warn:#e0a33a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;
+  --s-book:#4fa8e8;--s-spy:#7d8896;--put:#4fa8e8;--call:#e0a33a;--int:#5d6978;--ev:#a78bfa;--warn:#e0a33a;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 16px 48px}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--line);margin:0 0 28px}
+.tabs a{font:600 13px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:10px 14px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs a:hover,.tabs a:focus-visible{color:var(--accent);outline:none}
+.eyebrow{font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,5vw,48px)/1.05 var(--f-display);margin:.25em 0 .4em}
+h2{font:700 24px/1.15 var(--f-display);margin:0 0 4px}
+h3{font:600 16px var(--f-body);margin:0 0 8px}
+.lede{color:var(--muted);margin:0 0 24px;max-width:78ch}
+.sub{color:var(--muted);font-size:14px;margin:0 0 14px;max-width:82ch}
+section{margin-top:44px}
+.note{font-size:12px;color:var(--muted);margin:10px 0 0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.tile b{display:block;font:600 10.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tile .v{display:block;font:600 24px var(--f-mono);font-variant-numeric:tabular-nums;margin:4px 0 2px}
+.tile small{display:block;font-size:12px;color:var(--muted);line-height:1.4}
+.pos{color:var(--up)}.neg{color:var(--down)}
+.ctl{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:0 0 12px}
+.cg{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.cgl{font:600 10px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.seg{display:inline-flex;flex-wrap:wrap;gap:4px}
+.seg button{font:500 12px var(--f-mono);border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:5px 10px;border-radius:4px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.seg button:hover{color:var(--ink)}.seg button[aria-pressed="true"]:hover{color:#fff}
+.seg button.sw{display:inline-flex;align-items:center;gap:6px}
+.seg button.sw i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.seg button.sw[aria-pressed="false"] i{opacity:.35}
+.seg button.sw[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chart{position:relative;height:340px}
+.chart.dd{height:170px;margin-top:6px}
+.chart.wk{height:240px}
+.chart.ep{height:320px}
+.readout{display:flex;flex-wrap:wrap;gap:4px 16px;font:500 12px var(--f-mono);color:var(--muted);min-height:20px;margin:0 0 6px;font-variant-numeric:tabular-nums}
+.readout span b{font-weight:600;color:var(--ink)}
+.readout i{display:inline-block;width:10px;height:3px;border-radius:2px;vertical-align:3px;margin-right:5px}
+.two{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:900px){.two{grid-template-columns:minmax(0,1fr)}}
+.tw{overflow-x:auto}
+table.st{width:100%;border-collapse:collapse;font-size:13.5px}
+table.st th{font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.st th.r,table.st td.r{text-align:right}
+table.st td{padding:7px 6px;border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent);vertical-align:top}
+table.st td.mono{font:600 12.5px var(--f-mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tick{display:inline-block;font:600 12px var(--f-mono);letter-spacing:.04em;background:var(--ink);color:var(--bg);padding:2px 7px;border-radius:4px}
+.chip{display:inline-block;font:600 10px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chip.put{border-color:var(--put);color:var(--put)}.chip.call{border-color:var(--call);color:var(--call)}
+.chip.bad{border-color:var(--down);color:var(--down)}.chip.good{border-color:var(--up);color:var(--up)}
+.evs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.ev{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:6px;padding:12px 14px;text-align:left;font:inherit;color:inherit;cursor:pointer;min-width:0}
+.ev:hover,.ev[aria-pressed="true"]{border-color:var(--accent)}
+.ev.macro{border-left-color:var(--ev)}.ev.loss,.ev.assign{border-left-color:var(--down)}.ev.gain{border-left-color:var(--up)}
+.ev .d{font:600 11px var(--f-mono);color:var(--muted);letter-spacing:.04em}
+.ev .t{font:600 15px var(--f-body);margin:2px 0 4px}
+.ev p{margin:0;font-size:13px;color:var(--muted);line-height:1.45}
+.ev .p{font:600 13px var(--f-mono);margin-top:6px;display:block}
+#evInfo{margin:0 0 10px;font-size:13.5px;min-height:20px}
+#evInfo b{font-weight:600}
+.steps{margin:0;padding:0 6px 0 0;list-style:none;counter-reset:s;max-height:430px;overflow-y:auto}
+.steps li{position:relative;padding:8px 0 8px 34px;border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent);font-size:14px;cursor:pointer}
+.steps li:last-child{border-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:600 12px/22px var(--f-mono);text-align:center}
+.steps li.on::before{background:var(--accent);color:#fff}
+.steps li b{font-weight:600}
+.steps li small{display:block;color:var(--muted);font-size:12.5px}
+.bar{display:flex;align-items:center;gap:8px}
+.bar span{display:block;height:8px;border-radius:2px;min-width:2px}
+.view p{margin:0 0 12px;max-width:84ch}
+.view p:last-child{margin-bottom:0}
+.view h3{margin-top:18px}
+ul.rules{margin:0;padding-left:20px;max-width:86ch}
+ul.rules li{margin:5px 0}
+.more{font:500 12px var(--f-mono);border:1px solid var(--line);background:var(--panel);color:var(--accent);padding:6px 12px;border-radius:4px;cursor:pointer;margin-top:10px}
+select{font:500 12px var(--f-mono);border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:5px 8px;border-radius:4px}
+.callout{border-left:3px solid var(--warn);padding:10px 14px;background:color-mix(in srgb,var(--warn) 8%,var(--panel));border-radius:0 6px 6px 0;font-size:14px;margin:16px 0 0;max-width:90ch}
+#side{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:8px 28px}
+@media (max-width:760px){#side{grid-template-columns:minmax(0,1fr)}}
+#side h3{margin-top:0!important}
+footer.pg{font-size:12px;color:var(--muted);margin-top:32px;padding-top:16px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <nav class="tabs" aria-label="Dashboard sections"><a href="../">Stocks</a><a href="../macro/">Macro</a><a href="../fx/">FX</a><a href="../datacenter/">Datacenter</a><a href="../robotics/">Robotics</a><a href="../merger/">SpaceX vs Tesla</a><a href="../portfolio/">Portfolio</a><a href="./" aria-current="page">Options</a></nav>
+  <div class="eyebrow">Cash-secured puts · 5 delta · Weekly · Max 5 names · Mean-variance · $1M</div>
+  <h1>Weekly put-selling book</h1>
+  <p class="lede">Every Friday this book sells one-week, 5-delta cash-secured puts on up to five dashboard stocks that are in an uptrend, sized by mean-variance optimisation, and collects the premium. If a stock's momentum breaks during the week the put is bought back and that name sits out. If a put is exercised, the shares are kept and a 10-delta covered call is sold the next week. Backtested over the last two years from $1,000,000 and rebuilt after every US close.</p>
+  <div class="tiles" id="kpi"></div>
+  <div class="callout" id="caveat" hidden></div>
+
+  <section aria-labelledby="nowH">
+    <h2 id="nowH">This week's book</h2>
+    <p class="sub" id="nowSub"></p>
+    <div class="panel tw" id="book"></div>
+    <div class="panel" id="side" style="margin-top:12px"></div>
+  </section>
+
+  <section aria-labelledby="perfH">
+    <h2 id="perfH">Account value and drawdown</h2>
+    <p class="sub">The book's value (cash, T-bill interest, open options at their mark and any shares held) against $1M in the S&amp;P 500 (SPY). Markers flag market events, assignments and momentum buy-backs: click one, or hover anywhere to read the day.</p>
+    <div class="panel">
+      <div class="ctl">
+        <div class="cg"><span class="cgl">Range</span><div class="seg" id="rng"></div></div>
+        <div class="cg"><span class="cgl">Markers</span><div class="seg" id="mks"></div></div>
+      </div>
+      <div class="readout" id="ro1"></div>
+      <div id="evInfo"></div>
+      <div class="chart" id="perf" role="img" aria-label="Account value versus SPY with event markers"></div>
+      <div class="readout" id="ro2" style="margin-top:8px"></div>
+      <div class="chart dd" id="ddc" role="img" aria-label="Drawdown from previous high, book and SPY"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cashH">
+    <h2 id="cashH">Cash collected every week</h2>
+    <p class="sub">Premium taken in from puts and covered calls each week, plus T-bill interest on the cash that secures the puts, next to the week's actual profit or loss.</p>
+    <div class="panel">
+      <div class="ctl"><div class="cg"><span class="cgl">Show</span><div class="seg" id="wkv"></div></div></div>
+      <div class="readout" id="ro3"></div>
+      <div class="chart wk" id="wkc" role="img" aria-label="Weekly premium collected and weekly profit or loss"></div>
+    </div>
+    <div class="tiles" id="cashK" style="margin-top:12px"></div>
+  </section>
+
+  <section aria-labelledby="evH">
+    <h2 id="evH">What made and lost money</h2>
+    <p class="sub">Market events and the book's best and worst weeks, with the stocks that drove them. Click a card to jump the chart above to that week.</p>
+    <div class="evs" id="evs"></div>
+  </section>
+
+  <section aria-labelledby="exH">
+    <h2 id="exH">How an exercise plays out</h2>
+    <p class="sub">Every time a put finished in the money in the backtest. Pick one to replay it: the stock's price, the put strike that was sold, the assignment, and each 10-delta call that followed. Click a step to highlight it on the chart.</p>
+    <div class="panel">
+      <div class="ctl"><div class="cg"><span class="cgl">Assignment</span><div class="seg" id="epSel"></div></div></div>
+      <div class="two">
+        <div><div class="readout" id="ro4"></div><div class="chart ep" id="epc" role="img" aria-label="Stock price through an assignment, with the put and call strikes"></div></div>
+        <div><ol class="steps" id="epSteps"></ol><p class="note" id="epNote"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="nmH">
+    <h2 id="nmH">Profit by stock</h2>
+    <p class="sub">Net result per stock over the backtest: premium kept, minus buy-back costs and losses through the strike, plus or minus any shares held after an assignment. T-bill interest is not in these figures.</p>
+    <div class="panel tw" id="byName"></div>
+  </section>
+
+  <section aria-labelledby="viewH">
+    <h2 id="viewH">The expert read</h2>
+    <div class="panel view" id="view"></div>
+  </section>
+
+  <section aria-labelledby="logH">
+    <h2 id="logH">Trade log</h2>
+    <p class="sub">Every order the rules placed, newest first. Prices are per share; one contract is 100 shares.</p>
+    <div class="panel">
+      <div class="ctl">
+        <div class="cg"><span class="cgl">Stock</span><select id="fT"><option value="">All</option></select></div>
+        <div class="cg"><span class="cgl">Type</span><select id="fA"><option value="">All</option></select></div>
+      </div>
+      <div class="tw" id="log"></div>
+      <button type="button" class="more" id="logMore">Show more</button>
+    </div>
+  </section>
+
+  <section aria-labelledby="ruH">
+    <h2 id="ruH">Rules and assumptions</h2>
+    <div class="panel"><ul class="rules" id="rules"></ul></div>
+  </section>
+  <footer class="pg">A backtest of a rules-based strategy using modelled option prices, for information only, not investment advice. Short puts can lose far more than the premium collected. Not affiliated with any company shown.</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<script src="../assets/options-book.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1" defer></script>
+</body>
+</html>

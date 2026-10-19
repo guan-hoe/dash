@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 426.23,
+ "bias": {
+  "en": "Bearish · back on the 200-day average",
+  "zh": "偏空 · 重回 200 日均线"
+ },
+ "read": [
+  {
+   "en": "Rockwell Automation rose 1.0% on Oct 16 to $426.23 on heavy volume after touching $434.37. It is just above the rising 200-day average ($425.8) and below its falling 5-day ($427.6) and 10-day ($435.3), the 30-day ($430.5) and the falling 100-day ($448.3). MACD has been below its signal since Oct 13 and is below zero, its histogram flattening, Parabolic SAR has been bearish since Oct 8 ($453.45), and RSI is 44.",
+   "zh": "罗克韦尔自动化 10月16日放量上涨 1.0%，收于 $426.23，盘中高见 $434.37。股价略高于上行的 200 日均线（$425.8），位于下行的 5 日（$427.6）和 10 日均线（$435.3）、30 日均线（$430.5）及下行的 100 日均线（$448.3）下方。MACD 自 10月13日起位于信号线及零轴下方，柱状图走平，抛物线 SAR 自 10月8日起看空（$453.45），RSI 为 44。"
+  },
+  {
+   "en": "The $419 support held again and the close reclaimed the 200-day average, but the rally faded below the 10-day. Resistance is $427.6–430.5 (5 and 30-day averages), then $434–436 (Oct 16 high, 10-day average, Sep 8 high) and $448–453 (100-day average, SAR). Support is $425.8 (200-day), then $419–421.5 (May 19 low, Oct 16 low) and $412.7 (Oct 15 low). A close above $436 would open $448.",
+   "zh": "$419 支撑再度守住，收盘收复 200 日均线，但反弹在 10 日均线下方回落。阻力为 $427.6–430.5（5 日和 30 日均线），其次 $434–436（10月16日高点、10 日均线、9月8日高点）和 $448–453（100 日均线、SAR）。支撑为 $425.8（200 日均线），其次 $419–421.5（5月19日低点、10月16日低点）和 $412.7（10月15日低点）。若收盘站上 $436，上方目标看 $448。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    429,
+    {
+     "en": "5 and 30-day averages ($427.6–430.5)",
+     "zh": "5日和30日均线（$427.6–430.5）"
+    }
+   ],
+   [
+    435,
+    {
+     "en": "10-day average; Oct 16 high $434.4, Sep 8 high $436",
+     "zh": "10日均线；10月16日高点 $434.4、9月8日高点 $436"
+    }
+   ],
+   [
+    451,
+    {
+     "en": "100-day average and SAR ($448.3–453.5)",
+     "zh": "100日均线及抛物线SAR（$448.3–453.5）"
+    }
+   ]
+  ],
+  "s": [
+   [
+    425.8,
+    {
+     "en": "200-day average, reclaimed",
+     "zh": "200日均线，已收复"
+    }
+   ],
+   [
+    420,
+    {
+     "en": "May 19 low $419; Oct 16 low $421.5",
+     "zh": "5月19日低点 $419；10月16日低点 $421.5"
+    }
+   ],
+   [
+    412.7,
+    {
+     "en": "Oct 15 low",
+     "zh": "10月15日低点"
+    }
+   ]
+  ]
+ }
+}

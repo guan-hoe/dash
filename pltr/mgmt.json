@@ -1,0 +1,67 @@
+{
+ "ticker": "PLTR",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-08-03",
+ "timing": "amc",
+ "pre_close": 125.65,
+ "react": {
+  "date": "2026-08-04",
+  "close": 162.66,
+  "pct": 29.5
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 186.03,
+  "pct": 48.1
+ },
+ "review": {
+  "en": [
+   "Revenue rose 93% to about $1.94B. US commercial revenue jumped 149% to $764M and US government 90% to $809M; GAAP operating profit was $912M and operating cash flow topped $1.2B. Palantir raised 2026 guidance for a second time, to about $8.15B of revenue (+82%), over $3.42B of US commercial revenue and $4.5–4.7B of free cash flow. CEO Alex Karp said no company at its scale has grown half as fast and tied demand to governments and firms wanting sovereign control of AI; CFO David Glazer noted US commercial deal value of $6.24B (+124%).",
+   "The stock jumped 29.5% the next day, its biggest one-day gain since February 2024, after falling 29% earlier in the year on AI-valuation worries. It extended the move to about $186 by late August, held up better than chip stocks during September's AI-spending scare, and hit new highs in October. It now trades about two-thirds above the pre-report close."
+  ],
+  "zh": [
+   "营收增长 93% 至约 19.4 亿美元。美国商业营收大增 149% 至 7.64 亿美元，美国政府营收增长 90% 至 8.09 亿美元；GAAP 营业利润 9.12 亿美元，经营现金流超过 12 亿美元。Palantir 第二次上调 2026 年指引：营收约 81.5 亿美元（+82%），美国商业营收超过 34.2 亿美元，自由现金流 45–47 亿美元。CEO 亚历克斯·卡普表示同等规模的公司从未有过一半的增速，并将需求归因于政府和企业希望自主掌控 AI；CFO 大卫·格雷泽指出美国商业剩余合同价值达 62.4 亿美元（+124%）。",
+   "次日股价大涨 29.5%，为 2024 年 2 月以来最大单日涨幅；此前年内因 AI 估值担忧已下跌 29%。8 月底升至约 186 美元，9 月 AI 开支恐慌期间表现强于芯片股，10 月创新高，目前较财报前收盘高约三分之二。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Alex Karp",
+   "zh": "亚历克斯·卡普"
+  },
+  "since": "2003",
+  "bio": {
+   "en": "Co-founded Palantir in 2003 with Peter Thiel and others and has been CEO since; holds a Stanford law degree and a PhD in social theory from Goethe University Frankfurt. Built the company on defense and intelligence work before its AI platform took off with corporations.",
+   "zh": "2003 年与彼得·蒂尔等人联合创办 Palantir 并一直担任 CEO；拥有斯坦福法学学位和法兰克福歌德大学社会理论博士学位。公司以国防与情报业务起家，后凭 AI 平台在企业市场迅速崛起。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "David Glazer",
+   "zh": "大卫·格雷泽"
+  },
+  "since": "2020",
+  "bio": {
+   "en": "Joined Palantir in 2013 and held leadership roles across finance and legal before becoming CFO in 2020. Earlier a corporate securities lawyer at Wilson Sonsini advising tech companies on IPOs and financings.",
+   "zh": "2013 年加入 Palantir，在财务与法务领域担任多个领导职务，2020 年出任 CFO。此前在威尔逊·桑西尼律所任证券律师，为科技公司提供 IPO 与融资咨询。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 results (CNBC)",
+   "u": "https://www.cnbc.com/2026/08/03/palantir-pltr-earnings-q2-2026.html"
+  },
+  {
+   "t": "Q2 2026 call highlights",
+   "u": "https://zacks.com/stock/news/2967561/pltr-q2-earnings-call-spotlights-sovereign-ai-demand"
+  },
+  {
+   "t": "Next-day move (CNBC)",
+   "u": "https://www.cnbc.com/2026/08/04/palantir-2q-earnings-ai-sovereign-tools.html"
+  }
+ ]
+}

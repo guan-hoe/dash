@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Robotics · Stock Dashboards</title>
+<meta name="description" content="The robotics AI ecosystem across the US and China: humanoid makers, actuator, reducer and sensor suppliers, robot chips and AI brains, shipments, valuations, industrial robot installs and the trade policy between them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{--bg:#f3f5f7;--panel:#fff;--line:#d9dee5;--ink:#141a22;--muted:#5a6573;--accent:#0b6fb8;--accent-soft:#e3eff8;--up:#13804b;--down:#c2362b;
+  --us:#2563eb;--cn:#d9480f;--al:#0d9488;--k-part:#2563eb;--k-brain:#7c3aed;--k-dep:#13804b;--risk:#c2362b;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;--f-body:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;
+  --us:#4b8de8;--cn:#d9692b;--al:#1fa596;--k-part:#5fa0f0;--k-brain:#a78bfa;--k-dep:#3ccf86;--risk:#f0675b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;
+  --us:#4b8de8;--cn:#d9692b;--al:#1fa596;--k-part:#5fa0f0;--k-brain:#a78bfa;--k-dep:#3ccf86;--risk:#f0675b;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 16px 48px}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--line);margin:0 0 28px}
+.tabs a{font:600 13px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:10px 14px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs a:hover,.tabs a:focus-visible{color:var(--accent);outline:none}
+.eyebrow{font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,5vw,48px)/1.05 var(--f-display);margin:.25em 0 .4em}
+h2{font:700 24px/1.15 var(--f-display);margin:0 0 4px}
+h3{font:600 16px var(--f-body);margin:0 0 8px}
+.lede{color:var(--muted);margin:0 0 24px;max-width:72ch}
+.sub{color:var(--muted);font-size:14px;margin:0 0 14px;max-width:78ch}
+section{margin-top:44px}
+.note{font-size:12px;color:var(--muted);margin:10px 0 0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.tile b{display:block;font:600 10.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tile .v{display:block;font:600 24px var(--f-mono);font-variant-numeric:tabular-nums;margin:4px 0 2px}
+.tile small{display:block;font-size:12px;color:var(--muted);line-height:1.4}
+.ctl{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:0 0 12px}
+.cg{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.cgl{font:600 10px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.seg{display:inline-flex;flex-wrap:wrap;gap:4px}
+.seg button,.btn{font:500 12px var(--f-mono);border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:5px 10px;border-radius:4px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.seg button:hover,.btn:hover{color:var(--ink)}
+.seg button[aria-pressed="true"]:hover{color:#fff}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font:500 11.5px var(--f-mono);color:var(--muted);margin:8px 0 0}
+.leg i{display:inline-block;width:12px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:6px}
+.leg i.ln{height:2px;vertical-align:3px;width:16px}
+.c-us{background:var(--us)}.c-cn{background:var(--cn)}.c-al{background:var(--al)}
+.tip{position:absolute;z-index:40;max-width:300px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:10px 12px;box-shadow:0 8px 24px rgba(0,0,0,.16);font-size:13px;line-height:1.45;pointer-events:none}
+.tip b{display:block;font:700 14px var(--f-body);margin-bottom:2px}
+.tip small{display:block;color:var(--muted);font-size:12px}
+.tip .mono{font:600 12.5px var(--f-mono);font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.tw{overflow-x:auto}
+table.st{width:100%;border-collapse:collapse;font-size:13.5px}
+table.st th{font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.st td{padding:7px 6px;border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent);vertical-align:top}
+table.st td.mono{font:600 12.5px var(--f-mono);white-space:nowrap}
+table.st tr[data-n]{cursor:pointer}
+table.st tr[data-n]:hover td{background:var(--accent-soft)}
+.srcs{font-size:12.5px;color:var(--muted);columns:2 320px;column-gap:28px;padding-left:20px}
+.srcs li{break-inside:avoid;margin:3px 0}
+footer.pg{font-size:12px;color:var(--muted);margin-top:32px;padding-top:16px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <nav class="tabs" aria-label="Dashboard sections"><a href="../">Stocks</a><a href="../macro/">Macro</a><a href="../fx/">FX</a><a href="../datacenter/">Datacenter</a><a href="./" aria-current="page">Robotics</a><a href="../merger/">SpaceX vs Tesla</a><a href="../portfolio/">Portfolio</a><a href="../options/">Options</a></nav>
+  <div class="eyebrow">Humanoids · Parts · Sensors · Chips · AI brains · US vs China · Policy</div>
+  <h1>Robotics</h1>
+  <p class="lede">Who builds the robots, who supplies their joints, eyes and brains, and how the US and China depend on each other. China ships almost all of today's humanoids and makes most of the parts; the US leads on AI models, chips and valuations. Hover or tap anything to dig in.</p>
+
+  <div class="tiles" id="kpi"></div>
+
+  <section id="map" aria-labelledby="mapH">
+    <h2 id="mapH">The ecosystem, US vs China</h2>
+    <p class="sub">Seven layers from magnets to the factory floor, with the US on top, China at the bottom and the Japanese, European, Korean and Taiwanese suppliers both sides lean on in between. Dots flow along each supply link: blue for parts, purple for chips and AI models, green for robots going to work. Tap a company to trace its suppliers and customers.</p>
+    <div id="rmap"></div>
+  </section>
+
+  <section aria-labelledby="shH">
+    <h2 id="shH">Who ships the humanoids</h2>
+    <p class="sub">Units shipped by maker. Research firms count differently (some include wheeled and half-size humanoids), so switch between them; every count puts the same two Chinese makers on top.</p>
+    <div class="panel" id="ship"></div>
+  </section>
+
+  <section aria-labelledby="mkH">
+    <h2 id="mkH">What the market pays</h2>
+    <p class="sub">Latest price tags on robot makers and robot-brain labs: public market value, IPO target, last private round or deal value. Each bar says which kind it is and when it was set.</p>
+    <div class="panel" id="val"></div>
+  </section>
+
+  <section aria-labelledby="bmH">
+    <h2 id="bmH">Where a humanoid's cost goes, and who supplies it</h2>
+    <p class="sub">Typical bill of materials for a full-size humanoid. Tap a slice to see the main suppliers and the China-vs-import price gap, and to light those companies up on the map.</p>
+    <div class="panel" id="bom"></div>
+  </section>
+
+  <section aria-labelledby="irH">
+    <h2 id="irH">Industrial robots: the installed base</h2>
+    <p class="sub">Factory robot arms installed in 2025 by country (IFR World Robotics 2026). China installs more than every other country combined, and Chinese brands now supply over half its own market.</p>
+    <div class="panel" id="ind"></div>
+  </section>
+
+  <section aria-labelledby="poH">
+    <h2 id="poH">The policy tug-of-war</h2>
+    <p class="sub">Washington is closing its market to new Chinese robots; Beijing controls the rare-earth magnets every robot joint needs. Hover an event for details; the marker shows today.</p>
+    <div class="panel" id="pol"></div>
+  </section>
+
+  <section aria-labelledby="stH">
+    <h2 id="stH">Listed names by layer</h2>
+    <p class="sub">Public companies in the map. Filter by country or layer; tap a row to find it on the map. Links go to the stock pages on this dashboard where there is one.</p>
+    <div id="stk"></div>
+  </section>
+
+  <section aria-labelledby="srH">
+    <h2 id="srH">Sources</h2>
+    <ol class="srcs" id="srcs"></ol>
+  </section>
+
+  <footer class="pg" id="foot"></footer>
+</main>
+<script src="../assets/robotics.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

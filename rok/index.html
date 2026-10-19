@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rockwell Automation ROK Dashboard</title>
+<meta name="description" content="Rockwell Automation (NYSE: ROK) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NYSE: ROK</span>
+  <span class="bar-px" id="barPx">$432.59</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Rockwell Automation, Inc. · Common stock · Milwaukee, Wisconsin</div>
+      <h1 data-ih="title">Factory automation, <em>pulled along by chip fabs and data centers</em>.</h1>
+      <p data-i="lede" class="lede">Rockwell sells the controllers, drives, sensors and software that run factories, warehouses and process plants. After a two-year industrial slump, organic sales grew 10% last quarter on semiconductor, data center and warehouse projects, and the full-year outlook was raised. It is a slower, steadier story than the chip names on this site, priced at about 33 times this year's earnings.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$432.59</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$48.0B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$333–497</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E (FY26)</span></div><div class="v">~33×</div><div class="s"><span data-i="s_val">adj. EPS guide $13.15 midpoint · forward ~29×</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">FY26 guide</span></div><div class="v">~$9.0B</div><div class="s"><span data-i="s_an">sales +7.5–9.5% · adj. EPS $13.00–13.30</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Early Nov</div><div class="s"><span data-i="s_er">Q4 FY26 and FY27 outlook · date not yet announced</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. Rockwell has closed between about $400 and $495 since May.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="ROK daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">1.50</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Rockwell's fiscal year ends September 30. Gross margin steps up from about 40% to about 48% in FY25 in the source data, and the two fiscal Q4 figures are left blank because the source shows outliers. The last bar is the Q4 sales implied by the ~$9.0B full-year guide.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q3 FY26</span></div><div class="v">$2.31B</div><div class="s"><span data-i="sc0">+8% YoY · organic +10%</span></div></div><div class="cell"><div class="k"><span data-i="kc1">Intelligent Devices</span></div><div class="v">$1.08B</div><div class="s"><span data-i="sc1">+12% YoY · 20.0% margin</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Software & Control</span></div><div class="v">$751M</div><div class="s"><span data-i="sc2">+19% YoY · 34.8% margin</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Lifecycle Services</span></div><div class="v">$482M</div><div class="s"><span data-i="sc3">−12% YoY · −2% organic (divestitures)</span></div></div><div class="cell"><div class="k"><span data-i="kc4">Segment margin</span></div><div class="v">22.3%</div><div class="s"><span data-i="sc4">vs 19.5% a year ago</span></div></div><div class="cell"><div class="k"><span data-i="kc5">Adj. EPS</span></div><div class="v">$3.49</div><div class="s"><span data-i="sc5">+22% YoY · GAAP $3.65</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">New growth markets</h3><p data-i="w0p">Semiconductor fabs, data centers and warehouse automation drove the quarter, with automotive and life sciences improving.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Margins expanding</h3><p data-i="w1p">Segment operating margin rose to 22.3% from 19.5%, and Software & Control earns nearly 35%.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">FY27 outlook</h3><p data-i="w2p">The November report brings the first FY27 guide. The market will look for organic growth to hold near this year's 7.5–9.5%.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Recurring revenue</h3><p data-i="w3p">Organic annual recurring revenue grew 6% and software ARR high single digits, a slower but steadier part of the mix.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w4h">Industrial cycle</h3><p data-i="w4p">Rockwell's sales fell from $2.56B to $1.88B a quarter during the 2024 destocking. A turn in capex budgets would hit orders quickly.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Valuation</h3><p data-i="w5p">At about 33 times this year's adjusted EPS, the stock already prices in a solid recovery.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="ROK" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Early Nov 2026</div><h3 data-i="c0h">Q4 FY26 earnings</h3><p data-i="c0p">Full-year results and the first FY27 outlook. The FY26 guide implies about $2.34B of Q4 sales.</p></div></div><div class="item"><div><div class="date">Nov 2026</div><h3 data-i="c1h">Dividend review</h3><p data-i="c1p">Rockwell has raised its dividend every November for many years; the current rate is $1.38 a quarter.</p></div></div><div class="item"><div><div class="date">Late Jan 2027</div><h3 data-i="c2h">Q1 FY27 earnings</h3><p data-i="c2p">First quarter of the new fiscal year, usually the seasonal low.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://rockwellautomation.com/en-tr/company/news/press-releases/Rockwell-Automation-Reports-Third-Quarter-2026-Results.html" target="_blank" rel="noopener">Q3 FY26 results (Rockwell Automation)</a></li><li><a href="https://tradingview.com/news/tradingview:691c047963fb6:0" target="_blank" rel="noopener">Q3 FY26 segment detail (TradingView)</a></li><li><a href="https://stocktitan.net/news/ROK/rockwell-automation-reports-third-quarter-2026-4qmdttz2nb00.html" target="_blank" rel="noopener">Q3 FY26 summary and guidance (Stock Titan)</a></li><li><a href="https://stockanalysis.com/stocks/rok/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://ir.rockwellautomation.com/" target="_blank" rel="noopener">Rockwell Automation investor relations</a></li><li><a href="https://finance.yahoo.com/quote/ROK" target="_blank" rel="noopener">Price, market cap, beta and analyst targets: Yahoo Finance and Stocklake, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Rockwell Automation, Inc.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "rok", SHARES = 111050000.0, TV = "NYSE:ROK";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q4 FY21", "Sep 2021", 1808, 39.79, 14.19, 0.67], ["Q1 FY22", "Dec 2021", 1857, 40.33, 16.48, 2.05], ["Q2 FY22", "Mar 2022", 1808, 36.73, 11.85, 0.46], ["Q3 FY22", "Jun 2022", 1969, 40.76, 18.93, 2.55], ["Q4 FY22", "Sep 2022", 2126, 41.69, 20.62, 2.92], ["Q1 FY23", "Dec 2022", 1981, 41.07, 18.01, 3.31], ["Q2 FY23", "Mar 2023", 2275, 40.98, 14.31, 2.59], ["Q3 FY23", "Jun 2023", 2239, 40.89, 18.74, 3.45], ["Q4 FY23", "Sep 2023", 2563, 41.18, 19.85, 2.61], ["Q1 FY24", "Dec 2023", 2052, 38.74, 13.94, 1.86], ["Q2 FY24", "Mar 2024", 2126, 39.18, 15.85, 2.31], ["Q3 FY24", "Jun 2024", 2051, 39.88, 17.94, 2.02], ["Q4 FY24", "Sep 2024", 2035, null, 15.63, 2.09], ["Q1 FY25", "Dec 2024", 1881, 46.68, 13.08, 1.61], ["Q2 FY25", "Mar 2025", 2001, 48.58, 17.04, 2.22], ["Q3 FY25", "Jun 2025", 2144, 48.79, 17.63, 2.6], ["Q4 FY25", "Sep 2025", 2316, null, 19.73, 1.23], ["Q1 FY26", "Dec 2025", 2105, 48.27, 17.53, 2.69], ["Q2 FY26", "Mar 2026", 2239, 50.25, 20.72, 3.1], ["Q3 FY26", "Jun 2026", 2313, 49.46, 20.97, 3.65]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q4 FY26e", 2343, "Sep 2026 \u00b7 implied by ~$9.0B FY guide", "2026\u5e749\u6708 \u00b7 \u7531\u7ea6 90 \u4ebf\u5168\u5e74\u6307\u5f15\u63a8\u7b97"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "FY26 Q3", "sc0": "同比 +8% · 有机 +10%", "kc1": "智能设备", "sc1": "同比 +12% · 利润率 20.0%", "kc2": "软件与控制", "sc2": "同比 +19% · 利润率 34.8%", "kc3": "生命周期服务", "sc3": "同比 −12% · 有机 −2%（剥离）", "kc4": "分部利润率", "sc4": "一年前 19.5%", "kc5": "调整后每股收益", "sc5": "同比 +22% · GAAP $3.65", "w0h": "新增长市场", "w0p": "半导体工厂、数据中心与仓储自动化带动本季增长，汽车与生命科学亦在改善。", "w1h": "利润率扩张", "w1p": "分部营业利润率由 19.5% 升至 22.3%，软件与控制业务利润率近 35%。", "w2h": "FY27 展望", "w2p": "11月财报将首次给出 FY27 指引。市场将关注有机增长能否维持今年 7.5–9.5% 的水平。", "w3h": "经常性收入", "w3p": "有机年度经常性收入增长 6%，软件 ARR 增长接近一成，是增长较慢但较稳定的部分。", "w4h": "工业周期", "w4p": "2024 年去库存期间，罗克韦尔季度销售由 25.6 亿美元降至 18.8 亿。资本开支预算一旦转向，订单会迅速受影响。", "w5h": "估值", "w5p": "按今年调整后每股收益计约 33 倍，股价已反映稳健复苏。", "c0h": "FY26 第四季财报", "c0p": "全年业绩及首份 FY27 展望。FY26 指引隐含 Q4 销售约 23.4 亿美元。", "c1h": "股息审议", "c1p": "罗克韦尔多年来每年11月上调股息，目前每季 $1.38。", "c2h": "FY27 第一季财报", "c2p": "新财年首季，通常为季节性低点。", "eyebrow": "罗克韦尔自动化 · 普通股 · 威斯康星州密尔沃基", "title": "工厂自动化，<em>由晶圆厂与数据中心拉动</em>。", "lede": "罗克韦尔销售运行工厂、仓库和流程工厂的控制器、驱动器、传感器和软件。经历两年工业低迷后，上季在半导体、数据中心和仓储项目带动下有机销售增长 10%，全年展望上调。相比本站的芯片股，这是一个更慢、更稳的故事，估值约为今年盈利的 33 倍。", "k_val": "市盈率（FY26）", "s_val": "调整后每股指引中值 $13.15 · 预期约 29 倍", "k_an": "FY26 指引", "s_an": "销售 +7.5–9.5% · 调整后每股 $13.00–13.30", "s_er": "FY26 第四季及 FY27 展望 · 日期未公布", "sub_price": "每日收盘价与50日均线。罗克韦尔自5月以来收盘价在约 $400 至 $495 之间。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。罗克韦尔财年于9月30日结束。数据源中毛利率在 FY25 由约 40% 升至约 48%，两个财年第四季数字因数据源异常而留空。最后一根柱为约 90 亿美元全年指引所隐含的 Q4 销售。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Rockwell Automation, Inc. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

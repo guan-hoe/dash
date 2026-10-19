@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 214.13,
+ "bias": {
+  "en": "Uptrend under pressure · slipped under the 100-day",
+  "zh": "上升趋势承压 · 跌破 100 日均线"
+ },
+ "read": [
+  {
+   "en": "Nvidia fell 1.4% on Oct 16 to $214.13, trading between $213.34 and $218.68. It is below its falling 5-day ($221.5), 10-day ($228.3) and 30-day ($225.3) averages and just under the rising 100-day ($214.5), and above the rising 200-day ($203.0). MACD has been below its signal since Oct 12 and has slipped below zero with a widening histogram, Parabolic SAR has been bearish since Oct 13 ($240.28), and RSI is 37.5.",
+   "zh": "英伟达 10月16日下跌 1.4%，收于 $214.13，盘中区间 $213.34–218.68。股价位于下行的 5 日（$221.5）、10 日（$228.3）和 30 日均线（$225.3）下方，略低于上行的 100 日均线（$214.5），仍在上行的 200 日均线（$203.0）之上。MACD 自 10月12日起位于信号线下方，现已跌破零轴，柱状图扩大，抛物线 SAR 自 10月13日起看空（$240.28），RSI 为 37.5。"
+  },
+  {
+   "en": "The close slipped just below the 100-day average ($214.5), the support that held on Oct 15, while the $212.9 Oct 15 low held. Resistance is $214.5 (100-day), then $218.7–219.6 (Oct 16 high, Oct 14 low) and $221.5–225.3 (5 and 30-day averages). Support is $212.9, then $207–209 (Aug 24 and Sep 14 lows) and $203 (200-day). A close below $212.9 would open $207–209.",
+   "zh": "收盘略微跌破 10月15日守住的 100 日均线（$214.5），但 10月15日低点 $212.9 守住。阻力为 $214.5（100 日均线），其次 $218.7–219.6（10月16日高点、10月14日低点）和 $221.5–225.3（5 日和 30 日均线）。支撑为 $212.9，其次 $207–209（8月24日及9月14日低点）和 $203（200 日均线）。若收盘跌破 $212.9，下一目标看 $207–209。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    214.5,
+    {
+     "en": "100-day average, lost on the close",
+     "zh": "100日均线，收盘失守"
+    }
+   ],
+   [
+    219,
+    {
+     "en": "Oct 16 high $218.7; Oct 14 low $219.6",
+     "zh": "10月16日高点 $218.7；10月14日低点 $219.6"
+    }
+   ],
+   [
+    223.5,
+    {
+     "en": "5 and 30-day averages ($221.5–225.3)",
+     "zh": "5日和30日均线（$221.5–225.3）"
+    }
+   ]
+  ],
+  "s": [
+   [
+    212.9,
+    {
+     "en": "Oct 15 low; Oct 16 low $213.3",
+     "zh": "10月15日低点；10月16日低点 $213.3"
+    }
+   ],
+   [
+    208,
+    {
+     "en": "Aug 24 and Sep 14 lows ($207–209)",
+     "zh": "8月24日及9月14日低点（$207–209）"
+    }
+   ],
+   [
+    203,
+    {
+     "en": "200-day average",
+     "zh": "200日均线"
+    }
+   ]
+  ]
+ }
+}

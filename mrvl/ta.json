@@ -1,0 +1,59 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 227.83,
+ "bias": {
+  "en": "Bearish · lost the 100-day average",
+  "zh": "偏空 · 失守 100 日均线"
+ },
+ "read": [
+  {
+   "en": "Marvell fell 5.6% on Oct 16 to $227.83, trading between $226.62 and $237.62. It is below its falling 5-day ($249.8) and 10-day ($264.2) averages, the rising 30-day ($252.2) and the rising 100-day ($240.8), and above the 200-day ($175.9). MACD has been below its signal since Oct 12 and is above zero with a widening histogram, Parabolic SAR has been bearish since Oct 8 ($284.9), and RSI is 37.5.",
+   "zh": "Marvell 10月16日下跌 5.6%，收于 $227.83，盘中区间 $226.62–237.62。股价位于下行的 5 日（$249.8）和 10 日均线（$264.2）、上行的 30 日（$252.2）和 100 日均线（$240.8）下方，200 日均线（$175.9）上方。MACD 自 10月12日起位于信号线下方，仍在零轴之上，柱状图扩大，抛物线 SAR 自 10月8日起看空（$284.9），RSI 为 37.5。"
+  },
+  {
+   "en": "The 100-day average, which held on Oct 15, broke on the close and turns into resistance; the day's low dipped just under the $227.3 Oct 15 low. Resistance is $237.6 (Oct 16 high), then $240.8 (100-day) and $250–252 (5 and 30-day averages). Support is $226.6–227.3 (Oct 15 and 16 lows), then $200.6 (Sep 1 low). A close below $226.6 would open $200.6.",
+   "zh": "10月15日守住的 100 日均线在收盘时失守，转为阻力；当日低点略微跌破 10月15日低点 $227.3。阻力为 $237.6（10月16日高点），其次 $240.8（100 日均线）和 $250–252（5 日和 30 日均线）。支撑为 $226.6–227.3（10月15日及16日低点），其次 $200.6（9月1日低点）。若收盘跌破 $226.6，下一目标看 $200.6。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    237.6,
+    {
+     "en": "Oct 16 high",
+     "zh": "10月16日高点"
+    }
+   ],
+   [
+    240.8,
+    {
+     "en": "100-day average, lost Oct 16",
+     "zh": "100日均线，10月16日失守"
+    }
+   ],
+   [
+    251,
+    {
+     "en": "5 and 30-day averages ($249.8–252.2)",
+     "zh": "5日和30日均线（$249.8–252.2）"
+    }
+   ]
+  ],
+  "s": [
+   [
+    227,
+    {
+     "en": "Oct 15 and 16 lows ($226.6–227.3)",
+     "zh": "10月15日及16日低点（$226.6–227.3）"
+    }
+   ],
+   [
+    200.6,
+    {
+     "en": "Sep 1 low",
+     "zh": "9月1日低点"
+    }
+   ]
+  ]
+ }
+}

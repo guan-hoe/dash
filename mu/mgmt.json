@@ -1,0 +1,68 @@
+{
+ "ticker": "MU",
+ "asof": "2026-10-12",
+ "quarter": {
+  "en": "Q4 FY2026 (August quarter)",
+  "zh": "2026 财年第四季（8 月季度）"
+ },
+ "reported": "2026-09-30",
+ "timing": "amc",
+ "pre_close": 1065.11,
+ "react": {
+  "date": "2026-10-01",
+  "close": 1097.39,
+  "pct": 3.0
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 878.84,
+  "pct": -17.5
+ },
+ "review": {
+  "en": [
+   "Record revenue of $54.2B (+379%, +31% from Q3) at an 87% gross margin, with non-GAAP EPS of $33.42 beating the ~$31–32 consensus; fiscal 2026 revenue was $133.2B. The Q1 guide of $61.5B ±$1.5B and $38.15 EPS was about $4B above expectations. CEO Sanjay Mehrotra expects an even stronger fiscal 2027 and supply to stay tight through 2028, with over three-quarters of 2027 shipments under customer agreements. CFO Mark Murphy called Q1 the margin floor for the year, while capex is roughly doubling.",
+   "Shares rose about 2% after hours and closed up 3.0% on Oct 1 as Treasury yields jumped and investors fretted about flattening margins and doubling capex. The gain faded within days: the stock lost 4.3% in the week to Oct 9 on Toshiba's hard-drive expansion plans, a Taiwan strike vote and a cool response to Samsung's record profit, then fell 3.9% on Oct 12 after China's CXMT unveiled a denser DRAM design."
+  ],
+  "zh": [
+   "营收创纪录达 542 亿美元（同比 +379%，环比 +31%），毛利率 87%，非 GAAP 每股收益 33.42 美元，高于约 31–32 美元的预期；2026 财年营收 1,332 亿美元。第一季指引营收 615 亿美元（±15 亿）、每股收益 38.15 美元，较预期高出约 40 亿美元。CEO 桑杰·梅赫罗特拉预计 2027 财年会更强，供应紧张将持续到 2028 年，2027 年超过四分之三的出货已签客户协议。CFO 马克·墨菲称第一季是全年毛利率低点，同时资本开支将约翻倍。",
+   "盘后上涨约 2%，10 月 1 日收涨 3.0%，当天美债收益率飙升，投资者也担心毛利率趋平、资本开支翻倍。涨幅数日内即告回吐：东芝计划扩充硬盘产能、台湾厂区工人投票授权罢工，加上市场对三星创纪录利润反应冷淡，股价在截至 10 月 9 日的一周下跌 4.3%；10 月 12 日中国长鑫存储公布更高密度的 DRAM 设计，股价再跌 3.9%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Sanjay Mehrotra",
+   "zh": "桑杰·梅赫罗特拉"
+  },
+  "since": "2017",
+  "bio": {
+   "en": "Co-founded SanDisk in 1988 and was its CEO from 2011 until its sale to Western Digital in 2016; holds more than 70 flash-memory patents. Micron CEO since 2017 and now also chairman, he has steered it into high-bandwidth memory for AI.",
+   "zh": "1988 年联合创办闪迪，2011 年起任 CEO，直至 2016 年出售给西部数据；拥有 70 多项闪存专利。2017 年起任美光 CEO，现兼任董事长，带领美光进军 AI 高带宽内存。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Mark Murphy",
+   "zh": "马克·墨菲"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "Joined in 2022 from Qorvo, where he had been CFO since 2016. Earlier CFO of Delphi Automotive and of MEMC Electronic Materials, and president of Praxair's electronic materials division; Harvard MBA.",
+   "zh": "2022 年从 Qorvo 加入，此前自 2016 年起任 Qorvo CFO。更早曾任德尔福汽车和 MEMC 电子材料的 CFO，以及普莱克斯电子材料事业部总裁；哈佛 MBA。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q4 FY26 prepared remarks",
+   "u": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf"
+  },
+  {
+   "t": "Q4 FY26 reaction (StockTitan)",
+   "u": "https://stocktitan.net/articles/micron-q4-fy2026-earnings-memory-cycle"
+  },
+  {
+   "t": "CXMT selloff, Oct 12 (Quartz)",
+   "u": "https://qz.com/micron-stock-falls-cxmt-memory-chip-101226"
+  }
+ ],
+ "followup_done": true
+}

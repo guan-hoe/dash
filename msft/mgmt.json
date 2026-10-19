@@ -1,0 +1,63 @@
+{
+ "ticker": "MSFT",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q4 FY2026 (June quarter)",
+  "zh": "2026 财年第四季（6 月季度）"
+ },
+ "reported": "2026-07-29",
+ "timing": "amc",
+ "pre_close": 390.54,
+ "react": {
+  "date": "2026-07-30",
+  "close": 451.1,
+  "pct": 15.5
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 529.05,
+  "pct": 35.5
+ },
+ "review": {
+  "en": [
+   "Revenue rose 18% to $90.0B and EPS of $4.74 beat $4.24. Azure growth accelerated to 43% in constant currency, above the ~40% expected, and Azure passed $100B of revenue for the fiscal year. Commercial bookings backlog jumped 84% to $678B and paid Microsoft 365 Copilot seats topped 30 million. CFO Amy Hood guided Azure growth to 45% next quarter, above the 41% consensus. CEO Satya Nadella pointed to broad AI demand across Azure and Copilot.",
+   "The stock jumped 15.5% the next day, one of its biggest one-day gains in years, and kept climbing to $493 by Aug 4, 26% above the pre-report close. Faster Azure growth and a huge backlog convinced investors the AI spending is turning into revenue, easing the capex worries that hit other cloud names. Microsoft has held those gains since and is the best performer in the group after its report."
+  ],
+  "zh": [
+   "营收增长 18% 至 900 亿美元，每股收益 4.74 美元高于 4.24 美元预期。Azure 按固定汇率增速加快至 43%，高于约 40% 的预期，全财年营收首破 1,000 亿美元。商业订单积压增长 84% 至 6,780 亿美元，Microsoft 365 Copilot 付费席位突破 3,000 万。CFO 艾米·胡德指引下季 Azure 增长 45%，高于 41% 的预期。CEO 萨提亚·纳德拉强调 Azure 与 Copilot 的 AI 需求全面增长。",
+   "次日股价大涨 15.5%，为多年来最大单日涨幅之一，并持续上涨至 8 月 4 日的 493 美元，较财报前收盘高 26%。Azure 提速和庞大积压订单让投资者相信 AI 投入正转化为营收，缓解了困扰其他云厂商的资本开支担忧。此后涨幅一直保持，是同业中财报后表现最好的。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Satya Nadella",
+   "zh": "萨提亚·纳德拉"
+  },
+  "since": "2014",
+  "bio": {
+   "en": "Joined Microsoft in 1992 and ran its server and cloud business before becoming CEO in 2014 and chairman in 2021. Led the shift to Azure and the OpenAI partnership.",
+   "zh": "1992 年加入微软，曾负责服务器与云业务，2014 年出任 CEO，2021 年兼任董事长。主导了向 Azure 的转型以及与 OpenAI 的合作。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Amy Hood",
+   "zh": "艾米·胡德"
+  },
+  "since": "2013",
+  "bio": {
+   "en": "CFO since 2013, the first woman in the role. Joined Microsoft in 2002 from Goldman Sachs and was CFO of the Business division; known for conservative, steady guidance.",
+   "zh": "2013 年起任 CFO，是微软首位女性 CFO。2002 年从高盛加入微软，曾任商业事业部 CFO；以稳健保守的指引著称。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q4 FY26 results (CNBC)",
+   "u": "https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html"
+  },
+  {
+   "t": "Q4 FY26 breakdown",
+   "u": "https://indmoney.com/blog/us-stocks/microsoft-q4-results-why-msft-stock-jumped"
+  }
+ ]
+}

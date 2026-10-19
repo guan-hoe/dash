@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 186.03,
+ "bias": {
+  "en": "Uptrend, momentum fading · MACD crossed down",
+  "zh": "上升趋势、动能减弱 · MACD 下穿"
+ },
+ "read": [
+  {
+   "en": "Palantir fell 7.2% on Oct 16 to $186.03 on heavy volume, reversing from $203.55 to a low of $184.45. It is below its rising 5-day ($201.0) and 10-day ($198.9) averages and just under the rising 30-day ($186.4), and above the 100-day ($157.2) and 200-day ($152.7). MACD crossed below its signal on Oct 16 and is above zero, Parabolic SAR has been bearish since Oct 15 ($212.53), and RSI is 46.",
+   "zh": "Palantir 10月16日自 $203.55 回落，盘中低见 $184.45，收盘放量下跌 7.2%，报 $186.03。股价位于上行的 5 日（$201.0）和 10 日均线（$198.9）下方，略低于上行的 30 日均线（$186.4），仍在 100 日（$157.2）和 200 日均线（$152.7）之上。MACD 于 10月16日下穿信号线，仍在零轴之上，抛物线 SAR 自 10月15日起看空（$212.53），RSI 为 46。"
+  },
+  {
+   "en": "The $199.1 (10-day) and $193 supports both broke, and the close sits on the 30-day average. Resistance is $186.4 (30-day), then $192.6–194.7 (Oct 15 low, Sep 24 high) and $199–201 (10 and 5-day averages). Support is $184.5 (Oct 16 and Sep 29 lows), then $172 (Sep 18 low) and $164.6 (Sep 10 low). A close below $184.5 would open $172.",
+   "zh": "$199.1（10 日均线）和 $193 支撑均告失守，收盘落在 30 日均线附近。阻力为 $186.4（30 日均线），其次 $192.6–194.7（10月15日低点、9月24日高点）和 $199–201（10 日和 5 日均线）。支撑为 $184.5（10月16日及9月29日低点），其次 $172（9月18日低点）和 $164.6（9月10日低点）。若收盘跌破 $184.5，下一目标看 $172。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    186.4,
+    {
+     "en": "30-day average",
+     "zh": "30日均线"
+    }
+   ],
+   [
+    193.5,
+    {
+     "en": "Oct 15 low $192.6; Sep 24 high $194.7",
+     "zh": "10月15日低点 $192.6；9月24日高点 $194.7"
+    }
+   ],
+   [
+    200,
+    {
+     "en": "10 and 5-day averages ($198.9–201.0)",
+     "zh": "10日和5日均线（$198.9–201.0）"
+    }
+   ]
+  ],
+  "s": [
+   [
+    184.5,
+    {
+     "en": "Oct 16 low; Sep 29 low $184.8",
+     "zh": "10月16日低点；9月29日低点 $184.8"
+    }
+   ],
+   [
+    172,
+    {
+     "en": "Sep 18 low",
+     "zh": "9月18日低点"
+    }
+   ],
+   [
+    164.6,
+    {
+     "en": "Sep 10 low",
+     "zh": "9月10日低点"
+    }
+   ]
+  ]
+ }
+}

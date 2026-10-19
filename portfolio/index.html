@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Portfolio · Stock Dashboards</title>
+<meta name="description" content="A rules-based momentum portfolio of up to five dashboard stocks, rebalanced weekly for the highest expected Sharpe ratio with no stock above 25%, with its track record, drawdowns and forward-looking drawdown risk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{--bg:#f3f5f7;--panel:#fff;--line:#d9dee5;--ink:#141a22;--muted:#5a6573;--accent:#0b6fb8;--accent-soft:#e3eff8;--up:#13804b;--down:#c2362b;
+  --s-mom:#0b6fb8;--s-raw:#7c5cc4;--s-ew:#b86e00;--s-spy:#5a6573;--dd:#c2362b;--cash:#e3e8ee;
+  --g1:#1c6fd1;--g2:#c2501c;--g3:#13865f;--g4:#a86f00;--g5:#c0396c;--g6:#2b7a0b;--g7:#6f62d6;--g8:#cf4b4b;--g9:#0b8597;--g10:#8a5a2b;--g0:#6f7a87;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;--f-body:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;
+  --s-mom:#4fa8e8;--s-raw:#a78bfa;--s-ew:#e0a33a;--s-spy:#93a0b0;--dd:#f0675b;--cash:#222b36;
+  --g1:#3987e5;--g2:#d95926;--g3:#199e70;--g4:#c98500;--g5:#d55181;--g6:#3f9a1c;--g7:#9085e9;--g8:#e66767;--g9:#1fa5b8;--g10:#b07a46;--g0:#8b97a5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;
+  --s-mom:#4fa8e8;--s-raw:#a78bfa;--s-ew:#e0a33a;--s-spy:#93a0b0;--dd:#f0675b;--cash:#222b36;
+  --g1:#3987e5;--g2:#d95926;--g3:#199e70;--g4:#c98500;--g5:#d55181;--g6:#3f9a1c;--g7:#9085e9;--g8:#e66767;--g9:#1fa5b8;--g10:#b07a46;--g0:#8b97a5;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 16px 48px}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--line);margin:0 0 28px}
+.tabs a{font:600 13px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:10px 14px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs a:hover,.tabs a:focus-visible{color:var(--accent);outline:none}
+.eyebrow{font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,5vw,48px)/1.05 var(--f-display);margin:.25em 0 .4em}
+h2{font:700 24px/1.15 var(--f-display);margin:0 0 4px}
+h3{font:600 16px var(--f-body);margin:0 0 8px}
+.lede{color:var(--muted);margin:0 0 24px;max-width:76ch}
+.sub{color:var(--muted);font-size:14px;margin:0 0 14px;max-width:80ch}
+section{margin-top:44px}
+.note{font-size:12px;color:var(--muted);margin:10px 0 0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.tile b{display:block;font:600 10.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tile .v{display:block;font:600 24px var(--f-mono);font-variant-numeric:tabular-nums;margin:4px 0 2px}
+.tile small{display:block;font-size:12px;color:var(--muted);line-height:1.4}
+.tile.hl{border-color:var(--dd);box-shadow:inset 3px 0 0 var(--dd)}
+.pos{color:var(--up)}.neg{color:var(--down)}
+.ctl{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:0 0 12px}
+.cg{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.cgl{font:600 10px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.seg{display:inline-flex;flex-wrap:wrap;gap:4px}
+.seg button{font:500 12px var(--f-mono);border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:5px 10px;border-radius:4px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.seg button:hover{color:var(--ink)}.seg button[aria-pressed="true"]:hover{color:#fff}
+.seg button.sw{display:inline-flex;align-items:center;gap:6px}
+.seg button.sw i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.seg button.sw[aria-pressed="false"] i{opacity:.35}
+.seg button.sw[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chart{position:relative;height:340px}
+.chart.dd{height:220px}
+.readout{display:flex;flex-wrap:wrap;gap:4px 16px;font:500 12px var(--f-mono);color:var(--muted);min-height:20px;margin:0 0 6px;font-variant-numeric:tabular-nums}
+.readout span b{font-weight:600;color:var(--ink)}
+.readout i{display:inline-block;width:10px;height:3px;border-radius:2px;vertical-align:3px;margin-right:5px}
+.two{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:900px){.two{grid-template-columns:minmax(0,1fr)}}
+.tw{overflow-x:auto}
+table.st{width:100%;border-collapse:collapse;font-size:13.5px}
+table.st th{font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.st th.r,table.st td.r{text-align:right}
+table.st td{padding:7px 6px;border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent);vertical-align:top}
+table.st td.mono{font:600 12.5px var(--f-mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+table.st tr.off td{color:var(--muted)}
+.chip{display:inline-block;font:600 10px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chip.in{border-color:var(--up);color:var(--up)}.chip.out{border-color:var(--down);color:var(--down)}
+.wbar{display:flex;height:22px;border-radius:4px;overflow:hidden;margin:4px 0 10px;border:1px solid var(--line)}
+.wbar span{display:block;height:100%}
+.wleg{display:flex;flex-wrap:wrap;gap:4px 14px;font:500 11.5px var(--f-mono);color:var(--muted)}
+.wleg i{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+#wts{position:relative}
+#wts svg{display:block;width:100%;height:auto}
+.tip{position:absolute;z-index:40;min-width:180px;max-width:280px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:9px 11px;box-shadow:0 8px 24px rgba(0,0,0,.16);font:500 12px var(--f-mono);line-height:1.5;pointer-events:none;font-variant-numeric:tabular-nums}
+.tip b{display:block;font:600 12.5px var(--f-body);margin-bottom:3px}
+.tip i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.view p{margin:0 0 12px;max-width:80ch}
+.view p:last-child{margin-bottom:0}
+ul.rules{margin:0;padding-left:20px;max-width:84ch}
+ul.rules li{margin:4px 0}
+footer.pg{font-size:12px;color:var(--muted);margin-top:32px;padding-top:16px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <nav class="tabs" aria-label="Dashboard sections"><a href="../">Stocks</a><a href="../macro/">Macro</a><a href="../fx/">FX</a><a href="../datacenter/">Datacenter</a><a href="../robotics/">Robotics</a><a href="../merger/">SpaceX vs Tesla</a><a href="./" aria-current="page">Portfolio</a><a href="../options/">Options</a></nav>
+  <div class="eyebrow">Momentum · Max Sharpe · 5 stocks · 25% cap · Weekly rebalance</div>
+  <h1>Momentum portfolio</h1>
+  <p class="lede" id="lede">A rules-based portfolio built from the stocks on this dashboard. Every Friday it ranks them on risk-adjusted momentum, holds the top five that are in an uptrend, and weights them for the highest expected Sharpe ratio, with no stock above 25%. When the mix gets too volatile it holds part in cash. Rebuilt from the closing prices after every US session.</p>
+
+  <div class="tiles" id="kpi"></div>
+
+  <section aria-labelledby="nowH">
+    <h2 id="nowH">What it holds now</h2>
+    <p class="sub" id="nowSub"></p>
+    <div class="two">
+      <div class="panel tw" id="hold"></div>
+      <div class="panel" id="next"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="perfH">
+    <h2 id="perfH">Growth of $100</h2>
+    <p class="sub">The portfolio after trading costs against the same rules without the volatility control, an equal-weight basket of every dashboard stock, and the S&amp;P 500 (SPY). Pick a range to restart every line at $100 there; drag to pan, hover to read.</p>
+    <div class="panel">
+      <div class="ctl">
+        <div class="cg"><span class="cgl">Range</span><div class="seg" id="rng"></div></div>
+        <div class="cg"><span class="cgl">Lines</span><div class="seg" id="lns"></div></div>
+      </div>
+      <div class="readout" id="ro1"></div>
+      <div class="chart" id="perf" role="img" aria-label="Growth of 100 dollars, portfolio versus benchmarks"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="ddH">
+    <h2 id="ddH">Drawdown</h2>
+    <p class="sub">How far each line sits below its own previous high, over the same range. The red area is the portfolio; the marker shows its deepest point in the range.</p>
+    <div class="panel">
+      <div class="readout" id="ro2"></div>
+      <div class="chart dd" id="ddc" role="img" aria-label="Drawdown from previous high"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="mddH">
+    <h2 id="mddH">Max drawdown: the record and the risk ahead</h2>
+    <p class="sub" id="mddSub"></p>
+    <div class="tiles" id="mddK"></div>
+    <div class="panel view" id="view" style="margin-top:16px"></div>
+    <h3 style="margin-top:22px">The five deepest drawdowns</h3>
+    <div class="panel tw" id="eps"></div>
+  </section>
+
+  <section aria-labelledby="wtH">
+    <h2 id="wtH">How the weights moved</h2>
+    <p class="sub">Target weight of each stock at every weekly rebalance, with cash on top. Hover a week to see the mix.</p>
+    <div class="panel"><div id="wts"></div><div class="wleg" id="wleg" style="margin-top:10px"></div></div>
+  </section>
+
+  <section aria-labelledby="scH">
+    <h2 id="scH">Momentum ranking at the latest close</h2>
+    <p class="sub">Every dashboard stock scored on the same rule. A stock qualifies only if it closes above its 100-day average with a positive score; the top five that qualify are the candidates for Friday's rebalance.</p>
+    <div class="panel tw" id="scores"></div>
+  </section>
+
+  <section aria-labelledby="mtH">
+    <h2 id="mtH">How it works</h2>
+    <div class="panel"><ul class="rules" id="rules"></ul></div>
+  </section>
+
+  <footer class="pg" id="foot"></footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<script src="../assets/momentum.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>
