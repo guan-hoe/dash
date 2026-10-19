@@ -1,0 +1,67 @@
+{
+ "ticker": "ZS",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q4 FY2026 (July quarter)",
+  "zh": "2026 财年第四季（7 月季度）"
+ },
+ "reported": "2026-09-03",
+ "timing": "amc",
+ "pre_close": 177.8,
+ "react": {
+  "date": "2026-09-04",
+  "close": 169.8,
+  "pct": -4.5
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 207.38,
+  "pct": 16.6
+ },
+ "review": {
+  "en": [
+   "Revenue rose 25% to $898M, $21M above consensus, non-GAAP EPS of $1.19 beat $1.09, ARR grew 25% to $3.77B and operating margin hit a record 24.3%. The Q1 guide also beat, and fiscal 2027 ARR growth is guided to 16.6–17.4%. CEO Jay Chaudhry argued that AI agents make zero-trust security essential. CFO Kevin Rubin said the change in sales leadership, after two senior sales leaders left last quarter, will play out in the first half and is built into the guide.",
+   "The stock rose 2.9% into the report and about 5% after hours, then reversed to close 4.5% lower next day and fell to $161.94 by Sep 8, as the sales transition and slower growth ahead weighed on a name that had its worst day ever after the prior quarter. The turn came on Sep 14: AI-safety warnings from Anthropic's Dario Amodei and OpenAI's Sam Altman pushed money into security software and ZS jumped 16.5%. It has kept climbing since."
+  ],
+  "zh": [
+   "营收增长 25% 至 8.98 亿美元，高于预期 2,100 万美元；非 GAAP 每股收益 1.19 美元高于 1.09 美元；ARR 增长 25% 至 37.7 亿美元，营业利润率创纪录达 24.3%。第一季指引同样超预期，2027 财年 ARR 增长指引 16.6–17.4%。CEO 杰伊·乔杜里认为 AI 智能体让零信任安全成为必需。CFO 凯文·鲁宾表示，上季两名资深销售主管离职后的销售团队调整将在上半财年体现，已计入指引。",
+   "财报前股价上涨 2.9%，盘后一度涨约 5%，次日却收跌 4.5%，9 月 8 日跌至 161.94 美元：销售团队调整和增速放缓压制股价，而上一季财报后该股已录得史上最大单日跌幅。转折出现在 9 月 14 日：Anthropic 的达里奥·阿莫代伊与 OpenAI 的萨姆·奥尔特曼发出 AI 安全警告，资金涌入安全软件，ZS 大涨 16.5%，此后持续走高。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Jay Chaudhry",
+   "zh": "杰伊·乔杜里"
+  },
+  "since": "2007",
+  "bio": {
+   "en": "Serial founder who built four security companies, including CipherTrust and AirDefense, before founding Zscaler in 2007. Remains chairman, CEO and largest shareholder; his pitch is zero-trust security for users, workloads and now AI agents.",
+   "zh": "连续创业者，在 2007 年创立 Zscaler 之前已创办四家安全公司，包括 CipherTrust 和 AirDefense。现任董事长兼 CEO 及最大股东，主张为用户、工作负载以及 AI 智能体提供零信任安全。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Kevin Rubin",
+   "zh": "凯文·鲁宾"
+  },
+  "since": "2025",
+  "bio": {
+   "en": "CFO since May 2025, succeeding Remo Canessa. Previously CFO of coaching platform BetterUp and of Alteryx, which he took public and grew to $1B of ARR, and earlier CFO of MSC Software.",
+   "zh": "2025 年 5 月接替雷莫·卡内萨出任 CFO。此前任教练平台 BetterUp 和 Alteryx 的 CFO，曾带领 Alteryx 上市并将 ARR 做到 10 亿美元，更早任 MSC Software CFO。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q4 FY26 results (CNBC)",
+   "u": "https://cnbc.com/2026/09/03/zscaler-zs-q4-earnings-2026.html"
+  },
+  {
+   "t": "Sales transition read",
+   "u": "https://edgen.tech/news/post/zscaler-falls-45-as-sales-transition-clouds-record-q4-results"
+  },
+  {
+   "t": "Sep 14 rally (TIKR)",
+   "u": "https://tikr.com/blog/zscaler-stock-jumped-17-in-a-day-was-the-move-earned"
+  }
+ ]
+}

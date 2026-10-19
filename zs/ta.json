@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 207.38,
+ "bias": {
+  "en": "Uptrend pulling back · MACD and SAR turned down",
+  "zh": "上升趋势回调 · MACD 与 SAR 转空"
+ },
+ "read": [
+  {
+   "en": "Zscaler fell 5.9% on Oct 16 to $207.38, reversing from a high of $225.99 to a low of $203.33. It is below its rising 5-day ($220.6) and 10-day ($218.1) averages and above the 30-day ($200.4), 100-day ($166.3) and 200-day ($165.8, edging lower). MACD crossed below its signal on Oct 16 and is above zero, Parabolic SAR flipped bearish on Oct 16 ($237.22), and RSI is 51.",
+   "zh": "Zscaler 10月16日下跌 5.9%，收于 $207.38，盘中自高点 $225.99 回落至低点 $203.33。股价位于上行的 5 日（$220.6）和 10 日均线（$218.1）下方，位于 30 日（$200.4）、100 日（$166.3）和 200 日均线（$165.8，略有下行）上方。MACD 于 10月16日下穿信号线，仍在零轴之上，抛物线 SAR 于 10月16日转为看空（$237.22），RSI 为 51。"
+  },
+  {
+   "en": "The $217 and $212 supports both broke on the close and are now resistance; the day's low also undercut the former $206 SAR before the close recovered. Resistance is $212, then $218–221 (10 and 5-day averages) and $237 (Oct 12 high, SAR). Support is $203.3 (Oct 16 low), then $200.4 (30-day average) and $187.7 (Sep 28 low). A close below $200 would open $187.7.",
+   "zh": "$217 和 $212 支撑均于收盘失守，现转为阻力；当日低点一度跌破此前 $206 的 SAR，随后收盘回升。阻力为 $212，其次 $218–221（10 日和 5 日均线）和 $237（10月12日高点、SAR）。支撑为 $203.3（10月16日低点），其次 $200.4（30 日均线）和 $187.7（9月28日低点）。若收盘跌破 $200，下一目标看 $187.7。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    212.1,
+    {
+     "en": "Oct 15 low, now resistance",
+     "zh": "10月15日低点，现为阻力"
+    }
+   ],
+   [
+    219,
+    {
+     "en": "10 and 5-day averages ($218.1–220.6); former $217 support",
+     "zh": "10日和5日均线（$218.1–220.6）；原 $217 支撑"
+    }
+   ],
+   [
+    237.2,
+    {
+     "en": "Oct 12 high and Parabolic SAR",
+     "zh": "10月12日高点及抛物线 SAR"
+    }
+   ]
+  ],
+  "s": [
+   [
+    203.3,
+    {
+     "en": "Oct 16 low",
+     "zh": "10月16日低点"
+    }
+   ],
+   [
+    200.4,
+    {
+     "en": "30-day average",
+     "zh": "30日均线"
+    }
+   ],
+   [
+    187.7,
+    {
+     "en": "Sep 28 low",
+     "zh": "9月28日低点"
+    }
+   ]
+  ]
+ }
+}

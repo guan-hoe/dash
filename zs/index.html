@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zscaler ZS Dashboard</title>
+<meta name="description" content="Zscaler (NASDAQ: ZS) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: ZS</span>
+  <span class="bar-px" id="barPx">$233.73</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Zscaler, Inc. · Common stock · San Jose, California</div>
+      <h1 data-ih="title">Zero trust security, <em>now selling to AI</em>.</h1>
+      <p data-i="lede" class="lede">Zscaler sells cloud security that sits between users and apps. Revenue grew 25% to $898M last quarter (20% without the Red Canary acquisition), organic net new ARR accelerated to 17%, and AI security bookings jumped 50%. Free cash flow margin slipped to 23% as it built more data center capacity.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$233.73</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$37.8B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$115–337</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E</span></div><div class="v">~48×</div><div class="s"><span data-i="s_val">FY27 guide EPS $4.86–4.90 (non-GAAP)</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q1 FY27 guide</span></div><div class="v">$937M</div><div class="s"><span data-i="s_an">±$2M · ~19% growth · EPS $1.15–1.16</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Late Nov</div><div class="s"><span data-i="s_er">Q1 FY27 · date not yet announced</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. The stock ranged from about $115 to $337 over the past year.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="ZS daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">0.94</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Zscaler's fiscal year ends July 31. GAAP operating margin is still slightly negative because of stock compensation; non-GAAP operating margin was a record 24%. The last bar is guidance at the midpoint.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q4 FY26</span></div><div class="v">$898M</div><div class="s"><span data-i="sc0">+25% YoY · +20% organic</span></div></div><div class="cell"><div class="k"><span data-i="kc1">ARR</span></div><div class="v">$3.77B</div><div class="s"><span data-i="sc1">+25% · $3.63B excl. Red Canary</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Net new ARR</span></div><div class="v">$246M</div><div class="s"><span data-i="sc2">organic growth 17%, up from 7% in FY25</span></div></div><div class="cell"><div class="k"><span data-i="kc3">FY26 FCF margin</span></div><div class="v">23%</div><div class="s"><span data-i="sc3">27% in FY25 · FY27 guide 23–23.5%</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">AI security</h3><p data-i="w0p">Bookings for Security for AI and agentic security products rose about 50%, and organic net new ARR growth accelerated to 17%.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w1h">Slower ARR guide</h3><p data-i="w1p">FY27 ARR is guided to grow 16.6–17.4%, below the 25% just reported, partly because of a sales leadership transition.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Capex jump</h3><p data-i="w2p">Capex and capitalized software were $218.5M in Q4, up from $78.7M, cutting quarterly free cash flow to $60.8M.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w3h">Valuation and volatility</h3><p data-i="w3p">About 48× next year's non-GAAP earnings; the stock moved 8% in a day on Oct 9.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="ZS" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Late Nov 2026</div><h3 data-i="c0h">Q1 FY27 earnings</h3><p data-i="c0p">Guide: revenue $935–939M, operating income $215–217M, EPS $1.15–1.16.</p></div></div><div class="item"><div><div class="date">Late Feb 2027</div><h3 data-i="c1h">Q2 FY27 earnings</h3><p data-i="c1p">Date not yet announced.</p></div></div><div class="item"><div><div class="date">Jul 31, 2027</div><h3 data-i="c2h">FY27 ends</h3><p data-i="c2p">Guide: ARR $4.40–4.43B, revenue $3.91–3.94B, FCF margin 23–23.5%.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://stocktitan.net/news/ZS/zscaler-announces-strong-fourth-quarter-and-fiscal-2026-financial-tlojnwbor1z4.html" target="_blank" rel="noopener">Q4 FY26 release (Stock Titan)</a></li><li><a href="https://finance.biggo.com/news/US_ZS_2026-09-03" target="_blank" rel="noopener">Q4 FY26 call: AI bookings, guidance</a></li><li><a href="https://proactiveinvestors.com/companies/news/1098127/zscaler-shares-fall-despite-earnings-beat-as-free-cash-flow-slides-1098127.html" target="_blank" rel="noopener">Q4 FY26 free cash flow</a></li><li><a href="https://moomoo.com/news/notice/308079684/zscaler-10-k-fy2026-annual-report" target="_blank" rel="noopener">FY26 10-K: cash</a></li><li><a href="https://stockanalysis.com/stocks/zs/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://finance.yahoo.com/quote/ZS" target="_blank" rel="noopener">Price, market cap and beta: Financial Modeling Prep, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Zscaler, Inc..</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "zs", SHARES = 161710000.0, TV = "NASDAQ:ZS";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q1 FY22", "Oct 2021", 230.52, 77.51, -32.26, -0.65], ["Q2 FY22", "Jan 2022", 255.56, 77.5, -32.84, -0.71], ["Q3 FY22", "Apr 2022", 286.81, 77.87, -30.19, -0.72], ["Q4 FY22", "Jul 2022", 318.06, 78.61, -25.73, -0.69], ["Q1 FY23", "Oct 2022", 355.55, 78.49, -19.43, -0.48], ["Q2 FY23", "Jan 2023", 387.6, 77.45, -16.83, -0.4], ["Q3 FY23", "Apr 2023", 418.8, 77.18, -12.05, -0.32], ["Q4 FY23", "Jul 2023", 455.01, 77.53, -9.51, -0.21], ["Q1 FY24", "Oct 2023", 496.7, 77.65, -9.27, -0.23], ["Q2 FY24", "Jan 2024", 525, 77.75, -8.66, -0.19], ["Q3 FY24", "Apr 2024", 553.2, 78.73, -0.55, 0.12], ["Q4 FY24", "Jul 2024", 592.87, 78.12, -4.55, -0.1], ["Q1 FY25", "Oct 2024", 627.96, 77.56, -4.88, -0.08], ["Q2 FY25", "Jan 2025", 647.9, 77.15, -6.19, -0.05], ["Q3 FY25", "Apr 2025", 678.03, 77.1, -3.75, -0.03], ["Q4 FY25", "Jul 2025", 719.23, 76.23, -3.62, -0.11], ["Q1 FY26", "Oct 2025", 788.11, 76.66, -3.88, -0.07], ["Q2 FY26", "Jan 2026", 815.75, 76.57, -6.2, -0.21], ["Q3 FY26", "Apr 2026", 850.48, 77.39, -3.28, -0.09], ["Q4 FY26", "Jul 2026", 898.19, 76.84, -1.01, -0.03]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q1 FY27e", 937, "Oct 2026 \u00b7 guidance midpoint", "2026\u5e7410\u6708 \u00b7 \u6307\u5f15\u4e2d\u503c"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "FY26 Q4", "sc0": "同比 +25% · 有机 +20%", "kc1": "年度经常性收入", "sc1": "+25% · 不含 Red Canary 为 36.3 亿", "kc2": "新增 ARR", "sc2": "有机增长 17%，FY25 为 7%", "kc3": "FY26 自由现金流率", "sc3": "FY25 为 27% · FY27 指引 23–23.5%", "w0h": "AI 安全", "w0p": "AI 安全与智能体安全产品订单增约 50%，有机新增 ARR 增速加快至 17%。", "w1h": "ARR 指引放缓", "w1p": "FY27 ARR 指引增长 16.6–17.4%，低于刚公布的 25%，部分因销售领导层交接。", "w2h": "资本开支跳升", "w2p": "第四季资本开支与资本化软件达 2.185 亿美元（去年 7870 万），季度自由现金流降至 6080 万。", "w3h": "估值与波动", "w3p": "约为明年非GAAP盈利的 48 倍；10月9日单日波动 8%。", "c0h": "FY27 第一季财报", "c0p": "指引：营收 9.35–9.39 亿美元，营业利润 2.15–2.17 亿，每股 $1.15–1.16。", "c1h": "FY27 第二季财报", "c1p": "日期未公布。", "c2h": "FY27 结束", "c2p": "指引：ARR 44.0–44.3 亿美元，营收 39.1–39.4 亿，自由现金流率 23–23.5%。", "eyebrow": "Zscaler · 普通股 · 加州圣何塞", "title": "零信任安全，<em>开始卖给 AI</em>。", "lede": "Zscaler 提供介于用户与应用之间的云安全服务。上季营收增 25% 至 8.98 亿美元（不含收购的 Red Canary 为 20%），有机新增 ARR 增速加快至 17%，AI 安全订单大增 50%。因扩建数据中心，自由现金流利润率降至 23%。", "k_val": "市盈率", "s_val": "FY27 指引每股 $4.86–4.90（非GAAP）", "k_an": "FY27 Q1 指引", "s_an": "±200 万 · 增约 19% · 每股 $1.15–1.16", "s_er": "FY27 第一季 · 日期未公布", "sub_price": "每日收盘价与50日均线。过去一年股价在约 $115 至 $337 间。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。Zscaler 财年截至7月31日。因股权激励，GAAP 营业利润率仍略为负；非GAAP营业利润率创纪录达 24%。最后一根柱为指引中值。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Zscaler, Inc. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>
