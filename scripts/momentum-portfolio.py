@@ -7,7 +7,8 @@ Rules (walk-forward, no look-ahead):
     risk-adjusted momentum: the average of its 6-month and 3-month returns,
     both skipping the latest week, divided by its 3-month volatility.
   * Eligible: at least 131 sessions of history, close above its 100-day
-    average and a positive score (an absolute-momentum filter).
+    average, a positive risk-adjusted score, AND a positive normalized MACD 
+    histogram score (an advanced absolute-momentum filter).
   * Holds the top 5 eligible stocks, weighted for the highest expected Sharpe
     ratio with every weight between 0% and 25%. Expected returns are the
     stocks' annualised momentum shrunk halfway to the group average; risk is
@@ -42,7 +43,8 @@ STOCKS = [  # folder, ticker, name
 
 N_HOLD, CAP, STEP = 5, 0.25, 0.025
 L6, L3, SKIP, VOLW, COVW, SMA = 126, 63, 5, 63, 126, 100
-MIN_HIST = L6 + SKIP
+FAST_EMA, SLOW_EMA, SIGNAL_EMA = 12, 26, 9
+MIN_HIST = max(L6 + SKIP, SLOW_EMA + SIGNAL_EMA + 10) # Safe buffer for EMA stabilization
 COST = 0.0010          # per unit of value traded
 CASH_RATE = 0.039      # annual, ~3-month T-bill; also the Sharpe hurdle
 SHRINK_MU, SHRINK_COV = 0.5, 0.3
@@ -62,6 +64,16 @@ def load(path):
 def stdev(x):
     m = sum(x) / len(x)
     return math.sqrt(sum((v - m) ** 2 for v in x) / (len(x) - 1))
+
+
+def ema_series(prices, span):
+    """Calculates the full Exponential Moving Average series for a given window span."""
+    alpha = 2 / (span + 1)
+    ema = [prices[0]]
+    for p in prices[1:]:
+        val = p if p is not None else ema[-1]
+        ema.append(val * alpha + ema[-1] * (1 - alpha))
+    return ema
 
 
 def grid(n, units, cap_units):
@@ -104,12 +116,11 @@ def main():
         if h:
             px[tk], names[tk] = h, (folder, name)
     dates = sorted(set().union(*[set(v) for v in px.values()]))
-    # calendar = sessions where most stocks traded (drops stray foreign-holiday rows)
     cnt = {d: sum(d in v for v in px.values()) for d in dates}
     dates = [d for d in dates if cnt[d] >= len(px) * 0.5]
     T = len(dates)
     C = {tk: [v.get(d) for d in dates] for tk, v in px.items()}
-    for tk in C:  # forward-fill gaps after a stock's first price
+    for tk in C:
         s, last = C[tk], None
         for i in range(T):
             if s[i] is None:
@@ -133,16 +144,38 @@ def main():
             s = C[tk]
             if t - first[tk] < MIN_HIST or s[t] is None:
                 continue
+                
+            # --- Risk-Adjusted Momentum Core Score ---
             m6 = s[t - SKIP] / s[t - SKIP - L6] - 1
             m3 = s[t - SKIP] / s[t - SKIP - L3] - 1
             rr = [R[tk][k] for k in range(t - VOLW + 1, t + 1) if R[tk][k] is not None]
             vol = stdev(rr) * math.sqrt(252)
             sma = sum(s[t - SMA + 1:t + 1]) / SMA
             sc = (0.5 * m6 + 0.5 * m3) / vol if vol > 0 else 0
+            
+            # --- MACD Score Engine (Walk-Forward Isolation) ---
+            hist_prices = s[first[tk]:t + 1]
+            fast_ema = ema_series(hist_prices, FAST_EMA)
+            slow_ema = ema_series(hist_prices, SLOW_EMA)
+            
+            macd_line = [f - sl for f, sl in zip(fast_ema, slow_ema)]
+            signal_line = ema_series(macd_line, SIGNAL_EMA)
+            
+            # Extract current session values and convert to standard normalized percentage (PPO format)
+            macd_hist = macd_line[-1] - signal_line[-1]
+            macd_score = (macd_hist / s[t]) * 100 
+            
             mu = 0.5 * math.log(1 + m6) * 252 / L6 + 0.5 * math.log(1 + m3) * 252 / L3
-            rows.append({"tk": tk, "score": sc, "m6": m6, "m3": m3, "vol": vol, "mu": mu,
-                         "above": s[t] > sma, "sma": sma, "close": s[t],
-                         "ok": s[t] > sma and sc > 0})
+            
+            # Absolute momentum filter requires: Above 100 SMA AND Positive Momentum Score AND Positive MACD Histogram
+            is_eligible = s[t] > sma and sc > 0 and macd_score > 0
+            
+            rows.append({
+                "tk": tk, "score": sc, "macd_score": macd_score, "m6": m6, "m3": m3, 
+                "vol": vol, "mu": mu, "above": s[t] > sma, "sma": sma, "close": s[t],
+                "ok": is_eligible
+            })
+            
         rows.sort(key=lambda r: -r["score"])
         for i, r in enumerate(rows):
             r["rank"] = i + 1
@@ -170,14 +203,12 @@ def main():
     cfg = {'vt': VOL_TARGET}
 
     def scale(t, tw):
-        """Volatility target: if the mix's recent volatility is above VOL_TARGET,
-        hold proportionally less of every stock and the rest in cash."""
         if cfg['vt'] <= 0 or not tw:
             return tw
         pr = [sum(v * (R[k][i] or 0) for k, v in tw.items()) for i in range(t - VT_WIN + 1, t + 1)]
         fv = stdev(pr) * math.sqrt(252)
         f = min(1.0, cfg['vt'] / fv) if fv > 0 else 1.0
-        f = math.floor(f * 20) / 20  # 5% steps to avoid churning on noise
+        f = math.floor(f * 20) / 20
         return {k: v * f for k, v in tw.items()}
 
     start = max(MIN_HIST, SMA, COVW) + 1
