@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 221.31,
+ "bias": {
+  "en": "Bearish · lost $230, sitting on the 200-day",
+  "zh": "偏空 · 失守 $230，回踩 200 日均线"
+ },
+ "read": [
+  {
+   "en": "Bloom Energy fell 6.3% on Oct 16 to $221.31 and is down 21% in five sessions. It is below its 5-day ($244.5), 10-day ($265.0), 30-day ($269.8) and falling 100-day ($251.8) averages and just above the rising 200-day ($216.3). MACD has been below its signal since Oct 8 and is now below zero, Parabolic SAR has been bearish since Oct 8 ($283.6), and RSI is 36.5.",
+   "zh": "Bloom Energy 10月16日下跌 6.3%，收于 $221.31，五个交易日累计下跌 21%。股价位于 5 日（$244.5）、10 日（$265.0）、30 日（$269.8）和下行的 100 日均线（$251.8）下方，略高于上行的 200 日均线（$216.3）。MACD 自 10月8日起位于信号线下方，现已跌破零轴，抛物线 SAR 自 10月8日起看空（$283.6），RSI 为 36.5。"
+  },
+  {
+   "en": "The $230 June pivot broke on the close and is now resistance; the day's low of $219.17 held above the 200-day average and the Oct 15 low ($215.1). Above $230 are $244.5 (5-day) and $252 (100-day). Support is $215–216, then $197.5 (Sep 1 low) and $186 (Aug 24 low). A close below $215 would open $197.5; a close back above $230 would target $244.5.",
+   "zh": "$230 的 6月转折点收盘失守，转为阻力；当日低点 $219.17 守在 200 日均线和 10月15日低点（$215.1）之上。$230 上方为 $244.5（5 日均线）和 $252（100 日均线）。支撑为 $215–216，其次 $197.5（9月1日低点）和 $186（8月24日低点）。若收盘跌破 $215，下一目标看 $197.5；若重新站上 $230，目标看 $244.5。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    230,
+    {
+     "en": "June pivot ($230.6), now resistance",
+     "zh": "6月转折点（$230.6），转为阻力"
+    }
+   ],
+   [
+    244.5,
+    {
+     "en": "5-day average",
+     "zh": "5日均线"
+    }
+   ],
+   [
+    252,
+    {
+     "en": "100-day average; Oct 13 low $248.4",
+     "zh": "100日均线；10月13日低点 $248.4"
+    }
+   ]
+  ],
+  "s": [
+   [
+    215.5,
+    {
+     "en": "200-day average $216.3; Oct 15 low $215.1",
+     "zh": "200日均线 $216.3；10月15日低点 $215.1"
+    }
+   ],
+   [
+    197.5,
+    {
+     "en": "Sep 1 low",
+     "zh": "9月1日低点"
+    }
+   ],
+   [
+    186,
+    {
+     "en": "Aug 24 low",
+     "zh": "8月24日低点"
+    }
+   ]
+  ]
+ }
+}

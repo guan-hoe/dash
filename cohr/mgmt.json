@@ -1,0 +1,63 @@
+{
+ "ticker": "COHR",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q4 FY2026 (June quarter)",
+  "zh": "2026 财年第四季（6 月季度）"
+ },
+ "reported": "2026-08-12",
+ "timing": "amc",
+ "pre_close": 355.64,
+ "react": {
+  "date": "2026-08-13",
+  "close": 327.23,
+  "pct": -8.0
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 232.9,
+  "pct": -34.5
+ },
+ "review": {
+  "en": [
+   "Record revenue of $2.05B (+34%) beat the ~$1.98B forecast and non-GAAP EPS of $1.74 beat comfortably; gross margin rose to 40.2%. Fiscal 2026 revenue reached $7.12B with EPS up 59%, and debt leverage fell to 0.7x from 2x. CEO Jim Anderson said AI data-center demand remains robust and gave an upbeat outlook. CFO Sherri Luther said operating expenses are already below the 18%-of-sales target, so more of the growth should reach the bottom line.",
+   "The stock rose 8.2% on report day after a sharp run-up, slipped 3% after hours and fell 8.0% the next session: the margin beat was small while lower-margin transceivers are ramping fast, and investors wanted more. It kept falling with optical stocks to $275 on Aug 24, 23% below the report-day close, and despite a partial rebound it still sits about 12% below that level."
+  ],
+  "zh": [
+   "营收创纪录达 20.5 亿美元（+34%），高于约 19.8 亿美元的预期，非 GAAP 每股收益 1.74 美元明显超预期；毛利率升至 40.2%。2026 财年营收 71.2 亿美元，每股收益增长 59%，杠杆率由 2 倍降至 0.7 倍。CEO 吉姆·安德森表示AI 数据中心需求依然强劲，并给出乐观展望。CFO 雪莉·卢瑟表示营运开支已低于营收 18% 的目标，增长将更多转化为利润。",
+   "财报前股价已急升，当天再涨 8.2%，盘后回落 3%，次日下跌 8.0%：毛利率仅小幅超预期，而低毛利光模块正快速放量，市场期望更高。此后随光通信股续跌，8 月 24 日跌至 275 美元，较财报日收盘低 23%；虽有部分反弹，目前仍低约 12%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Jim Anderson",
+   "zh": "吉姆·安德森"
+  },
+  "since": "2024",
+  "bio": {
+   "en": "CEO since June 2024 after six years as CEO of Lattice Semiconductor, where margins and the stock rose sharply. Earlier ran AMD's computing and graphics business and held roles at Intel and Broadcom. Is refocusing Coherent on AI data-center optics and paying down debt.",
+   "zh": "2024 年 6 月出任 CEO，此前任莱迪思半导体 CEO 六年，期间利润率与股价大幅提升。更早曾执掌 AMD 计算与图形业务，并在英特尔和博通任职。正将 Coherent 重心转向 AI 数据中心光器件并削减债务。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Sherri Luther",
+   "zh": "雪莉·卢瑟"
+  },
+  "since": "2024",
+  "bio": {
+   "en": "Rejoined Coherent as CFO in 2024 from Lattice Semiconductor, where she had been CFO since 2019 alongside Anderson. Before that she spent 16 years at Coherent Inc., including as corporate VP of finance.",
+   "zh": "2024 年从莱迪思半导体重返 Coherent 任 CFO，她自 2019 年起在莱迪思担任 CFO，与安德森共事。此前在 Coherent Inc. 工作 16 年，曾任财务副总裁。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q4 FY26 call transcript",
+   "u": "https://investing.com/news/transcripts/earnings-call-transcript-coherent-tops-revenue-forecast-in-q4-2026-stock-swings-93CH-4856322"
+  },
+  {
+   "t": "Analyst reaction (Investing.com)",
+   "u": "https://www.investing.com/news/stock-market-news/coherent-posts-a-blowout-q4-and-aggressive-guidance-yet-shares-take-a-5-haircut-4856014"
+  }
+ ]
+}

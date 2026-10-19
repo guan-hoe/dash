@@ -1,0 +1,669 @@
+{
+ "dir": "zs",
+ "ticker": "ZS",
+ "exchange": "NASDAQ",
+ "name": "Zscaler",
+ "shares": 161710000.0,
+ "beta": "0.94",
+ "snapshot": {
+  "price": "$233.73",
+  "date": "Oct 9, 2026",
+  "mcap": "$37.8B",
+  "range": "$115–337"
+ },
+ "eyebrow": {
+  "en": "Zscaler, Inc. · Common stock · San Jose, California",
+  "zh": "Zscaler · 普通股 · 加州圣何塞"
+ },
+ "title": {
+  "en": "Zero trust security, <em>now selling to AI</em>.",
+  "zh": "零信任安全，<em>开始卖给 AI</em>。"
+ },
+ "lede": {
+  "en": "Zscaler sells cloud security that sits between users and apps. Revenue grew 25% to $898M last quarter (20% without the Red Canary acquisition), organic net new ARR accelerated to 17%, and AI security bookings jumped 50%. Free cash flow margin slipped to 23% as it built more data center capacity.",
+  "zh": "Zscaler 提供介于用户与应用之间的云安全服务。上季营收增 25% 至 8.98 亿美元（不含收购的 Red Canary 为 20%），有机新增 ARR 增速加快至 17%，AI 安全订单大增 50%。因扩建数据中心，自由现金流利润率降至 23%。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E",
+   "zh": "市盈率"
+  },
+  "v": "~48×",
+  "s": {
+   "en": "FY27 guide EPS $4.86–4.90 (non-GAAP)",
+   "zh": "FY27 指引每股 $4.86–4.90（非GAAP）"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q1 FY27 guide",
+   "zh": "FY27 Q1 指引"
+  },
+  "v": "$937M",
+  "s": {
+   "en": "±$2M · ~19% growth · EPS $1.15–1.16",
+   "zh": "±200 万 · 增约 19% · 每股 $1.15–1.16"
+  }
+ },
+ "earnings": {
+  "v": "Late Nov",
+  "s": {
+   "en": "Q1 FY27 · date not yet announced",
+   "zh": "FY27 第一季 · 日期未公布"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. The stock ranged from about $115 to $337 over the past year.",
+  "zh": "每日收盘价与50日均线。过去一年股价在约 $115 至 $337 间。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Zscaler's fiscal year ends July 31. GAAP operating margin is still slightly negative because of stock compensation; non-GAAP operating margin was a record 24%. The last bar is guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。Zscaler 财年截至7月31日。因股权激励，GAAP 营业利润率仍略为负；非GAAP营业利润率创纪录达 24%。最后一根柱为指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q4 FY26",
+    "zh": "FY26 Q4"
+   },
+   "v": "$898M",
+   "s": {
+    "en": "+25% YoY · +20% organic",
+    "zh": "同比 +25% · 有机 +20%"
+   }
+  },
+  {
+   "k": {
+    "en": "ARR",
+    "zh": "年度经常性收入"
+   },
+   "v": "$3.77B",
+   "s": {
+    "en": "+25% · $3.63B excl. Red Canary",
+    "zh": "+25% · 不含 Red Canary 为 36.3 亿"
+   }
+  },
+  {
+   "k": {
+    "en": "Net new ARR",
+    "zh": "新增 ARR"
+   },
+   "v": "$246M",
+   "s": {
+    "en": "organic growth 17%, up from 7% in FY25",
+    "zh": "有机增长 17%，FY25 为 7%"
+   }
+  },
+  {
+   "k": {
+    "en": "FY26 FCF margin",
+    "zh": "FY26 自由现金流率"
+   },
+   "v": "23%",
+   "s": {
+    "en": "27% in FY25 · FY27 guide 23–23.5%",
+    "zh": "FY25 为 27% · FY27 指引 23–23.5%"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "AI security",
+    "zh": "AI 安全"
+   },
+   "p": {
+    "en": "Bookings for Security for AI and agentic security products rose about 50%, and organic net new ARR growth accelerated to 17%.",
+    "zh": "AI 安全与智能体安全产品订单增约 50%，有机新增 ARR 增速加快至 17%。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Slower ARR guide",
+    "zh": "ARR 指引放缓"
+   },
+   "p": {
+    "en": "FY27 ARR is guided to grow 16.6–17.4%, below the 25% just reported, partly because of a sales leadership transition.",
+    "zh": "FY27 ARR 指引增长 16.6–17.4%，低于刚公布的 25%，部分因销售领导层交接。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Capex jump",
+    "zh": "资本开支跳升"
+   },
+   "p": {
+    "en": "Capex and capitalized software were $218.5M in Q4, up from $78.7M, cutting quarterly free cash flow to $60.8M.",
+    "zh": "第四季资本开支与资本化软件达 2.185 亿美元（去年 7870 万），季度自由现金流降至 6080 万。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Valuation and volatility",
+    "zh": "估值与波动"
+   },
+   "p": {
+    "en": "About 48× next year's non-GAAP earnings; the stock moved 8% in a day on Oct 9.",
+    "zh": "约为明年非GAAP盈利的 48 倍；10月9日单日波动 8%。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Late Nov 2026",
+   "h": {
+    "en": "Q1 FY27 earnings",
+    "zh": "FY27 第一季财报"
+   },
+   "p": {
+    "en": "Guide: revenue $935–939M, operating income $215–217M, EPS $1.15–1.16.",
+    "zh": "指引：营收 9.35–9.39 亿美元，营业利润 2.15–2.17 亿，每股 $1.15–1.16。"
+   }
+  },
+  {
+   "date": "Late Feb 2027",
+   "h": {
+    "en": "Q2 FY27 earnings",
+    "zh": "FY27 第二季财报"
+   },
+   "p": {
+    "en": "Date not yet announced.",
+    "zh": "日期未公布。"
+   }
+  },
+  {
+   "date": "Jul 31, 2027",
+   "h": {
+    "en": "FY27 ends",
+    "zh": "FY27 结束"
+   },
+   "p": {
+    "en": "Guide: ARR $4.40–4.43B, revenue $3.91–3.94B, FCF margin 23–23.5%.",
+    "zh": "指引：ARR 44.0–44.3 亿美元，营收 39.1–39.4 亿，自由现金流率 23–23.5%。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q4 FY26 release (Stock Titan)",
+   "https://stocktitan.net/news/ZS/zscaler-announces-strong-fourth-quarter-and-fiscal-2026-financial-tlojnwbor1z4.html"
+  ],
+  [
+   "Q4 FY26 call: AI bookings, guidance",
+   "https://finance.biggo.com/news/US_ZS_2026-09-03"
+  ],
+  [
+   "Q4 FY26 free cash flow",
+   "https://proactiveinvestors.com/companies/news/1098127/zscaler-shares-fall-despite-earnings-beat-as-free-cash-flow-slides-1098127.html"
+  ],
+  [
+   "FY26 10-K: cash",
+   "https://moomoo.com/news/notice/308079684/zscaler-10-k-fy2026-annual-report"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/zs/financials/?p=quarterly"
+  ],
+  [
+   "Price, market cap and beta: Financial Modeling Prep, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/ZS"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Zscaler, Inc..",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Zscaler, Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q1 FY22",
+   "Oct 2021",
+   230.52,
+   77.51,
+   -32.26,
+   -0.65
+  ],
+  [
+   "Q2 FY22",
+   "Jan 2022",
+   255.56,
+   77.5,
+   -32.84,
+   -0.71
+  ],
+  [
+   "Q3 FY22",
+   "Apr 2022",
+   286.81,
+   77.87,
+   -30.19,
+   -0.72
+  ],
+  [
+   "Q4 FY22",
+   "Jul 2022",
+   318.06,
+   78.61,
+   -25.73,
+   -0.69
+  ],
+  [
+   "Q1 FY23",
+   "Oct 2022",
+   355.55,
+   78.49,
+   -19.43,
+   -0.48
+  ],
+  [
+   "Q2 FY23",
+   "Jan 2023",
+   387.6,
+   77.45,
+   -16.83,
+   -0.4
+  ],
+  [
+   "Q3 FY23",
+   "Apr 2023",
+   418.8,
+   77.18,
+   -12.05,
+   -0.32
+  ],
+  [
+   "Q4 FY23",
+   "Jul 2023",
+   455.01,
+   77.53,
+   -9.51,
+   -0.21
+  ],
+  [
+   "Q1 FY24",
+   "Oct 2023",
+   496.7,
+   77.65,
+   -9.27,
+   -0.23
+  ],
+  [
+   "Q2 FY24",
+   "Jan 2024",
+   525,
+   77.75,
+   -8.66,
+   -0.19
+  ],
+  [
+   "Q3 FY24",
+   "Apr 2024",
+   553.2,
+   78.73,
+   -0.55,
+   0.12
+  ],
+  [
+   "Q4 FY24",
+   "Jul 2024",
+   592.87,
+   78.12,
+   -4.55,
+   -0.1
+  ],
+  [
+   "Q1 FY25",
+   "Oct 2024",
+   627.96,
+   77.56,
+   -4.88,
+   -0.08
+  ],
+  [
+   "Q2 FY25",
+   "Jan 2025",
+   647.9,
+   77.15,
+   -6.19,
+   -0.05
+  ],
+  [
+   "Q3 FY25",
+   "Apr 2025",
+   678.03,
+   77.1,
+   -3.75,
+   -0.03
+  ],
+  [
+   "Q4 FY25",
+   "Jul 2025",
+   719.23,
+   76.23,
+   -3.62,
+   -0.11
+  ],
+  [
+   "Q1 FY26",
+   "Oct 2025",
+   788.11,
+   76.66,
+   -3.88,
+   -0.07
+  ],
+  [
+   "Q2 FY26",
+   "Jan 2026",
+   815.75,
+   76.57,
+   -6.2,
+   -0.21
+  ],
+  [
+   "Q3 FY26",
+   "Apr 2026",
+   850.48,
+   77.39,
+   -3.28,
+   -0.09
+  ],
+  [
+   "Q4 FY26",
+   "Jul 2026",
+   898.19,
+   76.84,
+   -1.01,
+   -0.03
+  ]
+ ],
+ "guide": [
+  "Q1 FY27e",
+  937,
+  "Oct 2026 · guidance midpoint",
+  "2026年10月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q1 FY22 to Q4 FY26. Zscaler's fiscal year ends July 31. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY22 第一季至 FY26 第四季共 20 个季度。Zscaler 财年截至7月31日。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q1 FY22",
+    "Oct 2021",
+    93.27,
+    6.45,
+    86.82
+   ],
+   [
+    "Q2 FY22",
+    "Jan 2022",
+    48.26,
+    13.99,
+    34.27
+   ],
+   [
+    "Q3 FY22",
+    "Apr 2022",
+    77.24,
+    27.6,
+    49.64
+   ],
+   [
+    "Q4 FY22",
+    "Jul 2022",
+    103.14,
+    21.25,
+    81.89
+   ],
+   [
+    "Q1 FY23",
+    "Oct 2022",
+    128.46,
+    25.2,
+    103.26
+   ],
+   [
+    "Q2 FY23",
+    "Jan 2023",
+    89.48,
+    18.68,
+    70.8
+   ],
+   [
+    "Q3 FY23",
+    "Apr 2023",
+    108.47,
+    26.24,
+    82.23
+   ],
+   [
+    "Q4 FY23",
+    "Jul 2023",
+    135.94,
+    27.07,
+    108.87
+   ],
+   [
+    "Q1 FY24",
+    "Oct 2023",
+    260.81,
+    28.66,
+    232.15
+   ],
+   [
+    "Q2 FY24",
+    "Jan 2024",
+    142.07,
+    30.89,
+    111.18
+   ],
+   [
+    "Q3 FY24",
+    "Apr 2024",
+    173.41,
+    35.65,
+    137.76
+   ],
+   [
+    "Q4 FY24",
+    "Jul 2024",
+    203.56,
+    49.38,
+    154.17
+   ],
+   [
+    "Q1 FY25",
+    "Oct 2024",
+    331.34,
+    17.03,
+    314.31
+   ],
+   [
+    "Q2 FY25",
+    "Jan 2025",
+    179.43,
+    15.02,
+    164.42
+   ],
+   [
+    "Q3 FY25",
+    "Apr 2025",
+    211.08,
+    72.16,
+    138.92
+   ],
+   [
+    "Q4 FY25",
+    "Jul 2025",
+    250.6,
+    60.05,
+    190.56
+   ],
+   [
+    "Q1 FY26",
+    "Oct 2025",
+    448.28,
+    17.31,
+    430.97
+   ],
+   [
+    "Q2 FY26",
+    "Jan 2026",
+    204.07,
+    17.76,
+    186.32
+   ],
+   [
+    "Q3 FY26",
+    "Apr 2026",
+    198.02,
+    42.4,
+    155.62
+   ],
+   [
+    "Q4 FY26",
+    "Jul 2026",
+    279.29,
+    199.84,
+    79.45
+   ]
+  ],
+  "est": [
+   [
+    "Q1 FY27",
+    "Oct 2026",
+    500,
+    60,
+    440
+   ],
+   [
+    "Q2 FY27",
+    "Jan 2027",
+    260,
+    60,
+    200
+   ],
+   [
+    "Q3 FY27",
+    "Apr 2027",
+    250,
+    60,
+    190
+   ],
+   [
+    "Q4 FY27",
+    "Jul 2027",
+    300,
+    180,
+    120
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & ST investments",
+    "zh": "现金及短期投资"
+   },
+   "v": "$3.47B",
+   "s": {
+    "en": "Jul 31, 2026",
+    "zh": "2026年7月31日"
+   }
+  },
+  "read": [
+   {
+    "en": "Zscaler has generated cash in every one of the last 20 quarters, with a seasonal spike in the October quarter when annual bills are collected. FY26 free cash flow was $779M on the company's measure, but Q4 fell to $61M as capex tripled.",
+    "zh": "过去 20 个季度 Zscaler 每季都有正现金流，10月季度因收取年费而季节性走高。按公司口径 FY26 自由现金流 7.79 亿美元，但第四季因资本开支增至三倍降至 6100 万。"
+   },
+   {
+    "en": "Guidance points to a 23–23.5% free cash flow margin on about $3.92B of revenue in FY27, roughly $900–950M. I spread that with the usual pattern: a big October quarter and a capex-heavy July quarter.",
+    "zh": "指引显示 FY27 营收约 39.2 亿美元、自由现金流率 23–23.5%，约 9–9.5 亿美元。我按惯常季节性分配：10月季度最高，7月季度资本开支最重。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Data center capacity",
+     "zh": "数据中心容量"
+    },
+    "p": {
+     "en": "$218.5M of capex and capitalized software in Q4 alone, up from $78.7M.",
+     "zh": "仅第四季资本开支与资本化软件就达 2.185 亿美元（去年 7870 万）。"
+    }
+   },
+   {
+    "h": {
+     "en": "Acquisitions",
+     "zh": "收购"
+    },
+    "p": {
+     "en": "$918M was spent on acquisitions in FY26, mainly Red Canary.",
+     "zh": "FY26 收购支出 9.18 亿美元，主要为 Red Canary。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Annual billings",
+     "zh": "年度账单"
+    },
+    "p": {
+     "en": "Customers prepay annual subscriptions; deferred revenue rose 19% to $2.93B.",
+     "zh": "客户预付年度订阅；递延收入增 19% 至 29.3 亿美元。"
+    }
+   },
+   {
+    "h": {
+     "en": "Growing ARR",
+     "zh": "ARR 增长"
+    },
+    "p": {
+     "en": "ARR is guided to $4.40–4.43B by the end of FY27.",
+     "zh": "FY27 年底 ARR 指引为 44.0–44.3 亿美元。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & ST investments, Jul 2026",
+     "zh": "2026年7月现金及短期投资"
+    },
+    3470
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    950
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash & ST investments, Jul 2027 (est.)",
+   "zh": "2027年7月现金及短期投资（估）"
+  },
+  "bridgeNote": {
+   "en": "Excludes acquisitions and convertible note settlements.",
+   "zh": "未计入收购及可转债结算。"
+  },
+  "extraNote": {
+   "en": "Zscaler's own free cash flow also deducts capitalized internal-use software, so it runs slightly lower (Q4 FY26: $60.8M vs $79.5M here).",
+   "zh": "Zscaler 自身口径还扣除资本化内部软件，因此略低（FY26 Q4：公司 6080 万，本表 7950 万）。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/zs/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Q4 FY26 release",
+    "https://stocktitan.net/news/ZS/zscaler-announces-strong-fourth-quarter-and-fiscal-2026-financial-tlojnwbor1z4.html"
+   ]
+  ]
+ }
+}

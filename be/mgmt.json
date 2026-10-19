@@ -1,0 +1,63 @@
+{
+ "ticker": "BE",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-28",
+ "timing": "amc",
+ "pre_close": 166.84,
+ "react": {
+  "date": "2026-07-29",
+  "close": 163.75,
+  "pct": -1.9
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 221.31,
+  "pct": 32.6
+ },
+ "review": {
+  "en": [
+   "Revenue rose 166% to $1.065B, Bloom's first billion-dollar quarter and nearly 30% above consensus, with product revenue up 215%. Gross margin improved to 34.3%, operating income reached $240M and adjusted EPS of $0.78 almost doubled the $0.40 estimate. Management raised 2026 guidance to about $4B of revenue. Founder-CEO KR Sridhar said every major US hyperscaler and over a dozen neoclouds and AI labs have approved Bloom's fuel cells, making it a standard for on-site AI power.",
+   "The report landed after an 11% drop on Jul 28, when Corning's guidance triggered a selloff across AI hardware. Shares rose 11% after hours but closed 1.9% lower next day on execution worries. On Jul 30 Mizuho upgraded the stock to Buy, citing operating leverage and gas-turbine prices up about 20%, and it soared 26.5%. As power shortages for AI data centers became a market theme, the stock has gained more than two-thirds since the report."
+  ],
+  "zh": [
+   "营收增长 166% 至 10.65 亿美元，首次单季突破十亿，高出预期近 30%，产品营收增长 215%。毛利率升至 34.3%，营业利润 2.4 亿美元，经调整每股收益 0.78 美元，几乎是 0.40 美元预期的两倍。管理层将 2026 年营收指引上调至约 40 亿美元。创始人兼 CEO K.R. 斯里达尔表示，美国所有主要云巨头和十多家新兴云、AI 实验室都已认可 Bloom 燃料电池，使其成为 AI 现场供电的标准方案。",
+   "财报发布前的 7 月 28 日，康宁指引引发 AI 硬件板块抛售，Bloom 当天下跌 11%。盘后上涨 11%，但次日因执行风险担忧收跌 1.9%。7 月 30 日瑞穗将其上调至「买入」，理由是经营杠杆以及燃气轮机价格上涨约 20%，股价大涨 26.5%。随着 AI 数据中心电力短缺成为市场主线，股价自财报以来已上涨逾三分之二。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "KR Sridhar",
+   "zh": "K.R. 斯里达尔"
+  },
+  "since": "2001",
+  "bio": {
+   "en": "Founded Bloom (originally Ion America) in 2001 after leading a University of Arizona lab that built an oxygen-generating fuel-cell system for NASA's Mars program. Chairman and CEO since, now positioning Bloom as fast on-site power for AI data centers.",
+   "zh": "2001 年创立 Bloom（原名 Ion America），此前在亚利桑那大学领导实验室，为 NASA 火星计划研制制氧燃料电池系统。此后一直任董事长兼 CEO，现将 Bloom 定位为 AI 数据中心的快速现场供电方案。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Simon Edwards",
+   "zh": "西蒙·爱德华兹"
+  },
+  "since": "2026",
+  "bio": {
+   "en": "Joined in 2026 from AI-chip startup Groq, where he was CFO and later CEO after its licensing deal with NVIDIA. Earlier held CFO roles at other technology companies; Wharton MBA.",
+   "zh": "2026 年从 AI 芯片初创公司 Groq 加入；他曾任 Groq CFO，在其与英伟达达成授权交易后出任 CEO。此前在其他科技公司担任 CFO；沃顿商学院 MBA。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 call transcript",
+   "u": "https://www.marketbeat.com/earnings/reports/2026-7-28-bloom-energy-co-stock/"
+  },
+  {
+   "t": "Jul 30 upgrade",
+   "u": "https://markets.businessinsider.com/news/stocks/why-is-bloom-energy-stock-be-rallying-today-7-30-2026-1036388843"
+  }
+ ]
+}

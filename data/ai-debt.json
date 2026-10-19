@@ -1,0 +1,2149 @@
+{
+ "asof": "2026-10-14",
+ "asofText": "Oct 14, 2026",
+ "scope": "Bonds sold since May 2025 to fund AI data centers: every public bond deal by Alphabet, Amazon, Meta and Oracle since their AI borrowing began (Sep 2025), SpaceX's post-xAI bond, CoreWeave's notes and convertibles, SoftBank's OpenAI-funding bond, and the project-company bonds behind hyperscaler data-center leases. Microsoft has not sold a bond in this period. Bank loans and private credit facilities are not included.",
+ "fxFallback": {
+  "USD": 1,
+  "EUR": 1.14,
+  "GBP": 1.35,
+  "CHF": 1.25,
+  "CAD": 0.72,
+  "JPY": 0.0063,
+  "AUD": 0.71
+ },
+ "fxNote": "Non-US-dollar bonds are converted at the live rates from the FX tab (fallback: the rates in this file).",
+ "context": [
+  {
+   "k": "AI-related debt sold in 2026",
+   "v": "~$490–570B",
+   "s": "Goldman Sachs (~$489B by July), Morgan Stanley (~$570B full year forecast)"
+  },
+  {
+   "k": "Hyperscaler cover ratio",
+   "v": "~5× → ~2×",
+   "s": "Orders per dollar of bonds, February vs July 2026"
+  },
+  {
+   "k": "Oracle 5-year CDS",
+   "v": "~252 bp",
+   "s": "Oct 12 close, 3.7× a year ago and near its record; S&P has Oracle at BBB-, one notch above junk"
+  }
+ ],
+ "groups": [
+  {
+   "id": "googl",
+   "n": "Alphabet",
+   "page": "googl/"
+  },
+  {
+   "id": "amzn",
+   "n": "Amazon",
+   "page": "amzn/"
+  },
+  {
+   "id": "meta",
+   "n": "Meta",
+   "page": "meta/"
+  },
+  {
+   "id": "orcl",
+   "n": "Oracle"
+  },
+  {
+   "id": "spcx",
+   "n": "SpaceX (xAI)",
+   "page": "spcx/"
+  },
+  {
+   "id": "crwv",
+   "n": "CoreWeave"
+  },
+  {
+   "id": "sftb",
+   "n": "SoftBank (OpenAI)"
+  },
+  {
+   "id": "spv",
+   "n": "Data-center project SPVs"
+  }
+ ],
+ "deals": [
+  {
+   "id": "g-nov25-usd",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2025-11-03",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2028-11",
+     500,
+     "SOFR FRN"
+    ],
+    [
+     "2028-11",
+     1000,
+     3.875
+    ],
+    [
+     "2030-11",
+     2500,
+     4.1
+    ],
+    [
+     "2032-11",
+     1250,
+     4.375
+    ],
+    [
+     "2035-11",
+     3500,
+     4.7
+    ],
+    [
+     "2045-11",
+     2000,
+     5.35
+    ],
+    [
+     "2055-11",
+     4000,
+     5.45
+    ],
+    [
+     "2075-11",
+     2750,
+     5.7
+    ]
+   ],
+   "src": [
+    0
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-nov25-eur",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2025-11-03",
+   "cur": "EUR",
+   "kind": "ig",
+   "tr": [
+    [
+     "2028-11",
+     1000,
+     2.375
+    ],
+    [
+     "2031-11",
+     1000,
+     2.875
+    ],
+    [
+     "2034-11",
+     1000,
+     3.125
+    ],
+    [
+     "2038-11",
+     1000,
+     3.5
+    ],
+    [
+     "2044-11",
+     1250,
+     4.0
+    ],
+    [
+     "2064-11",
+     1250,
+     4.375
+    ]
+   ],
+   "src": [
+    0
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-feb26-usd",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-02-09",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029-02",
+     2500,
+     3.7
+    ],
+    [
+     "2031-02",
+     3000,
+     4.1
+    ],
+    [
+     "2033-02",
+     3000,
+     4.4
+    ],
+    [
+     "2036-02",
+     4250,
+     4.8
+    ],
+    [
+     "2046-02",
+     1500,
+     5.5
+    ],
+    [
+     "2056-02",
+     4000,
+     5.65
+    ],
+    [
+     "2066-02",
+     1750,
+     5.75
+    ]
+   ],
+   "src": [
+    1,
+    2
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-feb26-gbp",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-02-10",
+   "cur": "GBP",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029",
+     750,
+     4.125
+    ],
+    [
+     "2032",
+     1250,
+     4.625
+    ],
+    [
+     "2041",
+     1250,
+     5.5
+    ],
+    [
+     "2058",
+     1250,
+     5.875
+    ],
+    [
+     "2126-02",
+     1000,
+     6.125
+    ]
+   ],
+   "src": [
+    2
+   ],
+   "note": "Includes a 100-year bond due 2126, the first tech century bond since Motorola in 1997.",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-feb26-chf",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-02-10",
+   "cur": "CHF",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029",
+     905,
+     0.427
+    ],
+    [
+     "2032",
+     700,
+     0.89
+    ],
+    [
+     "2036",
+     575,
+     1.2525
+    ],
+    [
+     "2041",
+     455,
+     1.5823
+    ],
+    [
+     "2051",
+     420,
+     1.8675
+    ]
+   ],
+   "src": [
+    3
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-may26-eur",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-05-06",
+   "cur": "EUR",
+   "kind": "ig",
+   "tr": [
+    [
+     "2030",
+     1500,
+     3.2
+    ],
+    [
+     "2032",
+     1750,
+     3.45
+    ],
+    [
+     "2034",
+     1500,
+     3.625
+    ],
+    [
+     "2039",
+     1750,
+     4.1
+    ],
+    [
+     "2045",
+     1250,
+     4.5
+    ],
+    [
+     "2063",
+     1250,
+     4.8
+    ]
+   ],
+   "src": [
+    4
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-may26-cad",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-05-06",
+   "cur": "CAD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2031-05",
+     1500,
+     3.65
+    ],
+    [
+     "2033-05",
+     2000,
+     4.0
+    ],
+    [
+     "2036-05",
+     2250,
+     4.35
+    ],
+    [
+     "2056-05",
+     2750,
+     5.0
+    ]
+   ],
+   "src": [
+    4
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-may26-jpy",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-05-15",
+   "cur": "JPY",
+   "kind": "ig",
+   "tr": [
+    [
+     "2031",
+     200500,
+     2.412
+    ],
+    [
+     "2029-2066",
+     376000,
+     "1.965–4.599"
+    ]
+   ],
+   "src": [
+    5,
+    6
+   ],
+   "note": "¥576.5bn in 7 tranches (3, 5, 7, 10, 15, 30, 40 years). Only the 5-year size is public; the other six (¥376bn together, coupons 1.965% on the 3-year to 4.599% on the 40-year, 3.189% on the 10-year) are shown as one row and left out of the maturity chart.",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-aug26-usd",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-08-06",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2028-08",
+     750,
+     "SOFR+0.44"
+    ],
+    [
+     "2028-08",
+     1250,
+     4.5
+    ],
+    [
+     "2029-08",
+     500,
+     "SOFR+0.60"
+    ],
+    [
+     "2029-08",
+     2000,
+     4.625
+    ],
+    [
+     "2031-08",
+     3500,
+     4.875
+    ],
+    [
+     "2033-08",
+     2500,
+     5.2
+    ],
+    [
+     "2036-08",
+     4500,
+     5.45
+    ],
+    [
+     "2046-08",
+     3000,
+     6.25
+    ],
+    [
+     "2056-08",
+     4500,
+     6.375
+    ],
+    [
+     "2066-08",
+     2500,
+     6.5
+    ]
+   ],
+   "src": [
+    7
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "g-aug26-aud",
+   "g": "googl",
+   "iss": "Alphabet",
+   "priced": "2026-08-19",
+   "cur": "AUD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029",
+     500,
+     5.2
+    ],
+    [
+     "2029",
+     750,
+     "BBSW FRN"
+    ],
+    [
+     "2031",
+     750,
+     5.5
+    ],
+    [
+     "2031",
+     1500,
+     "BBSW FRN"
+    ],
+    [
+     "2036",
+     1000,
+     6.25
+    ],
+    [
+     "2046",
+     1000,
+     6.9
+    ]
+   ],
+   "src": [
+    8
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Aa2 / AA+"
+  },
+  {
+   "id": "a-nov25-usd",
+   "g": "amzn",
+   "iss": "Amazon",
+   "priced": "2025-11-17",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2028-11",
+     2500,
+     3.9
+    ],
+    [
+     "2030-11",
+     2500,
+     4.1
+    ],
+    [
+     "2033-11",
+     1500,
+     4.35
+    ],
+    [
+     "2035-11",
+     3500,
+     4.65
+    ],
+    [
+     "2055-11",
+     3000,
+     5.45
+    ],
+    [
+     "2065-11",
+     2000,
+     5.55
+    ]
+   ],
+   "src": [
+    9
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "A1 / AA"
+  },
+  {
+   "id": "a-mar26-usd",
+   "g": "amzn",
+   "iss": "Amazon",
+   "priced": "2026-03-10",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2028",
+     1750,
+     "SOFR FRN"
+    ],
+    [
+     "2029",
+     1000,
+     "SOFR FRN"
+    ],
+    [
+     "2028",
+     2250,
+     3.85
+    ],
+    [
+     "2029",
+     3000,
+     4.0
+    ],
+    [
+     "2031",
+     5000,
+     4.25
+    ],
+    [
+     "2033",
+     4000,
+     4.55
+    ],
+    [
+     "2036",
+     6000,
+     4.875
+    ],
+    [
+     "2046",
+     2500,
+     5.65
+    ],
+    [
+     "2056",
+     5500,
+     5.8
+    ],
+    [
+     "2066",
+     3000,
+     5.95
+    ],
+    [
+     "2076",
+     3000,
+     6.05
+    ]
+   ],
+   "src": [
+    10
+   ],
+   "note": "Fourth-largest US corporate bond sale on record; includes a 50-year bond due 2076.",
+   "backer": "",
+   "rating": "A1 / AA"
+  },
+  {
+   "id": "a-mar26-eur",
+   "g": "amzn",
+   "iss": "Amazon",
+   "priced": "2026-03-11",
+   "cur": "EUR",
+   "kind": "ig",
+   "tr": [
+    [
+     "2028-03",
+     1750,
+     "EURIBOR+0.35"
+    ],
+    [
+     "2028-03",
+     1250,
+     2.8
+    ],
+    [
+     "2030-03",
+     2000,
+     3.1
+    ],
+    [
+     "2032-03",
+     2250,
+     3.35
+    ],
+    [
+     "2035-03",
+     2500,
+     3.7
+    ],
+    [
+     "2039-03",
+     2250,
+     4.05
+    ],
+    [
+     "2045-03",
+     1250,
+     4.45
+    ],
+    [
+     "2064-03",
+     1250,
+     4.85
+    ]
+   ],
+   "src": [
+    11
+   ],
+   "note": "Largest corporate bond ever sold in euros.",
+   "backer": "",
+   "rating": "A1 / AA"
+  },
+  {
+   "id": "a-may26-chf",
+   "g": "amzn",
+   "iss": "Amazon",
+   "priced": "2026-05-12",
+   "cur": "CHF",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029",
+     900,
+     0.835
+    ],
+    [
+     "2032",
+     585,
+     1.2
+    ],
+    [
+     "2035",
+     475,
+     1.4475
+    ],
+    [
+     "2038",
+     390,
+     1.675
+    ],
+    [
+     "2044",
+     245,
+     1.9389
+    ],
+    [
+     "2051",
+     225,
+     2.0825
+    ]
+   ],
+   "src": [
+    12
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "A1 / AA"
+  },
+  {
+   "id": "a-jun26-cad",
+   "g": "amzn",
+   "iss": "Amazon",
+   "priced": "2026-06-08",
+   "cur": "CAD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029-06",
+     1250,
+     3.4
+    ],
+    [
+     "2031-06",
+     2500,
+     3.7
+    ],
+    [
+     "2033-06",
+     2000,
+     4.0
+    ],
+    [
+     "2036-06",
+     3500,
+     4.35
+    ],
+    [
+     "2056-06",
+     4750,
+     5.0
+    ]
+   ],
+   "src": [
+    13
+   ],
+   "note": "Largest corporate bond ever sold in Canadian dollars.",
+   "backer": "",
+   "rating": "A1 / AA"
+  },
+  {
+   "id": "a-jul26-usd",
+   "g": "amzn",
+   "iss": "Amazon",
+   "priced": "2026-07-07",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029-07",
+     750,
+     "SOFR+0.58"
+    ],
+    [
+     "2029-07",
+     3500,
+     4.6
+    ],
+    [
+     "2031-07",
+     4250,
+     4.8
+    ],
+    [
+     "2033-07",
+     3000,
+     5.1
+    ],
+    [
+     "2036-07",
+     4500,
+     5.3
+    ],
+    [
+     "2046-07",
+     2750,
+     6.0
+    ],
+    [
+     "2056-07",
+     4000,
+     6.1
+    ],
+    [
+     "2066-07",
+     2250,
+     6.25
+    ]
+   ],
+   "src": [
+    14
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "A1 / AA"
+  },
+  {
+   "id": "a-sep26-gbp",
+   "g": "amzn",
+   "iss": "Amazon",
+   "priced": "2026-09-09",
+   "cur": "GBP",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029-09",
+     1250,
+     5.2
+    ],
+    [
+     "2032-09",
+     1000,
+     5.55
+    ],
+    [
+     "2038-09",
+     1000,
+     6.25
+    ],
+    [
+     "2045-09",
+     1000,
+     6.65
+    ]
+   ],
+   "src": [
+    15
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "A1 / AA"
+  },
+  {
+   "id": "m-oct25-usd",
+   "g": "meta",
+   "iss": "Meta",
+   "priced": "2025-10-30",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2030-11",
+     4000,
+     4.2
+    ],
+    [
+     "2032-11",
+     4000,
+     4.6
+    ],
+    [
+     "2035-11",
+     6500,
+     4.875
+    ],
+    [
+     "2045-11",
+     4500,
+     5.5
+    ],
+    [
+     "2055-11",
+     6500,
+     5.625
+    ],
+    [
+     "2065-11",
+     4500,
+     5.75
+    ]
+   ],
+   "src": [
+    16
+   ],
+   "note": "Meta's largest bond sale; $125B of peak orders.",
+   "backer": "",
+   "rating": "Aa3 / AA-"
+  },
+  {
+   "id": "m-apr26-usd",
+   "g": "meta",
+   "iss": "Meta",
+   "priced": "2026-04-30",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2031-05",
+     3000,
+     4.55
+    ],
+    [
+     "2033-05",
+     2000,
+     4.875
+    ],
+    [
+     "2036-05",
+     6000,
+     5.25
+    ],
+    [
+     "2046-05",
+     4000,
+     6.2
+    ],
+    [
+     "2056-05",
+     6000,
+     6.3
+    ],
+    [
+     "2066-05",
+     4000,
+     6.45
+    ]
+   ],
+   "src": [
+    17
+   ],
+   "note": "$96B of peak orders, down from $125B on the October 2025 deal.",
+   "backer": "",
+   "rating": "Aa3 / AA-"
+  },
+  {
+   "id": "o-sep25-usd",
+   "g": "orcl",
+   "iss": "Oracle",
+   "priced": "2025-09-24",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2030-09",
+     3000,
+     4.45
+    ],
+    [
+     "2032-09",
+     3000,
+     4.8
+    ],
+    [
+     "2035-09",
+     4000,
+     5.2
+    ],
+    [
+     "2045-09",
+     2500,
+     5.875
+    ],
+    [
+     "2055-09",
+     3500,
+     5.95
+    ],
+    [
+     "2065-09",
+     2000,
+     6.1
+    ]
+   ],
+   "src": [
+    18
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Baa2 / BBB-"
+  },
+  {
+   "id": "o-feb26-usd",
+   "g": "orcl",
+   "iss": "Oracle",
+   "priced": "2026-02-02",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2029",
+     500,
+     "SOFR+1.11"
+    ],
+    [
+     "2029",
+     3000,
+     4.55
+    ],
+    [
+     "2031",
+     3500,
+     4.95
+    ],
+    [
+     "2033",
+     3000,
+     5.35
+    ],
+    [
+     "2036",
+     5000,
+     5.7
+    ],
+    [
+     "2046",
+     2250,
+     6.55
+    ],
+    [
+     "2056",
+     5000,
+     6.7
+    ],
+    [
+     "2066",
+     2750,
+     6.85
+    ]
+   ],
+   "src": [
+    19,
+    20
+   ],
+   "note": "Oracle said this is its only bond sale of 2026; the rest of its $45–50B plan is equity. S&P cut it to BBB- in July 2026.",
+   "backer": "",
+   "rating": "Baa2 / BBB-"
+  },
+  {
+   "id": "x-jun26-usd",
+   "g": "spcx",
+   "iss": "SpaceX",
+   "priced": "2026-06-23",
+   "cur": "USD",
+   "kind": "ig",
+   "tr": [
+    [
+     "2031",
+     7000,
+     5.35
+    ],
+    [
+     "2033",
+     6000,
+     5.65
+    ],
+    [
+     "2036",
+     6000,
+     5.875
+    ],
+    [
+     "2046",
+     2500,
+     6.6
+    ],
+    [
+     "2056",
+     3500,
+     6.65
+    ]
+   ],
+   "src": [
+    21,
+    22
+   ],
+   "note": "Repays the $20B bridge loan used to retire xAI and X debt after the xAI merger.",
+   "backer": "",
+   "rating": "BBB"
+  },
+  {
+   "id": "c-may25",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2025-05-21",
+   "cur": "USD",
+   "kind": "hy",
+   "tr": [
+    [
+     "2030-06",
+     2000,
+     9.25
+    ]
+   ],
+   "src": [
+    23
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Ba3 / B+"
+  },
+  {
+   "id": "c-jul25",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2025-07",
+   "cur": "USD",
+   "kind": "hy",
+   "tr": [
+    [
+     "2031",
+     1750,
+     9.0
+    ]
+   ],
+   "src": [
+    24
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Ba3 / B+"
+  },
+  {
+   "id": "c-dec25-cv",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2025-12-09",
+   "cur": "USD",
+   "kind": "cv",
+   "tr": [
+    [
+     "2031-12",
+     2250,
+     1.75
+    ]
+   ],
+   "src": [
+    24
+   ],
+   "note": "Convertible; conversion price about $107.80.",
+   "backer": "",
+   "rating": ""
+  },
+  {
+   "id": "c-apr26",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2026-04-08",
+   "cur": "USD",
+   "kind": "hy",
+   "tr": [
+    [
+     "2031-10",
+     2750,
+     9.75
+    ]
+   ],
+   "src": [
+    25,
+    26
+   ],
+   "note": "$1.75B plus a $1B add-on a week later.",
+   "backer": "",
+   "rating": "Ba3 / B+"
+  },
+  {
+   "id": "c-apr26-cv",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2026-04-09",
+   "cur": "USD",
+   "kind": "cv",
+   "tr": [
+    [
+     "2032-10",
+     3500,
+     1.75
+    ]
+   ],
+   "src": [
+    27
+   ],
+   "note": "Convertible; a further $500M option is not included.",
+   "backer": "",
+   "rating": ""
+  },
+  {
+   "id": "c-jun26-usd",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2026-06-11",
+   "cur": "USD",
+   "kind": "hy",
+   "tr": [
+    [
+     "2032-07",
+     1250,
+     9.625
+    ]
+   ],
+   "src": [
+    28
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Ba3 / B+"
+  },
+  {
+   "id": "c-jun26-eur",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2026-06-11",
+   "cur": "EUR",
+   "kind": "hy",
+   "tr": [
+    [
+     "2032-07",
+     2000,
+     8.5
+    ]
+   ],
+   "src": [
+    28
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "Ba3 / B+"
+  },
+  {
+   "id": "c-sep26-cv",
+   "g": "crwv",
+   "iss": "CoreWeave",
+   "priced": "2026-09-18",
+   "cur": "USD",
+   "kind": "cv",
+   "tr": [
+    [
+     "2033-04",
+     3700,
+     2.875
+    ]
+   ],
+   "src": [
+    29
+   ],
+   "note": "Convertible; a further $500M option is not included.",
+   "backer": "",
+   "rating": ""
+  },
+  {
+   "id": "s-sep26-usd",
+   "g": "sftb",
+   "iss": "SoftBank Group",
+   "priced": "2026-09-24",
+   "cur": "USD",
+   "kind": "hy",
+   "tr": [
+    [
+     "2030-04",
+     1000,
+     8.625
+    ],
+    [
+     "2032-04",
+     4500,
+     9.25
+    ],
+    [
+     "2034-04",
+     4500,
+     9.75
+    ]
+   ],
+   "src": [
+    30
+   ],
+   "note": "Largest high-yield bond on record; funds the final $10B of SoftBank's $30B OpenAI investment.",
+   "backer": "",
+   "rating": "BB+"
+  },
+  {
+   "id": "s-sep26-eur",
+   "g": "sftb",
+   "iss": "SoftBank Group",
+   "priced": "2026-09-24",
+   "cur": "EUR",
+   "kind": "hy",
+   "tr": [
+    [
+     "2030-10",
+     500,
+     7.125
+    ],
+    [
+     "2032-10",
+     500,
+     8.0
+    ]
+   ],
+   "src": [
+    30
+   ],
+   "note": "",
+   "backer": "",
+   "rating": "BB+"
+  },
+  {
+   "id": "p-beignet",
+   "g": "spv",
+   "iss": "Beignet Investor LLC",
+   "priced": "2025-10-16",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2049",
+     27290,
+     6.581
+    ]
+   ],
+   "src": [
+    31,
+    32
+   ],
+   "note": "Hyperion data center, Louisiana. Blue Owl ~80% / Meta ~20% JV; Meta leases the campus and guarantees its residual value. Rated A+.",
+   "backer": "Meta",
+   "rating": ""
+  },
+  {
+   "id": "p-sopaipilla",
+   "g": "spv",
+   "iss": "Sopaipilla Investor LLC",
+   "priced": "2026-07-27",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2048",
+     12550,
+     7.534
+    ]
+   ],
+   "src": [
+    33,
+    34
+   ],
+   "note": "El Paso, Texas, 1 GW. BlackRock (GIP/HPS) ~80% / Meta ~20%; repaid from Meta's 20-year lease from 2028. Figure shown is the yield at pricing.",
+   "backer": "Meta",
+   "rating": ""
+  },
+  {
+   "id": "p-saline",
+   "g": "spv",
+   "iss": "Related Digital – Saline Township campus",
+   "priced": "2026-04-24",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2045",
+     14000,
+     7.5
+    ]
+   ],
+   "src": [
+    35
+   ],
+   "note": "Michigan Stargate campus for OpenAI; Oracle is the tenant. Six years interest-only then amortizing, so principal is repaid before 2045. Pimco bought ~$10B.",
+   "backer": "Oracle",
+   "rating": ""
+  },
+  {
+   "id": "p-wulf",
+   "g": "spv",
+   "iss": "WULF Compute LLC",
+   "priced": "2025-10-16",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2030",
+     3200,
+     7.75
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "TeraWulf Lake Mariner, NY. Google backstops tenant Fluidstack's lease.",
+   "backer": "Alphabet",
+   "rating": ""
+  },
+  {
+   "id": "p-cipher",
+   "g": "spv",
+   "iss": "Cipher Compute LLC",
+   "priced": "2025-11-05",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2030",
+     1400,
+     7.125
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "Barber Lake, Texas. Google backstops $1.4B of Fluidstack's lease.",
+   "backer": "Alphabet",
+   "rating": ""
+  },
+  {
+   "id": "p-flash",
+   "g": "spv",
+   "iss": "Flash Compute LLC",
+   "priced": "2025-12",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2030",
+     1300,
+     7.25
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "Abernathy, Texas (TeraWulf / Fluidstack JV). Google backstops $1.3B of the lease.",
+   "backer": "Alphabet",
+   "rating": ""
+  },
+  {
+   "id": "p-blackpearl",
+   "g": "spv",
+   "iss": "Black Pearl Compute LLC",
+   "priced": "2026-02-04",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2031",
+     2000,
+     6.125
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "Cipher's Black Pearl site, Wink, Texas, leased to AWS.",
+   "backer": "Amazon",
+   "rating": ""
+  },
+  {
+   "id": "p-stingray",
+   "g": "spv",
+   "iss": "Stingray Compute LLC",
+   "priced": "2026-06-08",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2031",
+     810,
+     6.0
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "Cipher's 70 MW Stingray site, leased to AWS.",
+   "backer": "Amazon",
+   "rating": ""
+  },
+  {
+   "id": "p-apld2",
+   "g": "spv",
+   "iss": "APLD ComputeCo 2 LLC",
+   "priced": "2026-03-04",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2031",
+     2150,
+     6.75
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "Applied Digital Polaris Forge 2, North Dakota, ~15-year lease to an unnamed investment-grade hyperscaler.",
+   "backer": "Undisclosed hyperscaler",
+   "rating": ""
+  },
+  {
+   "id": "p-apld1",
+   "g": "spv",
+   "iss": "APLD ComputeCo LLC",
+   "priced": "2025-11-13",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2030",
+     2350,
+     9.25
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "Applied Digital Polaris Forge 1, leased to CoreWeave.",
+   "backer": "CoreWeave",
+   "rating": ""
+  },
+  {
+   "id": "p-apld3",
+   "g": "spv",
+   "iss": "APLD ComputeCo 3 LLC",
+   "priced": "2026-06-09",
+   "cur": "USD",
+   "kind": "spv",
+   "tr": [
+    [
+     "2031",
+     1590,
+     7.0
+    ]
+   ],
+   "src": [
+    31
+   ],
+   "note": "Applied Digital Polaris Forge 1 building 4, leased to CoreWeave.",
+   "backer": "CoreWeave",
+   "rating": ""
+  }
+ ],
+ "sources": [
+  {
+   "t": "Alphabet 8-K, $17.5B and €6.5B notes (Nov 6, 2025)",
+   "u": "https://investing.com/news/sec-filings/alphabet-closes-175-billion-us-and-65-billion-euro-senior-notes-offerings-93CH-4340399"
+  },
+  {
+   "t": "Alphabet 424B2, $20B notes (Feb 9, 2026)",
+   "u": "https://stocktitan.net/sec-filings/GOOG/424b2-alphabet-inc-prospectus-supplement-cfd86865ab00.html"
+  },
+  {
+   "t": "Alphabet 8-K, $20B and £5.5B notes closed (Feb 13, 2026)",
+   "u": "https://stocktitan.net/sec-filings/GOOG/8-k-alphabet-inc-reports-material-event-66000d4baccc.html"
+  },
+  {
+   "t": "Homburger: Alphabet CHF 3.055bn inaugural Swiss franc offering (Feb 2026)",
+   "u": "https://homburger.ch/en/news/homburger-advises-alphabet-on-its-issuance-of-chf-3-055-bn-in-inaugural-five-tranche-chf-offering"
+  },
+  {
+   "t": "Cleary Gottlieb: Alphabet €9B and inaugural C$8.5B offerings (May 2026)",
+   "u": "https://clearygottlieb.com/news-and-insights/news-listing/alphabet-in-9-billion-offering-and-inaugural-c8-5-billion-offering"
+  },
+  {
+   "t": "Reuters via KELO: Alphabet sells ¥576.5bn of yen bonds (May 15, 2026)",
+   "u": "https://kelo.com/2026/05/14/alphabet-sells-yen-bonds-worth-3-6-billion-largest-such-issue-by-foreign-company"
+  },
+  {
+   "t": "Nikkei via Biggo: Alphabet yen deal, largest tranche ¥200.5bn 5-year at 2.412%",
+   "u": "https://finance.biggo.jp/news/ee39b176-1951-4a27-9ca7-d0d182dcd102"
+  },
+  {
+   "t": "Alphabet $25B notes (Aug 6, 2026) – tranche table",
+   "u": "https://catlytic.com/analysis/alphabet-25-billion-bond-sale-2066"
+  },
+  {
+   "t": "Cleary Gottlieb: Alphabet inaugural A$5.5B notes (Aug 2026)",
+   "u": "https://cleary.legal/4cxH6fd"
+  },
+  {
+   "t": "Amazon $15B notes closed (Nov 20, 2025)",
+   "u": "https://investing.com/news/sec-filings/amazon-closes-15-billion-multitranche-bond-offering-93CH-4371759"
+  },
+  {
+   "t": "Amazon 8-K, $36.9B notes closed (Mar 13, 2026)",
+   "u": "https://investing.com/news/sec-filings/amazon-closes-369-billion-debt-offering-across-multiple-maturities-93CH-4561089"
+  },
+  {
+   "t": "Amazon 8-K, €14.47B euro notes closed (Mar 16, 2026)",
+   "u": "https://jp.advfn.com/exchanges/NASDAQ/AMZN/share-news/98064840/form-8-k-current-report"
+  },
+  {
+   "t": "Legalcommunity.ch: Amazon CHF 2.82bn inaugural Swiss franc bonds (May 2026)",
+   "u": "https://legalcommunity.ch/schellenberg-wittmer-with-joint-lead-managers-on-amazons-chf-bond-placement"
+  },
+  {
+   "t": "Amazon 8-K, C$14B notes closed (Jun 12, 2026)",
+   "u": "https://stocktitan.net/sec-filings/AMZN/8-k-amazon-com-inc-reports-material-event-66c253cf1aff.html"
+  },
+  {
+   "t": "Amazon 424B5, $25B notes (Jul 7, 2026)",
+   "u": "https://dataporium.tech/articles/amazons-25-billion-debt-raise-highlights-ai-investment-drive-and-shifting-investor-sentiment"
+  },
+  {
+   "t": "Amazon 8-K, £4.25B sterling notes closed (Sep 14, 2026)",
+   "u": "https://stocktitan.net/sec-filings/AMZN/8-k-amazon-com-inc-reports-material-event-b6e20782f933.html"
+  },
+  {
+   "t": "Meta 424B2, $30B notes (Oct 30, 2025)",
+   "u": "https://stocktitan.net/sec-filings/META/424b2-meta-platforms-inc-prospectus-supplement-6c486669c7ae.html"
+  },
+  {
+   "t": "Meta 424B2, $25B notes (Apr 30, 2026)",
+   "u": "https://stocktitan.net/sec-filings/META/424b2-meta-platforms-inc-prospectus-supplement-3c67b2ba1bbb.html"
+  },
+  {
+   "t": "Oracle 424B2, $18B notes (Sep 24, 2025)",
+   "u": "https://freshfields.com/en/our-thinking/news/news-search/2025/09/freshfields-represents-oracle-on-its-$18-bn-aggregate-principal-amount-of-senior-debt-securities"
+  },
+  {
+   "t": "IFR: Oracle raises $25bn in eight-part bond (Feb 2, 2026)",
+   "u": "https://ifre.com/bonds/2379081/oracle-raises-us25bn-in-bond-offering-as-ai-funding-spree-continues"
+  },
+  {
+   "t": "BTW Media: Oracle's financing stack, Feb 2026 tranche detail from the 424B2",
+   "u": "https://btw.media/en/oracle-financing-stack-effective-conditional-break-points"
+  },
+  {
+   "t": "MarketWatch: SpaceX $25B bond pricing (Jun 23, 2026)",
+   "u": "https://marketwatch.com/story/spacex-reveals-pricing-details-for-what-could-be-one-of-the-years-biggest-debt-deals-8c027a85"
+  },
+  {
+   "t": "Space Intelligence: SpaceX five tranches, refinancing the xAI bridge loan",
+   "u": "https://research.33fg.com/news/spacex-prices-25-billion-debut-bond-to-refinance-its-xai-bridge-loan"
+  },
+  {
+   "t": "CoreWeave: $2B 9.25% senior notes due 2030 (May 2025)",
+   "u": "https://prnewswire.com/news-releases/coreweave-announces-upsize-and-pricing-of-2-000-million-of-senior-notes-302462124.html"
+  },
+  {
+   "t": "CoreWeave: $2.25B 1.75% convertible notes due 2031 (Dec 2025), also lists the 9.000% 2031 notes",
+   "u": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Prices-Upsized-2-25-Billion-Convertible-Senior-Notes-Offering"
+  },
+  {
+   "t": "CoreWeave: $1.75B 9.75% notes due 2031 (Apr 2026)",
+   "u": "https://www.investing.com/news/company-news/coreweave-prices-175-billion-bond-offering-at-975-yield-93CH-4606535"
+  },
+  {
+   "t": "CoreWeave: $1B add-on 9.75% notes due 2031 (Apr 16, 2026)",
+   "u": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Announces-Pricing-of-1000-million-of-9-750-Senior-Notes-due-2031/default.aspx"
+  },
+  {
+   "t": "CoreWeave: $3.5B 1.75% convertible notes due 2032 (Apr 2026)",
+   "u": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Prices-Upsized-3-5-Billion-Convertible-Senior-Notes-Offering?AccountID=10790435"
+  },
+  {
+   "t": "CoreWeave: $1.25B 9.625% and €2B 8.5% notes due 2032 (Jun 2026)",
+   "u": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Announces-Pricing-of-1-25-Billion-of-Senior-Notes-and-2-Billion-of-Senior-Notes"
+  },
+  {
+   "t": "CoreWeave: $3.7B 2.875% convertible notes due 2033 (Sep 2026)",
+   "u": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Prices-Upsized-3-7-Billion-Convertible-Senior-Notes-Offering"
+  },
+  {
+   "t": "SoftBank Group issuance notice, $10B + €1B senior notes (Sep 24, 2026)",
+   "u": "https://sandpczone.com/softbank-openai-11b-bonds"
+  },
+  {
+   "t": "Hyperscaler bond tracker (frenzycap): off-balance-sheet project bonds",
+   "u": "https://frenzycap.com/bonds"
+  },
+  {
+   "t": "r40: Meta's Hyperion exposure and the Beignet 6.581% 2049 bond",
+   "u": "https://r40.io/news/meta-hyperion-46bn-bond-fell-less-than-2032-note"
+  },
+  {
+   "t": "Edgen/Bloomberg: Sopaipilla Investor bond for Meta's El Paso data center (Jul 2026)",
+   "u": "https://edgen.tech/es/news/stock/metas-12b-data-center-bond-costs-04-more-as-ai-debt-tightens"
+  },
+  {
+   "t": "Longbridge: Sopaipilla $12.55B priced at 7.534%, due 2048",
+   "u": "https://longbridge.com/news/293985003"
+  },
+  {
+   "t": "Bloomberg via Yahoo: $14B bonds for Oracle's Michigan data center (Apr 2026)",
+   "u": "https://finance.yahoo.com/news/oracle-data-center-16-billion-000012707.html"
+  },
+  {
+   "t": "TradingView/Benzinga: highest-yielding hyperscaler bonds, Oct 5 2026 (yields and prices)",
+   "u": "https://www.tradingview.com/news/benzinga:7522ce132094b:0-highest-yielding-hyperscaler-bonds-in-october-2026-spacex-joins-oracle-above-7-5/"
+  },
+  {
+   "t": "CNBC: CoreWeave bond yields near 15% (Oct 14 2026; CoreWeave 2031/2032 and Oracle 2032 yields)",
+   "u": "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html"
+  },
+  {
+   "t": "CrossVol Research: CoreWeave 2032 at 79.82, G spread 990bp; Oracle 2066 G spread 300bp; Oracle CDS 251.9bp (Oct 12–13 2026)",
+   "u": "https://newsletter.crossvolresearch.com/p/us-macro-where-are-we-as-of-october"
+  },
+  {
+   "t": "TechFlow: Morgan Stanley note, Oracle 2035 spread 224bp, 2055 278bp, 5Y CDS 260bp (Oct 7 2026)",
+   "u": "https://techflowpost.com/en-US/newsletter/139471"
+  },
+  {
+   "t": "Oninvest: CoreWeave CDS 811bp, bond yields 11.4–12.1% (Sep 24 2026)",
+   "u": "https://en.oninvest.com/article/protection-against-big-tech-defaults-has-become-2-5-times-more-expensive-are-ai-related-debts-no-longer-safe"
+  },
+  {
+   "t": "MarketWatch/Morningstar: CoreWeave 5Y CDS ~881bp on Oct 12 2026 (Dow Jones Market Data)",
+   "u": "https://morningstar.com/news/marketwatch/20261014454/coreweaves-ai-bonds-tumble-raising-red-flags-for-the-wider-market"
+  },
+  {
+   "t": "Reuters via Devdiscourse: Beignet 2049 bonds at 91, 7.55%, ~230bp over Treasuries (Sep 28 2026); 185bp at launch, 255bp peak in July",
+   "u": "https://devdiscourse.com/article/international/3984191-roi-are-ai-credit-cracks-a-warning-or-a-buy-signal-mcgeever"
+  },
+  {
+   "t": "Mezha: Meta 5Y CDS topped July high, near 100bp (Sep 28 2026)",
+   "u": "https://mezha.net/eng/news/2dade4ca_ai_debt_selloff"
+  },
+  {
+   "t": "Smart Investor: 5Y CDS Microsoft ~52, Amazon ~73, Alphabet ~72, Meta ~95, Oracle ~227, CoreWeave >855 (early Oct 2026)",
+   "u": "https://www.instagram.com/p/Dd1CHJ-Fa1Q/"
+  },
+  {
+   "t": "Bloomberg: SoftBank 5Y CDS ~383–385bp, highest since 2023 (Sep 16 2026)",
+   "u": "https://bloomberg.com/news/articles/2026-09-16/softbank-cds-hovers-near-3-year-high-on-openai-funding-concerns"
+  },
+  {
+   "t": "SoftBank Group: Sep 24 2026 notes priced at par (8.625% 2030, 9.25% 2032, 9.75% 2034; €7.125% 2030, €8.0% 2032)",
+   "u": "https://aistockwire.com/blog/softbank-sftby-falls-8-5-percent-junk-bonds-9-75-percent-openai-october-2026"
+  },
+  {
+   "t": "Startup Fortune: hyperscaler bond spreads widened toward 80bp in September from ~50bp",
+   "u": "https://startupfortune.com/bond-investors-are-starting-to-say-no-to-the-ai-debt-binge"
+  },
+  {
+   "t": "BingX/term sheet: Alphabet Aug 2026 2066 notes priced at 6.527%, 130bp over Treasuries",
+   "u": "https://bingx.com/en/news/post/hyperscaler-bonds-pay-over-as-yields-climb"
+  }
+ ],
+ "mkt": {
+  "asof": "2026-10-14",
+  "note": "Yields are estimates: the live government bond yield for the bond's currency and years to maturity (Treasuries for US$, Bunds for euros, gilts, Swiss, Canadian, Japanese and Australian government bonds), plus the borrower's credit spread at that maturity taken from the latest dealer quotes reported in the press (dated below). Week- and month-to-date changes add the move in government yields since last Friday / the last day of last month to any change in the borrower's spread between dated quotes. Floating-rate notes and convertibles have no comparable yield and are left blank. 5-year CDS is the cost of insuring the borrower's debt for five years, in basis points a year; no CDS trades on SpaceX or the project companies.",
+  "govtSnap": {
+   "asof": "2026-10-14",
+   "USD": {
+    "2": 4.9,
+    "5": 5.05,
+    "10": 5.3,
+    "30": 5.61
+   },
+   "EUR": {
+    "2": 2.55,
+    "5": 2.9,
+    "10": 3.44,
+    "30": 3.95
+   },
+   "GBP": {
+    "2": 4.55,
+    "5": 4.85,
+    "10": 5.4,
+    "30": 6.0
+   },
+   "CHF": {
+    "2": 0.55,
+    "5": 0.75,
+    "10": 1.05,
+    "30": 1.25
+   },
+   "CAD": {
+    "2": 3.24,
+    "5": 3.5,
+    "10": 3.94,
+    "30": 4.25
+   },
+   "JPY": {
+    "2": 1.55,
+    "5": 2.1,
+    "10": 3.02,
+    "30": 4.15
+   },
+   "AUD": {
+    "2": 4.7,
+    "5": 4.95,
+    "10": 5.35,
+    "30": 5.75
+   }
+  },
+  "iss": {
+   "googl": {
+    "mode": "curve",
+    "spr": [
+     [
+      1,
+      45
+     ],
+     [
+      3,
+      55
+     ],
+     [
+      5,
+      65
+     ],
+     [
+      7,
+      75
+     ],
+     [
+      10,
+      85
+     ],
+     [
+      20,
+      105
+     ],
+     [
+      30,
+      118
+     ],
+     [
+      50,
+      121
+     ]
+    ],
+    "sh": [
+     [
+      "2026-08-10",
+      12
+     ],
+     [
+      "2026-10-05",
+      0
+     ]
+    ],
+    "cds": {
+     "v": 72,
+     "d": "2026-10-02",
+     "s": 44
+    },
+    "how": "Long end from the 2066 and 2075 notes on Oct 5 (6.81% and 6.84%); shorter maturities from hyperscaler spreads near 80–85bp in September.",
+    "src": [
+     36,
+     48,
+     47,
+     44
+    ]
+   },
+   "amzn": {
+    "mode": "curve",
+    "spr": [
+     [
+      1,
+      45
+     ],
+     [
+      3,
+      55
+     ],
+     [
+      5,
+      65
+     ],
+     [
+      10,
+      85
+     ],
+     [
+      20,
+      110
+     ],
+     [
+      30,
+      130
+     ],
+     [
+      50,
+      132
+     ]
+    ],
+    "sh": [
+     [
+      "2026-10-05",
+      0
+     ]
+    ],
+    "cds": {
+     "v": 73,
+     "d": "2026-10-02",
+     "s": 44
+    },
+    "how": "Long end from the 2066 and 2076 notes on Oct 5 (6.93% and 6.95%); shorter maturities from hyperscaler spreads near 80bp.",
+    "src": [
+     36,
+     47,
+     44
+    ]
+   },
+   "meta": {
+    "mode": "curve",
+    "spr": [
+     [
+      1,
+      60
+     ],
+     [
+      3,
+      75
+     ],
+     [
+      5,
+      90
+     ],
+     [
+      10,
+      115
+     ],
+     [
+      20,
+      160
+     ],
+     [
+      40,
+      183
+     ]
+    ],
+    "sh": [
+     [
+      "2026-10-05",
+      0
+     ]
+    ],
+    "cds": {
+     "v": 98,
+     "d": "2026-09-28",
+     "s": 43
+    },
+    "how": "Long end from the 2064 and 2065 notes on Oct 5 (7.48% and 7.46%); CDS near 100bp, a record.",
+    "src": [
+     36,
+     43,
+     44
+    ]
+   },
+   "orcl": {
+    "mode": "curve",
+    "spr": [
+     [
+      1,
+      170
+     ],
+     [
+      3,
+      195
+     ],
+     [
+      6,
+      214
+     ],
+     [
+      10,
+      224
+     ],
+     [
+      20,
+      265
+     ],
+     [
+      30,
+      290
+     ],
+     [
+      40,
+      300
+     ]
+    ],
+    "sh": [
+     [
+      "2026-10-05",
+      -18
+     ],
+     [
+      "2026-10-13",
+      0
+     ]
+    ],
+    "cds": {
+     "v": 251.9,
+     "d": "2026-10-12",
+     "s": 38
+    },
+    "how": "2032 notes at 7.24% (Oct 14), 2035 at +224bp and 2055 at +278bp (Oct 7), 2066 at +300bp (Oct 13, widest since issue, from +282bp on Oct 5).",
+    "src": [
+     37,
+     39,
+     38,
+     36
+    ]
+   },
+   "spcx": {
+    "mode": "curve",
+    "spr": [
+     [
+      5,
+      180
+     ],
+     [
+      10,
+      200
+     ],
+     [
+      20,
+      221
+     ],
+     [
+      30,
+      204
+     ]
+    ],
+    "sh": [
+     [
+      "2026-10-05",
+      0
+     ]
+    ],
+    "cds": null,
+    "how": "2046 and 2056 notes on Oct 5 (7.84% and 7.67%); the 2031–2036 notes have no reported quote and use a spread a little inside the long bonds.",
+    "src": [
+     36
+    ]
+   },
+   "crwv": {
+    "mode": "curve",
+    "spr": [
+     [
+      3,
+      990
+     ],
+     [
+      7,
+      990
+     ]
+    ],
+    "sh": [
+     [
+      "2026-09-24",
+      -300
+     ],
+     [
+      "2026-10-12",
+      -118
+     ],
+     [
+      "2026-10-13",
+      0
+     ]
+    ],
+    "cds": {
+     "v": 881,
+     "d": "2026-10-12",
+     "s": 41
+    },
+    "how": "9.625% 2032 notes at 79.82 / 14.96% (G spread 990bp, Oct 13) and 9.75% 2031 at ~14.9% (Oct 14), from 11.4–12.1% on Sep 24. Other reports put the CDS near 1,000bp by Oct 14.",
+    "src": [
+     38,
+     37,
+     40,
+     41
+    ]
+   },
+   "sftb": {
+    "mode": "issue",
+    "sh": [
+     [
+      "2026-09-24",
+      0
+     ]
+    ],
+    "cds": {
+     "v": 384.6,
+     "d": "2026-09-15",
+     "s": 45
+    },
+    "how": "No secondary quotes reported; spreads held at the Sep 24 pricing (all five tranches sold at par).",
+    "src": [
+     46,
+     45
+    ]
+   },
+   "spv": {
+    "mode": "issue",
+    "flat": 230,
+    "sh": [
+     [
+      "2025-10-16",
+      -45
+     ],
+     [
+      "2026-07-15",
+      25
+     ],
+     [
+      "2026-09-28",
+      0
+     ]
+    ],
+    "cds": null,
+    "how": "Each project bond's spread at pricing, widened by how much Meta's Beignet 2049 notes have widened since (185bp at launch, 255bp in July, ~230bp on Sep 28).",
+    "src": [
+     42
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 325,
+ "bias": {
+  "en": "Bearish · closed below the September lows",
+  "zh": "偏空 · 收盘跌破 9月低点"
+ },
+ "read": [
+  {
+   "en": "Teradyne fell 5.3% on Oct 16 to $325.00, near the day's low of $324.09, and is down 19% in five sessions. It is below the 5-day ($358.4), 10-day ($388.0), 30-day ($383.2) and 100-day ($381.5) averages and the rising 200-day ($344.7). MACD has been below its signal since Oct 12 and is below zero, Parabolic SAR has been bearish since Oct 8 ($424.39), and RSI is 33.",
+   "zh": "泰瑞达 10月16日下跌 5.3%，收于 $325.00，接近当日低点 $324.09，五个交易日累计下跌 19%。股价位于 5 日（$358.4）、10 日（$388.0）、30 日（$383.2）和 100 日均线（$381.5）以及上行的 200 日均线（$344.7）下方。MACD 自 10月12日起位于信号线及零轴下方，抛物线 SAR 自 10月8日起看空（$424.39），RSI 为 33。"
+  },
+  {
+   "en": "The $331.9 Oct 15 low and the $326 September lows both broke and are now resistance, then $345 (200-day average, Oct 15 high) and $358 (5-day). Support is $309.4 (May 19 low), then $297–301 (late-July lows). A close below $309 would open $297–301; a close back above $332 would target $345.",
+   "zh": "10月15日低点 $331.9 和 9月低点 $326 均告失守，现转为阻力，其次 $345（200 日均线、10月15日高点）和 $358（5 日均线）。支撑为 $309.4（5月19日低点），其次 $297–301（7月下旬低点）。若收盘跌破 $309，下一目标看 $297–301；若收盘重回 $332 上方，目标看 $345。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    332,
+    {
+     "en": "September lows ($326–326.4) and Oct 15 low $331.9, now resistance",
+     "zh": "9月低点（$326–326.4）及10月15日低点 $331.9，现为阻力"
+    }
+   ],
+   [
+    345,
+    {
+     "en": "200-day average $344.7; Oct 15 high $344.9",
+     "zh": "200日均线 $344.7；10月15日高点 $344.9"
+    }
+   ],
+   [
+    358,
+    {
+     "en": "5-day average",
+     "zh": "5日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    309.4,
+    {
+     "en": "May 19 low",
+     "zh": "5月19日低点"
+    }
+   ],
+   [
+    299,
+    {
+     "en": "Late-July lows ($297–301)",
+     "zh": "7月下旬低点（$297–301）"
+    }
+   ]
+  ]
+ }
+}

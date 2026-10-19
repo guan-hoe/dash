@@ -1,0 +1,67 @@
+{
+ "ticker": "AVGO",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q3 FY2026 (July quarter)",
+  "zh": "2026 财年第三季（7 月季度）"
+ },
+ "reported": "2026-09-02",
+ "timing": "amc",
+ "pre_close": 367.24,
+ "react": {
+  "date": "2026-09-03",
+  "close": 357.16,
+  "pct": -2.7
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 328.75,
+  "pct": -10.5
+ },
+ "review": {
+  "en": [
+   "Revenue rose 86% to $29.6B and adjusted EPS of $3.32 beat $3.22; free cash flow was $13.7B. AI chip revenue more than tripled, and the Q4 guide of $34.8B includes $21.7B of AI revenue (+236%). CEO Hock Tan raised the fiscal 2027 AI revenue target to $115B from over $100B and set $230B for 2028, saying supply is secured for both. The catch is margin: Q4 gross margin is guided to about 73%, down five points, because custom XPUs carry costly memory. Amie Thuener is the new CFO.",
+   "Shares slipped 3% after hours and closed 2.7% lower the next day: the Q4 revenue guide landed between analysts' estimates rather than above them, and lower margins left the debate on custom-chip profitability open. The mid-September AI-slowdown scare pushed the stock to $339 on Sep 15, 8% below the pre-report close. It recovered to about $376 in early October and now sits just below its pre-report price."
+  ],
+  "zh": [
+   "营收增长 86% 至 296 亿美元，经调整每股收益 3.32 美元高于 3.22 美元，自由现金流 137 亿美元。AI 芯片营收增长逾两倍，第四季营收指引 348 亿美元，其中 AI 营收 217 亿美元（+236%）。CEO 陈福阳将 2027 财年 AI 营收目标由超过 1,000 亿美元上调至 1,150 亿美元，并首次给出 2028 财年 2,300 亿美元目标，称两年的供应均已锁定。隐忧是毛利率：第四季毛利率指引约 73%，下降五个百分点，因定制 XPU 含有昂贵的内存。Amie Thuener 为新任 CFO。",
+   "盘后下跌 3%，次日收跌 2.7%：第四季营收指引落在分析师预期区间内而非明显高于预期，毛利率下滑令定制芯片盈利能力之争悬而未决。9 月中旬 AI 放缓担忧令股价在 9 月 15 日跌至 339 美元，较财报前收盘低 8%。10 月初回升至约 376 美元，目前略低于财报前价位。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Hock Tan",
+   "zh": "陈福阳"
+  },
+  "since": "2006",
+  "bio": {
+   "en": "Malaysian-born, MIT-trained engineer with a Harvard MBA. CEO of Avago since 2006, he built today's Broadcom through acquisitions including Broadcom (2016), CA, Symantec's enterprise unit and VMware (2023), and now leads its custom AI chip business.",
+   "zh": "生于马来西亚，麻省理工工程背景、哈佛 MBA。2006 年起任安华高 CEO，通过收购博通（2016）、CA、赛门铁克企业业务和 VMware（2023）打造今日的博通，目前带领其定制 AI 芯片业务。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Amie Thuener",
+   "zh": "Amie Thuener"
+  },
+  "since": "2026",
+  "bio": {
+   "en": "CFO since June 12, 2026, succeeding the retiring Kirsten Spears. Joined from Alphabet, where she had been vice president, corporate controller and chief accounting officer since 2018.",
+   "zh": "2026 年 6 月 12 日接替退休的克尔斯滕·斯皮尔斯出任 CFO。此前在 Alphabet 任职，2018 年起担任副总裁、公司财务总监兼首席会计官。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q3 FY26 analysis (INDmoney)",
+   "u": "https://www.indmoney.com/blog/us-stocks/broadcom-q3-earnings-analysis-avgo-stock"
+  },
+  {
+   "t": "Q3 FY26 call transcript",
+   "u": "https://finance.yahoo.com/markets/stocks/articles/broadcom-avgo-q3-2026-earnings-212843048.html"
+  },
+  {
+   "t": "CFO transition",
+   "u": "https://news.broadcom.com/company/news/financial-releases/64156"
+  }
+ ]
+}

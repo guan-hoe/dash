@@ -1,0 +1,1159 @@
+{
+ "pelosi": {
+  "title": "Nancy Pelosi household",
+  "basis": "Estimated weights, STOCK Act filings",
+  "last_stock_filing": "2026-08-21",
+  "weights_source": {
+   "name": "Pelosi Tracker",
+   "url": "https://pelositracker.app/portfolios/nancy-pelosi",
+   "asof": "2026-10-13"
+  },
+  "note": "Trades are Paul Pelosi's (owner code SP). Filings give value bands, not exact sizes, so weights are third-party estimates (call options counted as stock exposure) and the return is a model: today's weights applied to daily prices, not the household's actual P&L. Excludes AllianceBernstein units, private funds and real estate.",
+  "holdings": [
+   [
+    "NVDA",
+    "NVIDIA",
+    15
+   ],
+   [
+    "BE",
+    "Bloom Energy",
+    13
+   ],
+   [
+    "GOOGL",
+    "Alphabet",
+    13
+   ],
+   [
+    "AVGO",
+    "Broadcom",
+    12
+   ],
+   [
+    "PANW",
+    "Palo Alto Networks",
+    7
+   ],
+   [
+    "INTC",
+    "Intel",
+    6
+   ],
+   [
+    "VST",
+    "Vistra",
+    6
+   ],
+   [
+    "CRWD",
+    "CrowdStrike",
+    6
+   ],
+   [
+    "AMZN",
+    "Amazon",
+    5
+   ],
+   [
+    "TEM",
+    "Tempus AI",
+    4
+   ],
+   [
+    "AAPL",
+    "Apple",
+    3
+   ],
+   [
+    "MSFT",
+    "Microsoft",
+    3
+   ],
+   [
+    "TSLA",
+    "Tesla",
+    3
+   ],
+   [
+    "UBER",
+    "Uber",
+    1
+   ]
+  ],
+  "trades": [
+   [
+    "2026-07-28",
+    "BE",
+    "Buy",
+    "100 calls, $100 strike, Jun 2027",
+    "$500K–1M",
+    "20035143"
+   ],
+   [
+    "2026-07-28",
+    "BE",
+    "Buy",
+    "5,000 shares",
+    "$500K–1M",
+    "20035143"
+   ],
+   [
+    "2026-07-24",
+    "BE",
+    "Buy",
+    "100 calls, $100 strike, Jun 2027",
+    "$1M–5M",
+    "20035143"
+   ],
+   [
+    "2026-07-24",
+    "BE",
+    "Buy",
+    "10,000 shares",
+    "$1M–5M",
+    "20035143"
+   ],
+   [
+    "2026-07-24",
+    "INTC",
+    "Buy",
+    "10,000 shares",
+    "$500K–1M",
+    "20035143"
+   ],
+   [
+    "2026-07-24",
+    "INTC",
+    "Buy",
+    "50 calls, $50 strike, Jun 2027",
+    "$250K–500K",
+    "20035143"
+   ],
+   [
+    "2026-05-29",
+    "INTC",
+    "Buy",
+    "200 calls, $50 strike, Mar 2027",
+    "$1M–5M",
+    "20034836"
+   ],
+   [
+    "2026-05-29",
+    "UBER",
+    "Buy",
+    "200 calls, $50 strike, Mar 2027",
+    "$500K–1M",
+    "20034836"
+   ],
+   [
+    "2026-01-16",
+    "AB",
+    "Buy",
+    "25,000 units",
+    "$1M–5M",
+    "20033725"
+   ],
+   [
+    "2026-01-16",
+    "GOOGL",
+    "Exercise",
+    "50 calls (5,000 shares)",
+    "$500K–1M",
+    "20033725"
+   ],
+   [
+    "2026-01-16",
+    "AMZN",
+    "Exercise",
+    "50 calls (5,000 shares)",
+    "$500K–1M",
+    "20033725"
+   ],
+   [
+    "2026-01-16",
+    "NVDA",
+    "Exercise",
+    "50 calls (5,000 shares)",
+    "$250K–500K",
+    "20033725"
+   ],
+   [
+    "2026-01-16",
+    "VST",
+    "Exercise",
+    "50 calls (5,000 shares)",
+    "$100K–250K",
+    "20033725"
+   ],
+   [
+    "2026-01-16",
+    "TEM",
+    "Exercise",
+    "50 calls (5,000 shares)",
+    "$50K–100K",
+    "20033725"
+   ],
+   [
+    "2025-12-30",
+    "GOOGL",
+    "Buy",
+    "20 calls, Jan 2027",
+    "$250K–500K",
+    "20033725"
+   ],
+   [
+    "2025-12-30",
+    "AAPL",
+    "Buy",
+    "20 calls, Jan 2027",
+    "$250K–500K",
+    "20033725"
+   ],
+   [
+    "2025-12-30",
+    "NVDA",
+    "Buy",
+    "20 calls, Jan 2027",
+    "$100K–250K",
+    "20033725"
+   ],
+   [
+    "2025-12-30",
+    "AMZN",
+    "Buy",
+    "20 calls, Jan 2027",
+    "$100K–250K",
+    "20033725"
+   ],
+   [
+    "2025-12-30",
+    "DIS",
+    "Sell",
+    "10,000 shares",
+    "$1M–5M",
+    "20033725"
+   ],
+   [
+    "2025-12-30",
+    "PYPL",
+    "Sell",
+    "5,000 shares",
+    "$250K–500K",
+    "20033725"
+   ],
+   [
+    "2025-12-24",
+    "AAPL",
+    "Sell",
+    "45,000 shares",
+    "$5M–25M",
+    "20033725"
+   ],
+   [
+    "2025-12-24",
+    "AMZN",
+    "Sell",
+    "20,000 shares",
+    "$1M–5M",
+    "20033725"
+   ],
+   [
+    "2025-12-24",
+    "NVDA",
+    "Sell",
+    "20,000 shares",
+    "$1M–5M",
+    "20033725"
+   ]
+  ],
+  "reviewed_filings": [
+   "20033725",
+   "20034836",
+   "20035143",
+   "20035553"
+  ],
+  "latest_filing": "Latest filing (Oct 2, 2026, #20035553): a $500K–1M real-estate LLC investment, no stock trades.",
+  "filing_year": "2026",
+  "filing_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/{year}/{id}.pdf"
+ },
+ "trump": {
+  "title": "Donald Trump · personal stock book",
+  "basis": "Estimated values, OGE annual report and 278-T filings",
+  "last_stock_filing": "2026-08-31",
+  "since_text": "latest 278-T covers trades to Aug 31 (released Oct 8)",
+  "weights_source": {
+   "name": "Unusual Whales estimates (via Business Insider, Jul 2026)",
+   "url": "https://www.businessinsider.com/trump-portfolio-stock-trades-beat-market-analysis-2026-7",
+   "asof": "2026-07-02"
+  },
+  "note": "Filings give value bands, so weights are third-party estimates from his 2025 annual report: Trump Media (DJT, ~114.75M shares in a trust) ~$993M, then Alphabet, Apple, Nvidia and Broadcom; the other ~$567M of stocks sits in index-replicating managed accounts, modelled as SPY. Return is a model (fixed weights, rebalanced daily), not actual P&L. Excludes ~$700M of bonds, crypto, real estate and private businesses.",
+  "holdings": [
+   [
+    "DJT",
+    "Trump Media & Technology",
+    993
+   ],
+   [
+    "GOOGL",
+    "Alphabet",
+    40.1
+   ],
+   [
+    "AAPL",
+    "Apple",
+    36
+   ],
+   [
+    "NVDA",
+    "NVIDIA",
+    35.3
+   ],
+   [
+    "AVGO",
+    "Broadcom",
+    24
+   ],
+   [
+    "SPY",
+    "Rest of stock book (modelled as S&P 500)",
+    566.6
+   ]
+  ],
+  "trades_label": "Largest August trades",
+  "trades": [
+   [
+    "2026-08-21",
+    "META",
+    "Buy",
+    "Stock",
+    "$5M–25M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "T",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "COP",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "ABT",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "NFLX",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "CVX",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "AMD",
+    "Sell",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "CHD",
+    "Sell",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "NVDA",
+    "Sell",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "DELL",
+    "Sell",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "BA",
+    "Sell",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "HD",
+    "Sell",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "TMUS",
+    "Sell",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "DDOG",
+    "Sell",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-21",
+    "PANW",
+    "Sell",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-18",
+    "SPCX",
+    "Buy",
+    "Senior notes, 5.35% due Jul 2031 (debt, not shares)",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-17",
+    "NVDA",
+    "Buy",
+    "Stock",
+    "$500K–1M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-17",
+    "AMZN",
+    "Buy",
+    "Stock",
+    "$250K–500K",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-10",
+    "MSFT",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-10",
+    "MCD",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-10",
+    "CMCSA",
+    "Buy",
+    "Stock",
+    "$1M–5M",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ],
+   [
+    "2026-08-03",
+    "NVDA",
+    "Buy",
+    "Stock",
+    "$250K–500K",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0BDCCCE7DE13AEFA85258E8A002DE2B5/$FILE/Donald-J-Trump.09.17.2026-278T.pdf"
+   ]
+  ],
+  "filing_url": "{id}",
+  "latest_filing": "Latest 278-T (released Oct 8) lists 517 August trades worth roughly $74M–273M in total.",
+  "trades_source": "Trades: OGE Form 278-T."
+ },
+ "druck": {
+  "title": "Stanley Druckenmiller · Duquesne Family Office",
+  "basis": "13F holdings, exact share counts",
+  "cik": 1536411,
+  "accession": "0001536411-26-000006",
+  "period": "2026-06-30",
+  "filed": "2026-08-14",
+  "next_due": "2026-11-16",
+  "note": "13F lists US-listed long positions and call options at quarter end only, filed up to 45 days later; it omits shorts, cash, bonds, currencies and futures. Call rows are valued at the underlying shares, as filed. Weights are each row's share of the total reported value, with filed share counts at today's prices; the fund may have traded since.",
+  "previous": "Vs Mar 31: reported value rose from about $3.4B to $5.2B and positions from 70 to 95; exited Micron, Intel, Broadcom, Lattice, Coherent, Cloudflare and MercadoLibre; built Amazon (shares up more than tenfold, calls doubled), Alphabet, AMD, Delta, Bitdeer, Riot and Fox, and roughly tripled United Airlines.",
+  "holdings": [
+   [
+    "NTRA",
+    "Natera",
+    3186306,
+    864923000
+   ],
+   [
+    "TSM",
+    "TSMC (ADS)",
+    589680,
+    281613000
+   ],
+   [
+    "STM",
+    "STMicroelectronics (NY)",
+    3102880,
+    232375000
+   ],
+   [
+    "RSP",
+    "Invesco S&P 500 Equal Weight ETF",
+    821000,
+    174684000,
+    "call"
+   ],
+   [
+    "INSM",
+    "Insmed",
+    1424690,
+    151900000
+   ],
+   [
+    "EWZ",
+    "iShares MSCI Brazil ETF",
+    4228000,
+    145866000,
+    "call"
+   ],
+   [
+    "INSM",
+    "Insmed",
+    1350000,
+    143937000,
+    "call"
+   ],
+   [
+    "YPF",
+    "YPF (ADR)",
+    3138897,
+    142726000
+   ],
+   [
+    "AMZN",
+    "Amazon",
+    541600,
+    129085000
+   ],
+   [
+    "TBBB",
+    "BBB Foods",
+    2901733,
+    120915000
+   ],
+   [
+    "GOOGL",
+    "Alphabet (A)",
+    336300,
+    120184000
+   ],
+   [
+    "EWZ",
+    "iShares MSCI Brazil ETF",
+    3436170,
+    118548000
+   ],
+   [
+    "STX",
+    "Seagate Technology",
+    122000,
+    117730000
+   ],
+   [
+    "FOXA",
+    "Fox (A)",
+    2204600,
+    114992000
+   ],
+   [
+    "AMZN",
+    "Amazon",
+    459300,
+    109470000,
+    "call"
+   ],
+   [
+    "UAL",
+    "United Airlines",
+    794795,
+    108084000
+   ],
+   [
+    "SE",
+    "Sea (ADS)",
+    1099905,
+    105404000
+   ],
+   [
+    "CDW",
+    "CDW",
+    743950,
+    104629000
+   ],
+   [
+    "NAMS",
+    "NewAmsterdam Pharma",
+    3070146,
+    104047000
+   ],
+   [
+    "IWM",
+    "iShares Russell 2000 ETF",
+    330000,
+    99149000,
+    "call"
+   ],
+   [
+    "SNDK",
+    "Sandisk",
+    34900,
+    79353000
+   ],
+   [
+    "RVMD",
+    "Revolution Medicines",
+    399587,
+    74835000
+   ],
+   [
+    "SPY",
+    "SPDR S&P 500 ETF",
+    90000,
+    67209000,
+    "call"
+   ],
+   [
+    "BTDR",
+    "Bitdeer Technologies",
+    4074993,
+    64670000
+   ],
+   [
+    "CRH",
+    "CRH",
+    553555,
+    59230000
+   ],
+   [
+    "DAL",
+    "Delta Air Lines",
+    603000,
+    56477000
+   ],
+   [
+    "TSLA",
+    "Tesla",
+    126000,
+    52996000,
+    "call"
+   ],
+   [
+    "FLR",
+    "Fluor",
+    982200,
+    51457000
+   ],
+   [
+    "DHI",
+    "D.R. Horton",
+    299000,
+    48701000
+   ],
+   [
+    "CPNG",
+    "Coupang",
+    2667485,
+    46334000
+   ],
+   [
+    "AMD",
+    "AMD",
+    72900,
+    42348000
+   ],
+   [
+    "PANW",
+    "Palo Alto Networks",
+    116650,
+    39780000
+   ],
+   [
+    "CLF",
+    "Cleveland-Cliffs",
+    4216184,
+    39590000
+   ],
+   [
+    "HUT",
+    "Hut 8",
+    314150,
+    36267000
+   ],
+   [
+    "CDW",
+    "CDW",
+    250000,
+    35160000,
+    "call"
+   ],
+   [
+    "CAI",
+    "Caris Life Sciences",
+    1894450,
+    33759000
+   ],
+   [
+    "ARGT",
+    "Global X MSCI Argentina ETF",
+    328800,
+    30019000
+   ],
+   [
+    "FOX",
+    "Fox (B)",
+    632600,
+    29631000
+   ],
+   [
+    "WWD",
+    "Woodward",
+    67194,
+    28587000
+   ],
+   [
+    "META",
+    "Meta Platforms",
+    50000,
+    28165000,
+    "call"
+   ],
+   [
+    "NUVB",
+    "Nuvation Bio",
+    4539800,
+    25786000
+   ],
+   [
+    "PTGX",
+    "Protagonist Therapeutics",
+    208900,
+    25607000
+   ],
+   [
+    "ROKU",
+    "Roku",
+    184055,
+    25425000
+   ],
+   [
+    "CVCO",
+    "Cavco Industries",
+    39500,
+    24268000
+   ],
+   [
+    "ADMA",
+    "ADMA Biologics",
+    2784110,
+    23303000
+   ],
+   [
+    "PURR",
+    "Hyperliquid Strategies",
+    2941500,
+    23150000
+   ],
+   [
+    "RMBS",
+    "Rambus",
+    173000,
+    22964000
+   ],
+   [
+    "RYTM",
+    "Rhythm Pharmaceuticals",
+    203618,
+    22608000
+   ],
+   [
+    "SKY",
+    "Champion Homes",
+    254400,
+    22418000
+   ],
+   [
+    "DAKT",
+    "Daktronics",
+    1123109,
+    21968000
+   ],
+   [
+    "PCT",
+    "PureCycle Technologies",
+    2681415,
+    21746000
+   ],
+   [
+    "SCCO",
+    "Southern Copper",
+    123060,
+    21444000
+   ],
+   [
+    "LIN",
+    "Linde",
+    41200,
+    21380000
+   ],
+   [
+    "ENTG",
+    "Entegris",
+    118300,
+    21277000
+   ],
+   [
+    "TEVA",
+    "Teva Pharmaceutical (ADS)",
+    624999,
+    21175000
+   ],
+   [
+    "U",
+    "Unity Software",
+    738785,
+    21114000
+   ],
+   [
+    "AEVA",
+    "Aeva Technologies",
+    720175,
+    20683000
+   ],
+   [
+    "RIOT",
+    "Riot Platforms",
+    754800,
+    20666000
+   ],
+   [
+    "Q",
+    "Qnity Electronics",
+    125655,
+    20521000
+   ],
+   [
+    "EQIX",
+    "Equinix",
+    18450,
+    19232000
+   ],
+   [
+    "LRCX",
+    "Lam Research",
+    43600,
+    18893000
+   ],
+   [
+    "DFTX",
+    "Definium Therapeutics",
+    356600,
+    16774000
+   ],
+   [
+    "BLTE",
+    "Belite Bio (ADS)",
+    106100,
+    16338000
+   ],
+   [
+    "RSP",
+    "Invesco S&P 500 Equal Weight ETF",
+    74400,
+    15830000
+   ],
+   [
+    "TXG",
+    "10x Genomics",
+    403100,
+    15455000
+   ],
+   [
+    "WAB",
+    "Wabtec",
+    56595,
+    15258000
+   ],
+   [
+    "LLY",
+    "Eli Lilly",
+    12380,
+    14849000
+   ],
+   [
+    "XENE",
+    "Xenon Pharmaceuticals",
+    238600,
+    14402000
+   ],
+   [
+    "OLMA",
+    "Olema Pharmaceuticals",
+    986827,
+    12345000
+   ],
+   [
+    "RGEN",
+    "Repligen",
+    77400,
+    10560000
+   ],
+   [
+    "RKT",
+    "Rocket Companies",
+    652220,
+    10272000
+   ],
+   [
+    "BIDU",
+    "Baidu (ADR)",
+    88200,
+    10080000
+   ],
+   [
+    "ARM",
+    "Arm Holdings (ADS)",
+    28090,
+    9960000
+   ],
+   [
+    "CVNA",
+    "Carvana",
+    151000,
+    9939000
+   ],
+   [
+    "RDDT",
+    "Reddit",
+    56550,
+    9816000
+   ],
+   [
+    "AA",
+    "Alcoa",
+    185640,
+    9679000
+   ],
+   [
+    "TMO",
+    "Thermo Fisher Scientific",
+    19200,
+    9626000
+   ],
+   [
+    "DHR",
+    "Danaher",
+    50300,
+    9581000
+   ],
+   [
+    "FFIV",
+    "F5",
+    22000,
+    9151000
+   ],
+   [
+    "VIST",
+    "Vista Energy (ADS)",
+    134700,
+    8594000
+   ],
+   [
+    "SKE",
+    "Skeena Resources",
+    300200,
+    8003000
+   ],
+   [
+    "JBS",
+    "JBS",
+    655900,
+    7772000
+   ],
+   [
+    "GLUE",
+    "Monte Rosa Therapeutics",
+    297600,
+    7202000
+   ],
+   [
+    "RLAY",
+    "Relay Therapeutics",
+    349000,
+    6530000
+   ],
+   [
+    "DBVT",
+    "DBV Technologies (ADS)",
+    383363,
+    6287000
+   ],
+   [
+    "CCCS",
+    "CCC Intelligent Solutions",
+    1170900,
+    6042000
+   ],
+   [
+    "UWMC",
+    "UWM Holdings",
+    2583000,
+    5915000
+   ],
+   [
+    "NVTS",
+    "Navitas Semiconductor",
+    311100,
+    5575000
+   ],
+   [
+    "SOLS",
+    "Solstice Advanced Materials",
+    62525,
+    5540000
+   ],
+   [
+    "FTAI",
+    "FTAI Aviation",
+    20200,
+    5465000
+   ],
+   [
+    "BEAM",
+    "Beam Therapeutics",
+    153600,
+    5272000
+   ],
+   [
+    "AUR",
+    "Aurora Innovation",
+    633700,
+    4322000
+   ],
+   [
+    "IREN",
+    "IREN",
+    87100,
+    3983000
+   ],
+   [
+    "GGAL",
+    "Grupo Financiero Galicia (ADR)",
+    59500,
+    2977000
+   ],
+   [
+    "WVE",
+    "Wave Life Sciences",
+    173000,
+    1005000
+   ]
+  ]
+ },
+ "thiel": {
+  "title": "Peter Thiel · Thiel Macro LLC",
+  "basis": "13F holdings, exact share counts",
+  "cik": 1562087,
+  "accession": "0001315863-26-000593",
+  "period": "2026-06-30",
+  "filed": "2026-08-14",
+  "next_due": "2026-11-16",
+  "note": "13F lists US-listed long positions at quarter end only, filed up to 45 days later; it omits shorts, cash, non-US holdings and Founders Fund. Values now are the filed share counts at today's prices; the fund may have traded since.",
+  "holdings": [
+   [
+    "AMZN",
+    "Amazon",
+    495000,
+    117978300
+   ],
+   [
+    "VIST",
+    "Vista Energy (ADS)",
+    1189792,
+    75908730
+   ],
+   [
+    "VST",
+    "Vistra",
+    372755,
+    59130126
+   ],
+   [
+    "AEP",
+    "American Electric Power",
+    308617,
+    42221892
+   ],
+   [
+    "DTE",
+    "DTE Energy",
+    264450,
+    40294247
+   ],
+   [
+    "FE",
+    "FirstEnergy",
+    839319,
+    39901225
+   ],
+   [
+    "CMS",
+    "CMS Energy",
+    517124,
+    39559986
+   ],
+   [
+    "XE",
+    "X-Energy",
+    200000,
+    3672000
+   ]
+  ],
+  "previous": "No 13F holdings at Dec 31, 2025 or Mar 31, 2026; all eight positions are new this quarter."
+ }
+}

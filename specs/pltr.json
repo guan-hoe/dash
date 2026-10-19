@@ -1,0 +1,751 @@
+{
+ "dir": "pltr",
+ "ticker": "PLTR",
+ "exchange": "NASDAQ",
+ "name": "Palantir Technologies",
+ "shares": 2403000000.0,
+ "beta": "1.60",
+ "snapshot": {
+  "price": "$209.05",
+  "date": "Oct 9, 2026",
+  "mcap": "$502B",
+  "range": "$107–209"
+ },
+ "eyebrow": {
+  "en": "Palantir Technologies Inc. · Class A common stock · Aventura, Florida",
+  "zh": "Palantir Technologies · A 类普通股 · 佛罗里达州阿文图拉"
+ },
+ "title": {
+  "en": "Data and AI software for the Pentagon and corporate America, <em>growing faster at $8B than at $2B</em>.",
+  "zh": "服务五角大楼与美国企业的数据和 AI 软件，<em>规模 80 亿时比 20 亿时增长更快</em>。"
+ },
+ "lede": {
+  "en": "Palantir sells software (Foundry, Gotham and its AI Platform, AIP) that lets governments and companies run decisions on their own data. Revenue grew 93% last quarter to $1.94B, led by US commercial sales up 149%, and the full-year guide was raised to about $8.15B. The catch is price: at a record $209 the stock is valued at about 62 times this year's revenue guide.",
+  "zh": "Palantir 销售让政府和企业基于自身数据做决策的软件（Foundry、Gotham 及 AI 平台 AIP）。上季营收增长 93% 至 19.4 亿美元，其中美国商业收入增长 149%，全年指引上调至约 81.5 亿美元。问题在于价格：股价创下 $209 的纪录，市值约为今年营收指引的 62 倍。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/S (FY26 guide)",
+   "zh": "市销率（FY26 指引）"
+  },
+  "v": "~62×",
+  "s": {
+   "en": "trailing GAAP P/E ~180× · forward ~90×",
+   "zh": "GAAP 历史市盈率约 180 倍 · 预期约 90 倍"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q3 2026 guide",
+   "zh": "2026 第三季指引"
+  },
+  "v": "$2.16B",
+  "s": {
+   "en": "+83% YoY · adj. op. income $1.29–1.30B · FY $8.15–8.16B",
+   "zh": "同比 +83% · 调整后营业利润 12.9–13.0 亿 · 全年 81.5–81.6 亿"
+  }
+ },
+ "earnings": {
+  "v": "Nov 2",
+  "s": {
+   "en": "Q3 2026 · expected, after close · not yet confirmed",
+   "zh": "2026 第三季 · 预计盘后 · 公司尚未确认"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. Palantir fell from $207 in November 2025 to $107 in late June, then almost doubled after the Aug 3 report to a record close of $209.05 on Oct 9.",
+  "zh": "每日收盘价与50日均线。Palantir 由 2025年11月的 $207 跌至 6月下旬的 $107，8月3日财报后几乎翻倍，10月9日以 $209.05 创收盘纪录。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Palantir's fiscal year is the calendar year. GAAP operating margin swung from −23% in Q3 2021 to 47% as stock-based pay shrank relative to sales; Q4 2024 dips to 1% on a one-off stock compensation charge. The last bar is the midpoint of the Q3 2026 guide of $2.160–2.164B.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。Palantir 财年与日历年一致。随着股权激励相对营收缩小，GAAP 营业利润率由 2021 第三季的 −23% 升至 47%；2024 第四季因一次性股权激励费用降至 1%。最后一根柱为 2026 第三季指引 21.60–21.64 亿美元的中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q2 2026",
+    "zh": "2026 第二季"
+   },
+   "v": "$1.94B",
+   "s": {
+    "en": "+93% YoY · +19% QoQ",
+    "zh": "同比 +93% · 环比 +19%"
+   }
+  },
+  {
+   "k": {
+    "en": "US commercial",
+    "zh": "美国商业"
+   },
+   "v": "$764M",
+   "s": {
+    "en": "+149% YoY · 653 customers (+35%)",
+    "zh": "同比 +149% · 客户 653 家（+35%）"
+   }
+  },
+  {
+   "k": {
+    "en": "US government",
+    "zh": "美国政府"
+   },
+   "v": "$809M",
+   "s": {
+    "en": "+90% YoY · +18% QoQ",
+    "zh": "同比 +90% · 环比 +18%"
+   }
+  },
+  {
+   "k": {
+    "en": "International",
+    "zh": "国际"
+   },
+   "v": "$363M",
+   "s": {
+    "en": "commercial $182M (+26%) · gov't $181M (+42%)",
+    "zh": "商业 1.82 亿（+26%）· 政府 1.81 亿（+42%）"
+   }
+  },
+  {
+   "k": {
+    "en": "Rule of 40",
+    "zh": "40 法则"
+   },
+   "v": "155%",
+   "s": {
+    "en": "adj. op. margin 62% · GAAP 47%",
+    "zh": "调整后营业利润率 62% · GAAP 47%"
+   }
+  },
+  {
+   "k": {
+    "en": "US comm. deal value",
+    "zh": "美国商业剩余合同额"
+   },
+   "v": "$6.24B",
+   "s": {
+    "en": "+124% YoY · total RDV $13.1B",
+    "zh": "同比 +124% · 总剩余合同额 131 亿"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "US commercial engine",
+    "zh": "美国商业引擎"
+   },
+   "p": {
+    "en": "US commercial bookings hit a record $2.13B (+153%) and the full-year guide now calls for at least $3.42B of revenue, up 134% or more.",
+    "zh": "美国商业签约额创纪录 21.3 亿美元（+153%），全年指引至少 34.2 亿美元营收，增长不低于 134%。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Cash machine",
+    "zh": "现金充沛"
+   },
+   "p": {
+    "en": "Q2 cash from operations was $1.22B, a 63% margin. Palantir holds $9.2B of cash and Treasuries, has no borrowings, and guides $4.5–4.7B of adjusted free cash flow this year.",
+    "zh": "Q2 经营现金流 12.2 亿美元，利润率 63%。持有 92 亿美元现金及国债，无借款，今年调整后自由现金流指引 45–47 亿。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Q3 bar",
+    "zh": "第三季门槛"
+   },
+   "p": {
+    "en": "The Street expects about $2.18B, just above the $2.16B guide. Palantir beat the top of its guide by 5.7–8.7% in each of the last five quarters, yet the stock fell after two of those reports.",
+    "zh": "市场预期约 21.8 亿美元，略高于 21.6 亿指引。过去五季营收均超指引上限 5.7–8.7%，但其中两次财报后股价下跌。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "International lag",
+    "zh": "国际业务落后"
+   },
+   "p": {
+    "en": "The US is 81% of revenue. International commercial grew only 26%, so growth depends heavily on one country's companies and agencies.",
+    "zh": "美国占营收 81%。国际商业仅增长 26%，增长高度依赖美国企业和机构。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Valuation",
+    "zh": "估值"
+   },
+   "p": {
+    "en": "At about $502B the stock trades near 62 times this year's revenue guide and about 180 times trailing GAAP earnings. Any slowdown would hit a price like that hard.",
+    "zh": "市值约 5,020 亿美元，约为今年营收指引的 62 倍、GAAP 历史盈利的约 180 倍。增长一旦放缓，股价将大受冲击。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Stock pay and dilution",
+    "zh": "股权激励与稀释"
+   },
+   "p": {
+    "en": "Stock-based compensation was $265M in Q2 (14% of revenue). It is the main gap between the 62% adjusted and 47% GAAP operating margin, and diluted shares (2.57B) run well above basic (2.40B).",
+    "zh": "Q2 股权激励 2.65 亿美元（占营收 14%），是调整后 62% 与 GAAP 47% 营业利润率之间的主要差距；稀释股数（25.7 亿）明显高于基本股数（24.0 亿）。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Nov 2, 2026",
+   "h": {
+    "en": "Q3 2026 earnings (expected)",
+    "zh": "2026 第三季财报（预计）"
+   },
+   "p": {
+    "en": "Guide is $2.160–2.164B revenue and $1.292–1.296B adjusted operating income. Date not yet confirmed by the company.",
+    "zh": "指引营收 21.60–21.64 亿美元，调整后营业利润 12.92–12.96 亿。公司尚未确认日期。"
+   }
+  },
+  {
+   "date": "Dec 11, 2026",
+   "h": {
+    "en": "US funding deadline",
+    "zh": "美国政府拨款期限"
+   },
+   "p": {
+    "en": "The stopgap bill funds federal agencies to Dec 11. A full-year defense budget, or another extension, shapes new government awards.",
+    "zh": "临时拨款法案为联邦机构提供资金至12月11日。全年国防预算或再次延期将影响新的政府合同。"
+   }
+  },
+  {
+   "date": "Early Feb 2027",
+   "h": {
+    "en": "Q4 2026 earnings",
+    "zh": "2026 第四季财报"
+   },
+   "p": {
+    "en": "Full-year results and the first 2027 guide. The FY26 guide implies about $2.42B of Q4 revenue if Q3 lands at guidance.",
+    "zh": "全年业绩及首份 2027 指引。若 Q3 符合指引，FY26 指引隐含 Q4 营收约 24.2 亿美元。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q2 2026 results press release (SEC exhibit 99.1)",
+   "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000039/a2026q2ex991pressrelease.htm"
+  ],
+  [
+   "Q2 2026 earnings call transcript (Motley Fool)",
+   "https://fool.com/earnings/call-transcripts/2026/08/10/palantir-pltr-q2-2026-earnings-call-transcript"
+  ],
+  [
+   "Palantir Q2 2026 earnings: revenue up 93%, guidance raised (Yahoo Finance)",
+   "https://finance.yahoo.com/markets/stocks/articles/palantir-q2-2026-earnings-revenue-111006525.html"
+  ],
+  [
+   "Palantir closes at a record; what Q3 has to clear (Yahoo Finance / TIKR)",
+   "https://finance.yahoo.com/markets/stocks/articles/palantir-stock-closed-record-barclays-153645442.html"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/pltr/financials/income-statement/?p=quarterly"
+  ],
+  [
+   "Q3 date and Q2 recap (Benzinga)",
+   "https://benzinga.com/markets/equities/26/10/62105178/palantir-stock-soars-60-in-q3-after-first-half-rout-can-earnings-keep-the-rally-going"
+  ],
+  [
+   "Price, market cap, beta and analyst targets: Stocklake, FMP and Stock Analysis, as of Oct 9, 2026",
+   "https://stockanalysis.com/stocks/pltr/statistics/"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Palantir Technologies Inc.",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Palantir Technologies Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q3 2021",
+   "Sep 2021",
+   392,
+   77.86,
+   -23.45,
+   -0.05
+  ],
+  [
+   "Q4 2021",
+   "Dec 2021",
+   433,
+   79.77,
+   -13.62,
+   -0.08
+  ],
+  [
+   "Q1 2022",
+   "Mar 2022",
+   446,
+   78.85,
+   -8.84,
+   -0.05
+  ],
+  [
+   "Q2 2022",
+   "Jun 2022",
+   473,
+   78.39,
+   -8.82,
+   -0.09
+  ],
+  [
+   "Q3 2022",
+   "Sep 2022",
+   478,
+   77.48,
+   -13.01,
+   -0.06
+  ],
+  [
+   "Q4 2022",
+   "Dec 2022",
+   509,
+   79.49,
+   -3.5,
+   0.01
+  ],
+  [
+   "Q1 2023",
+   "Mar 2023",
+   525,
+   79.5,
+   0.78,
+   0.01
+  ],
+  [
+   "Q2 2023",
+   "Jun 2023",
+   533,
+   79.96,
+   1.89,
+   0.01
+  ],
+  [
+   "Q3 2023",
+   "Sep 2023",
+   558,
+   80.66,
+   7.16,
+   0.03
+  ],
+  [
+   "Q4 2023",
+   "Dec 2023",
+   608,
+   82.14,
+   10.81,
+   0.04
+  ],
+  [
+   "Q1 2024",
+   "Mar 2024",
+   634,
+   81.67,
+   12.75,
+   0.04
+  ],
+  [
+   "Q2 2024",
+   "Jun 2024",
+   678,
+   81.04,
+   15.53,
+   0.06
+  ],
+  [
+   "Q3 2024",
+   "Sep 2024",
+   726,
+   79.79,
+   15.59,
+   0.06
+  ],
+  [
+   "Q4 2024",
+   "Dec 2024",
+   828,
+   78.91,
+   1.33,
+   0.03
+  ],
+  [
+   "Q1 2025",
+   "Mar 2025",
+   884,
+   80.43,
+   19.92,
+   0.08
+  ],
+  [
+   "Q2 2025",
+   "Jun 2025",
+   1004,
+   80.78,
+   26.83,
+   0.13
+  ],
+  [
+   "Q3 2025",
+   "Sep 2025",
+   1181,
+   82.45,
+   33.3,
+   0.18
+  ],
+  [
+   "Q4 2025",
+   "Dec 2025",
+   1407,
+   84.65,
+   40.9,
+   0.23
+  ],
+  [
+   "Q1 2026",
+   "Mar 2026",
+   1633,
+   86.78,
+   46.18,
+   0.34
+  ],
+  [
+   "Q2 2026",
+   "Jun 2026",
+   1935,
+   84.66,
+   47.12,
+   0.41
+  ]
+ ],
+ "guide": [
+  "Q3 2026e",
+  2162,
+  "Sep 2026 · guidance midpoint",
+  "2026年9月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q3 2021 to Q2 2026. Palantir's fiscal year is the calendar year. This is GAAP free cash flow; Palantir's own 'adjusted' figure also adds back employer taxes on stock pay. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 2021 第三季至 2026 第二季共 20 个季度。Palantir 财年与日历年一致。此处为 GAAP 自由现金流；公司自报的“调整后”数字另加回股权激励相关的雇主税费。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q3 2021",
+    "Sep 2021",
+    100.8,
+    5.4,
+    95.4
+   ],
+   [
+    "Q4 2021",
+    "Dec 2021",
+    93.4,
+    5.8,
+    87.6
+   ],
+   [
+    "Q1 2022",
+    "Mar 2022",
+    35.5,
+    15.2,
+    20.3
+   ],
+   [
+    "Q2 2022",
+    "Jun 2022",
+    62.4,
+    5.5,
+    57.0
+   ],
+   [
+    "Q3 2022",
+    "Sep 2022",
+    47.1,
+    14.4,
+    32.6
+   ],
+   [
+    "Q4 2022",
+    "Dec 2022",
+    78.8,
+    4.9,
+    73.8
+   ],
+   [
+    "Q1 2023",
+    "Mar 2023",
+    187.4,
+    4.8,
+    182.6
+   ],
+   [
+    "Q2 2023",
+    "Jun 2023",
+    90.2,
+    3.9,
+    86.3
+   ],
+   [
+    "Q3 2023",
+    "Sep 2023",
+    133.4,
+    1.6,
+    131.9
+   ],
+   [
+    "Q4 2023",
+    "Dec 2023",
+    301.2,
+    4.9,
+    296.3
+   ],
+   [
+    "Q1 2024",
+    "Mar 2024",
+    129.6,
+    2.7,
+    126.9
+   ],
+   [
+    "Q2 2024",
+    "Jun 2024",
+    144.2,
+    2.9,
+    141.3
+   ],
+   [
+    "Q3 2024",
+    "Sep 2024",
+    419.8,
+    4.0,
+    415.8
+   ],
+   [
+    "Q4 2024",
+    "Dec 2024",
+    460.3,
+    3.1,
+    457.2
+   ],
+   [
+    "Q1 2025",
+    "Mar 2025",
+    310.3,
+    6.2,
+    304.1
+   ],
+   [
+    "Q2 2025",
+    "Jun 2025",
+    539.2,
+    7.6,
+    531.6
+   ],
+   [
+    "Q3 2025",
+    "Sep 2025",
+    507.7,
+    6.8,
+    500.9
+   ],
+   [
+    "Q4 2025",
+    "Dec 2025",
+    777.3,
+    13.3,
+    764.0
+   ],
+   [
+    "Q1 2026",
+    "Mar 2026",
+    899.2,
+    7.4,
+    891.8
+   ],
+   [
+    "Q2 2026",
+    "Jun 2026",
+    1216.2,
+    14.6,
+    1201.6
+   ]
+  ],
+  "est": [
+   [
+    "Q3 2026",
+    "Sep 2026",
+    1190,
+    15,
+    1175
+   ],
+   [
+    "Q4 2026",
+    "Dec 2026",
+    1300,
+    15,
+    1285
+   ],
+   [
+    "Q1 2027",
+    "Mar 2027",
+    1250,
+    15,
+    1235
+   ],
+   [
+    "Q2 2027",
+    "Jun 2027",
+    1550,
+    20,
+    1530
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash",
+    "zh": "现金"
+   },
+   "v": "$9.2B",
+   "s": {
+    "en": "Jun 30, 2026 · incl. short-term Treasuries · no borrowings",
+    "zh": "2026年6月30日 · 含短期国债 · 无借款"
+   }
+  },
+  "read": [
+   {
+    "en": "Palantir spends almost nothing on equipment (capex was $15M in Q2), so free cash flow tracks operating cash flow. It rose from under $100M a quarter in 2021–22 to $1.2B in Q2 2026, and the last four quarters add up to about $3.4B. One caveat: stock-based pay ($265M in Q2) is a real cost to shareholders that never shows up as cash out, so free cash flow flatters the picture; after subtracting it, Q2 was still about $940M.",
+    "zh": "Palantir 几乎不需设备投资（Q2 资本开支仅 1,500 万美元），自由现金流基本等于经营现金流。季度自由现金流由 2021–22 年不足 1 亿美元升至 2026 年 Q2 的 12 亿，近四季合计约 34 亿。需注意：股权激励（Q2 为 2.65 亿）是股东承担的真实成本，却不体现为现金流出，因此自由现金流显得更好看；扣除后 Q2 仍约 9.4 亿。"
+   },
+   {
+    "en": "My base case uses the $4.5–4.7B full-year adjusted free cash flow guide. With about $2.1B already earned in the first half, the second half needs about $2.4–2.6B, which I split evenly, then let growth continue into 2027. That gives about $5.2B over four quarters. Collections are lumpy: Q1 2025 dropped to $304M from $457M the quarter before, so single quarters can miss.",
+    "zh": "我的基准情景采用 45–47 亿美元的全年调整后自由现金流指引。上半年已产生约 21 亿，下半年需约 24–26 亿，我平均分配，并让增长延续至 2027 年，四季合计约 52 亿。回款有波动：2025 年 Q1 由前一季的 4.57 亿降至 3.04 亿，单季可能不及预期。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Hiring",
+     "zh": "招聘"
+    },
+    "p": {
+     "en": "The CFO flagged a seasonal jump in Q3 expenses from new-hire starts and marketing.",
+     "zh": "CFO 提示 Q3 因新员工入职和营销支出会出现季节性增加。"
+    }
+   },
+   {
+    "h": {
+     "en": "Buybacks",
+     "zh": "回购"
+    },
+    "p": {
+     "en": "Small: $19M in each of Q3 and Q4 2025 and none in the first half of 2026. They do not offset stock-pay dilution.",
+     "zh": "规模很小：2025 年 Q3、Q4 各 1,900 万美元，2026 上半年为零，不足以抵消股权激励稀释。"
+    }
+   },
+   {
+    "h": {
+     "en": "Capex",
+     "zh": "资本开支"
+    },
+    "p": {
+     "en": "Only $7–15M a quarter; customers mostly run Palantir on cloud capacity they pay for.",
+     "zh": "每季仅 700 万至 1,500 万美元；客户大多在自己付费的云上运行 Palantir。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "US commercial deals",
+     "zh": "美国商业合同"
+    },
+    "p": {
+     "en": "$6.24B of contracted US commercial revenue not yet recognised, up 124%.",
+     "zh": "美国商业已签约未确认收入 62.4 亿美元，增长 124%。"
+    }
+   },
+   {
+    "h": {
+     "en": "High margins",
+     "zh": "高利润率"
+    },
+    "p": {
+     "en": "A 62% adjusted operating margin means most new revenue turns into cash.",
+     "zh": "调整后营业利润率 62%，新增营收大多转化为现金。"
+    }
+   },
+   {
+    "h": {
+     "en": "Interest income",
+     "zh": "利息收入"
+    },
+    "p": {
+     "en": "The $9.2B cash pile earned $78M of interest in Q2.",
+     "zh": "92 亿美元现金在 Q2 赚取 7,800 万利息。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash, Jun 2026",
+     "zh": "2026年6月现金"
+    },
+    9200
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    5225
+   ],
+   [
+    {
+     "en": "Option exercises (est.)",
+     "zh": "期权行权（估）"
+    },
+    20
+   ],
+   [
+    {
+     "en": "Buybacks (est.)",
+     "zh": "回购（估）"
+    },
+    -80
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash, Jun 2027 (est.)",
+   "zh": "2027年6月现金（估）"
+  },
+  "bridgeNote": {
+   "en": "Palantir pays no dividend and buys back little stock, so cash keeps piling up. The real cost to owners is dilution from stock pay, not cash going out.",
+   "zh": "Palantir 不派息、回购很少，因此现金持续累积。股东的真正成本是股权激励带来的稀释，而非现金流出。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/pltr/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Balance sheet (Stock Analysis)",
+    "https://stockanalysis.com/stocks/pltr/financials/balance-sheet/?p=quarterly"
+   ],
+   [
+    "Q2 2026 results and FY26 outlook (SEC exhibit 99.1)",
+    "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000039/a2026q2ex991pressrelease.htm"
+   ]
+  ]
+ }
+}

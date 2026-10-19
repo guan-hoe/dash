@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tesla TSLA Dashboard</title>
+<meta name="description" content="Tesla (Nasdaq: TSLA) investor dashboard: price, automotive, energy and services revenue, deliveries, margins, valuation, risks and catalysts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Same system as the ARM dashboard: sticky ticker bar, one wide panel per section with stat cells beside it. */
+:root{
+  --bg:#f3f5f7; --panel:#ffffff; --line:#d9dee5; --ink:#141a22; --muted:#5a6573;
+  --accent:#0b6fb8; --accent-soft:#e3eff8; --copper:#b4622d; --copper-soft:#f6e9df; --slate:#7d8a9c;
+  --up:#13804b; --down:#c2362b; --warn:#a86a00;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1117; --panel:#141b24; --line:#26303c; --ink:#e7ecf2; --muted:#93a0b0;
+  --accent:#4fa8e8; --accent-soft:#132a3d; --copper:#e08a52; --copper-soft:#33221a; --slate:#8e9cb0;
+  --up:#3ccf86; --down:#f0675b; --warn:#e3a43a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1117; --panel:#141b24; --line:#26303c; --ink:#e7ecf2; --muted:#93a0b0;
+  --accent:#4fa8e8; --accent-soft:#132a3d; --copper:#e08a52; --copper-soft:#33221a; --slate:#8e9cb0;
+  --up:#3ccf86; --down:#f0675b; --warn:#e3a43a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.tick{font:600 13px var(--f-mono);letter-spacing:.04em;background:var(--ink);color:var(--bg);padding:3px 8px;border-radius:4px}
+.bar-px{font:600 18px var(--f-mono);font-variant-numeric:tabular-nums}
+.chg{font:500 13px var(--f-mono)}
+.up{color:var(--up)}.down{color:var(--down)}
+nav.sec{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.sec a{font-size:13px;color:var(--muted);text-decoration:none;padding:4px 8px;border-radius:4px}
+nav.sec a:hover,nav.sec a:focus-visible{background:var(--accent-soft);color:var(--ink);outline:none}
+.tools{display:flex;gap:6px}
+button.tg{font:500 12px var(--f-mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:4px 9px;cursor:pointer}
+button.tg:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hero{padding-block:36px 20px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:end}
+.eyebrow{font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,5vw,52px)/1.02 var(--f-display);margin:.25em 0 .3em;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{color:var(--muted);max-width:60ch;margin:0}
+.pxbox{border-left:3px solid var(--accent);padding-left:18px}
+.pxbig{font:600 clamp(40px,6vw,60px)/1 var(--f-mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.pxnote{font-size:12px;color:var(--muted);margin-top:6px}
+section{padding-block:28px;border-top:1px solid var(--line);scroll-margin-top:64px}
+h2{font:700 24px/1.15 var(--f-display);margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px;max-width:72ch}
+.grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0}
+.cells{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;align-content:start}
+.cell{background:var(--panel);padding:12px 14px;min-width:0}
+.grid>.cells{align-self:start}
+.cell .k{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cell .v{font:600 20px var(--f-mono);font-variant-numeric:tabular-nums;margin-top:2px}
+.cell .s{font-size:12px;color:var(--muted)}
+.chart{position:relative;height:320px}
+.chart.sm{height:260px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:8px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.range{display:flex;gap:4px;margin-bottom:10px}
+.range button{font:500 12px var(--f-mono);border:1px solid var(--line);background:transparent;color:var(--muted);padding:3px 9px;border-radius:4px;cursor:pointer}
+.range button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tr.guide td{color:var(--muted);font-style:italic}
+.wl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;gap:12px;min-width:0}
+.pill{flex:none;font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:3px;height:fit-content}
+.p-risk{background:color-mix(in srgb,var(--down) 15%,transparent);color:var(--down)}
+.p-watch{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.p-plus{background:color-mix(in srgb,var(--up) 15%,transparent);color:var(--up)}
+.item h3{font:600 15px var(--f-body);margin:0 0 3px}
+.item p{margin:0;font-size:13.5px;color:var(--muted)}
+.cal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.date{font:600 13px var(--f-mono);color:var(--accent)}
+ol.src{font-size:13px;color:var(--muted);padding-left:20px;columns:2;column-gap:32px}
+ol.src li{break-inside:avoid;margin-bottom:4px}
+footer{font-size:12px;color:var(--muted);padding-top:20px;border-top:1px solid var(--line)}
+#tv{min-height:0}
+.live{display:inline-flex;align-items:center;gap:6px;font:500 12px var(--f-mono);color:var(--muted)}
+.live .dot{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.live.on .dot{background:var(--up);box-shadow:0 0 0 0 var(--up);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--up) 60%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (max-width:860px){.hero,.grid{grid-template-columns:minmax(0,1fr)}.cal{grid-template-columns:minmax(0,1fr)}nav.sec{display:none}}
+@media (max-width:620px){.wl{grid-template-columns:minmax(0,1fr)}ol.src{columns:1}.chart{height:260px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: TSLA</span>
+  <span class="bar-px" id="barPx">$375.00</span>
+  <span class="chg down" id="barChg">−0.74%</span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#annual" data-i="n_ann">Financials</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div class="eyebrow" data-i="eyebrow">Tesla, Inc. · Common stock · Austin, Texas</div>
+      <h1 data-ih="title">A carmaker on the books, <em>an AI bet</em> in the price.</h1>
+      <p class="lede" data-i="lede">Tesla still earns about three-quarters of its revenue selling cars, and Q2 operating margin was just 1.4%. The $1.5T valuation rests on robotaxi, FSD subscriptions, Optimus and energy storage, while capex runs above $25B this year.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 8, 2026</div>
+      <div class="pxbig" id="pxBig">$375.00</div>
+      <div class="chg down" id="pxChg">−2.81 (−0.74%)</div>
+      <div class="pxnote" id="pxNote">YTD −16.6% · 1Y −14.5%</div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k" data-i="k_mcap">Market cap</div><div class="v" id="mcap">$1.48T</div><div class="s" data-i="s_mcap">at current price</div></div>
+    <div class="cell"><div class="k" data-i="k_52">52-week range</div><div class="v">$297–499</div><div class="s" data-i="s_52">intraday low / high</div></div>
+    <div class="cell"><div class="k" data-i="k_pe">Forward P/E</div><div class="v">~164×</div><div class="s" data-i="s_pe">2027E EPS $2.29 · trailing GAAP ~347×</div></div>
+    <div class="cell"><div class="k" data-i="k_ttm">Revenue TTM</div><div class="v">$103.6B</div><div class="s" data-i="s_ttm">+12% YoY</div></div>
+    <div class="cell"><div class="k" data-i="k_an">Analysts</div><div class="v">Buy</div><div class="s" data-i="s_an">35 buy · 32 hold · 15 sell · target $441</div></div>
+    <div class="cell"><div class="k" data-i="k_er">Next earnings</div><div class="v">Oct 21</div><div class="s" data-i="s_er">Q3 2026, after close</div></div>
+  </div>
+
+  <section id="price">
+    <h2 data-i="h_price">Price, last 12 months</h2>
+    <p class="sub" data-i="sub_price">Daily closes with the 50-day average. The stock peaked in mid-December, slid 39% to a late-July low after the Q2 profit miss, and has since won back about two-fifths of the drop.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="TSLA daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k" data-i="k_hi">1Y closing high</div><div class="v">$489.88</div><div class="s">Dec 16, 2025</div></div>
+        <div class="cell"><div class="k" data-i="k_lo">1Y closing low</div><div class="v">$298.32</div><div class="s">Jul 29, 2026</div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v">$353</div><div class="s" data-i="s_sma50">price above</div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v">$391</div><div class="s" data-i="s_sma200">price below</div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v">55.8</div><div class="s" data-i="s_rsi">neutral</div></div>
+        <div class="cell"><div class="k">ATR 20</div><div class="v">$10.9</div><div class="s" data-i="s_atr">~3% daily range</div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">1.92</div><div class="s" data-i="s_beta">vs. S&amp;P 500</div></div>
+        <div class="cell"><div class="k" data-i="k_dd">From peak</div><div class="v down" id="ddv">−23%</div><div class="s" data-i="s_dd">vs. Dec 16 close</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2 data-i="h_rev">Revenue by segment, by quarter</h2>
+    <p class="sub" data-i="sub_rev">Automotive is vehicle sales, regulatory credits and leasing. Energy is Megapack, Powerwall and solar. Services &amp; other covers servicing, insurance, Supercharging, used cars and FSD-related revenue. Q3 2026 is analyst consensus, not company guidance; Tesla does not give quarterly revenue guidance.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_auto">Automotive</span></span><span><i class="sw" style="background:var(--copper)"></i><span data-i="l_en">Energy</span></span><span><i class="sw" style="background:var(--slate)"></i><span data-i="l_svc">Services &amp; other</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Consensus</span></span></div>
+        <div class="chart"><canvas id="cRev" aria-label="Quarterly revenue by segment"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k">Q2 2026</div><div class="v">$28.24B</div><div class="s" data-i="s_q2">+26% YoY, record quarter</div></div>
+        <div class="cell"><div class="k" data-i="k_auto">Automotive</div><div class="v">$20.52B</div><div class="s" data-i="s_auto">+23% · credits only $146M</div></div>
+        <div class="cell"><div class="k" data-i="k_en">Energy</div><div class="v">$3.14B</div><div class="s" data-i="s_en">+13% · 13.5 GWh deployed</div></div>
+        <div class="cell"><div class="k" data-i="k_svc">Services</div><div class="v">$4.58B</div><div class="s" data-i="s_svc">+50% YoY</div></div>
+        <div class="cell"><div class="k" data-i="k_gm">Gross margin</div><div class="v">16.8%</div><div class="s" data-i="s_gm">Q1 was 21.1%</div></div>
+        <div class="cell"><div class="k" data-i="k_om">Op. margin</div><div class="v down">1.4%</div><div class="s" data-i="s_om">opex +47% YoY</div></div>
+        <div class="cell"><div class="k" data-i="k_del">Q3 deliveries</div><div class="v">486,532</div><div class="s" data-i="s_del">vs. ~462k consensus</div></div>
+        <div class="cell"><div class="k" data-i="k_sto">Q3 storage</div><div class="v">13.7 GWh</div><div class="s" data-i="s_sto">record quarter</div></div>
+      </div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th data-i="t_q">Quarter</th><th data-i="l_auto">Automotive</th><th data-i="l_en">Energy</th><th data-i="l_svc">Services &amp; other</th><th data-i="t_tot">Total</th><th data-i="t_yoy">Total YoY</th><th data-i="t_gm">Gross margin</th><th data-i="t_eps">Non-GAAP EPS</th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="annual">
+    <h2 data-i="h_ann">Fiscal-year financials</h2>
+    <p class="sub" data-i="sub_ann">Revenue in US$ millions; Tesla's fiscal year is the calendar year. Revenue fell 3% in 2025 as vehicle sales shrank 10%, and GAAP net income nearly halved to $3.8B ($1.08 diluted EPS) as R&amp;D rose 41%.</p>
+    <div class="grid">
+      <div class="panel"><div class="chart sm"><canvas id="cAnn" aria-label="Annual revenue by segment"></canvas></div></div>
+      <div class="panel tbl">
+        <table>
+          <thead><tr><th>FY25</th><th>US$M</th><th data-i="t_pct">% rev</th></tr></thead>
+          <tbody>
+            <tr><td data-i="r_rev">Revenue</td><td>94,827</td><td>100%</td></tr>
+            <tr><td data-i="r_gp">Gross profit</td><td>17,094</td><td>18.0%</td></tr>
+            <tr><td>R&amp;D</td><td>6,411</td><td>6.8%</td></tr>
+            <tr><td>SG&amp;A</td><td>5,834</td><td>6.2%</td></tr>
+            <tr><td data-i="r_oi">Operating income (GAAP)</td><td>4,355</td><td>4.6%</td></tr>
+            <tr><td data-i="r_ni">Net income (GAAP)</td><td>3,794</td><td>4.0%</td></tr>
+            <tr><td data-i="r_eps">Non-GAAP EPS</td><td>$1.67</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2 data-i="h_watch">Watch list</h2>
+    <p class="sub" data-i="sub_watch">What moves the thesis, sorted by direction.</p>
+    <div class="wl">
+      <div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Robotaxi and FSD</h3><p data-i="w1p">Unsupervised robotaxi runs in 7 US metros and Cybercab production has started in Texas. Paid FSD users reached 1.48M, with take rate above 55% of North American deliveries.</p></div></div>
+      <div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w2h">Volume is back</h3><p data-i="w2p">Q3 deliveries of 486,532 beat consensus by about 25k after Q2 rose 25% YoY. Storage deployments hit a record 13.7 GWh, with Megapack 3 due in 2026.</p></div></div>
+      <div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Margin squeeze</h3><p data-i="w3p">Auto gross margin ex-credits fell to 16.3% from 19.2% in Q1. Q2 GAAP profit leaned on a ~$1.0B unrealized SpaceX gain; operating income was only $398M.</p></div></div>
+      <div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w4h">Capex and cash burn</h3><p data-i="w4p">2026 capex is guided above $25B. Free cash flow was −$1.09B in Q2 and management expects it to stay negative through 2026. Cash and investments stand at $43.5B.</p></div></div>
+      <div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Credits and execution</h3><p data-i="w5p">Regulatory credit revenue fell 67% YoY to $146M. Optimus, Semi and Cybercab all have to ramp in the same half-year, and the robotaxi city target for H1 was missed.</p></div></div>
+      <div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w6h">Valuation and dispersion</h3><p data-i="w6p">About 164× 2027 earnings. Analyst targets run from $157 to $840, and 15 of 82 rate it a sell. Average daily range is about $11, so position sizing matters.</p></div></div>
+    </div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="TSLA" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2 data-i="h_cal">Calendar</h2>
+    <div class="cal">
+      <div class="item"><div><div class="date">Oct 21, 2026</div><h3 data-i="c1h">Q3 2026 earnings</h3><p data-i="c1p">After US close; Q&amp;A webcast 5:30pm ET (Oct 22, 5:30am SGT). Consensus: revenue ~$27.6B, gross margin ~17.7%.</p></div></div>
+      <div class="item"><div><div class="date">Early Jan 2027</div><h3 data-i="c2h">Q4 deliveries</h3><p data-i="c2p">Production and deliveries usually post on the second calendar day of the quarter.</p></div></div>
+      <div class="item"><div><div class="date">Late Jan 2027</div><h3 data-i="c3h">Q4 and FY26 results</h3><p data-i="c3p">Date not yet announced; full-year results have come in the last week of January.</p></div></div>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2 data-i="h_src">Sources</h2>
+    <ol class="src">
+      <li><a href="https://ir.tesla.com" target="_blank" rel="noopener">Tesla Investor Relations</a> — quarterly updates, delivery reports</li>
+      <li><a href="https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments" target="_blank" rel="noopener">Q3 2026 production, deliveries &amp; deployments</a> (Oct 2, 2026)</li>
+      <li><a href="https://www.stocktitan.net/sec-filings/TSLA/8-k-tesla-inc-reports-material-event-1911b8f568a6.html" target="_blank" rel="noopener">Q1 2026 Form 8-K and five-quarter summary</a></li>
+      <li><a href="https://evwire.com/p/tesla-q2-2026-earnings-results" target="_blank" rel="noopener">Q2 2026 earnings recap</a></li>
+      <li><a href="https://teslabriefing.com/en/earnings/2026-q2" target="_blank" rel="noopener">Q2 2026 detail: credits, auto margin, outlook</a></li>
+      <li><a href="https://linevestnews.com/article/2026-08-22-tesla-tsla-q2-2026-revenue-26pct-ai-costs-crush-operating-margin" target="_blank" rel="noopener">Q2 2026 10-Q segment table</a></li>
+      <li><a href="https://mercomindia.com/teslas-q4-2025-revenue-falls-3-while-energy-generation-and-storage-revenue-rises-25" target="_blank" rel="noopener">Q4 and FY2025 results</a></li>
+      <li><a href="https://www.hudson-labs.com/research/tesla-q3-2026-earnings-preview-tsla-revenue-margins-outlook" target="_blank" rel="noopener">Q3 2026 earnings preview and consensus</a></li>
+      <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001318605" target="_blank" rel="noopener">SEC EDGAR filings (CIK 1318605)</a></li>
+      <li>Price history, technicals, estimates, analyst consensus: Financial Modeling Prep, as of Oct 9, 2026</li>
+    </ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Tesla, Inc.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// Daily closes (embedded snapshot, replaced by data/history.json when the live feed loads). Kept longer than 1Y so the 50-day average spans the whole chart.
+const P = {"d":["2025-07-01","2025-07-02","2025-07-03","2025-07-07","2025-07-08","2025-07-09","2025-07-10","2025-07-11","2025-07-14","2025-07-15","2025-07-16","2025-07-17","2025-07-18","2025-07-21","2025-07-22","2025-07-23","2025-07-24","2025-07-25","2025-07-28","2025-07-29","2025-07-30","2025-07-31","2025-08-01","2025-08-04","2025-08-05","2025-08-06","2025-08-07","2025-08-08","2025-08-11","2025-08-12","2025-08-13","2025-08-14","2025-08-15","2025-08-18","2025-08-19","2025-08-20","2025-08-21","2025-08-22","2025-08-25","2025-08-26","2025-08-27","2025-08-28","2025-08-29","2025-09-02","2025-09-03","2025-09-04","2025-09-05","2025-09-08","2025-09-09","2025-09-10","2025-09-11","2025-09-12","2025-09-15","2025-09-16","2025-09-17","2025-09-18","2025-09-19","2025-09-22","2025-09-23","2025-09-24","2025-09-25","2025-09-26","2025-09-29","2025-09-30","2025-10-01","2025-10-02","2025-10-03","2025-10-06","2025-10-07","2025-10-08","2025-10-09","2025-10-10","2025-10-13","2025-10-14","2025-10-15","2025-10-16","2025-10-17","2025-10-20","2025-10-21","2025-10-22","2025-10-23","2025-10-24","2025-10-27","2025-10-28","2025-10-29","2025-10-30","2025-10-31","2025-11-03","2025-11-04","2025-11-05","2025-11-06","2025-11-07","2025-11-10","2025-11-11","2025-11-12","2025-11-13","2025-11-14","2025-11-17","2025-11-18","2025-11-19","2025-11-20","2025-11-21","2025-11-24","2025-11-25","2025-11-26","2025-11-28","2025-12-01","2025-12-02","2025-12-03","2025-12-04","2025-12-05","2025-12-08","2025-12-09","2025-12-10","2025-12-11","2025-12-12","2025-12-15","2025-12-16","2025-12-17","2025-12-18","2025-12-19","2025-12-22","2025-12-23","2025-12-24","2025-12-26","2025-12-29","2025-12-30","2025-12-31","2026-01-02","2026-01-05","2026-01-06","2026-01-07","2026-01-08","2026-01-09","2026-01-12","2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15","2026-07-16","2026-07-17","2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-10","2026-08-11","2026-08-12","2026-08-13","2026-08-14","2026-08-17","2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-08","2026-09-09","2026-09-10","2026-09-11","2026-09-14","2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-28","2026-09-29","2026-09-30","2026-10-01","2026-10-02","2026-10-05","2026-10-06","2026-10-07","2026-10-08"],"c":[300.71,315.65,315.35,293.94,297.81,295.88,309.87,313.51,316.9,310.78,321.67,319.41,329.65,328.49,332.11,332.56,305.3,316.06,325.59,321.2,319.04,308.27,302.63,309.26,308.72,319.91,322.27,329.65,339.03,340.84,339.38,335.58,330.56,335.16,329.31,323.9,320.11,340.01,346.6,351.67,349.6,345.98,333.87,329.36,334.09,338.53,350.84,346.4,346.97,347.79,368.81,395.94,410.04,421.62,425.86,416.85,426.07,434.21,425.85,442.79,423.39,440.4,443.21,444.72,459.46,436.0,429.83,453.25,433.09,438.69,435.54,413.49,435.9,429.24,435.15,428.75,439.31,447.43,442.6,438.97,448.98,433.72,452.42,460.55,461.51,440.1,456.56,468.37,444.26,462.07,445.91,429.52,445.23,439.62,430.6,401.99,404.35,408.92,401.25,403.99,395.23,391.09,417.78,419.4,426.58,430.17,430.14,429.24,446.74,454.53,455.0,439.58,445.17,451.45,446.89,458.96,475.31,489.88,467.26,483.37,481.2,488.73,485.56,485.4,475.19,459.64,454.43,449.72,438.07,451.67,432.96,431.41,435.8,445.01,448.96,447.2,439.2,438.57,437.5,419.25,431.44,449.36,449.06,435.2,430.9,431.46,416.56,430.41,421.81,421.96,406.01,397.21,411.11,417.32,425.21,428.27,417.07,417.44,410.63,411.32,411.71,411.82,399.83,409.38,417.4,408.58,402.51,403.32,392.43,405.94,405.55,396.73,398.68,399.24,407.82,395.01,391.2,395.56,399.27,392.78,380.3,367.96,380.85,383.03,385.95,372.11,361.83,355.28,371.75,381.26,360.59,352.82,346.65,343.25,345.62,348.95,352.42,364.2,391.95,388.9,400.62,392.5,386.42,387.51,373.72,376.3,378.67,376.02,372.8,381.63,390.82,392.51,389.37,398.73,411.79,428.35,445.0,433.45,445.27,443.3,422.24,409.99,404.11,417.26,417.85,426.01,433.59,440.36,442.1,435.79,415.88,423.74,423.7,418.45,391.0,408.95,396.68,381.59,399.15,406.43,411.15,404.66,396.38,400.49,405.05,381.61,375.53,375.12,379.71,411.84,420.6,425.3,393.45,419.77,402.9,394.06,406.55,407.76,394.76,396.18,394.46,391.06,380.84,369.57,378.93,374.01,319.69,313.03,309.22,307.44,298.32,308.85,311.21,322.08,327.35,321.55,319.53,328.58,330.88,332.81,327.51,339.96,342.27,339.3,336.87,351.12,345.13,362.86,348.95,350.25,345.82,354.81,348.75,367.95,356.09,357.01,376.37,354.08,368.16,367.81,363.56,365.44,358.97,356.58,358.08,366.2,364.27,375.3,378.9,380.12,377.94,372.11,357.45,352.84,354.81,354.11,370.59,378.73,380.68,377.81,375.0]};
+const WIN = 251; // trading days in the 1Y view
+// [quarter, automotive, energy, services & other, total revenue a year earlier, GAAP gross margin %, non-GAAP EPS]
+const Q = [
+ ["Q3 2024",20016,2376,2790,23350,19.8,0.72],
+ ["Q4 2024",19798,3061,2848,25167,16.3,0.73],
+ ["Q1 2025",13967,2730,2638,21301,16.3,0.27],
+ ["Q2 2025",16661,2789,3046,25500,17.2,0.40],
+ ["Q3 2025",21205,3415,3475,25182,18.0,0.50],
+ ["Q4 2025",17693,3837,3371,25707,20.1,0.50],
+ ["Q1 2026",16234,2408,3745,19335,21.1,0.41],
+ ["Q2 2026",20517,3138,4581,22496,16.8,0.33],
+];
+const G = ["Q3 2026","(consensus)",27571,28095,17.7];
+const A = [["FY23",82419,6035,8319],["FY24",77070,10086,10534],["FY25",69526,12771,12530]];
+
+const T = {
+ zh:{n_home:"全部股票",n_over:"概览",n_price:"股价",n_rev:"营收",n_ann:"财务",n_fcf:"现金流",n_watch:"关注点",n_news:"新闻",n_src:"来源",
+  eyebrow:"Tesla, Inc. · 普通股 · 美国德州奥斯汀",
+  title:"账面是车企，股价押注的是<em>人工智能</em>。",
+  lede:"特斯拉约四分之三的营收仍来自卖车，第二季营业利润率仅 1.4%。1.5 万亿美元的市值押注在 Robotaxi、FSD 订阅、Optimus 机器人和储能上，而今年资本开支超过 250 亿美元。",
+  k_mcap:"市值",s_mcap:"按当前股价",k_52:"52周区间",s_52:"盘中低 / 高",k_pe:"预期市盈率",s_pe:"2027 年预期 EPS $2.29 · GAAP 历史约 347 倍",k_ttm:"近12月营收",s_ttm:"同比 +12%",k_an:"分析师",s_an:"35 买入 · 32 持有 · 15 卖出 · 目标 $441",k_er:"下次财报",s_er:"2026 第三季，盘后",
+  h_price:"近12个月股价",sub_price:"每日收盘价与50日均线。股价在12月中见顶，Q2 盈利不及预期后跌 39% 至7月底低点，此后收复约五分之二跌幅。",
+  k_hi:"一年收盘最高",k_lo:"一年收盘最低",s_sma50:"股价在上方",s_sma200:"股价在下方",s_rsi:"中性",s_atr:"日波幅约3%",s_beta:"相对标普500",k_dd:"距高点",s_dd:"相对12月16日收盘",
+  h_rev:"按季度分部营收",sub_rev:"汽车包括整车销售、监管积分与租赁；能源包括 Megapack、Powerwall 与太阳能；服务及其他包括维修、保险、超充、二手车与 FSD 相关收入。2026 第三季为分析师一致预期，并非公司指引；特斯拉不提供季度营收指引。",
+  l_auto:"汽车",l_en:"能源",l_svc:"服务及其他",l_g:"一致预期",s_q2:"同比 +26%，单季新高",k_auto:"汽车",s_auto:"+23% · 积分仅 $146M",k_en:"能源",s_en:"+13% · 部署 13.5 GWh",k_svc:"服务",s_svc:"同比 +50%",k_gm:"毛利率",s_gm:"Q1 为 21.1%",k_om:"营业利润率",s_om:"营业费用同比 +47%",k_del:"Q3 交付",s_del:"预期约 46.2 万",k_sto:"Q3 储能",s_sto:"单季新高",
+  t_q:"季度",t_tot:"合计",t_yoy:"合计同比",t_gm:"毛利率",t_eps:"非GAAP每股收益",
+  h_ann:"财年财务",sub_ann:"营收单位为百万美元；特斯拉财年即自然年。2025 年营收下降 3%，汽车收入减少 10%；研发增长 41%，GAAP 净利润近乎减半至 38 亿美元（摊薄每股 $1.08）。",
+  t_pct:"占营收",r_rev:"营收",r_gp:"毛利",r_oi:"营业利润（GAAP）",r_ni:"净利润（GAAP）",r_eps:"非GAAP每股收益",
+  h_watch:"关注点",sub_watch:"影响投资逻辑的因素，按方向分类。",pl_plus:"利好",pl_watch:"留意",pl_risk:"风险",
+  w1h:"Robotaxi 与 FSD",w1p:"无人监督 Robotaxi 已在美国 7 个都会区运营，Cybercab 已在德州投产。FSD 付费用户达 148 万，北美交付搭载率超过 55%。",
+  w2h:"销量回升",w2p:"Q3 交付 486,532 辆，比预期多约 2.5 万辆；Q2 已同比增 25%。储能部署创纪录达 13.7 GWh，Megapack 3 预计 2026 年投产。",
+  w3h:"利润率受压",w3p:"不含积分的汽车毛利率由 Q1 的 19.2% 降至 16.3%。Q2 GAAP 利润依赖约 10 亿美元 SpaceX 未实现收益，营业利润仅 3.98 亿美元。",
+  w4h:"资本开支与现金消耗",w4p:"2026 年资本开支指引超过 250 亿美元。Q2 自由现金流为 −10.9 亿美元，管理层预计 2026 年余下时间仍为负。现金及投资为 435 亿美元。",
+  w5h:"积分与执行风险",w5p:"监管积分收入同比降 67% 至 1.46 亿美元。Optimus、Semi 和 Cybercab 需在同一半年内爬坡，上半年 Robotaxi 城市目标未达成。",
+  w6h:"估值与分歧",w6p:"约为 2027 年预期盈利的 164 倍。分析师目标价从 $157 到 $840 不等，82 位中有 15 位给出卖出评级。日均波幅约 $11，仓位控制很重要。",
+  h_cal:"日程",c1h:"2026 第三季财报",c1p:"美股收盘后发布；问答网播美东 5:30pm（新加坡时间10月22日早上5:30）。一致预期：营收约 276 亿美元，毛利率约 17.7%。",c2h:"第四季交付数据",c2p:"产量与交付数据通常在季度第二个自然日公布。",c3h:"第四季及 2026 全年业绩",c3p:"日期未公布；全年业绩通常在1月最后一周发布。",
+  h_src:"来源",foot:"基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Tesla, Inc. 无关联。"}
+};
+const EN = {};
+document.querySelectorAll("[data-i],[data-ih]").forEach(el=>{const k=el.dataset.i||el.dataset.ih; if(!(k in EN)) EN[k]=el.innerHTML;});
+let lang="en";
+function setLang(l){lang=l;document.documentElement.lang=l==="zh"?"zh-Hans":"en";
+  document.querySelectorAll("[data-i],[data-ih]").forEach(el=>{const k=el.dataset.i||el.dataset.ih;const v=l==="zh"?(T.zh[k]??EN[k]):EN[k];el.innerHTML=v;});
+  document.getElementById("langBtn").textContent=l==="zh"?"EN":"中文";
+  try{localStorage.setItem("tsla-lang",l)}catch(e){}
+  buildCharts();}
+document.getElementById("langBtn").onclick=()=>setLang(lang==="en"?"zh":"en");
+
+const modes=["auto","light","dark"];let mode="auto";
+function setTheme(m){mode=m;const r=document.documentElement;if(m==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",m);
+  document.getElementById("themeBtn").textContent=m==="auto"?"◐ Auto":m==="light"?"☀ Light":"☾ Dark";
+  try{localStorage.setItem("tsla-theme",m)}catch(e){} buildCharts();}
+document.getElementById("themeBtn").onclick=()=>setTheme(modes[(modes.indexOf(mode)+1)%3]);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>buildCharts());
+
+// quarterly table, newest first
+(function(){const b=document.getElementById("qBody");const f=n=>n.toLocaleString("en-US");
+  const pct=(a,b)=>{const v=(a/b-1)*100;return (v>0?"+":v<0?"−":"")+Math.abs(v).toFixed(0)+"%";};
+  Q.forEach(q=>{const tot=q[1]+q[2]+q[3];
+    b.insertAdjacentHTML("afterbegin",`<tr><td>${q[0]}</td><td>${f(q[1])}</td><td>${f(q[2])}</td><td>${f(q[3])}</td><td><b>${f(tot)}</b></td><td>${pct(tot,q[4])}</td><td>${q[5].toFixed(1)}%</td><td>$${q[6].toFixed(2)}</td></tr>`);});
+  b.insertAdjacentHTML("afterbegin",`<tr class="guide"><td>${G[0]} ${G[1]}</td><td>—</td><td>—</td><td>—</td><td>${f(G[2])}</td><td>${pct(G[2],G[3])}</td><td>${G[4].toFixed(1)}%</td><td>—</td></tr>`);
+})();
+
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let charts=[],range=0;
+function sma(a,n){return a.map((_,i)=>i<n-1?null:a.slice(i-n+1,i+1).reduce((s,x)=>s+x,0)/n);}
+function buildCharts(){
+  if(!window.Chart) return;
+  charts.forEach(c=>c.destroy());charts=[];
+  const mut=css("--muted"),line=css("--line"),acc=css("--accent"),cop=css("--copper"),sl=css("--slate");
+  Chart.defaults.font.family=css("--f-mono");Chart.defaults.font.size=11;Chart.defaults.color=mut;
+  const grid={color:line,drawTicks:false},nobox={border:{display:false}};
+  const n=range?range:WIN, d=P.d.slice(-n), c=P.c.slice(-n), s=sma(P.c,50).slice(-n);
+  const ctx=document.getElementById("cPrice").getContext("2d");
+  const gr=ctx.createLinearGradient(0,0,0,320);gr.addColorStop(0,acc+"40");gr.addColorStop(1,acc+"00");
+  charts.push(new Chart(ctx,{type:"line",data:{labels:d,datasets:[
+    {label:lang==="zh"?"收盘":"Close",data:c,borderColor:acc,backgroundColor:gr,fill:true,borderWidth:1.8,pointRadius:c.map((_,i)=>i===c.length-1?4:0),pointBackgroundColor:acc,tension:.15},
+    {label:"SMA 50",data:s,borderColor:cop,borderWidth:1.2,borderDash:[4,3],pointRadius:0,fill:false}]},
+    options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},
+      plugins:{legend:{labels:{boxWidth:10,color:mut}},tooltip:{callbacks:{label:t=>`${t.dataset.label}: $${t.parsed.y?.toFixed(2)}`}}},
+      scales:{x:{...nobox,grid:{display:false},ticks:{maxTicksLimit:7,callback:function(v){const s=this.getLabelForValue(v);return s.slice(5,7)+"/"+s.slice(2,4);}}},
+              y:{...nobox,grid,ticks:{callback:v=>"$"+v}}}}}));
+  const L={a:lang==="zh"?"汽车":"Automotive",e:lang==="zh"?"能源":"Energy",s:lang==="zh"?"服务及其他":"Services & other",g:lang==="zh"?"一致预期":"Consensus"};
+  const ql=Q.map(q=>q[0]).concat([G[0]+"E"]);
+  charts.push(new Chart(document.getElementById("cRev"),{type:"bar",data:{labels:ql,datasets:[
+    {label:L.a,data:Q.map(q=>q[1]).concat([null]),backgroundColor:acc,stack:"s",borderRadius:2},
+    {label:L.e,data:Q.map(q=>q[2]).concat([null]),backgroundColor:cop,stack:"s",borderRadius:2},
+    {label:L.s,data:Q.map(q=>q[3]).concat([null]),backgroundColor:sl,stack:"s",borderRadius:2},
+    {label:L.g,data:Q.map(()=>null).concat([G[2]]),backgroundColor:line,borderColor:mut,borderWidth:1,borderDash:[3,3],stack:"s",borderRadius:2}]},
+    options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},
+      plugins:{legend:{display:false},tooltip:{filter:t=>t.parsed.y!=null,callbacks:{label:t=>`${t.dataset.label}: $${(t.parsed.y/1000).toFixed(2)}B`,
+        footer:it=>it.length>1?"Total: $"+(it.reduce((s,x)=>s+x.parsed.y,0)/1000).toFixed(2)+"B":""}}},
+      scales:{x:{...nobox,grid:{display:false},stacked:true,ticks:{maxRotation:0,autoSkip:true,callback:function(v){return this.getLabelForValue(v).split(" ");}}},
+              y:{...nobox,stacked:true,grid,ticks:{callback:v=>"$"+(v/1000)+"B"}}}}}));
+  charts.push(new Chart(document.getElementById("cAnn"),{type:"bar",data:{labels:A.map(a=>a[0]),datasets:[
+    {label:L.a,data:A.map(a=>a[1]),backgroundColor:acc,stack:"s",borderRadius:2},
+    {label:L.e,data:A.map(a=>a[2]),backgroundColor:cop,stack:"s",borderRadius:2},
+    {label:L.s,data:A.map(a=>a[3]),backgroundColor:sl,stack:"s",borderRadius:2}]},
+    options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},
+      plugins:{legend:{labels:{boxWidth:10,color:mut}},tooltip:{callbacks:{label:t=>`${t.dataset.label}: $${t.parsed.y.toLocaleString()}M`,footer:it=>"Total: $"+it.reduce((s,x)=>s+x.parsed.y,0).toLocaleString()+"M"}}},
+      scales:{x:{...nobox,grid:{display:false},stacked:true},y:{...nobox,stacked:true,grid,ticks:{callback:v=>"$"+(v/1000)+"B"}}}}}));
+}
+document.querySelectorAll(".range button").forEach(b=>b.onclick=()=>{range=+b.dataset.r;
+  document.querySelectorAll(".range button").forEach(x=>x.setAttribute("aria-pressed",x===b));buildCharts();});
+
+let sl0="en",st="auto";try{sl0=localStorage.getItem("tsla-lang")||"en";st=localStorage.getItem("tsla-theme")||"auto"}catch(e){}
+mode=st;if(st!=="auto")document.documentElement.setAttribute("data-theme",st);
+document.getElementById("themeBtn").textContent=st==="auto"?"◐ Auto":st==="light"?"☀ Light":"☾ Dark";
+
+// ---- live quote: data/quote.json + data/history.json, refreshed by GitHub Actions ----
+const SHARES = 3.95e9; // from market cap / price
+let LQ = null;
+const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const sgn = v => (v>=0?"+":"−") + Math.abs(v).toFixed(2);
+const sgn1 = v => (v>=0?"+":"−") + Math.abs(v).toFixed(1);
+function renderQuote(){
+  const c = P.c, last = LQ ? LQ.price : c[c.length-1];
+  const prev = LQ ? LQ.prevClose : c[c.length-2];
+  const ch = last - prev, pct = ch / prev * 100, up = ch >= 0;
+  const zh = lang === "zh";
+  ["barPx","pxBig"].forEach(id => document.getElementById(id).textContent = fmt$(last));
+  const bc = document.getElementById("barChg"), pc = document.getElementById("pxChg");
+  bc.textContent = sgn(pct) + "%"; pc.textContent = `${sgn(ch)} (${sgn(pct)}%)`;
+  [bc,pc].forEach(e => { e.classList.toggle("up",up); e.classList.toggle("down",!up); });
+  // YTD vs last close of prior year; 1Y and peak over the 1Y window
+  const yr = String(new Date().getFullYear()); let base = null;
+  for (let i = 0; i < P.d.length; i++) { if (P.d[i] < yr) base = c[i]; }
+  const w = c.slice(-WIN), ytd = base ? (last/base-1)*100 : null, y1 = (last/w[0]-1)*100;
+  const peak = Math.max(...w, last), dd = (last/peak-1)*100;
+  document.getElementById("pxNote").textContent = (ytd!=null ? (zh?"年初至今 ":"YTD ")+sgn1(ytd)+"% · " : "") + (zh?"一年 ":"1Y ") + sgn1(y1) + "%";
+  document.getElementById("mcap").textContent = "$" + (last*SHARES/1e12).toFixed(2) + "T";
+  const ddv = document.getElementById("ddv"); ddv.textContent = (dd<0?"−":"") + Math.abs(dd).toFixed(0) + "%";
+  ddv.classList.toggle("down", dd < -0.5);
+  const t = LQ ? new Date(LQ.time*1000) : null;
+  const sgt = d => d.toLocaleString(zh?"zh-CN":"en-SG",{timeZone:"Asia/Singapore",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false});
+  const open = LQ && LQ.state === "REGULAR";
+  document.getElementById("pxLabel").textContent = open ? (zh?"盘中 · 美股交易中":"Intraday · market open") : (zh?"最近收盘":"Last close") + (t ? " · " + t.toLocaleDateString(zh?"zh-CN":"en-US",{timeZone:"America/New_York",month:"short",day:"numeric",year:"numeric"}) : "");
+  document.getElementById("barLive").classList.toggle("on", !!open);
+  document.getElementById("barTime").textContent = t ? (open ? (zh?"实时 ":"Live ") : (zh?"收盘 ":"Closed ")) + sgt(t) + " SGT" : (zh?"快照":"snapshot");
+  document.getElementById("footTime").textContent = t ? (zh?"股价更新于 ":"Price updated ") + sgt(t) + " SGT (" + (zh?"约每10分钟刷新":"refreshes about every 10 min") + ")." : "";
+}
+async function loadLive(){
+  try {
+    const bust = "?t=" + Date.now();
+    const [q, hist] = await Promise.all([
+      fetch("data/quote.json"+bust,{cache:"no-store"}).then(r => r.ok ? r.json() : null),
+      fetch("data/history.json"+bust,{cache:"no-store"}).then(r => r.ok ? r.json() : null)]);
+    let changed = false;
+    if (hist && hist.d && hist.d.length > 50 && hist.d[hist.d.length-1] >= P.d[P.d.length-1]) { P.d = hist.d; P.c = hist.c; changed = true; }
+    if (q && q.price) {
+      if (!LQ || q.time !== LQ.time) changed = true;
+      LQ = q;
+      if (q.date) { const i = P.d.indexOf(q.date); if (i >= 0) P.c[i] = q.price; else if (q.date > P.d[P.d.length-1]) { P.d.push(q.date); P.c.push(q.price); } }
+    }
+    if (changed) { renderQuote(); buildCharts(); }
+  } catch (e) { /* stay on embedded snapshot */ }
+}
+const _setLang = setLang; setLang = l => { _setLang(l); renderQuote(); };
+loadLive(); setInterval(loadLive, 60000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) loadLive(); });
+setLang(sl0);
+</script>
+<script>
+(function(){var s=document.createElement("script");s.src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js";s.async=true;
+s.text=JSON.stringify({symbol:"NASDAQ:TSLA",width:"100%",isTransparent:true,colorTheme:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",locale:"en"});
+document.querySelector("#tv .tradingview-widget-container").appendChild(s);})();
+</script>
+
+<script src="fcf-data.js?v=2"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

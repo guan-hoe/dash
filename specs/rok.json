@@ -1,0 +1,747 @@
+{
+ "dir": "rok",
+ "ticker": "ROK",
+ "exchange": "NYSE",
+ "name": "Rockwell Automation",
+ "shares": 111050000.0,
+ "beta": "1.50",
+ "snapshot": {
+  "price": "$432.59",
+  "date": "Oct 9, 2026",
+  "mcap": "$48.0B",
+  "range": "$333–497"
+ },
+ "eyebrow": {
+  "en": "Rockwell Automation, Inc. · Common stock · Milwaukee, Wisconsin",
+  "zh": "罗克韦尔自动化 · 普通股 · 威斯康星州密尔沃基"
+ },
+ "title": {
+  "en": "Factory automation, <em>pulled along by chip fabs and data centers</em>.",
+  "zh": "工厂自动化，<em>由晶圆厂与数据中心拉动</em>。"
+ },
+ "lede": {
+  "en": "Rockwell sells the controllers, drives, sensors and software that run factories, warehouses and process plants. After a two-year industrial slump, organic sales grew 10% last quarter on semiconductor, data center and warehouse projects, and the full-year outlook was raised. It is a slower, steadier story than the chip names on this site, priced at about 33 times this year's earnings.",
+  "zh": "罗克韦尔销售运行工厂、仓库和流程工厂的控制器、驱动器、传感器和软件。经历两年工业低迷后，上季在半导体、数据中心和仓储项目带动下有机销售增长 10%，全年展望上调。相比本站的芯片股，这是一个更慢、更稳的故事，估值约为今年盈利的 33 倍。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E (FY26)",
+   "zh": "市盈率（FY26）"
+  },
+  "v": "~33×",
+  "s": {
+   "en": "adj. EPS guide $13.15 midpoint · forward ~29×",
+   "zh": "调整后每股指引中值 $13.15 · 预期约 29 倍"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "FY26 guide",
+   "zh": "FY26 指引"
+  },
+  "v": "~$9.0B",
+  "s": {
+   "en": "sales +7.5–9.5% · adj. EPS $13.00–13.30",
+   "zh": "销售 +7.5–9.5% · 调整后每股 $13.00–13.30"
+  }
+ },
+ "earnings": {
+  "v": "Early Nov",
+  "s": {
+   "en": "Q4 FY26 and FY27 outlook · date not yet announced",
+   "zh": "FY26 第四季及 FY27 展望 · 日期未公布"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. Rockwell has closed between about $400 and $495 since May.",
+  "zh": "每日收盘价与50日均线。罗克韦尔自5月以来收盘价在约 $400 至 $495 之间。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Rockwell's fiscal year ends September 30. Gross margin steps up from about 40% to about 48% in FY25 in the source data, and the two fiscal Q4 figures are left blank because the source shows outliers. The last bar is the Q4 sales implied by the ~$9.0B full-year guide.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。罗克韦尔财年于9月30日结束。数据源中毛利率在 FY25 由约 40% 升至约 48%，两个财年第四季数字因数据源异常而留空。最后一根柱为约 90 亿美元全年指引所隐含的 Q4 销售。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q3 FY26",
+    "zh": "FY26 Q3"
+   },
+   "v": "$2.31B",
+   "s": {
+    "en": "+8% YoY · organic +10%",
+    "zh": "同比 +8% · 有机 +10%"
+   }
+  },
+  {
+   "k": {
+    "en": "Intelligent Devices",
+    "zh": "智能设备"
+   },
+   "v": "$1.08B",
+   "s": {
+    "en": "+12% YoY · 20.0% margin",
+    "zh": "同比 +12% · 利润率 20.0%"
+   }
+  },
+  {
+   "k": {
+    "en": "Software & Control",
+    "zh": "软件与控制"
+   },
+   "v": "$751M",
+   "s": {
+    "en": "+19% YoY · 34.8% margin",
+    "zh": "同比 +19% · 利润率 34.8%"
+   }
+  },
+  {
+   "k": {
+    "en": "Lifecycle Services",
+    "zh": "生命周期服务"
+   },
+   "v": "$482M",
+   "s": {
+    "en": "−12% YoY · −2% organic (divestitures)",
+    "zh": "同比 −12% · 有机 −2%（剥离）"
+   }
+  },
+  {
+   "k": {
+    "en": "Segment margin",
+    "zh": "分部利润率"
+   },
+   "v": "22.3%",
+   "s": {
+    "en": "vs 19.5% a year ago",
+    "zh": "一年前 19.5%"
+   }
+  },
+  {
+   "k": {
+    "en": "Adj. EPS",
+    "zh": "调整后每股收益"
+   },
+   "v": "$3.49",
+   "s": {
+    "en": "+22% YoY · GAAP $3.65",
+    "zh": "同比 +22% · GAAP $3.65"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "New growth markets",
+    "zh": "新增长市场"
+   },
+   "p": {
+    "en": "Semiconductor fabs, data centers and warehouse automation drove the quarter, with automotive and life sciences improving.",
+    "zh": "半导体工厂、数据中心与仓储自动化带动本季增长，汽车与生命科学亦在改善。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Margins expanding",
+    "zh": "利润率扩张"
+   },
+   "p": {
+    "en": "Segment operating margin rose to 22.3% from 19.5%, and Software & Control earns nearly 35%.",
+    "zh": "分部营业利润率由 19.5% 升至 22.3%，软件与控制业务利润率近 35%。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "FY27 outlook",
+    "zh": "FY27 展望"
+   },
+   "p": {
+    "en": "The November report brings the first FY27 guide. The market will look for organic growth to hold near this year's 7.5–9.5%.",
+    "zh": "11月财报将首次给出 FY27 指引。市场将关注有机增长能否维持今年 7.5–9.5% 的水平。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Recurring revenue",
+    "zh": "经常性收入"
+   },
+   "p": {
+    "en": "Organic annual recurring revenue grew 6% and software ARR high single digits, a slower but steadier part of the mix.",
+    "zh": "有机年度经常性收入增长 6%，软件 ARR 增长接近一成，是增长较慢但较稳定的部分。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Industrial cycle",
+    "zh": "工业周期"
+   },
+   "p": {
+    "en": "Rockwell's sales fell from $2.56B to $1.88B a quarter during the 2024 destocking. A turn in capex budgets would hit orders quickly.",
+    "zh": "2024 年去库存期间，罗克韦尔季度销售由 25.6 亿美元降至 18.8 亿。资本开支预算一旦转向，订单会迅速受影响。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Valuation",
+    "zh": "估值"
+   },
+   "p": {
+    "en": "At about 33 times this year's adjusted EPS, the stock already prices in a solid recovery.",
+    "zh": "按今年调整后每股收益计约 33 倍，股价已反映稳健复苏。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Early Nov 2026",
+   "h": {
+    "en": "Q4 FY26 earnings",
+    "zh": "FY26 第四季财报"
+   },
+   "p": {
+    "en": "Full-year results and the first FY27 outlook. The FY26 guide implies about $2.34B of Q4 sales.",
+    "zh": "全年业绩及首份 FY27 展望。FY26 指引隐含 Q4 销售约 23.4 亿美元。"
+   }
+  },
+  {
+   "date": "Nov 2026",
+   "h": {
+    "en": "Dividend review",
+    "zh": "股息审议"
+   },
+   "p": {
+    "en": "Rockwell has raised its dividend every November for many years; the current rate is $1.38 a quarter.",
+    "zh": "罗克韦尔多年来每年11月上调股息，目前每季 $1.38。"
+   }
+  },
+  {
+   "date": "Late Jan 2027",
+   "h": {
+    "en": "Q1 FY27 earnings",
+    "zh": "FY27 第一季财报"
+   },
+   "p": {
+    "en": "First quarter of the new fiscal year, usually the seasonal low.",
+    "zh": "新财年首季，通常为季节性低点。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q3 FY26 results (Rockwell Automation)",
+   "https://rockwellautomation.com/en-tr/company/news/press-releases/Rockwell-Automation-Reports-Third-Quarter-2026-Results.html"
+  ],
+  [
+   "Q3 FY26 segment detail (TradingView)",
+   "https://tradingview.com/news/tradingview:691c047963fb6:0"
+  ],
+  [
+   "Q3 FY26 summary and guidance (Stock Titan)",
+   "https://stocktitan.net/news/ROK/rockwell-automation-reports-third-quarter-2026-4qmdttz2nb00.html"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/rok/financials/?p=quarterly"
+  ],
+  [
+   "Rockwell Automation investor relations",
+   "https://ir.rockwellautomation.com/"
+  ],
+  [
+   "Price, market cap, beta and analyst targets: Yahoo Finance and Stocklake, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/ROK"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Rockwell Automation, Inc.",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Rockwell Automation, Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q4 FY21",
+   "Sep 2021",
+   1808,
+   39.79,
+   14.19,
+   0.67
+  ],
+  [
+   "Q1 FY22",
+   "Dec 2021",
+   1857,
+   40.33,
+   16.48,
+   2.05
+  ],
+  [
+   "Q2 FY22",
+   "Mar 2022",
+   1808,
+   36.73,
+   11.85,
+   0.46
+  ],
+  [
+   "Q3 FY22",
+   "Jun 2022",
+   1969,
+   40.76,
+   18.93,
+   2.55
+  ],
+  [
+   "Q4 FY22",
+   "Sep 2022",
+   2126,
+   41.69,
+   20.62,
+   2.92
+  ],
+  [
+   "Q1 FY23",
+   "Dec 2022",
+   1981,
+   41.07,
+   18.01,
+   3.31
+  ],
+  [
+   "Q2 FY23",
+   "Mar 2023",
+   2275,
+   40.98,
+   14.31,
+   2.59
+  ],
+  [
+   "Q3 FY23",
+   "Jun 2023",
+   2239,
+   40.89,
+   18.74,
+   3.45
+  ],
+  [
+   "Q4 FY23",
+   "Sep 2023",
+   2563,
+   41.18,
+   19.85,
+   2.61
+  ],
+  [
+   "Q1 FY24",
+   "Dec 2023",
+   2052,
+   38.74,
+   13.94,
+   1.86
+  ],
+  [
+   "Q2 FY24",
+   "Mar 2024",
+   2126,
+   39.18,
+   15.85,
+   2.31
+  ],
+  [
+   "Q3 FY24",
+   "Jun 2024",
+   2051,
+   39.88,
+   17.94,
+   2.02
+  ],
+  [
+   "Q4 FY24",
+   "Sep 2024",
+   2035,
+   null,
+   15.63,
+   2.09
+  ],
+  [
+   "Q1 FY25",
+   "Dec 2024",
+   1881,
+   46.68,
+   13.08,
+   1.61
+  ],
+  [
+   "Q2 FY25",
+   "Mar 2025",
+   2001,
+   48.58,
+   17.04,
+   2.22
+  ],
+  [
+   "Q3 FY25",
+   "Jun 2025",
+   2144,
+   48.79,
+   17.63,
+   2.6
+  ],
+  [
+   "Q4 FY25",
+   "Sep 2025",
+   2316,
+   null,
+   19.73,
+   1.23
+  ],
+  [
+   "Q1 FY26",
+   "Dec 2025",
+   2105,
+   48.27,
+   17.53,
+   2.69
+  ],
+  [
+   "Q2 FY26",
+   "Mar 2026",
+   2239,
+   50.25,
+   20.72,
+   3.1
+  ],
+  [
+   "Q3 FY26",
+   "Jun 2026",
+   2313,
+   49.46,
+   20.97,
+   3.65
+  ]
+ ],
+ "guide": [
+  "Q4 FY26e",
+  2343,
+  "Sep 2026 · implied by ~$9.0B FY guide",
+  "2026年9月 · 由约 90 亿全年指引推算"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q4 FY21 to Q3 FY26. Rockwell's fiscal year ends September 30. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY21 第四季至 FY26 第三季共 20 个季度。罗克韦尔财年于9月30日结束。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q4 FY21",
+    "Sep 2021",
+    204.1,
+    43.7,
+    160.4
+   ],
+   [
+    "Q1 FY22",
+    "Dec 2021",
+    -12,
+    37.1,
+    -49.1
+   ],
+   [
+    "Q2 FY22",
+    "Mar 2022",
+    90.8,
+    44.9,
+    45.9
+   ],
+   [
+    "Q3 FY22",
+    "Jun 2022",
+    344.9,
+    18.3,
+    326.6
+   ],
+   [
+    "Q4 FY22",
+    "Sep 2022",
+    399.4,
+    40.8,
+    358.6
+   ],
+   [
+    "Q1 FY23",
+    "Dec 2022",
+    66.3,
+    24.2,
+    42.1
+   ],
+   [
+    "Q2 FY23",
+    "Mar 2023",
+    187.1,
+    31.5,
+    155.6
+   ],
+   [
+    "Q3 FY23",
+    "Jun 2023",
+    281.7,
+    41.6,
+    240.1
+   ],
+   [
+    "Q4 FY23",
+    "Sep 2023",
+    839.5,
+    63.2,
+    776.3
+   ],
+   [
+    "Q1 FY24",
+    "Dec 2023",
+    33,
+    68,
+    -35
+   ],
+   [
+    "Q2 FY24",
+    "Mar 2024",
+    120,
+    51,
+    69
+   ],
+   [
+    "Q3 FY24",
+    "Jun 2024",
+    279,
+    41,
+    238
+   ],
+   [
+    "Q4 FY24",
+    "Sep 2024",
+    432,
+    65,
+    367
+   ],
+   [
+    "Q1 FY25",
+    "Dec 2024",
+    364,
+    71,
+    293
+   ],
+   [
+    "Q2 FY25",
+    "Mar 2025",
+    199,
+    28,
+    171
+   ],
+   [
+    "Q3 FY25",
+    "Jun 2025",
+    527,
+    38,
+    489
+   ],
+   [
+    "Q4 FY25",
+    "Sep 2025",
+    454,
+    49,
+    405
+   ],
+   [
+    "Q1 FY26",
+    "Dec 2025",
+    234,
+    64,
+    170
+   ],
+   [
+    "Q2 FY26",
+    "Mar 2026",
+    320,
+    45,
+    275
+   ],
+   [
+    "Q3 FY26",
+    "Jun 2026",
+    724,
+    70,
+    654
+   ]
+  ],
+  "est": [
+   [
+    "Q4 FY26",
+    "Sep 2026",
+    560,
+    70,
+    490
+   ],
+   [
+    "Q1 FY27",
+    "Dec 2026",
+    300,
+    60,
+    240
+   ],
+   [
+    "Q2 FY27",
+    "Mar 2027",
+    380,
+    55,
+    325
+   ],
+   [
+    "Q3 FY27",
+    "Jun 2027",
+    650,
+    70,
+    580
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash",
+    "zh": "现金"
+   },
+   "v": "$479M",
+   "s": {
+    "en": "Jun 30, 2026 · debt $3.6B",
+    "zh": "2026年6月30日 · 债务 36 亿"
+   }
+  },
+  "read": [
+   {
+    "en": "Rockwell's free cash flow is seasonal: the December quarter is usually the weakest (it was negative in Q1 FY22 and Q1 FY24) and the second half is strongest. Q3 FY26 produced a record $654M, and the last four quarters add up to about $1.5B.",
+    "zh": "罗克韦尔自由现金流有季节性：12月季度通常最弱（FY22 和 FY24 第一季为负），下半财年最强。FY26 第三季创下 6.54 亿美元纪录，近四季合计约 15 亿。"
+   },
+   {
+    "en": "My base case uses the ~$9.0B FY26 sales guide (about $2.34B in Q4) and keeps the recent seasonal pattern, with modest growth into FY27. That gives about $1.6B over four quarters. The main risk is the industrial cycle: in FY24, when customers cut inventory, quarterly free cash flow fell as low as −$35M.",
+    "zh": "我的基准情景采用约 90 亿美元的 FY26 销售指引（Q4 约 23.4 亿），沿用近期的季节性模式，FY27 小幅增长，四季合计约 16 亿美元。主要风险是工业周期：FY24 客户去库存时，季度自由现金流一度低至 −3,500 万美元。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Dividends",
+     "zh": "股息"
+    },
+    "p": {
+     "en": "About $155M a quarter at $1.38 per share, usually raised each November.",
+     "zh": "每股 $1.38，每季约 1.55 亿美元，通常每年11月上调。"
+    }
+   },
+   {
+    "h": {
+     "en": "Buybacks",
+     "zh": "回购"
+    },
+    "p": {
+     "en": "$754M of repurchases over the first three quarters of FY26, including $446M in Q2.",
+     "zh": "FY26 前三季回购 7.54 亿美元，其中 Q2 4.46 亿。"
+    }
+   },
+   {
+    "h": {
+     "en": "Debt",
+     "zh": "债务"
+    },
+    "p": {
+     "en": "About $3.6B of debt against $479M of cash, so buybacks partly depend on borrowing.",
+     "zh": "债务约 36 亿美元，现金 4.79 亿，因此回购部分依赖借款。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Volume recovery",
+     "zh": "销量复苏"
+    },
+    "p": {
+     "en": "Organic sales grew 10% in Q3 after the 2024 destocking.",
+     "zh": "继 2024 年去库存后，Q3 有机销售增长 10%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Higher margins",
+     "zh": "利润率提升"
+    },
+    "p": {
+     "en": "Segment margin of 22.3% means more of each sales dollar becomes cash.",
+     "zh": "分部利润率 22.3%，意味着每一美元销售转化为更多现金。"
+    }
+   },
+   {
+    "h": {
+     "en": "Sensia exit",
+     "zh": "退出 Sensia"
+    },
+    "p": {
+     "en": "Dissolving the Sensia joint venture removed a lower-margin business in the second half of FY26.",
+     "zh": "解散 Sensia 合资企业，于 FY26 下半年剥离了一项较低利润率的业务。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash, Jun 2026",
+     "zh": "2026年6月现金"
+    },
+    479
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    1635
+   ],
+   [
+    {
+     "en": "Dividends (est.)",
+     "zh": "股息（估）"
+    },
+    -640
+   ],
+   [
+    {
+     "en": "Buybacks (est.)",
+     "zh": "回购（估）"
+    },
+    -800
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash, Jun 2027 (est.)",
+   "zh": "2027年6月现金（估）"
+  },
+  "bridgeNote": {
+   "en": "Rockwell runs with little cash and funds part of its buybacks with debt, so cash on hand rarely builds up.",
+   "zh": "罗克韦尔现金较少，部分回购以债务融资，因此账面现金很少累积。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/rok/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Balance sheet (Stock Analysis)",
+    "https://stockanalysis.com/stocks/rok/financials/balance-sheet/?p=quarterly"
+   ],
+   [
+    "Q3 FY26 results",
+    "https://stocktitan.net/news/ROK/rockwell-automation-reports-third-quarter-2026-4qmdttz2nb00.html"
+   ]
+  ]
+ }
+}

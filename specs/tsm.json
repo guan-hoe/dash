@@ -1,0 +1,756 @@
+{
+ "dir": "tsm",
+ "ticker": "TSM",
+ "exchange": "NYSE",
+ "name": "TSMC",
+ "shares": 5186500000.0,
+ "beta": "1.24",
+ "snapshot": {
+  "price": "$419.53",
+  "date": "Oct 15, 2026",
+  "mcap": "$2.18T",
+  "range": "$267–487"
+ },
+ "eyebrow": {
+  "en": "Taiwan Semiconductor Manufacturing Co. · ADR (1 ADR = 5 shares) · Hsinchu, Taiwan",
+  "zh": "台积电 · 美国存托凭证（1 ADR = 5 股）· 台湾新竹"
+ },
+ "title": {
+  "en": "Every leading AI chip goes through <em>one company's fabs</em>.",
+  "zh": "每颗领先的 AI 芯片，<em>都出自同一家晶圆厂</em>。"
+ },
+ "lede": {
+  "en": "TSMC makes the chips that NVIDIA, Apple, AMD, Broadcom and Marvell design. Q3 revenue grew 41% in dollars to $46.7B, above the top of guidance, and Q4 is guided to $52.3–54.3B, up about 58% from a year ago. The costs are rising too: 2nm and overseas fabs pulled gross margin down to 66.4%, and capex stays at $60–64B for 2026 with more to come.",
+  "zh": "台积电代工英伟达、苹果、AMD、博通和迈威尔设计的芯片。第三季美元营收增长 41% 至 467 亿美元，超出指引上限；第四季指引 523–543 亿美元，同比增约 58%。成本亦在上升：2 纳米与海外工厂令毛利率降至 66.4%，2026 年资本开支维持 600–640 亿美元，且未来更高。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E (forward)",
+   "zh": "市盈率（预期）"
+  },
+  "v": "~19×",
+  "s": {
+   "en": "2027 consensus EPS · trailing ~27×",
+   "zh": "2027 年一致预期每股收益 · 历史约 27 倍"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q4 2026 guide",
+   "zh": "2026 Q4 指引"
+  },
+  "v": "$52.3–54.3B",
+  "s": {
+   "en": "GM 65–67% · op. margin 56.5–58.5%",
+   "zh": "毛利率 65–67% · 营业利润率 56.5–58.5%"
+  }
+ },
+ "earnings": {
+  "v": "Mid-Jan",
+  "s": {
+   "en": "Q4 2026 results and 2027 capex",
+   "zh": "2026 Q4 业绩及 2027 资本开支"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes of the NYSE-listed ADR with the 50-day average. Each ADR represents five Taiwan-listed shares.",
+  "zh": "纽交所 ADR 每日收盘价与50日均线。每份 ADR 代表五股台湾上市股票。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions as reported by TSMC, with gross margin on the right axis. EPS is per ADR, converted from NT$ at each quarter's rate. The last bar is the midpoint of TSMC's Q4 2026 guidance.",
+  "zh": "营收单位为百万美元（按台积电公布的美元数字），右轴为毛利率。每股收益按每份 ADR 计算，以各季汇率由新台币换算。最后一根柱为台积电 2026 年第四季指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q3 2026",
+    "zh": "2026 Q3"
+   },
+   "v": "$46.7B",
+   "s": {
+    "en": "+41% YoY in US$ · above guide",
+    "zh": "美元计同比 +41% · 高于指引"
+   }
+  },
+  {
+   "k": {
+    "en": "Gross margin",
+    "zh": "毛利率"
+   },
+   "v": "66.4%",
+   "s": {
+    "en": "−1.3 pts QoQ on 2nm ramp · Q4 guide 65–67%",
+    "zh": "环比 −1.3 个百分点（2纳米爬坡）· Q4 指引 65–67%"
+   }
+  },
+  {
+   "k": {
+    "en": "HPC share",
+    "zh": "高性能计算占比"
+   },
+   "v": "68%",
+   "s": {
+    "en": "of revenue · +22% QoQ",
+    "zh": "营收占比 · 环比 +22%"
+   }
+  },
+  {
+   "k": {
+    "en": "2nm + 3nm",
+    "zh": "2纳米 + 3纳米"
+   },
+   "v": "41%",
+   "s": {
+    "en": "of wafer revenue · 2nm 8% · 7nm and below 79%",
+    "zh": "晶圆营收占比 · 2纳米 8% · 7纳米及以下 79%"
+   }
+  },
+  {
+   "k": {
+    "en": "EPS per ADR",
+    "zh": "每份 ADR 收益"
+   },
+   "v": "$4.60",
+   "s": {
+    "en": "+69% YoY · consensus $4.42",
+    "zh": "同比 +69% · 一致预期 4.42 美元"
+   }
+  },
+  {
+   "k": {
+    "en": "2026 outlook",
+    "zh": "2026 展望"
+   },
+   "v": "~+44%",
+   "s": {
+    "en": "US$ revenue growth, from ~40% · capex $60–64B",
+    "zh": "美元营收增长，原约 40% · 资本开支 600–640 亿"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "AI demand outruns supply",
+    "zh": "AI 需求超过供给"
+   },
+   "p": {
+    "en": "CEO C.C. Wei said demand still runs well ahead of supply. Full-year US$ revenue growth was raised again to about 44%, and the Q4 guide implies about 58% year-over-year growth.",
+    "zh": "CEO 魏哲家表示需求仍远超供给。全年美元营收增长再度上调至约 44%，Q4 指引意味着同比增约 58%。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Pricing power",
+    "zh": "定价能力"
+   },
+   "p": {
+    "en": "Operating margin of 58.7% beat the top of guidance even as 2nm diluted gross margin, helped by high utilization of 3nm and 5nm and price increases.",
+    "zh": "尽管 2 纳米摊薄毛利率，营业利润率仍达 58.7%，超出指引上限，受益于 3、5 纳米高稼动率及调价。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "2nm and overseas dilution",
+    "zh": "2纳米与海外稀释"
+   },
+   "p": {
+    "en": "Gross margin fell 1.3 points to 66.4% on the 2nm ramp and is guided to about 66% in Q4. Overseas fabs cost about 2 points this year and should widen to 3–4 points as more US fabs ramp.",
+    "zh": "受 2 纳米爬坡影响，毛利率下降 1.3 个百分点至 66.4%，Q4 指引约 66%。海外工厂今年拖累约 2 个百分点，随更多美国工厂投产将扩大至 3–4 个百分点。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Capex keeps rising",
+    "zh": "资本开支持续上升"
+   },
+   "p": {
+    "en": "The 2026 budget stays at $60–64B ($40.6B spent through Q3), and management said 2026–2028 spending will be even more significantly higher than the past three years, with nearly 20 fabs under way.",
+    "zh": "2026 年预算维持 600–640 亿美元（前三季已支出 406 亿），管理层表示 2026–2028 年支出将比过去三年更显著增加，在建工厂近 20 座。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Currency",
+    "zh": "汇率"
+   },
+   "p": {
+    "en": "TSMC reports in NT dollars, and the ADR trades in US dollars. Each 1% move in the NT$ shifts gross margin by about 0.4 points.",
+    "zh": "台积电以新台币报告，ADR 以美元交易。新台币每变动 1%，毛利率约变动 0.4 个百分点。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Geopolitics and tariffs",
+    "zh": "地缘政治与关税"
+   },
+   "p": {
+    "en": "Most leading-edge capacity is in Taiwan. Cross-strait tension and US chip tariffs are risks that no amount of earnings growth removes.",
+    "zh": "大部分先进产能位于台湾。两岸紧张局势与美国芯片关税属于盈利增长无法消除的风险。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Nov 10, 2026",
+   "h": {
+    "en": "October sales",
+    "zh": "10月营收"
+   },
+   "p": {
+    "en": "TSMC publishes monthly revenue around the 10th of each month. Q4 guidance implies about NT$560–590B a month.",
+    "zh": "台积电约在每月10日公布月度营收。Q4 指引意味着每月约 5,600–5,900 亿新台币。"
+   }
+  },
+  {
+   "date": "Dec 10, 2026",
+   "h": {
+    "en": "November sales",
+    "zh": "11月营收"
+   },
+   "p": {
+    "en": "Two months of Q4 sales show whether it tracks the $52.3–54.3B guide.",
+    "zh": "两个月营收可显示 Q4 是否符合 523–543 亿美元指引。"
+   }
+  },
+  {
+   "date": "Mid-Jan 2027",
+   "h": {
+    "en": "Q4 2026 earnings",
+    "zh": "2026 第四季财报"
+   },
+   "p": {
+    "en": "Guide: $52.3–54.3B revenue, 65–67% gross margin, 56.5–58.5% operating margin. Also the 2027 capex budget.",
+    "zh": "指引：营收 523–543 亿美元，毛利率 65–67%，营业利润率 56.5–58.5%。另将公布 2027 年资本开支预算。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q3 2026 results press release (SEC filing)",
+   "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+  ],
+  [
+   "Q3 2026 earnings call transcript (Investing.com)",
+   "https://investing.com/news/transcripts/earnings-call-transcript-tsmc-beats-q3-2026-estimates-as-stock-slips-93CH-4950695"
+  ],
+  [
+   "Q3 2026 vs estimates and Q4 guidance (Zacks)",
+   "https://zacks.com/stock/news/3008590/taiwan-semiconductor-q3-earnings-revenues-top-estimates-margins-up"
+  ],
+  [
+   "Q3 2026 node mix and outlook (Gate News)",
+   "https://gate.com/news/detail/TSM/tsmc-reports-q3-eps-460-q4-revenue-guidance-up-to-543-billion-24969752"
+  ],
+  [
+   "Quarterly income statement in NT$ (Stock Analysis)",
+   "https://stockanalysis.com/stocks/tsm/financials/?p=quarterly"
+  ],
+  [
+   "TSMC investor relations, Q3 2026",
+   "https://investor.tsmc.com/english/quarterly-results/2026/q3"
+  ],
+  [
+   "Price, market cap and consensus EPS: Financial Modeling Prep, as of Oct 15, 2026",
+   "https://finance.yahoo.com/quote/TSM"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 15, 2026 (Q3 2026 results). For information only, not investment advice. Not affiliated with Taiwan Semiconductor Manufacturing Company Limited.",
+  "zh": "基本面数据截至 2026年10月15日（2026 年第三季业绩）。仅供参考，不构成投资建议。与台湾积体电路制造股份有限公司无关联。"
+ },
+ "quarters": [
+  [
+   "Q3 2021",
+   "Sep 2021",
+   14880,
+   51.3,
+   41.24,
+   1.08
+  ],
+  [
+   "Q4 2021",
+   "Dec 2021",
+   15740,
+   52.66,
+   41.71,
+   1.12
+  ],
+  [
+   "Q1 2022",
+   "Mar 2022",
+   17570,
+   55.63,
+   45.73,
+   1.4
+  ],
+  [
+   "Q2 2022",
+   "Jun 2022",
+   18160,
+   59.06,
+   49.07,
+   1.55
+  ],
+  [
+   "Q3 2022",
+   "Sep 2022",
+   20230,
+   60.43,
+   50.61,
+   1.79
+  ],
+  [
+   "Q4 2022",
+   "Dec 2022",
+   19930,
+   62.22,
+   51.96,
+   1.67
+  ],
+  [
+   "Q1 2023",
+   "Mar 2023",
+   16720,
+   56.33,
+   45.46,
+   1.31
+  ],
+  [
+   "Q2 2023",
+   "Jun 2023",
+   15680,
+   54.11,
+   42.0,
+   1.14
+  ],
+  [
+   "Q3 2023",
+   "Sep 2023",
+   17280,
+   54.26,
+   41.71,
+   1.29
+  ],
+  [
+   "Q4 2023",
+   "Dec 2023",
+   19620,
+   53.04,
+   41.6,
+   1.52
+  ],
+  [
+   "Q1 2024",
+   "Mar 2024",
+   18870,
+   53.07,
+   42.02,
+   1.39
+  ],
+  [
+   "Q2 2024",
+   "Jun 2024",
+   20820,
+   53.17,
+   42.55,
+   1.48
+  ],
+  [
+   "Q3 2024",
+   "Sep 2024",
+   23500,
+   57.83,
+   47.49,
+   1.94
+  ],
+  [
+   "Q4 2024",
+   "Dec 2024",
+   26880,
+   59.0,
+   49.02,
+   2.15
+  ],
+  [
+   "Q1 2025",
+   "Mar 2025",
+   25530,
+   58.79,
+   48.5,
+   2.12
+  ],
+  [
+   "Q2 2025",
+   "Jun 2025",
+   30070,
+   58.62,
+   49.63,
+   2.47
+  ],
+  [
+   "Q3 2025",
+   "Sep 2025",
+   33100,
+   59.45,
+   50.58,
+   2.92
+  ],
+  [
+   "Q4 2025",
+   "Dec 2025",
+   33730,
+   62.33,
+   53.92,
+   3.02
+  ],
+  [
+   "Q1 2026",
+   "Mar 2026",
+   35900,
+   66.25,
+   58.1,
+   3.49
+  ],
+  [
+   "Q2 2026",
+   "Jun 2026",
+   40200,
+   67.72,
+   60.34,
+   4.31
+  ],
+  [
+   "Q3 2026",
+   "Sep 2026",
+   46720,
+   66.41,
+   58.66,
+   4.6
+  ]
+ ],
+ "guide": [
+  "Q4 2026e",
+  53300,
+  "Dec 2026 · guidance midpoint ($52.3–54.3B)",
+  "2026年12月 · 指引中值（523–543 亿美元）"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, converted from NT$ to US$ millions at each quarter's rate, for the 20 quarters from Q4 2021 to Q3 2026. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，按各季汇率由新台币换算为百万美元，涵盖 2021 Q4 至 2026 Q3 共 20 个季度。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q4 2021",
+    "Dec 2021",
+    13585,
+    8461,
+    5124
+   ],
+   [
+    "Q1 2022",
+    "Mar 2022",
+    13316,
+    9379,
+    3937
+   ],
+   [
+    "Q2 2022",
+    "Jun 2022",
+    11520,
+    7402,
+    4118
+   ],
+   [
+    "Q3 2022",
+    "Sep 2022",
+    13617,
+    8775,
+    4842
+   ],
+   [
+    "Q4 2022",
+    "Dec 2022",
+    15512,
+    10732,
+    4780
+   ],
+   [
+    "Q1 2023",
+    "Mar 2023",
+    12664,
+    9944,
+    2720
+   ],
+   [
+    "Q2 2023",
+    "Jun 2023",
+    5454,
+    8170,
+    -2716
+   ],
+   [
+    "Q3 2023",
+    "Sep 2023",
+    9313,
+    7163,
+    2150
+   ],
+   [
+    "Q4 2023",
+    "Dec 2023",
+    12384,
+    5337,
+    7047
+   ],
+   [
+    "Q1 2024",
+    "Mar 2024",
+    13892,
+    5773,
+    8119
+   ],
+   [
+    "Q2 2024",
+    "Jun 2024",
+    11675,
+    6358,
+    5317
+   ],
+   [
+    "Q3 2024",
+    "Sep 2024",
+    12126,
+    6406,
+    5720
+   ],
+   [
+    "Q4 2024",
+    "Dec 2024",
+    19196,
+    11203,
+    7993
+   ],
+   [
+    "Q1 2025",
+    "Mar 2025",
+    19030,
+    10064,
+    8966
+   ],
+   [
+    "Q2 2025",
+    "Jun 2025",
+    16006,
+    9571,
+    6435
+   ],
+   [
+    "Q3 2025",
+    "Sep 2025",
+    14272,
+    9612,
+    4660
+   ],
+   [
+    "Q4 2025",
+    "Dec 2025",
+    23393,
+    11508,
+    11885
+   ],
+   [
+    "Q1 2026",
+    "Mar 2026",
+    22126,
+    11103,
+    11023
+   ],
+   [
+    "Q2 2026",
+    "Jun 2026",
+    24789,
+    15696,
+    9093
+   ],
+   [
+    "Q3 2026",
+    "Sep 2026",
+    28770,
+    13800,
+    14970
+   ]
+  ],
+  "est": [
+   [
+    "Q4 2026",
+    "Dec 2026",
+    31000,
+    21000,
+    10000
+   ],
+   [
+    "Q1 2027",
+    "Mar 2027",
+    31500,
+    19000,
+    12500
+   ],
+   [
+    "Q2 2027",
+    "Jun 2027",
+    32000,
+    20000,
+    12000
+   ],
+   [
+    "Q3 2027",
+    "Sep 2027",
+    34000,
+    20500,
+    13500
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & securities",
+    "zh": "现金及有价证券"
+   },
+   "v": "~$126B",
+   "s": {
+    "en": "NT$4.0T · Sep 30, 2026",
+    "zh": "4.0 万亿新台币 · 2026年9月30日"
+   }
+  },
+  "read": [
+   {
+    "en": "TSMC turns roughly 45–65% of revenue into operating cash, then spends a large share of it on fabs. Free cash flow dipped below zero only once in five years (Q2 2023). Q3 2026 was a record at about $15B: operating cash of NT$920B (~$28.8B) against $13.8B of capex.",
+    "zh": "台积电约 45–65% 的营收转化为经营现金流，再将其中大部分投入建厂。五年间自由现金流仅一次转负（2023 Q2）。2026 Q3 创纪录，约 150 亿美元：经营现金流 9,200 亿新台币（约 288 亿美元），资本开支 138 亿美元。"
+   },
+   {
+    "en": "My base case uses the Q4 guide midpoint ($53.3B), operating cash at about 55–60% of revenue, and capex of about $21B in Q4 (the $60–64B budget less $40.6B spent through Q3), then $19–21B a quarter in 2027 as spending steps up again. That gives about $48B of free cash flow over four quarters. Capex is the swing factor: each extra $5B a year comes straight out of this number.",
+    "zh": "我的基准情景采用 Q4 指引中值（533 亿美元），经营现金流约为营收的 55–60%，Q4 资本开支约 210 亿美元（600–640 亿预算减去前三季已支出的 406 亿），2027 年每季 190–210 亿美元，四季自由现金流约 480 亿。资本开支是最大变数：每年每多 50 亿美元都直接从这里扣除。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Fabs",
+     "zh": "建厂"
+    },
+    "p": {
+     "en": "2026 capex of $60–64B, with $40.6B spent through Q3; 2nm, Arizona, Japan and advanced packaging are the big items.",
+     "zh": "2026 年资本开支 600–640 亿美元，前三季已支出 406 亿；2 纳米、亚利桑那、日本及先进封装为主要项目。"
+    }
+   },
+   {
+    "h": {
+     "en": "Dividends",
+     "zh": "股息"
+    },
+    "p": {
+     "en": "About NT$156B (~$4.9B) was paid in Q3 2026, and management reiterated a steadily rising dividend per share.",
+     "zh": "2026 Q3 派息约 1,560 亿新台币（约 49 亿美元），管理层重申每股股息稳定增加。"
+    }
+   },
+   {
+    "h": {
+     "en": "US expansion",
+     "zh": "美国扩张"
+    },
+    "p": {
+     "en": "A fresh $100B commitment in Arizona adds to spending over the next several years.",
+     "zh": "在亚利桑那新增 1,000 亿美元承诺，未来数年支出进一步增加。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Record sales",
+     "zh": "创纪录营收"
+    },
+    "p": {
+     "en": "Q3 sales of NT$1.49 trillion were up 51% year over year and 18% from Q2, and Q4 is guided about 14% higher again.",
+     "zh": "Q3 营收 1.49 万亿新台币，同比增 51%，环比增 18%；Q4 指引再环比增约 14%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Record margins",
+     "zh": "创纪录利润率"
+    },
+    "p": {
+     "en": "A 58.7% operating margin in Q3 means most incremental revenue drops to cash.",
+     "zh": "Q3 营业利润率 58.7%，意味着大部分新增营收转为现金。"
+    }
+   },
+   {
+    "h": {
+     "en": "Interest on cash",
+     "zh": "现金利息"
+    },
+    "p": {
+     "en": "Roughly $126B of cash and securities earns meaningful interest income, which adds to operating cash.",
+     "zh": "约 1,260 亿美元现金及有价证券带来可观利息收入，计入经营现金流。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & securities, Sep 2026",
+     "zh": "2026年9月现金及有价证券"
+    },
+    126000
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    48000
+   ],
+   [
+    {
+     "en": "Dividends (est.)",
+     "zh": "股息（估）"
+    },
+    -21000
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash & securities, Sep 2027 (est.)",
+   "zh": "2027年9月现金及有价证券（估）"
+  },
+  "bridgeNote": {
+   "en": "TSMC's cash balance rose NT$488B in Q3 to NT$3.6T, with NT$4.0T including marketable securities. The NT$/US$ rate alone can move these dollar figures by several billion.",
+   "zh": "台积电第三季现金余额增加 4,880 亿新台币至 3.6 万亿，连同有价证券为 4.0 万亿。仅新台币汇率变动即可使这些美元数字变动数十亿。"
+  },
+  "extraNote": {
+   "en": "Converted from NT$ using the rate implied by TSMC's own NT$ and US$ revenue for each quarter.",
+   "zh": "以台积电各季新台币与美元营收所隐含的汇率换算。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement in NT$ (Stock Analysis)",
+    "https://stockanalysis.com/stocks/tsm/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Q3 2026 cash flow, capex and balance sheet (earnings call, Investing.com)",
+    "https://investing.com/news/transcripts/earnings-call-transcript-tsmc-beats-q3-2026-estimates-as-stock-slips-93CH-4950695"
+   ],
+   [
+    "Q3 2026 results press release (SEC filing)",
+    "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+   ]
+  ]
+ }
+}

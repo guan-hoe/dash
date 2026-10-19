@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Coherent COHR Dashboard</title>
+<meta name="description" content="Coherent (NYSE: COHR) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NYSE: COHR</span>
+  <span class="bar-px" id="barPx">$312.62</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Coherent Corp. · Common stock · Saxonburg, Pennsylvania</div>
+      <h1 data-ih="title">AI optics growth, <em>paid for up front</em>.</h1>
+      <p data-i="lede" class="lede">Coherent makes optical transceivers, indium phosphide lasers and industrial lasers. Datacenter & Communications is now 79% of revenue and grew 59% last quarter, and management targets a $3B revenue quarter by the end of FY27. To get there it is spending heavily on laser capacity, which has turned free cash flow negative.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$312.62</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$61.2B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$108–440</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E</span></div><div class="v">~40×</div><div class="s"><span data-i="s_val">Q1 guide EPS $1.95 × 4 (non-GAAP)</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q1 FY27 guide</span></div><div class="v">$2.3B</div><div class="s"><span data-i="s_an">±$100M · EPS $1.85–2.05</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Early Nov</div><div class="s"><span data-i="s_er">Q1 FY27 · date not yet announced</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. From its 52-week low the stock roughly quadrupled to $440, then fell about 30%.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="COHR daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">2.11</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Coherent's fiscal year ends June 30; FY22 is II-VI before it bought Coherent in July 2022 and took its name. The last bar is guidance at the midpoint.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q4 FY26</span></div><div class="v">$2.05B</div><div class="s"><span data-i="sc0">+34% YoY · +42% pro forma</span></div></div><div class="cell"><div class="k"><span data-i="kc1">Datacenter & Comms</span></div><div class="v">$1.62B</div><div class="s"><span data-i="sc1">+59% · 79% of revenue</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Industrial</span></div><div class="v">$431M</div><div class="s"><span data-i="sc2">−16% YoY</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Gross margin</span></div><div class="v">40.2%</div><div class="s"><span data-i="sc3">non-GAAP · Q1 guide 39.5–41.5%</span></div></div><div class="cell"><div class="k"><span data-i="kc4">Q4 EPS</span></div><div class="v">$1.74</div><div class="s"><span data-i="sc4">non-GAAP · +74% YoY</span></div></div><div class="cell"><div class="k"><span data-i="kc5">Leverage</span></div><div class="v">0.7×</div><div class="s"><span data-i="sc5">debt / EBITDA · 2.0× a year ago</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">Data center demand</h3><p data-i="w0p">Data center revenue rose 66% YoY in Q4, and management expects more than 80% YoY growth this quarter. 1.6T transceivers ramp through 2027.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Indium phosphide scale-up</h3><p data-i="w1p">Internal InP laser output doubles YoY by the end of Q1 FY27, a quarter early, and more than doubles again by end-2027. A 6-inch wafer gives four times the output of a 3-inch one at half the cost.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w2h">New products</h3><p data-i="w2p">Co-packaged optics revenue starts in the December quarter, and the optical circuit switch market estimate doubled to over $4B.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Cash burn from capex</h3><p data-i="w3p">FY26 operating cash flow was only $80M against $1.1B of capex, so free cash flow was about −$1B. A third InP site is planned for the first half of 2027.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w4h">Industrial weakness</h3><p data-i="w4p">Industrial revenue fell to $431M from $511M a year earlier as Coherent leans into AI.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Execution</h3><p data-i="w5p">InP capacity is the bottleneck; any slip in yields or the ramp caps revenue. The stock is about 30% below its high, so position sizing matters.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="COHR" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Early Nov 2026</div><h3 data-i="c0h">Q1 FY27 earnings</h3><p data-i="c0p">Guide: $2.2–2.4B revenue, 39.5–41.5% non-GAAP gross margin, EPS $1.85–2.05.</p></div></div><div class="item"><div><div class="date">Dec quarter 2026</div><h3 data-i="c1h">First CPO revenue</h3><p data-i="c1p">Co-packaged optics is expected to start contributing.</p></div></div><div class="item"><div><div class="date">Jun 2027</div><h3 data-i="c2h">$3B quarter target</h3><p data-i="c2p">Management aims for a quarter above $3B of revenue by the end of FY27.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://miracoup.com/cohr-q4-2026-earnings-analysis" target="_blank" rel="noopener">Q4 FY26 analysis and guidance (Miracoup)</a></li><li><a href="https://investing.com/news/company-news/coherent-q4-fy26-slides-ai-demand-drives-42-revenue-surge-93CH-4856345" target="_blank" rel="noopener">Q4 FY26 slides (Investing.com)</a></li><li><a href="https://tikr.com/blog/coherents-q4-earnings-call-set-a-new-target-3-billion-in-quarterly-revenue-heres-what-that-means-for-the-stock" target="_blank" rel="noopener">Q4 FY26 call: InP capacity and $3B target</a></li><li><a href="https://financialmarkets.com/article/cohr-q4-2026-cash-burn" target="_blank" rel="noopener">FY26 cash burn</a></li><li><a href="https://tradingkey.com/news/transcripts/262105524-tradingkey" target="_blank" rel="noopener">Q4 FY26 call transcript summary</a></li><li><a href="https://stockanalysis.com/stocks/cohr/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0000820318" target="_blank" rel="noopener">SEC EDGAR filings (CIK 820318)</a></li><li><a href="https://finance.yahoo.com/quote/COHR" target="_blank" rel="noopener">Price, market cap and beta: Yahoo Finance and Financial Modeling Prep, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Coherent Corp..</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "cohr", SHARES = 195640000.0, TV = "NYSE:COHR";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q1 FY22", "Sep 2021", 795.11, 38.56, 11.95, 0.5], ["Q2 FY22", "Dec 2021", 806.82, 38.57, 12.17, 0.44], ["Q3 FY22", "Mar 2022", 827.72, 38.86, 12.9, 0.28], ["Q4 FY22", "Jun 2022", 886.96, 36.76, 12.88, 0.23], ["Q1 FY23", "Sep 2022", 1345, 32.99, 3.16, -0.56], ["Q2 FY23", "Dec 2022", 1370, 30.01, 0.6, -0.58], ["Q3 FY23", "Mar 2023", 1240, 33.88, 5.43, -0.24], ["Q4 FY23", "Jun 2023", 1205, 29.16, 3.39, -1.54], ["Q1 FY24", "Sep 2023", 1053, 29.14, -1.74, -0.65], ["Q2 FY24", "Dec 2023", 1131, 30.99, 2.68, -0.38], ["Q3 FY24", "Mar 2024", 1209, 30.32, 2.8, -0.29], ["Q4 FY24", "Jun 2024", 1314, 32.86, 5.88, -0.52], ["Q1 FY25", "Sep 2024", 1348, 34.13, 7.38, -0.04], ["Q2 FY25", "Dec 2024", 1435, 35.5, 10.1, 0.44], ["Q3 FY25", "Mar 2025", 1498, 35.23, 10.12, -0.11], ["Q4 FY25", "Jun 2025", 1529, 36.63, 9.02, -0.83], ["Q1 FY26", "Sep 2025", 1581, 36.63, 10.89, 1.19], ["Q2 FY26", "Dec 2025", 1686, 36.95, 11.78, 0.76], ["Q3 FY26", "Mar 2026", 1806, 37.66, 13.57, 0.97], ["Q4 FY26", "Jun 2026", 2046, 38.48, 11.83, 1.19]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q1 FY27e", 2300, "Sep 2026 \u00b7 guidance midpoint", "2026\u5e749\u6708 \u00b7 \u6307\u5f15\u4e2d\u503c"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "FY26 Q4", "sc0": "同比 +34% · 备考 +42%", "kc1": "数据中心与通信", "sc1": "+59% · 占营收 79%", "kc2": "工业", "sc2": "同比 −16%", "kc3": "毛利率", "sc3": "非GAAP · Q1 指引 39.5–41.5%", "kc4": "Q4 每股收益", "sc4": "非GAAP · 同比 +74%", "kc5": "杠杆", "sc5": "债务/EBITDA · 一年前 2.0 倍", "w0h": "数据中心需求", "w0p": "第四季数据中心收入同比增 66%，管理层预计本季同比增逾 80%。1.6T 光模块在 2027 年持续放量。", "w1h": "磷化铟扩产", "w1p": "内部磷化铟激光器产能将在 FY27 第一季末同比翻倍（提前一季），2027 年底前再翻倍以上。6 英寸晶圆产出是 3 英寸的四倍、成本减半。", "w2h": "新产品", "w2p": "共封装光学收入将于12月季度开始贡献，光路交换机市场规模估计翻倍至逾 40 亿美元。", "w3h": "资本开支烧钱", "w3p": "FY26 经营现金流仅 8000 万美元，资本开支 11 亿，自由现金流约 −10 亿。第三个磷化铟工厂计划于 2027 年上半年启用。", "w4h": "工业业务疲软", "w4p": "随公司转向 AI，工业收入由一年前的 5.11 亿美元降至 4.31 亿。", "w5h": "执行风险", "w5p": "磷化铟产能是瓶颈，良率或爬坡受阻将限制营收。股价较高点低约 30%，仓位控制很重要。", "c0h": "FY27 第一季财报", "c0p": "指引：营收 22–24 亿美元，非GAAP毛利率 39.5–41.5%，每股 $1.85–2.05。", "c1h": "首笔 CPO 收入", "c1p": "共封装光学预计开始贡献收入。", "c2h": "单季 30 亿目标", "c2p": "管理层目标在 FY27 结束前实现单季营收逾 30 亿美元。", "eyebrow": "Coherent · 普通股 · 宾州萨克森堡", "title": "AI 光学高增长，<em>先投入后回报</em>。", "lede": "Coherent 生产光模块、磷化铟激光器和工业激光器。数据中心与通信业务已占营收 79%，上季增长 59%，管理层目标在 FY27 结束前实现单季 30 亿美元营收。为此公司大举投资激光器产能，自由现金流已转负。", "k_val": "市盈率", "s_val": "Q1 指引每股 $1.95 × 4（非GAAP）", "k_an": "FY27 Q1 指引", "s_an": "±1 亿 · 每股 $1.85–2.05", "s_er": "FY27 第一季 · 日期未公布", "sub_price": "每日收盘价与50日均线。股价从52周低点约涨四倍至 $440，之后回落约 30%。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。Coherent 财年截至6月30日；FY22 为 II-VI 在 2022年7月收购 Coherent 并更名之前的数据。最后一根柱为指引中值。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Coherent Corp. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

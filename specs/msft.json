@@ -1,0 +1,697 @@
+{
+ "dir": "msft",
+ "ticker": "MSFT",
+ "exchange": "NASDAQ",
+ "name": "Microsoft",
+ "shares": 7425500000.0,
+ "beta": "1.10",
+ "snapshot": {
+  "price": "$535.07",
+  "date": "Oct 9, 2026",
+  "mcap": "$3.97T",
+  "range": "$349–554"
+ },
+ "eyebrow": {
+  "en": "Microsoft Corporation · Common stock · Redmond, Washington",
+  "zh": "微软 · 普通股 · 华盛顿州雷德蒙德"
+ },
+ "title": {
+  "en": "Azure accelerates, <em>and the cash still flows</em>.",
+  "zh": "Azure 加速，<em>现金照样流入</em>。"
+ },
+ "lede": {
+  "en": "Microsoft grew revenue 18% to $90.0B last quarter as Azure accelerated to 43%, and it guides to about 45% next. Unlike most AI spenders it still produces large free cash flow, $67B last fiscal year, even with about $41B of quarterly capex including leases.",
+  "zh": "微软上季营收增 18% 至 900 亿美元，Azure 增速加快至 43%，下季指引约 45%。与多数 AI 投资者不同，即使含租赁的季度资本开支约 410 亿美元，它仍产生大量自由现金流，上财年为 670 亿。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E",
+   "zh": "市盈率"
+  },
+  "v": "~30×",
+  "s": {
+   "en": "trailing GAAP EPS $17.96",
+   "zh": "GAAP 历史每股 $17.96"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Azure guide",
+   "zh": "Azure 指引"
+  },
+  "v": "~45%",
+  "s": {
+   "en": "Q1 FY27 growth, constant currency",
+   "zh": "FY27 Q1 增速，按固定汇率"
+  }
+ },
+ "earnings": {
+  "v": "Oct 28",
+  "s": {
+   "en": "Q1 FY27 · expected, after close",
+   "zh": "FY27 第一季 · 预计，盘后"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. The stock ranged from about $349 to $554 over the past year.",
+  "zh": "每日收盘价与50日均线。过去一年股价在约 $349 至 $554 间。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with gross margin on the right axis. Microsoft's fiscal year ends June 30. Some GAAP EPS figures include OpenAI-related items. The last bar is guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为毛利率。微软财年截至6月30日。部分 GAAP 每股收益含 OpenAI 相关项目。最后一根柱为指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q4 FY26",
+    "zh": "FY26 Q4"
+   },
+   "v": "$90.0B",
+   "s": {
+    "en": "+18% YoY",
+    "zh": "同比 +18%"
+   }
+  },
+  {
+   "k": {
+    "en": "Microsoft Cloud",
+    "zh": "微软云"
+   },
+   "v": "$59.3B",
+   "s": {
+    "en": "+27% · Azure +43%",
+    "zh": "+27% · Azure +43%"
+   }
+  },
+  {
+   "k": {
+    "en": "Commercial RPO",
+    "zh": "商业剩余履约义务"
+   },
+   "v": "$678B",
+   "s": {
+    "en": "+84% · +25% excl. OpenAI",
+    "zh": "+84% · 不含 OpenAI 为 +25%"
+   }
+  },
+  {
+   "k": {
+    "en": "FY26 free cash flow",
+    "zh": "FY26 自由现金流"
+   },
+   "v": "$67.0B",
+   "s": {
+    "en": "after $115.9B of cash capex",
+    "zh": "扣除 1159 亿现金资本开支后"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Azure accelerating",
+    "zh": "Azure 加速"
+   },
+   "p": {
+    "en": "Azure grew 43% and is guided to about 45%, with demand still ahead of supply. Azure passed $100B of annual revenue.",
+    "zh": "Azure 增长 43%，指引约 45%，需求仍超供给。Azure 年收入突破 1000 亿美元。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Copilot",
+    "zh": "Copilot"
+   },
+   "p": {
+    "en": "Paid Microsoft 365 Copilot seats doubled to over 30M.",
+    "zh": "Microsoft 365 Copilot 付费席位翻倍至逾 3000 万。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Capex keeps growing",
+    "zh": "资本开支持续增长"
+   },
+   "p": {
+    "en": "About $50B of capex is expected in Q1 FY27 and fiscal 2027 spending will rise. Gross margin slipped to 67%.",
+    "zh": "FY27 第一季资本开支预计约 500 亿美元，FY27 全年将上升。毛利率降至 67%。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "OpenAI concentration",
+    "zh": "OpenAI 集中度"
+   },
+   "p": {
+    "en": "Much of the $678B backlog is OpenAI; excluding it, backlog grew 25%.",
+    "zh": "6780 亿积压订单中很大部分来自 OpenAI；剔除后增长 25%。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Oct 28, 2026",
+   "h": {
+    "en": "Q1 FY27 earnings (expected)",
+    "zh": "FY27 第一季财报（预计）"
+   },
+   "p": {
+    "en": "Guide: revenue $89.85–90.95B, Azure ~45% growth.",
+    "zh": "指引：营收 898.5–909.5 亿美元，Azure 增约 45%。"
+   }
+  },
+  {
+   "date": "Late Jan 2027",
+   "h": {
+    "en": "Q2 FY27 earnings",
+    "zh": "FY27 第二季财报"
+   },
+   "p": {
+    "en": "Date not yet announced.",
+    "zh": "日期未公布。"
+   }
+  },
+  {
+   "date": "Jun 30, 2027",
+   "h": {
+    "en": "FY27 ends",
+    "zh": "FY27 结束"
+   },
+   "p": {
+    "en": "Management expects capex to grow in fiscal 2027.",
+    "zh": "管理层预计 FY27 资本开支增长。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q4 FY26 call: Azure 43%, guidance",
+   "https://finance.biggo.com/news/US_MSFT_2026-07-29"
+  ],
+  [
+   "Q4 FY26 recap: FCF and capex",
+   "https://research.aardvarklabs.co/research/msft/earnings/2026-fq4/msft-2026-fq4-recap"
+  ],
+  [
+   "Q4 FY26 capex detail",
+   "https://windowsforum.com/news/microsoft-fy26-q4-azure-growth-hits-43-as-ai-capex-reaches-41-billion.447566"
+  ],
+  [
+   "Q1 FY27 guidance",
+   "https://moomoo.com/news/post/73761419/microsoft-msftus-breaks-through-the-ai-spending-panic-q4-results"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/msft/financials/?p=quarterly"
+  ],
+  [
+   "Price, market cap, beta and earnings date: Financial Modeling Prep, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/MSFT"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Microsoft Corporation.",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Microsoft Corporation 无关联。"
+ },
+ "quarters": [
+  [
+   "Q1 FY22",
+   "Sep 2021",
+   45317,
+   69.89,
+   44.66,
+   2.71
+  ],
+  [
+   "Q2 FY22",
+   "Dec 2021",
+   51728,
+   67.21,
+   43.01,
+   2.48
+  ],
+  [
+   "Q3 FY22",
+   "Mar 2022",
+   49360,
+   68.36,
+   41.26,
+   2.22
+  ],
+  [
+   "Q4 FY22",
+   "Jun 2022",
+   51865,
+   68.32,
+   39.59,
+   2.24
+  ],
+  [
+   "Q1 FY23",
+   "Sep 2022",
+   50122,
+   69.17,
+   42.93,
+   2.35
+  ],
+  [
+   "Q2 FY23",
+   "Dec 2022",
+   52747,
+   67.13,
+   38.96,
+   2.2
+  ],
+  [
+   "Q3 FY23",
+   "Mar 2023",
+   52857,
+   69.49,
+   42.29,
+   2.45
+  ],
+  [
+   "Q4 FY23",
+   "Jun 2023",
+   56189,
+   70.11,
+   43.16,
+   2.69
+  ],
+  [
+   "Q1 FY24",
+   "Sep 2023",
+   56517,
+   71.16,
+   47.59,
+   2.99
+  ],
+  [
+   "Q2 FY24",
+   "Dec 2023",
+   62020,
+   68.36,
+   43.59,
+   2.93
+  ],
+  [
+   "Q3 FY24",
+   "Mar 2024",
+   61858,
+   70.08,
+   44.59,
+   2.94
+  ],
+  [
+   "Q4 FY24",
+   "Jun 2024",
+   64727,
+   69.59,
+   43.14,
+   2.95
+  ],
+  [
+   "Q1 FY25",
+   "Sep 2024",
+   65585,
+   69.35,
+   46.58,
+   3.3
+  ],
+  [
+   "Q2 FY25",
+   "Dec 2024",
+   69632,
+   68.69,
+   45.46,
+   3.23
+  ],
+  [
+   "Q3 FY25",
+   "Mar 2025",
+   70066,
+   68.72,
+   45.67,
+   3.46
+  ],
+  [
+   "Q4 FY25",
+   "Jun 2025",
+   76441,
+   68.58,
+   44.9,
+   3.65
+  ],
+  [
+   "Q1 FY26",
+   "Sep 2025",
+   77673,
+   69.05,
+   48.87,
+   3.72
+  ],
+  [
+   "Q2 FY26",
+   "Dec 2025",
+   81273,
+   68.04,
+   47.09,
+   5.16
+  ],
+  [
+   "Q3 FY26",
+   "Mar 2026",
+   82886,
+   67.63,
+   46.33,
+   4.27
+  ],
+  [
+   "Q4 FY26",
+   "Jun 2026",
+   90007,
+   67.2,
+   45.11,
+   4.81
+  ]
+ ],
+ "guide": [
+  "Q1 FY27e",
+  90400,
+  "Sep 2026 · guidance midpoint",
+  "2026年9月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q1 FY22 to Q4 FY26. Microsoft's fiscal year ends June 30. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY22 第一季至 FY26 第四季共 20 个季度。微软财年截至6月30日。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q1 FY22",
+    "Sep 2021",
+    24540,
+    5810,
+    18730
+   ],
+   [
+    "Q2 FY22",
+    "Dec 2021",
+    14480,
+    5865,
+    8615
+   ],
+   [
+    "Q3 FY22",
+    "Mar 2022",
+    25386,
+    5340,
+    20046
+   ],
+   [
+    "Q4 FY22",
+    "Jun 2022",
+    24629,
+    6871,
+    17758
+   ],
+   [
+    "Q1 FY23",
+    "Sep 2022",
+    23198,
+    6283,
+    16915
+   ],
+   [
+    "Q2 FY23",
+    "Dec 2022",
+    11173,
+    6274,
+    4899
+   ],
+   [
+    "Q3 FY23",
+    "Mar 2023",
+    24441,
+    6607,
+    17834
+   ],
+   [
+    "Q4 FY23",
+    "Jun 2023",
+    28770,
+    8943,
+    19827
+   ],
+   [
+    "Q1 FY24",
+    "Sep 2023",
+    30583,
+    9917,
+    20666
+   ],
+   [
+    "Q2 FY24",
+    "Dec 2023",
+    18853,
+    9735,
+    9118
+   ],
+   [
+    "Q3 FY24",
+    "Mar 2024",
+    31917,
+    10952,
+    20965
+   ],
+   [
+    "Q4 FY24",
+    "Jun 2024",
+    37195,
+    13873,
+    23322
+   ],
+   [
+    "Q1 FY25",
+    "Sep 2024",
+    34180,
+    14923,
+    19257
+   ],
+   [
+    "Q2 FY25",
+    "Dec 2024",
+    22291,
+    15804,
+    6487
+   ],
+   [
+    "Q3 FY25",
+    "Mar 2025",
+    37044,
+    16745,
+    20299
+   ],
+   [
+    "Q4 FY25",
+    "Jun 2025",
+    42647,
+    17079,
+    25568
+   ],
+   [
+    "Q1 FY26",
+    "Sep 2025",
+    45057,
+    19394,
+    25663
+   ],
+   [
+    "Q2 FY26",
+    "Dec 2025",
+    35758,
+    29876,
+    5882
+   ],
+   [
+    "Q3 FY26",
+    "Mar 2026",
+    46679,
+    30876,
+    15803
+   ],
+   [
+    "Q4 FY26",
+    "Jun 2026",
+    55441,
+    35802,
+    19639
+   ]
+  ],
+  "est": [
+   [
+    "Q1 FY27",
+    "Sep 2026",
+    50000,
+    42000,
+    8000
+   ],
+   [
+    "Q2 FY27",
+    "Dec 2026",
+    40000,
+    44000,
+    -4000
+   ],
+   [
+    "Q3 FY27",
+    "Mar 2027",
+    55000,
+    45000,
+    10000
+   ],
+   [
+    "Q4 FY27",
+    "Jun 2027",
+    62000,
+    47000,
+    15000
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & investments",
+    "zh": "现金及投资"
+   },
+   "v": "$76.8B",
+   "s": {
+    "en": "Jun 30, 2026 · net cash $36.5B",
+    "zh": "2026年6月30日 · 净现金 365 亿"
+   }
+  },
+  "read": [
+   {
+    "en": "Microsoft has produced positive free cash flow in all 20 quarters, usually $15–25B, with a seasonal dip in the December quarter when taxes are paid. Cash capex more than doubled in two years, from $44.5B in FY24 to $115.9B in FY26, yet FY26 free cash flow was still $67B because operating cash flow grew almost as fast.",
+    "zh": "微软 20 个季度自由现金流全部为正，通常 150–250 亿美元，12月季度因缴税季节性走低。两年内现金资本开支由 FY24 的 445 亿增至 FY26 的 1159 亿，翻倍有余，但经营现金流几乎同步增长，FY26 自由现金流仍达 670 亿美元。"
+   },
+   {
+    "en": "Management expects about $50B of capex in Q1 FY27 including leases, and higher spending through fiscal 2027. I assume cash capex of $42–47B a quarter against operating cash flow of $40–62B, giving about $29B over four quarters, much less than FY26 and roughly what the dividend costs.",
+    "zh": "管理层预计 FY27 第一季含租赁资本开支约 500 亿美元，全年支出更高。我假设每季现金资本开支 420–470 亿、经营现金流 400–620 亿，四季合计约 290 亿美元，远低于 FY26，约等于股息支出。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Data centers and GPUs",
+     "zh": "数据中心与 GPU"
+    },
+    "p": {
+     "en": "$115.9B of cash capex in FY26 plus finance leases; Q4 capex including leases was about $41B.",
+     "zh": "FY26 现金资本开支 1159 亿美元，另有融资租赁；第四季含租赁资本开支约 410 亿。"
+    }
+   },
+   {
+    "h": {
+     "en": "Dividends",
+     "zh": "股息"
+    },
+    "p": {
+     "en": "About $6.8B a quarter.",
+     "zh": "每季约 68 亿美元。"
+    }
+   },
+   {
+    "h": {
+     "en": "Buybacks",
+     "zh": "回购"
+    },
+    "p": {
+     "en": "About $4.6B a quarter recently.",
+     "zh": "近期每季约 46 亿美元。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Cloud and Office",
+     "zh": "云与 Office"
+    },
+    "p": {
+     "en": "Operating cash flow of $55.4B in Q4, up 30%.",
+     "zh": "第四季经营现金流 554 亿美元，增 30%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Contracted backlog",
+     "zh": "已签约积压订单"
+    },
+    "p": {
+     "en": "$678B of commercial RPO, about 30% due within 12 months.",
+     "zh": "商业剩余履约义务 6780 亿美元，约 30% 在 12 个月内确认。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & investments, Jun 2026",
+     "zh": "2026年6月现金及投资"
+    },
+    76800
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    29000
+   ],
+   [
+    {
+     "en": "Dividends (~$6.8B a quarter)",
+     "zh": "股息（每季约68亿）"
+    },
+    -27000
+   ],
+   [
+    {
+     "en": "Buybacks (~$4.6B a quarter)",
+     "zh": "回购（每季约46亿）"
+    },
+    -18400
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash & investments, Jun 2027 (est.)",
+   "zh": "2027年6月现金及投资（估）"
+  },
+  "bridgeNote": {
+   "en": "Excludes debt maturities and new borrowing.",
+   "zh": "未计入债务到期及新增借款。"
+  },
+  "extraNote": {
+   "en": "Capex here is cash purchases of property and equipment; management's capex figure also includes finance leases.",
+   "zh": "此处资本开支为物业与设备的现金购置；管理层口径另含融资租赁。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/msft/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Q4 FY26 recap: FCF",
+    "https://research.aardvarklabs.co/research/msft/earnings/2026-fq4/msft-2026-fq4-recap"
+   ],
+   [
+    "Net cash (Tech CEO Daily)",
+    "https://techceodaily.com/data/which-big-tech-companies-carry-the-most-debt"
+   ]
+  ]
+ }
+}

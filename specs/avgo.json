@@ -1,0 +1,744 @@
+{
+ "dir": "avgo",
+ "ticker": "AVGO",
+ "exchange": "NASDAQ",
+ "name": "Broadcom",
+ "shares": 4773600000.0,
+ "beta": "1.48",
+ "snapshot": {
+  "price": "$361.54",
+  "date": "Oct 9, 2026",
+  "mcap": "$1.73T",
+  "range": "$290–495"
+ },
+ "eyebrow": {
+  "en": "Broadcom Inc. · Common stock · Palo Alto, California",
+  "zh": "博通 · 普通股 · 加州帕洛阿尔托"
+ },
+ "title": {
+  "en": "Custom AI chips for Google, Meta and OpenAI, <em>plus a software cash machine</em>.",
+  "zh": "为谷歌、Meta、OpenAI 打造定制 AI 芯片，<em>外加软件印钞机</em>。"
+ },
+ "lede": {
+  "en": "Broadcom designs custom AI accelerators (XPUs) and the networking chips that connect them, and owns VMware. AI semiconductor revenue tripled to $16.7B last quarter and is guided to $21.7B next, with management talking about roughly $115B of AI revenue in fiscal 2027. Two guides in a row landed just below what the market hoped, and AI mix is pulling gross margin down.",
+  "zh": "博通设计定制 AI 加速器（XPU）及连接它们的网络芯片，并拥有 VMware。上季 AI 半导体营收增至三倍达 167 亿美元，下季指引 217 亿，管理层提及 2027 财年 AI 营收约 1,150 亿美元。但连续两次指引略低于市场期望，且 AI 占比上升正在拉低毛利率。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E (forward)",
+   "zh": "市盈率（预期）"
+  },
+  "v": "~19×",
+  "s": {
+   "en": "consensus next-year EPS · trailing GAAP ~46×",
+   "zh": "一致预期下年每股收益 · GAAP 历史约 46 倍"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q4 FY26 guide",
+   "zh": "FY26 Q4 指引"
+  },
+  "v": "$34.8B",
+  "s": {
+   "en": "AI $21.7B · op. margin ~66% · GM ~73%",
+   "zh": "AI 217 亿 · 营业利润率约 66% · 毛利率约 73%"
+  }
+ },
+ "earnings": {
+  "v": "Mid-Dec",
+  "s": {
+   "en": "Q4 FY26 · date not yet announced",
+   "zh": "FY26 第四季 · 日期未公布"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. The stock fell after both the June and September reports despite record AI sales, and is 27% below its June high.",
+  "zh": "每日收盘价与50日均线。尽管 AI 营收创新高，6月与9月两次财报后股价均下跌，目前较6月高点低 27%。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Broadcom's fiscal year ends around November 1; VMware is included from Q1 FY24. The last bar is company guidance.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。博通财年约在11月1日结束；FY24 第一季起计入 VMware。最后一根柱为公司指引。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q3 FY26",
+    "zh": "FY26 Q3"
+   },
+   "v": "$29.6B",
+   "s": {
+    "en": "+86% YoY · record",
+    "zh": "同比 +86% · 创纪录"
+   }
+  },
+  {
+   "k": {
+    "en": "AI semiconductors",
+    "zh": "AI 半导体"
+   },
+   "v": "$16.7B",
+   "s": {
+    "en": "+221% YoY · 56% of sales",
+    "zh": "同比 +221% · 占营收 56%"
+   }
+  },
+  {
+   "k": {
+    "en": "Semiconductors",
+    "zh": "半导体"
+   },
+   "v": "$20.8B",
+   "s": {
+    "en": "+127% YoY",
+    "zh": "同比 +127%"
+   }
+  },
+  {
+   "k": {
+    "en": "Infrastructure software",
+    "zh": "基础设施软件"
+   },
+   "v": "$8.75B",
+   "s": {
+    "en": "+29% YoY · ~84% op. margin",
+    "zh": "同比 +29% · 营业利润率约 84%"
+   }
+  },
+  {
+   "k": {
+    "en": "Free cash flow",
+    "zh": "自由现金流"
+   },
+   "v": "$13.7B",
+   "s": {
+    "en": "46% of revenue",
+    "zh": "占营收 46%"
+   }
+  },
+  {
+   "k": {
+    "en": "FY26 AI revenue",
+    "zh": "FY26 AI 营收"
+   },
+   "v": "~$58B",
+   "s": {
+    "en": "raised from $56B · FY27 ~$115B",
+    "zh": "由 560 亿上调 · FY27 约 1,150 亿"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "AI run rate",
+    "zh": "AI 营收增速"
+   },
+   "p": {
+    "en": "AI revenue goes from $8.4B in Q1 to a guided $21.7B in Q4 FY26. Management laid out about $115B for FY27 and about $230B for FY28, and says supply is secured for FY27.",
+    "zh": "AI 营收由 FY26 Q1 的 84 亿美元增至 Q4 指引的 217 亿。管理层给出 FY27 约 1,150 亿、FY28 约 2,300 亿的展望，并表示 FY27 供应已锁定。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Customer roster",
+    "zh": "客户阵容"
+   },
+   "p": {
+    "en": "Shipping TPUs for Google and Anthropic, OpenAI's first custom accelerator, and Meta's MTIA from Q4. XPU shipments rose more than 3.5 times in a year.",
+    "zh": "为谷歌和 Anthropic 出货 TPU，交付 OpenAI 首款定制加速器，Q4 起出货 Meta 的 MTIA。XPU 出货量一年增长逾 3.5 倍。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Margin mix",
+    "zh": "毛利结构"
+   },
+   "p": {
+    "en": "XPUs carry more memory content and lower margins than software. Gross margin fell 210 basis points to 75% in Q3 and is guided to about 73% in Q4.",
+    "zh": "XPU 内存含量较高，毛利率低于软件。Q3 毛利率下降 210 个基点至 75%，Q4 指引约 73%。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "High expectations",
+    "zh": "预期过高"
+   },
+   "p": {
+    "en": "The Q4 revenue guide of $34.8B came in just under the $35.0B consensus, and the stock fell about 5% after hours, as it did in June.",
+    "zh": "Q4 营收指引 348 亿美元，略低于 350 亿一致预期，盘后股价跌约 5%，与6月如出一辙。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Customer concentration",
+    "zh": "客户集中"
+   },
+   "p": {
+    "en": "A handful of hyperscalers and AI labs buy most of the AI output. A delay in one program or a shift to in-house design would show up quickly.",
+    "zh": "少数超大规模云厂商与 AI 实验室买走大部分 AI 产品。任何一个项目延迟或客户转向自研都会迅速反映在业绩上。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Debt",
+    "zh": "债务"
+   },
+   "p": {
+    "en": "Broadcom carries about $59B of debt against $24B of cash, mostly from the VMware deal, though free cash flow covers it comfortably.",
+    "zh": "博通债务约 590 亿美元、现金 240 亿，主要来自 VMware 收购，但自由现金流足以覆盖。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Mid-Dec 2026",
+   "h": {
+    "en": "Q4 FY26 earnings",
+    "zh": "FY26 第四季财报"
+   },
+   "p": {
+    "en": "Guide: about $34.8B revenue, including $21.7B of AI semiconductors and $8.7B of software.",
+    "zh": "指引：营收约 348 亿美元，其中 AI 半导体 217 亿、软件 87 亿。"
+   }
+  },
+  {
+   "date": "Q4 FY26",
+   "h": {
+    "en": "Meta MTIA shipments",
+    "zh": "Meta MTIA 出货"
+   },
+   "p": {
+    "en": "Broadcom expects production shipments of Meta's custom accelerator to begin this quarter.",
+    "zh": "博通预计本季开始量产出货 Meta 的定制加速器。"
+   }
+  },
+  {
+   "date": "Early Mar 2027",
+   "h": {
+    "en": "Q1 FY27 earnings",
+    "zh": "FY27 第一季财报"
+   },
+   "p": {
+    "en": "First quarter against the ~$115B FY27 AI outlook.",
+    "zh": "对照 FY27 约 1,150 亿 AI 展望的首个季度。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q3 FY26 results and Q4 guidance (Jain)",
+   "https://jain.com/broadcom-q3-fy2026-ai-chip-revenue-custom-accelerators"
+  ],
+  [
+   "Q3 FY26 earnings call highlights",
+   "https://defenseworld.net/2026/09/04/broadcom-q3-earnings-call-highlights.html"
+  ],
+  [
+   "FY26 AI outlook raised to $58B (AlphaPilot)",
+   "https://alphapilot.tech/discover/broadcom-lifts-fy26-ai-revenue-to-58b-decoding-the-xpu-line-of-sight"
+  ],
+  [
+   "Market reaction to the Q4 guide (Depthgrid)",
+   "https://depthgrid.in/2026/09/broadcom-ai-chip-earnings-q3-2026.html"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/avgo/financials/?p=quarterly"
+  ],
+  [
+   "Broadcom investor relations",
+   "https://investors.broadcom.com/"
+  ],
+  [
+   "Price, market cap, beta and analyst targets: Yahoo Finance and Stocklake, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/AVGO"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Broadcom Inc.",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Broadcom Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q4 FY21",
+   "Oct 2021",
+   7407,
+   74.08,
+   35.2,
+   0.44
+  ],
+  [
+   "Q1 FY22",
+   "Jan 2022",
+   7706,
+   75.02,
+   40.58,
+   0.56
+  ],
+  [
+   "Q2 FY22",
+   "May 2022",
+   8103,
+   75.86,
+   42.12,
+   0.59
+  ],
+  [
+   "Q3 FY22",
+   "Jul 2022",
+   8464,
+   75.46,
+   44.25,
+   0.71
+  ],
+  [
+   "Q4 FY22",
+   "Oct 2022",
+   8930,
+   74.27,
+   44.8,
+   0.72
+  ],
+  [
+   "Q1 FY23",
+   "Jan 2023",
+   8915,
+   73.37,
+   46.16,
+   0.88
+  ],
+  [
+   "Q2 FY23",
+   "Apr 2023",
+   8733,
+   75.07,
+   46.0,
+   0.81
+  ],
+  [
+   "Q3 FY23",
+   "Jul 2023",
+   8876,
+   74.4,
+   45.84,
+   0.77
+  ],
+  [
+   "Q4 FY23",
+   "Oct 2023",
+   9295,
+   73.65,
+   45.76,
+   0.83
+  ],
+  [
+   "Q1 FY24",
+   "Feb 2024",
+   11961,
+   73.97,
+   23.37,
+   0.28
+  ],
+  [
+   "Q2 FY24",
+   "May 2024",
+   12487,
+   74.84,
+   26.51,
+   0.44
+  ],
+  [
+   "Q3 FY24",
+   "Aug 2024",
+   13072,
+   76.03,
+   31.74,
+   -0.41
+  ],
+  [
+   "Q4 FY24",
+   "Nov 2024",
+   14054,
+   75.81,
+   39.45,
+   0.9
+  ],
+  [
+   "Q1 FY25",
+   "Feb 2025",
+   14916,
+   78.06,
+   43.21,
+   1.14
+  ],
+  [
+   "Q2 FY25",
+   "May 2025",
+   15004,
+   78.03,
+   40.21,
+   1.03
+  ],
+  [
+   "Q3 FY25",
+   "Aug 2025",
+   15952,
+   76.78,
+   38.24,
+   0.85
+  ],
+  [
+   "Q4 FY25",
+   "Nov 2025",
+   18015,
+   76.61,
+   43.73,
+   1.74
+  ],
+  [
+   "Q1 FY26",
+   "Feb 2026",
+   19311,
+   75.77,
+   44.94,
+   1.5
+  ],
+  [
+   "Q2 FY26",
+   "May 2026",
+   22187,
+   76.11,
+   48.99,
+   1.91
+  ],
+  [
+   "Q3 FY26",
+   "Aug 2026",
+   29591,
+   74.23,
+   54.31,
+   2.68
+  ]
+ ],
+ "guide": [
+  "Q4 FY26e",
+  34800,
+  "Nov 2026 · company guidance",
+  "2026年11月 · 公司指引"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q4 FY21 to Q3 FY26. Broadcom's fiscal year ends around November 1. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY21 第四季至 FY26 第三季共 20 个季度。博通财年约在11月1日结束。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q4 FY21",
+    "Oct 2021",
+    3541,
+    88,
+    3453
+   ],
+   [
+    "Q1 FY22",
+    "Jan 2022",
+    3486,
+    101,
+    3385
+   ],
+   [
+    "Q2 FY22",
+    "May 2022",
+    4243,
+    85,
+    4158
+   ],
+   [
+    "Q3 FY22",
+    "Jul 2022",
+    4424,
+    116,
+    4308
+   ],
+   [
+    "Q4 FY22",
+    "Oct 2022",
+    4583,
+    122,
+    4461
+   ],
+   [
+    "Q1 FY23",
+    "Jan 2023",
+    4036,
+    103,
+    3933
+   ],
+   [
+    "Q2 FY23",
+    "Apr 2023",
+    4502,
+    122,
+    4380
+   ],
+   [
+    "Q3 FY23",
+    "Jul 2023",
+    4719,
+    122,
+    4597
+   ],
+   [
+    "Q4 FY23",
+    "Oct 2023",
+    4828,
+    105,
+    4723
+   ],
+   [
+    "Q1 FY24",
+    "Feb 2024",
+    4815,
+    122,
+    4693
+   ],
+   [
+    "Q2 FY24",
+    "May 2024",
+    4580,
+    132,
+    4448
+   ],
+   [
+    "Q3 FY24",
+    "Aug 2024",
+    4963,
+    172,
+    4791
+   ],
+   [
+    "Q4 FY24",
+    "Nov 2024",
+    5604,
+    122,
+    5482
+   ],
+   [
+    "Q1 FY25",
+    "Feb 2025",
+    6113,
+    100,
+    6013
+   ],
+   [
+    "Q2 FY25",
+    "May 2025",
+    6555,
+    144,
+    6411
+   ],
+   [
+    "Q3 FY25",
+    "Aug 2025",
+    7166,
+    142,
+    7024
+   ],
+   [
+    "Q4 FY25",
+    "Nov 2025",
+    7703,
+    237,
+    7466
+   ],
+   [
+    "Q1 FY26",
+    "Feb 2026",
+    8260,
+    250,
+    8010
+   ],
+   [
+    "Q2 FY26",
+    "May 2026",
+    10493,
+    231,
+    10262
+   ],
+   [
+    "Q3 FY26",
+    "Aug 2026",
+    14197,
+    532,
+    13665
+   ]
+  ],
+  "est": [
+   [
+    "Q4 FY26",
+    "Nov 2026",
+    16300,
+    600,
+    15700
+   ],
+   [
+    "Q1 FY27",
+    "Feb 2027",
+    17200,
+    600,
+    16600
+   ],
+   [
+    "Q2 FY27",
+    "May 2027",
+    19000,
+    650,
+    18350
+   ],
+   [
+    "Q3 FY27",
+    "Aug 2027",
+    20800,
+    700,
+    20100
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash",
+    "zh": "现金"
+   },
+   "v": "$24.0B",
+   "s": {
+    "en": "Aug 2, 2026 · debt $59.4B",
+    "zh": "2026年8月2日 · 债务 594 亿"
+   }
+  },
+  "read": [
+   {
+    "en": "Broadcom is one of the most cash-efficient large companies in the market: capex is tiny, so almost all operating cash becomes free cash flow. Quarterly free cash flow roughly tripled in two years, from $4.4B in Q2 FY24 to a record $13.7B in Q3 FY26, as AI revenue scaled on top of VMware.",
+    "zh": "博通是市场上现金效率最高的大型公司之一：资本开支极少，几乎全部经营现金流都转为自由现金流。随着 AI 营收在 VMware 基础上扩张，季度自由现金流两年内约增至三倍，由 FY24 Q2 的 44 亿美元增至 FY26 Q3 创纪录的 137 亿。"
+   },
+   {
+    "en": "My base case assumes free cash flow near 45% of revenue, with revenue of $34.8B in Q4 (guided) rising to about $45B by Q3 FY27 on the AI outlook. That gives about $71B over four quarters. The main risk is timing: XPU programs are lumpy, and management has said deployment speed at customer data centers, not demand, sets the pace.",
+    "zh": "我的基准情景假设自由现金流约为营收的 45%，营收由 Q4 指引的 348 亿美元，按 AI 展望增至 FY27 Q3 约 450 亿，四季合计约 710 亿。主要风险是时点：XPU 项目起伏较大，管理层表示节奏取决于客户数据中心的部署速度，而非需求。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Dividends",
+     "zh": "股息"
+    },
+    "p": {
+     "en": "The $0.65 quarterly dividend costs about $3.1B a quarter; Broadcom usually raises it each December.",
+     "zh": "每季 $0.65 股息约 31 亿美元；博通通常在每年12月上调。"
+    }
+   },
+   {
+    "h": {
+     "en": "Buybacks",
+     "zh": "回购"
+    },
+    "p": {
+     "en": "Repurchases are opportunistic: $7.85B in Q1 FY26, then $0.6B in Q2 and none in Q3.",
+     "zh": "回购视时机而定：FY26 Q1 回购 78.5 亿美元，Q2 6 亿，Q3 为零。"
+    }
+   },
+   {
+    "h": {
+     "en": "Debt",
+     "zh": "债务"
+    },
+    "p": {
+     "en": "About $59B of debt, largely from the VMware purchase, which Broadcom has been refinancing and paying down.",
+     "zh": "约 590 亿美元债务，主要来自 VMware 收购，博通持续再融资与偿还。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "AI semiconductors",
+     "zh": "AI 半导体"
+    },
+    "p": {
+     "en": "AI revenue is guided to $21.7B in Q4, up 236% year over year.",
+     "zh": "Q4 AI 营收指引 217 亿美元，同比增长 236%。"
+    }
+   },
+   {
+    "h": {
+     "en": "VMware software",
+     "zh": "VMware 软件"
+    },
+    "p": {
+     "en": "Infrastructure software brings in about $8.7B a quarter at roughly 84% operating margin.",
+     "zh": "基础设施软件每季约 87 亿美元营收，营业利润率约 84%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Low capex",
+     "zh": "低资本开支"
+    },
+    "p": {
+     "en": "Capex was $532M in Q3, under 2% of revenue.",
+     "zh": "Q3 资本开支 5.32 亿美元，不足营收 2%。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash, Aug 2026",
+     "zh": "2026年8月现金"
+    },
+    23975
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    70750
+   ],
+   [
+    {
+     "en": "Dividends (est.)",
+     "zh": "股息（估）"
+    },
+    -13000
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash before buybacks and debt paydown, Aug 2027 (est.)",
+   "zh": "2027年8月现金，未计回购与偿债（估）"
+  },
+  "bridgeNote": {
+   "en": "In practice much of this would go to buybacks and debt reduction, as it has in past years.",
+   "zh": "实际上，与往年一样，其中大部分将用于回购和降低债务。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/avgo/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Balance sheet (Stock Analysis)",
+    "https://stockanalysis.com/stocks/avgo/financials/balance-sheet/?p=quarterly"
+   ],
+   [
+    "Q3 FY26 results (Jain)",
+    "https://jain.com/broadcom-q3-fy2026-ai-chip-revenue-custom-accelerators"
+   ]
+  ]
+ }
+}

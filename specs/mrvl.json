@@ -1,0 +1,751 @@
+{
+ "dir": "mrvl",
+ "ticker": "MRVL",
+ "exchange": "NASDAQ",
+ "name": "Marvell Technology",
+ "shares": 898700000.0,
+ "beta": "2.26",
+ "snapshot": {
+  "price": "$275.28",
+  "date": "Oct 9, 2026",
+  "mcap": "$247B",
+  "range": "$71–330"
+ },
+ "eyebrow": {
+  "en": "Marvell Technology, Inc. · Common stock · Santa Clara, California",
+  "zh": "迈威尔科技 · 普通股 · 加州圣克拉拉"
+ },
+ "title": {
+  "en": "The plumbing of AI data centers, <em>now with custom chips on top</em>.",
+  "zh": "AI 数据中心的管道，<em>再加上定制芯片</em>。"
+ },
+ "lede": {
+  "en": "Marvell sells the optical DSPs, switches and custom accelerators that move data between AI chips. Data center sales were 79% of revenue last quarter and grew 46%. Management expects about $12B of revenue this fiscal year and about $18B next year, with the custom business more than doubling. The trade-off: custom chips carry lower margins, so gross margin is guided flat while revenue climbs.",
+  "zh": "迈威尔销售在 AI 芯片之间传输数据的光通信 DSP、交换芯片与定制加速器。上季数据中心业务占营收 79%，增长 46%。管理层预计本财年营收约 120 亿美元、下财年约 180 亿美元，定制业务将翻倍以上。代价是：定制芯片毛利率较低，因此营收攀升的同时毛利率指引持平。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E (forward)",
+   "zh": "市盈率（预期）"
+  },
+  "v": "~38×",
+  "s": {
+   "en": "consensus next-year EPS · trailing GAAP ~91×",
+   "zh": "一致预期下年每股收益 · GAAP 历史约 91 倍"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q3 FY27 guide",
+   "zh": "FY27 Q3 指引"
+  },
+  "v": "$3.15B",
+  "s": {
+   "en": "±5% · non-GAAP EPS $1.10 · GM 57.5–58.5%",
+   "zh": "±5% · 非GAAP每股 $1.10 · 毛利率 57.5–58.5%"
+  }
+ },
+ "earnings": {
+  "v": "Early Dec",
+  "s": {
+   "en": "Q3 FY27 · date not yet announced",
+   "zh": "FY27 第三季 · 日期未公布"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. Marvell nearly quadrupled from its February low as AI networking orders accelerated.",
+  "zh": "每日收盘价与50日均线。随 AI 网络订单加速，迈威尔股价较2月低点上涨近三倍。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Marvell's fiscal year ends around January 31, so Q2 FY27 is the quarter ended Aug 1, 2026. The last bar is company guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。迈威尔财年约在1月31日结束，FY27 第二季即截至 2026年8月1日的季度。最后一根柱为公司指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q2 FY27",
+    "zh": "FY27 Q2"
+   },
+   "v": "$2.74B",
+   "s": {
+    "en": "+37% YoY · record",
+    "zh": "同比 +37% · 创纪录"
+   }
+  },
+  {
+   "k": {
+    "en": "Data center",
+    "zh": "数据中心"
+   },
+   "v": "$2.17B",
+   "s": {
+    "en": "+46% YoY · 79% of sales",
+    "zh": "同比 +46% · 占营收 79%"
+   }
+  },
+  {
+   "k": {
+    "en": "Comms & other",
+    "zh": "通信及其他"
+   },
+   "v": "$568M",
+   "s": {
+    "en": "+10% YoY",
+    "zh": "同比 +10%"
+   }
+  },
+  {
+   "k": {
+    "en": "Gross margin",
+    "zh": "毛利率"
+   },
+   "v": "58.9%",
+   "s": {
+    "en": "non-GAAP · GAAP 53.1%",
+    "zh": "非GAAP · GAAP 53.1%"
+   }
+  },
+  {
+   "k": {
+    "en": "FY27 outlook",
+    "zh": "FY27 展望"
+   },
+   "v": "~$12B",
+   "s": {
+    "en": "~+45% · raised from ~$11.5B",
+    "zh": "约 +45% · 由约 115 亿上调"
+   }
+  },
+  {
+   "k": {
+    "en": "FY28 outlook",
+    "zh": "FY28 展望"
+   },
+   "v": "~$18B",
+   "s": {
+    "en": "raised from ~$16.5B",
+    "zh": "由约 165 亿上调"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Custom silicon ramps",
+    "zh": "定制芯片放量"
+   },
+   "p": {
+    "en": "The custom business ramps sharply in the second half of FY27 and is expected to more than double in FY28, from both XPUs and XPU-attach products such as CXL and custom networking.",
+    "zh": "定制业务将在 FY27 下半年大幅放量，FY28 预计翻倍以上，来源包括 XPU 及 CXL、定制网络等 XPU 配套产品。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Optics and switching",
+    "zh": "光通信与交换"
+   },
+   "p": {
+    "en": "800G optical DSP demand is strong and 1.6T is ramping. Management said most of the $1.5B raise to its FY28 outlook comes from scale-up optics and switching.",
+    "zh": "800G 光 DSP 需求强劲，1.6T 正在放量。管理层表示 FY28 展望上调的 15 亿美元中，大部分来自纵向扩展光通信与交换。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Margin mix",
+    "zh": "毛利结构"
+   },
+   "p": {
+    "en": "Custom chips dilute gross margin: non-GAAP gross margin is guided down to 57.5–58.5% in Q3 and to stay in that range through FY28. Operating margin should still reach the 38–40% target by Q4.",
+    "zh": "定制芯片拉低毛利率：Q3 非GAAP 毛利率指引降至 57.5–58.5%，并在 FY28 维持该区间。营业利润率仍有望在 Q4 达到 38–40% 目标。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Google agreement",
+    "zh": "谷歌协议"
+   },
+   "p": {
+    "en": "An expanded agreement with Google covers custom programs including XPU-attach products, with significant revenue expected from FY29.",
+    "zh": "与谷歌扩大的协议涵盖包括 XPU 配套产品在内的定制项目，预计 FY29 起贡献可观营收。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Supplier prepayments",
+    "zh": "供应商预付款"
+   },
+   "p": {
+    "en": "About $1B of capacity prepayments to suppliers this year is holding back operating cash flow, which fell slightly in Q2 despite record sales.",
+    "zh": "今年约 10 亿美元的产能预付款拖累经营现金流；尽管营收创新高，Q2 经营现金流仍小幅下降。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Volatility and leadership changes",
+    "zh": "波动与管理层变动"
+   },
+   "p": {
+    "en": "The stock has a beta of about 2.3, and the CFO and investor relations roles are changing hands during the ramp. Communications revenue is guided down low-to-mid teens in Q3.",
+    "zh": "股价贝塔值约 2.3，放量期间 CFO 与投资者关系负责人更替。通信业务 Q3 指引下滑约一成多。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Early Dec 2026",
+   "h": {
+    "en": "Q3 FY27 earnings",
+    "zh": "FY27 第三季财报"
+   },
+   "p": {
+    "en": "Guide: $3.15B ±5% revenue, 57.5–58.5% non-GAAP gross margin, EPS $1.10 ±$0.05.",
+    "zh": "指引：营收 31.5 亿美元 ±5%，非GAAP毛利率 57.5–58.5%，每股 $1.10 ±$0.05。"
+   }
+  },
+  {
+   "date": "Q4 FY27",
+   "h": {
+    "en": "Custom step-up",
+    "zh": "定制业务跃升"
+   },
+   "p": {
+    "en": "Management expects a much larger revenue step-up in the January quarter, broad-based across custom, connectivity and a rebound in communications.",
+    "zh": "管理层预计1月季度营收大幅跃升，定制、互连及通信业务回升全面贡献。"
+   }
+  },
+  {
+   "date": "Early Mar 2027",
+   "h": {
+    "en": "Q4 FY27 earnings",
+    "zh": "FY27 第四季财报"
+   },
+   "p": {
+    "en": "Full-year results and first look at the FY28 plan (~$18B).",
+    "zh": "全年业绩，并首次披露 FY28 计划（约 180 亿美元）。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q2 FY27 results and Q3 guidance (Frontier Tech Wire)",
+   "https://frontiertechwire.com/marvell-record-2-739bn-quarter-data-center-up-46-percent"
+  ],
+  [
+   "Q2 FY27 call highlights (GuruFocus)",
+   "https://gurufocus.com/news/9057517/marvell-technology-inc-mrvl-q2-2027-earnings-call-highlights-record-revenue-and-massive-aidriven-growth-outlook"
+  ],
+  [
+   "FY27 and FY28 outlook (Publish Nexus)",
+   "https://publish-nexus.com/articles/marvell-revenue-hits-2-739bn-on-data-centre-demand"
+  ],
+  [
+   "Q2 FY27 earnings call highlights",
+   "https://defenseworld.net/2026/08/29/marvell-technology-q2-earnings-call-highlights.html"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/mrvl/financials/?p=quarterly"
+  ],
+  [
+   "Marvell investor relations",
+   "https://investor.marvell.com/"
+  ],
+  [
+   "Price, market cap, beta and analyst targets: Yahoo Finance and Stocklake, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/MRVL"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Marvell Technology, Inc.",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Marvell Technology, Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q3 FY22",
+   "Oct 2021",
+   1211,
+   48.53,
+   -1.29,
+   -0.08
+  ],
+  [
+   "Q4 FY22",
+   "Jan 2022",
+   1343,
+   51.29,
+   2.86,
+   0.01
+  ],
+  [
+   "Q1 FY23",
+   "Apr 2022",
+   1447,
+   52.54,
+   5.56,
+   -0.2
+  ],
+  [
+   "Q2 FY23",
+   "Jul 2022",
+   1517,
+   51.82,
+   8.26,
+   0.01
+  ],
+  [
+   "Q3 FY23",
+   "Oct 2022",
+   1537,
+   50.56,
+   7.9,
+   0.02
+  ],
+  [
+   "Q4 FY23",
+   "Jan 2023",
+   1419,
+   48.36,
+   2.79,
+   -0.02
+  ],
+  [
+   "Q1 FY24",
+   "Apr 2023",
+   1322,
+   42.16,
+   -9.27,
+   -0.2
+  ],
+  [
+   "Q2 FY24",
+   "Jul 2023",
+   1341,
+   38.86,
+   -12.21,
+   -0.24
+  ],
+  [
+   "Q3 FY24",
+   "Oct 2023",
+   1419,
+   38.86,
+   -10.07,
+   -0.19
+  ],
+  [
+   "Q4 FY24",
+   "Feb 2024",
+   1427,
+   46.55,
+   -0.53,
+   -0.45
+  ],
+  [
+   "Q1 FY25",
+   "May 2024",
+   1161,
+   45.47,
+   -12.77,
+   -0.25
+  ],
+  [
+   "Q2 FY25",
+   "Aug 2024",
+   1273,
+   46.16,
+   -7.57,
+   -0.22
+  ],
+  [
+   "Q3 FY25",
+   "Nov 2024",
+   1516,
+   46.58,
+   0.81,
+   -0.78
+  ],
+  [
+   "Q4 FY25",
+   "Feb 2025",
+   1817,
+   50.54,
+   12.31,
+   0.23
+  ],
+  [
+   "Q1 FY26",
+   "May 2025",
+   1895,
+   50.25,
+   13.63,
+   0.2
+  ],
+  [
+   "Q2 FY26",
+   "Aug 2025",
+   2006,
+   50.38,
+   14.89,
+   0.22
+  ],
+  [
+   "Q3 FY26",
+   "Nov 2025",
+   2075,
+   51.59,
+   17.73,
+   2.2
+  ],
+  [
+   "Q4 FY26",
+   "Jan 2026",
+   2219,
+   51.74,
+   18.66,
+   0.47
+  ],
+  [
+   "Q1 FY27",
+   "May 2026",
+   2418,
+   52.15,
+   14.48,
+   0.04
+  ],
+  [
+   "Q2 FY27",
+   "Aug 2026",
+   2739,
+   53.14,
+   16.68,
+   0.33
+  ]
+ ],
+ "guide": [
+  "Q3 FY27e",
+  3150,
+  "Oct 2026 · guidance midpoint",
+  "2026年10月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q3 FY22 to Q2 FY27. Marvell's fiscal year ends around January 31. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY22 第三季至 FY27 第二季共 20 个季度。迈威尔财年约在1月31日结束。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q3 FY22",
+    "Oct 2021",
+    264.7,
+    76.8,
+    187.9
+   ],
+   [
+    "Q4 FY22",
+    "Jan 2022",
+    346.2,
+    38.8,
+    307.4
+   ],
+   [
+    "Q1 FY23",
+    "Apr 2022",
+    194.8,
+    36.9,
+    157.9
+   ],
+   [
+    "Q2 FY23",
+    "Jul 2022",
+    331.5,
+    72.6,
+    258.9
+   ],
+   [
+    "Q3 FY23",
+    "Oct 2022",
+    411,
+    42.7,
+    368.3
+   ],
+   [
+    "Q4 FY23",
+    "Jan 2023",
+    351.5,
+    54,
+    297.5
+   ],
+   [
+    "Q1 FY24",
+    "Apr 2023",
+    208.4,
+    99.8,
+    108.6
+   ],
+   [
+    "Q2 FY24",
+    "Jul 2023",
+    112.5,
+    111.1,
+    1.4
+   ],
+   [
+    "Q3 FY24",
+    "Oct 2023",
+    503,
+    54.4,
+    448.6
+   ],
+   [
+    "Q4 FY24",
+    "Feb 2024",
+    546.6,
+    71,
+    475.6
+   ],
+   [
+    "Q1 FY25",
+    "May 2024",
+    324.5,
+    91.5,
+    233.0
+   ],
+   [
+    "Q2 FY25",
+    "Aug 2024",
+    306.4,
+    48.2,
+    258.2
+   ],
+   [
+    "Q3 FY25",
+    "Nov 2024",
+    536.3,
+    75,
+    461.3
+   ],
+   [
+    "Q4 FY25",
+    "Feb 2025",
+    514,
+    69.9,
+    444.1
+   ],
+   [
+    "Q1 FY26",
+    "May 2025",
+    332.9,
+    118.8,
+    214.1
+   ],
+   [
+    "Q2 FY26",
+    "Aug 2025",
+    461.6,
+    47.5,
+    414.1
+   ],
+   [
+    "Q3 FY26",
+    "Nov 2025",
+    582.3,
+    73.5,
+    508.8
+   ],
+   [
+    "Q4 FY26",
+    "Jan 2026",
+    373.7,
+    114.3,
+    259.4
+   ],
+   [
+    "Q1 FY27",
+    "May 2026",
+    638.8,
+    155.7,
+    483.1
+   ],
+   [
+    "Q2 FY27",
+    "Aug 2026",
+    605.5,
+    126.7,
+    478.8
+   ]
+  ],
+  "est": [
+   [
+    "Q3 FY27",
+    "Oct 2026",
+    700,
+    140,
+    560
+   ],
+   [
+    "Q4 FY27",
+    "Jan 2027",
+    950,
+    150,
+    800
+   ],
+   [
+    "Q1 FY28",
+    "May 2027",
+    1000,
+    150,
+    850
+   ],
+   [
+    "Q2 FY28",
+    "Aug 2027",
+    1100,
+    160,
+    940
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & investments",
+    "zh": "现金及投资"
+   },
+   "v": "$3.9B",
+   "s": {
+    "en": "Aug 1, 2026 · debt $5.3B",
+    "zh": "2026年8月1日 · 债务 53 亿"
+   }
+  },
+  "read": [
+   {
+    "en": "Marvell's cash flow is steady rather than spectacular: free cash flow has stayed positive in every one of the last 20 quarters, between about $0 and $500M, even through the 2023–24 downturn when GAAP results were in the red. The last four quarters produced about $1.7B.",
+    "zh": "迈威尔的现金流稳健而非惊人：过去 20 个季度自由现金流全部为正，介于约 0 至 5 亿美元之间，即便在 2023–24 年 GAAP 亏损的下行期亦然。近四季合计约 17 亿美元。"
+   },
+   {
+    "en": "My base case uses Q3 guidance ($3.15B) and the ~$12B fiscal-year outlook, which implies about $3.7B of revenue in Q4, at roughly 22–25% of revenue converting to operating cash and capex near $150M a quarter. That gives about $3.2B over four quarters. The biggest swing factor is the ~$1B of supplier prepayments this year, which depress cash flow before the custom revenue arrives.",
+    "zh": "我的基准情景采用 Q3 指引（31.5 亿美元）及约 120 亿美元的全年展望（意味着 Q4 营收约 37 亿），假设约 22–25% 的营收转化为经营现金流、每季资本开支约 1.5 亿美元，四季合计约 32 亿美元。最大变数是今年约 10 亿美元的供应商预付款，它在定制营收到账前压低现金流。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Buybacks",
+     "zh": "回购"
+    },
+    "p": {
+     "en": "Cash spent on buybacks was about $2.4B over the last four quarters, including $1.36B in Q3 FY26 alone.",
+     "zh": "近四季回购支出约 24 亿美元，仅 FY26 第三季就达 13.6 亿。"
+    }
+   },
+   {
+    "h": {
+     "en": "Supplier prepayments",
+     "zh": "供应商预付款"
+    },
+    "p": {
+     "en": "About $1B of capacity prepayments this fiscal year to secure supply for the custom ramp.",
+     "zh": "本财年约 10 亿美元产能预付款，以确保定制业务放量所需的供应。"
+    }
+   },
+   {
+    "h": {
+     "en": "Dividend",
+     "zh": "股息"
+    },
+    "p": {
+     "en": "The $0.06 quarterly dividend costs about $54M a quarter.",
+     "zh": "每季 $0.06 股息，约 5,400 万美元。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "AI data center demand",
+     "zh": "AI 数据中心需求"
+    },
+    "p": {
+     "en": "Q3 data center revenue is guided up more than 20% sequentially and about 75% year over year.",
+     "zh": "Q3 数据中心营收指引环比增逾 20%，同比约 75%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Operating leverage",
+     "zh": "经营杠杆"
+    },
+    "p": {
+     "en": "Non-GAAP operating margin reached 36.6% in Q2 and is expected to reach the 38–40% target by Q4.",
+     "zh": "Q2 非GAAP 营业利润率达 36.6%，预计 Q4 达到 38–40% 目标。"
+    }
+   },
+   {
+    "h": {
+     "en": "Light capex",
+     "zh": "轻资本开支"
+    },
+    "p": {
+     "en": "As a fabless chip designer Marvell spends only about $100–150M a quarter on equipment.",
+     "zh": "作为无晶圆厂芯片设计公司，迈威尔每季设备开支仅约 1–1.5 亿美元。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & investments, Aug 2026",
+     "zh": "2026年8月现金及投资"
+    },
+    3933
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    3150
+   ],
+   [
+    {
+     "en": "Dividends (est.)",
+     "zh": "股息（估）"
+    },
+    -216
+   ],
+   [
+    {
+     "en": "Buybacks at ~$300M a quarter (est.)",
+     "zh": "回购，每季约 3 亿（估）"
+    },
+    -1200
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash & investments, Aug 2027 (est.)",
+   "zh": "2027年8月现金及投资（估）"
+  },
+  "bridgeNote": {
+   "en": "Marvell carries $5.3B of debt against $3.9B of cash, so it is not running a net cash pile; buyback pace depends on how fast prepayments turn into revenue.",
+   "zh": "迈威尔债务 53 亿美元、现金 39 亿，并非净现金状态；回购节奏取决于预付款转化为营收的速度。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/mrvl/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Balance sheet (Stock Analysis)",
+    "https://stockanalysis.com/stocks/mrvl/financials/balance-sheet/?p=quarterly"
+   ],
+   [
+    "Q2 FY27 call: prepayments and buybacks",
+    "https://defenseworld.net/2026/08/29/marvell-technology-q2-earnings-call-highlights.html"
+   ]
+  ]
+ }
+}

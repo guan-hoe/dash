@@ -1,0 +1,735 @@
+{
+ "dir": "cohr",
+ "ticker": "COHR",
+ "exchange": "NYSE",
+ "name": "Coherent",
+ "shares": 195640000.0,
+ "beta": "2.11",
+ "snapshot": {
+  "price": "$312.62",
+  "date": "Oct 9, 2026",
+  "mcap": "$61.2B",
+  "range": "$108–440"
+ },
+ "eyebrow": {
+  "en": "Coherent Corp. · Common stock · Saxonburg, Pennsylvania",
+  "zh": "Coherent · 普通股 · 宾州萨克森堡"
+ },
+ "title": {
+  "en": "AI optics growth, <em>paid for up front</em>.",
+  "zh": "AI 光学高增长，<em>先投入后回报</em>。"
+ },
+ "lede": {
+  "en": "Coherent makes optical transceivers, indium phosphide lasers and industrial lasers. Datacenter & Communications is now 79% of revenue and grew 59% last quarter, and management targets a $3B revenue quarter by the end of FY27. To get there it is spending heavily on laser capacity, which has turned free cash flow negative.",
+  "zh": "Coherent 生产光模块、磷化铟激光器和工业激光器。数据中心与通信业务已占营收 79%，上季增长 59%，管理层目标在 FY27 结束前实现单季 30 亿美元营收。为此公司大举投资激光器产能，自由现金流已转负。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E",
+   "zh": "市盈率"
+  },
+  "v": "~40×",
+  "s": {
+   "en": "Q1 guide EPS $1.95 × 4 (non-GAAP)",
+   "zh": "Q1 指引每股 $1.95 × 4（非GAAP）"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q1 FY27 guide",
+   "zh": "FY27 Q1 指引"
+  },
+  "v": "$2.3B",
+  "s": {
+   "en": "±$100M · EPS $1.85–2.05",
+   "zh": "±1 亿 · 每股 $1.85–2.05"
+  }
+ },
+ "earnings": {
+  "v": "Early Nov",
+  "s": {
+   "en": "Q1 FY27 · date not yet announced",
+   "zh": "FY27 第一季 · 日期未公布"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. From its 52-week low the stock roughly quadrupled to $440, then fell about 30%.",
+  "zh": "每日收盘价与50日均线。股价从52周低点约涨四倍至 $440，之后回落约 30%。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Coherent's fiscal year ends June 30; FY22 is II-VI before it bought Coherent in July 2022 and took its name. The last bar is guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。Coherent 财年截至6月30日；FY22 为 II-VI 在 2022年7月收购 Coherent 并更名之前的数据。最后一根柱为指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q4 FY26",
+    "zh": "FY26 Q4"
+   },
+   "v": "$2.05B",
+   "s": {
+    "en": "+34% YoY · +42% pro forma",
+    "zh": "同比 +34% · 备考 +42%"
+   }
+  },
+  {
+   "k": {
+    "en": "Datacenter & Comms",
+    "zh": "数据中心与通信"
+   },
+   "v": "$1.62B",
+   "s": {
+    "en": "+59% · 79% of revenue",
+    "zh": "+59% · 占营收 79%"
+   }
+  },
+  {
+   "k": {
+    "en": "Industrial",
+    "zh": "工业"
+   },
+   "v": "$431M",
+   "s": {
+    "en": "−16% YoY",
+    "zh": "同比 −16%"
+   }
+  },
+  {
+   "k": {
+    "en": "Gross margin",
+    "zh": "毛利率"
+   },
+   "v": "40.2%",
+   "s": {
+    "en": "non-GAAP · Q1 guide 39.5–41.5%",
+    "zh": "非GAAP · Q1 指引 39.5–41.5%"
+   }
+  },
+  {
+   "k": {
+    "en": "Q4 EPS",
+    "zh": "Q4 每股收益"
+   },
+   "v": "$1.74",
+   "s": {
+    "en": "non-GAAP · +74% YoY",
+    "zh": "非GAAP · 同比 +74%"
+   }
+  },
+  {
+   "k": {
+    "en": "Leverage",
+    "zh": "杠杆"
+   },
+   "v": "0.7×",
+   "s": {
+    "en": "debt / EBITDA · 2.0× a year ago",
+    "zh": "债务/EBITDA · 一年前 2.0 倍"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Data center demand",
+    "zh": "数据中心需求"
+   },
+   "p": {
+    "en": "Data center revenue rose 66% YoY in Q4, and management expects more than 80% YoY growth this quarter. 1.6T transceivers ramp through 2027.",
+    "zh": "第四季数据中心收入同比增 66%，管理层预计本季同比增逾 80%。1.6T 光模块在 2027 年持续放量。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Indium phosphide scale-up",
+    "zh": "磷化铟扩产"
+   },
+   "p": {
+    "en": "Internal InP laser output doubles YoY by the end of Q1 FY27, a quarter early, and more than doubles again by end-2027. A 6-inch wafer gives four times the output of a 3-inch one at half the cost.",
+    "zh": "内部磷化铟激光器产能将在 FY27 第一季末同比翻倍（提前一季），2027 年底前再翻倍以上。6 英寸晶圆产出是 3 英寸的四倍、成本减半。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "New products",
+    "zh": "新产品"
+   },
+   "p": {
+    "en": "Co-packaged optics revenue starts in the December quarter, and the optical circuit switch market estimate doubled to over $4B.",
+    "zh": "共封装光学收入将于12月季度开始贡献，光路交换机市场规模估计翻倍至逾 40 亿美元。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Cash burn from capex",
+    "zh": "资本开支烧钱"
+   },
+   "p": {
+    "en": "FY26 operating cash flow was only $80M against $1.1B of capex, so free cash flow was about −$1B. A third InP site is planned for the first half of 2027.",
+    "zh": "FY26 经营现金流仅 8000 万美元，资本开支 11 亿，自由现金流约 −10 亿。第三个磷化铟工厂计划于 2027 年上半年启用。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Industrial weakness",
+    "zh": "工业业务疲软"
+   },
+   "p": {
+    "en": "Industrial revenue fell to $431M from $511M a year earlier as Coherent leans into AI.",
+    "zh": "随公司转向 AI，工业收入由一年前的 5.11 亿美元降至 4.31 亿。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Execution",
+    "zh": "执行风险"
+   },
+   "p": {
+    "en": "InP capacity is the bottleneck; any slip in yields or the ramp caps revenue. The stock is about 30% below its high, so position sizing matters.",
+    "zh": "磷化铟产能是瓶颈，良率或爬坡受阻将限制营收。股价较高点低约 30%，仓位控制很重要。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Early Nov 2026",
+   "h": {
+    "en": "Q1 FY27 earnings",
+    "zh": "FY27 第一季财报"
+   },
+   "p": {
+    "en": "Guide: $2.2–2.4B revenue, 39.5–41.5% non-GAAP gross margin, EPS $1.85–2.05.",
+    "zh": "指引：营收 22–24 亿美元，非GAAP毛利率 39.5–41.5%，每股 $1.85–2.05。"
+   }
+  },
+  {
+   "date": "Dec quarter 2026",
+   "h": {
+    "en": "First CPO revenue",
+    "zh": "首笔 CPO 收入"
+   },
+   "p": {
+    "en": "Co-packaged optics is expected to start contributing.",
+    "zh": "共封装光学预计开始贡献收入。"
+   }
+  },
+  {
+   "date": "Jun 2027",
+   "h": {
+    "en": "$3B quarter target",
+    "zh": "单季 30 亿目标"
+   },
+   "p": {
+    "en": "Management aims for a quarter above $3B of revenue by the end of FY27.",
+    "zh": "管理层目标在 FY27 结束前实现单季营收逾 30 亿美元。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q4 FY26 analysis and guidance (Miracoup)",
+   "https://miracoup.com/cohr-q4-2026-earnings-analysis"
+  ],
+  [
+   "Q4 FY26 slides (Investing.com)",
+   "https://investing.com/news/company-news/coherent-q4-fy26-slides-ai-demand-drives-42-revenue-surge-93CH-4856345"
+  ],
+  [
+   "Q4 FY26 call: InP capacity and $3B target",
+   "https://tikr.com/blog/coherents-q4-earnings-call-set-a-new-target-3-billion-in-quarterly-revenue-heres-what-that-means-for-the-stock"
+  ],
+  [
+   "FY26 cash burn",
+   "https://financialmarkets.com/article/cohr-q4-2026-cash-burn"
+  ],
+  [
+   "Q4 FY26 call transcript summary",
+   "https://tradingkey.com/news/transcripts/262105524-tradingkey"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/cohr/financials/?p=quarterly"
+  ],
+  [
+   "SEC EDGAR filings (CIK 820318)",
+   "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000820318"
+  ],
+  [
+   "Price, market cap and beta: Yahoo Finance and Financial Modeling Prep, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/COHR"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Coherent Corp..",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Coherent Corp. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q1 FY22",
+   "Sep 2021",
+   795.11,
+   38.56,
+   11.95,
+   0.5
+  ],
+  [
+   "Q2 FY22",
+   "Dec 2021",
+   806.82,
+   38.57,
+   12.17,
+   0.44
+  ],
+  [
+   "Q3 FY22",
+   "Mar 2022",
+   827.72,
+   38.86,
+   12.9,
+   0.28
+  ],
+  [
+   "Q4 FY22",
+   "Jun 2022",
+   886.96,
+   36.76,
+   12.88,
+   0.23
+  ],
+  [
+   "Q1 FY23",
+   "Sep 2022",
+   1345,
+   32.99,
+   3.16,
+   -0.56
+  ],
+  [
+   "Q2 FY23",
+   "Dec 2022",
+   1370,
+   30.01,
+   0.6,
+   -0.58
+  ],
+  [
+   "Q3 FY23",
+   "Mar 2023",
+   1240,
+   33.88,
+   5.43,
+   -0.24
+  ],
+  [
+   "Q4 FY23",
+   "Jun 2023",
+   1205,
+   29.16,
+   3.39,
+   -1.54
+  ],
+  [
+   "Q1 FY24",
+   "Sep 2023",
+   1053,
+   29.14,
+   -1.74,
+   -0.65
+  ],
+  [
+   "Q2 FY24",
+   "Dec 2023",
+   1131,
+   30.99,
+   2.68,
+   -0.38
+  ],
+  [
+   "Q3 FY24",
+   "Mar 2024",
+   1209,
+   30.32,
+   2.8,
+   -0.29
+  ],
+  [
+   "Q4 FY24",
+   "Jun 2024",
+   1314,
+   32.86,
+   5.88,
+   -0.52
+  ],
+  [
+   "Q1 FY25",
+   "Sep 2024",
+   1348,
+   34.13,
+   7.38,
+   -0.04
+  ],
+  [
+   "Q2 FY25",
+   "Dec 2024",
+   1435,
+   35.5,
+   10.1,
+   0.44
+  ],
+  [
+   "Q3 FY25",
+   "Mar 2025",
+   1498,
+   35.23,
+   10.12,
+   -0.11
+  ],
+  [
+   "Q4 FY25",
+   "Jun 2025",
+   1529,
+   36.63,
+   9.02,
+   -0.83
+  ],
+  [
+   "Q1 FY26",
+   "Sep 2025",
+   1581,
+   36.63,
+   10.89,
+   1.19
+  ],
+  [
+   "Q2 FY26",
+   "Dec 2025",
+   1686,
+   36.95,
+   11.78,
+   0.76
+  ],
+  [
+   "Q3 FY26",
+   "Mar 2026",
+   1806,
+   37.66,
+   13.57,
+   0.97
+  ],
+  [
+   "Q4 FY26",
+   "Jun 2026",
+   2046,
+   38.48,
+   11.83,
+   1.19
+  ]
+ ],
+ "guide": [
+  "Q1 FY27e",
+  2300,
+  "Sep 2026 · guidance midpoint",
+  "2026年9月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q1 FY22 to Q4 FY26. Coherent's fiscal year ends June 30. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY22 第一季至 FY26 第四季共 20 个季度。Coherent 财年截至6月30日。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q1 FY22",
+    "Sep 2021",
+    52.34,
+    47.57,
+    4.77
+   ],
+   [
+    "Q2 FY22",
+    "Dec 2021",
+    187.75,
+    54.12,
+    133.63
+   ],
+   [
+    "Q3 FY22",
+    "Mar 2022",
+    35.92,
+    94.3,
+    -58.38
+   ],
+   [
+    "Q4 FY22",
+    "Jun 2022",
+    137.33,
+    118.34,
+    18.98
+   ],
+   [
+    "Q1 FY23",
+    "Sep 2022",
+    79.58,
+    138.99,
+    -59.41
+   ],
+   [
+    "Q2 FY23",
+    "Dec 2022",
+    220.49,
+    106.86,
+    113.63
+   ],
+   [
+    "Q3 FY23",
+    "Mar 2023",
+    152.43,
+    97.15,
+    55.28
+   ],
+   [
+    "Q4 FY23",
+    "Jun 2023",
+    181.53,
+    93.06,
+    88.47
+   ],
+   [
+    "Q1 FY24",
+    "Sep 2023",
+    198.8,
+    62.2,
+    136.61
+   ],
+   [
+    "Q2 FY24",
+    "Dec 2023",
+    67.17,
+    91.47,
+    -24.3
+   ],
+   [
+    "Q3 FY24",
+    "Mar 2024",
+    117.43,
+    93.24,
+    24.19
+   ],
+   [
+    "Q4 FY24",
+    "Jun 2024",
+    162.33,
+    99.91,
+    62.42
+   ],
+   [
+    "Q1 FY25",
+    "Sep 2024",
+    152.98,
+    91.98,
+    61
+   ],
+   [
+    "Q2 FY25",
+    "Dec 2024",
+    187.38,
+    105.68,
+    81.7
+   ],
+   [
+    "Q3 FY25",
+    "Mar 2025",
+    162.96,
+    111.82,
+    51.14
+   ],
+   [
+    "Q4 FY25",
+    "Jun 2025",
+    130.28,
+    131.35,
+    -1.07
+   ],
+   [
+    "Q1 FY26",
+    "Sep 2025",
+    45.96,
+    103.95,
+    -57.99
+   ],
+   [
+    "Q2 FY26",
+    "Dec 2025",
+    57.9,
+    153.6,
+    -95.7
+   ],
+   [
+    "Q3 FY26",
+    "Mar 2026",
+    -93.8,
+    289.68,
+    -383.48
+   ],
+   [
+    "Q4 FY26",
+    "Jun 2026",
+    69.46,
+    555.68,
+    -486.23
+   ]
+  ],
+  "est": [
+   [
+    "Q1 FY27",
+    "Sep 2026",
+    250,
+    550,
+    -300
+   ],
+   [
+    "Q2 FY27",
+    "Dec 2026",
+    300,
+    550,
+    -250
+   ],
+   [
+    "Q3 FY27",
+    "Mar 2027",
+    350,
+    500,
+    -150
+   ],
+   [
+    "Q4 FY27",
+    "Jun 2027",
+    400,
+    500,
+    -100
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash",
+    "zh": "现金"
+   },
+   "v": "$2.59B",
+   "s": {
+    "en": "Jun 30, 2026 · leverage 0.7×",
+    "zh": "2026年6月30日 · 杠杆 0.7 倍"
+   }
+  },
+  "read": [
+   {
+    "en": "Coherent used to produce modest free cash flow: most quarters from 2023 to 2025 brought in $24–137M, with a few small negatives. FY26 reversed that: operating cash flow fell to $80M for the year as inventory and receivables grew with AI demand, while capex rose to $1.1B, so free cash flow was about −$1B, including −$486M in Q4.",
+    "zh": "Coherent 过去自由现金流不大：2023 至 2025 年多数季度为 2400 万至 1.37 亿美元，偶有小幅为负。FY26 情况逆转：随 AI 需求增长，库存与应收款增加，全年经营现金流降至 8000 万美元，资本开支升至 11 亿，自由现金流约 −10 亿，其中第四季 −4.86 亿。"
+   },
+   {
+    "en": "Capex stays high while Coherent doubles indium phosphide output and builds a third site for the first half of 2027. I assume $500–550M of capex a quarter and operating cash flow recovering toward $400M as working capital catches up, which still leaves about −$800M over four quarters. The $2.6B of cash covers that, but leaves little room for buybacks or faster debt paydown.",
+    "zh": "在磷化铟产能翻倍并于 2027 年上半年建成第三个工厂期间，资本开支仍将维持高位。我假设每季资本开支 5–5.5 亿美元，经营现金流随营运资金回落逐步回升至约 4 亿，四季合计仍约 −8 亿。26 亿现金足以覆盖，但回购或加速还债的空间有限。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Indium phosphide fabs",
+     "zh": "磷化铟晶圆厂"
+    },
+    "p": {
+     "en": "6-inch lines in Texas and Sweden, plus a third site planned for the first half of 2027. Capex was $556M in Q4 alone.",
+     "zh": "德州与瑞典的 6 英寸产线，另计划于 2027 年上半年建第三个工厂。仅第四季资本开支就达 5.56 亿美元。"
+    }
+   },
+   {
+    "h": {
+     "en": "Working capital",
+     "zh": "营运资金"
+    },
+    "p": {
+     "en": "Inventory and receivables rise with datacenter growth, which is why operating cash flow lags profits.",
+     "zh": "库存与应收款随数据中心增长而上升，这是经营现金流落后于利润的原因。"
+    }
+   },
+   {
+    "h": {
+     "en": "Debt paydown",
+     "zh": "偿还债务"
+    },
+    "p": {
+     "en": "Net debt fell by about $0.5B in FY26, cutting leverage to 0.7× from 2.0×.",
+     "zh": "FY26 净负债减少约 5 亿美元，杠杆由 2.0 倍降至 0.7 倍。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Datacenter growth",
+     "zh": "数据中心增长"
+    },
+    "p": {
+     "en": "Q1 FY27 is guided to $2.2–2.4B of revenue, with data center growth above 80% YoY.",
+     "zh": "FY27 第一季营收指引 22–24 亿美元，数据中心同比增逾 80%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Cheaper lasers",
+     "zh": "激光器成本下降"
+    },
+    "p": {
+     "en": "6-inch InP wafers at half the cost of 3-inch should lift gross margin as they ramp.",
+     "zh": "6 英寸磷化铟晶圆成本为 3 英寸的一半，放量后应推高毛利率。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash, Jun 2026",
+     "zh": "2026年6月现金"
+    },
+    2590
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    -800
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash, Jun 2027 (est.)",
+   "zh": "2027年6月现金（估）"
+  },
+  "bridgeNote": {
+   "en": "Excludes new borrowing, debt repayment, divestitures and buybacks.",
+   "zh": "未计入新增借款、偿债、资产出售与回购。"
+  },
+  "extraNote": {
+   "en": "FY2022 figures are II-VI before it acquired Coherent in July 2022.",
+   "zh": "FY2022 数据为 II-VI 在 2022年7月收购 Coherent 之前的数据。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/cohr/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "FY26 cash burn",
+    "https://financialmarkets.com/article/cohr-q4-2026-cash-burn"
+   ],
+   [
+    "Q4 FY26 call: cash and leverage",
+    "https://tradingkey.com/news/transcripts/262105524-tradingkey"
+   ]
+  ]
+ }
+}

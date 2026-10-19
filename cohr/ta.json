@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 232.9,
+ "bias": {
+  "en": "Bearish · lost the Oct 15 low, $221 next",
+  "zh": "偏空 · 跌破 10月15日低点，下看 $221"
+ },
+ "read": [
+  {
+   "en": "Coherent fell 7.1% on Oct 16 to $232.90 and is down 25.5% in five sessions. It is below its 5-day ($265.0), 10-day ($294.6) and 200-day ($294.5) averages and the falling 30-day ($297.0) and 100-day ($321.4). MACD has been below its signal since Oct 12 and is below zero with the histogram widening, Parabolic SAR has been bearish since Oct 12 ($325.6), and RSI is 33.",
+   "zh": "Coherent 10月16日下跌 7.1%，收于 $232.90，五个交易日累计下跌 25.5%。股价位于 5 日（$265.0）、10 日（$294.6）和 200 日均线（$294.5）以及下行的 30 日（$297.0）和 100 日均线（$321.4）下方。MACD 自 10月12日起位于信号线及零轴下方，柱状图继续扩大，抛物线 SAR 自 10月12日起看空（$325.6），RSI 为 33。"
+  },
+  {
+   "en": "The Oct 15 low ($235.5) broke on the close and is now first resistance, then $255 (Sep 3 and Jul 17 lows) and $262.6–265 (Aug 24 low, 5-day average). Support is $231.6 (Oct 16 low), then $221 (Jul 29 low) and the $200 round number. A close below $221 would open $200; a close back above $255 would target $265.",
+   "zh": "10月15日低点（$235.5）收盘失守，现为第一阻力，其次 $255（9月3日及7月17日低点）和 $262.6–265（8月24日低点、5 日均线）。支撑为 $231.6（10月16日低点），其次 $221（7月29日低点）和 $200 整数关口。若收盘跌破 $221，下一目标看 $200；若重新站上 $255，目标看 $265。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    235.5,
+    {
+     "en": "Oct 15 low, now resistance",
+     "zh": "10月15日低点，转为阻力"
+    }
+   ],
+   [
+    255,
+    {
+     "en": "Sep 3 and Jul 17 lows",
+     "zh": "9月3日及7月17日低点"
+    }
+   ],
+   [
+    264,
+    {
+     "en": "Aug 24 low $262.6 and 5-day average $265.0",
+     "zh": "8月24日低点 $262.6 及5日均线 $265.0"
+    }
+   ]
+  ],
+  "s": [
+   [
+    231.6,
+    {
+     "en": "Oct 16 low",
+     "zh": "10月16日低点"
+    }
+   ],
+   [
+    221,
+    {
+     "en": "Jul 29 low",
+     "zh": "7月29日低点"
+    }
+   ],
+   [
+    200,
+    {
+     "en": "Round number",
+     "zh": "整数关口"
+    }
+   ]
+  ]
+ }
+}

@@ -1,0 +1,1909 @@
+{
+ "asof": "2026-10-13",
+ "asofText": "Oct 13, 2026",
+ "note": "Gigawatts are the power a company has online or contracted for data centers (IT or facility power, as each company reports it), not a measure of chip performance. Forecasts are analyst consensus unless marked otherwise; company guidance and single-broker estimates are labelled. Fiscal years are each company's own (Microsoft to June, Oracle to May, Alibaba to March).",
+ "groups": [
+  {
+   "id": "hyper",
+   "n": "Hyperscalers"
+  },
+  {
+   "id": "neo",
+   "n": "Neoclouds"
+  },
+  {
+   "id": "lab",
+   "n": "AI labs with their own fleet"
+  },
+  {
+   "id": "colo",
+   "n": "Colocation REITs"
+  }
+ ],
+ "companies": [
+  {
+   "id": "msft",
+   "name": "Microsoft",
+   "ticker": "NASDAQ: MSFT",
+   "page": "msft/",
+   "group": "hyper",
+   "blurb": "Azure, the second-largest cloud, and the main compute supplier to OpenAI.",
+   "chips": [
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB200 / GB300 NVL72",
+     "s": "Fairwater AI sites, hundreds of thousands of GPUs"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA Vera Rubin NVL72",
+     "s": "Racks running on Azure since mid-2026"
+    },
+    {
+     "k": "GPU",
+     "n": "AMD Instinct MI300X / MI450 (Helios)",
+     "s": "Helios racks with MI450 ship to Microsoft from Q3 2026"
+    },
+    {
+     "k": "Custom",
+     "n": "Maia 200",
+     "s": "In-house inference chip; ~30% better perf per dollar, serves OpenAI and MAI models"
+    },
+    {
+     "k": "CPU",
+     "n": "Cobalt 200 (Arm)",
+     "s": "In-house CPU, racks in 25+ data centers"
+    }
+   ],
+   "gw": {
+    "now": 12,
+    "nowT": "~12 GW today, ~2 GW of it on AI chips",
+    "tgt": 38,
+    "tgtT": "38 GW by 2032 (reported plan)"
+   },
+   "capexV": 175,
+   "capexT": "~$175B calendar 2026",
+   "capex": [
+    "FY26 (to Jun) cash capex $115.9B, plus finance leases",
+    "Q1 FY27 guided above $50B; FY27 capex to rise again",
+    "Calendar 2026 restated to ~$175B after a lease-accounting change"
+   ],
+   "rev": {
+    "p": "FY26 (to Jun 2026)",
+    "t": 331.8,
+    "segs": [
+     {
+      "n": "Productivity & Business Processes",
+      "v": 140.0,
+      "s": "Office 365, Copilot, LinkedIn, Dynamics"
+     },
+     {
+      "n": "Intelligent Cloud",
+      "v": 137.8,
+      "s": "Azure passed $100B a year; +43% in Q4",
+      "dc": true
+     },
+     {
+      "n": "More Personal Computing",
+      "v": 54.1,
+      "s": "Windows, Xbox, search ads"
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "FY26",
+     "FY27e",
+     "FY28e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$331.8B",
+       "$390.8B",
+       "$467.2B"
+      ],
+      "s": "FY26 actual; consensus"
+     },
+     {
+      "n": "Azure (2028)",
+      "v": [
+       "$100B+",
+       "—",
+       "~$260B"
+      ],
+      "s": "BofA scenario for 2028"
+     }
+    ]
+   },
+   "watch": "About $678B of commercial backlog, much of it OpenAI. Azure guided to ~45% growth next quarter.",
+   "src": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "ry": [
+    {
+     "y": "FY27e",
+     "p": "Jul 2026–Jun 2027",
+     "v": 390.8,
+     "g": 17.8,
+     "s": "Consensus"
+    },
+    {
+     "y": "FY28e",
+     "p": "Jul 2027–Jun 2028",
+     "v": 467.2,
+     "g": 19.5,
+     "s": "Consensus"
+    }
+   ],
+   "bk": {
+    "v": 678,
+    "t": "Commercial RPO",
+    "asof": "Jun 30, 2026",
+    "note": "~30% turns into revenue within 12 months; up 84% y/y, or 25% excluding OpenAI.",
+    "cl": [
+     {
+      "n": "OpenAI",
+      "v": "~45% of RPO",
+      "s": "Incremental $250B Azure commitment (Oct 2025)"
+     },
+     {
+      "n": "Anthropic",
+      "v": "$30B",
+      "s": "Azure compute, up to 1 GW"
+     },
+     {
+      "n": "Enterprise",
+      "v": "rest",
+      "s": "Microsoft 365, Azure and Dynamics contracts"
+     }
+    ],
+    "src": [
+     47,
+     48,
+     49
+    ]
+   }
+  },
+  {
+   "id": "amzn",
+   "name": "Amazon (AWS)",
+   "ticker": "NASDAQ: AMZN",
+   "page": "amzn/",
+   "group": "hyper",
+   "blurb": "The largest cloud, and the biggest builder of its own AI and CPU chips.",
+   "chips": [
+    {
+     "k": "Custom",
+     "n": "Trainium2 / Trainium3",
+     "s": "Over 1M Trainium2 for Anthropic; multi-GW commitments from Anthropic and OpenAI"
+    },
+    {
+     "k": "CPU",
+     "n": "Graviton4 / Graviton5 (Arm)",
+     "s": "Used by 98% of the top 1,000 EC2 customers"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB200 / GB300",
+     "s": "Alongside Trainium for GPU customers"
+    },
+    {
+     "k": "Custom",
+     "n": "Nitro",
+     "s": "Offload card in every server; part of the $25B chips run rate"
+    }
+   ],
+   "gw": {
+    "now": 14,
+    "nowT": "~14 GW at end-2025 (Morgan Stanley est.); +3.8 GW in a year",
+    "tgt": 28,
+    "tgtT": "Double 2025 power by end-2027 (company)"
+   },
+   "capexV": 220,
+   "capexT": "~$220B in 2026",
+   "capex": [
+    "2026 cash capex ~$220B, raised from ~$200B on memory costs",
+    "Morgan Stanley sees ~6 GW added in 2026 and ~8 GW in 2027",
+    "Most 2027 capacity already reserved by customers"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 716.9,
+    "segs": [
+     {
+      "n": "Online stores",
+      "v": 269.3
+     },
+     {
+      "n": "Third-party seller services",
+      "v": 172.2
+     },
+     {
+      "n": "AWS",
+      "v": 128.7,
+      "s": "Q2 2026: $42.2B, +37%, 39% margin",
+      "dc": true
+     },
+     {
+      "n": "Advertising",
+      "v": 68.6
+     },
+     {
+      "n": "Subscriptions",
+      "v": 49.6
+     },
+     {
+      "n": "Physical stores",
+      "v": 22.6
+     },
+     {
+      "n": "Other",
+      "v": 5.9
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$828.7B",
+       "$950.8B",
+       "$1,103B"
+      ],
+      "s": "Consensus"
+     },
+     {
+      "n": "AWS",
+      "v": [
+       "$176.9B",
+       "$249.2B",
+       "~$320B"
+      ],
+      "s": "Morgan Stanley 2026–27; BofA 2028 scenario"
+     }
+    ]
+   },
+   "watch": "AWS backlog $496B. Custom chips and AI each run above $25B a year, growing triple digits.",
+   "src": [
+    4,
+    5,
+    6,
+    7,
+    2
+   ],
+   "ry": [
+    {
+     "y": "2026e",
+     "p": "Calendar 2026",
+     "v": 828.7,
+     "g": 15.6,
+     "s": "Consensus"
+    },
+    {
+     "y": "2027e",
+     "p": "Calendar 2027",
+     "v": 950.8,
+     "g": 14.7,
+     "s": "Consensus"
+    }
+   ],
+   "bk": {
+    "v": 496,
+    "t": "AWS backlog",
+    "asof": "Jun 30, 2026",
+    "note": "About 2.5× a year earlier and double the $244B at the start of 2026.",
+    "cl": [
+     {
+      "n": "Anthropic",
+      "v": ">$100B",
+      "s": "10 years; up to 5 GW of Trainium"
+     },
+     {
+      "n": "OpenAI",
+      "v": "multi-GW",
+      "s": "~2 GW of Trainium plus the $38B deal of Nov 2025"
+     },
+     {
+      "n": "Enterprise",
+      "v": "rest",
+      "s": "Multi-year AWS commitments"
+     }
+    ],
+    "src": [
+     50,
+     51,
+     52
+    ]
+   }
+  },
+  {
+   "id": "googl",
+   "name": "Alphabet (Google Cloud)",
+   "ticker": "NASDAQ: GOOGL",
+   "page": "googl/",
+   "group": "hyper",
+   "blurb": "Google Cloud plus the TPU, now sold as hardware to outside customers too.",
+   "chips": [
+    {
+     "k": "Custom",
+     "n": "TPU v7 Ironwood",
+     "s": "GA 2026; 9,216-chip pods; ~1 GW for Anthropic in 2026"
+    },
+    {
+     "k": "Custom",
+     "n": "TPU 8t (training) / TPU 8i (inference)",
+     "s": "8th generation; ~2x perf per watt vs Ironwood"
+    },
+    {
+     "k": "CPU",
+     "n": "Axion (Arm)",
+     "s": "Hosts TPU 8i nodes, two per node"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB300 / Vera Rubin NVL72",
+     "s": "For cloud GPU customers"
+    }
+   ],
+   "gw": {
+    "now": null,
+    "nowT": "Fleet size not disclosed",
+    "tgt": 6,
+    "tgtT": "TPU run rate 3 GW end-2027, 6 GW end-2028 (Piper Sandler est.)"
+   },
+   "capexV": 200,
+   "capexT": "$195–205B in 2026",
+   "capex": [
+    "2026 guide raised four times, to $195–205B",
+    "2027 to increase significantly; consensus ~$257B",
+    "~60% servers, ~40% data centers and networking"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 402.8,
+    "segs": [
+     {
+      "n": "Search & other",
+      "v": 224.5
+     },
+     {
+      "n": "Google Cloud",
+      "v": 58.7,
+      "s": "Q2 2026: $24.8B, +82%, backlog $514B",
+      "dc": true
+     },
+     {
+      "n": "Subscriptions, platforms & devices",
+      "v": 48.0
+     },
+     {
+      "n": "YouTube ads",
+      "v": 40.4
+     },
+     {
+      "n": "Network",
+      "v": 29.8
+     },
+     {
+      "n": "Other Bets",
+      "v": 1.5
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$498.3B",
+       "$616.9B",
+       "$744.4B"
+      ],
+      "s": "Consensus"
+     },
+     {
+      "n": "Google Cloud",
+      "v": [
+       "$102–107B",
+       "$150–165B",
+       "~$300B"
+      ],
+      "s": "Aardvark Labs 2026–27; BofA 2028 scenario"
+     },
+     {
+      "n": "TPU hardware sales",
+      "v": [
+       "~$8B",
+       "~$51B",
+       "~$104B"
+      ],
+      "s": "Piper Sandler"
+     }
+    ]
+   },
+   "watch": "Still supply-constrained; renting third-party capacity in Q3 as a bridge.",
+   "src": [
+    8,
+    9,
+    10,
+    11,
+    2
+   ],
+   "ry": [
+    {
+     "y": "2026e",
+     "p": "Calendar 2026",
+     "v": 498.3,
+     "g": 23.7,
+     "s": "Consensus"
+    },
+    {
+     "y": "2027e",
+     "p": "Calendar 2027",
+     "v": 616.9,
+     "g": 23.8,
+     "s": "Consensus"
+    }
+   ],
+   "bk": {
+    "v": 514,
+    "t": "Google Cloud backlog",
+    "asof": "Jun 30, 2026",
+    "note": "Up more than $50B in the quarter.",
+    "cl": [
+     {
+      "n": "Anthropic",
+      "v": "~$200B",
+      "s": "Over 40% of the backlog; TPUs"
+     },
+     {
+      "n": "Meta",
+      "v": ">$10B",
+      "s": "Six-year cloud deal (Aug 2025)"
+     },
+     {
+      "n": "OpenAI",
+      "v": "n/d",
+      "s": "Capacity deal since 2025"
+     },
+     {
+      "n": "Enterprise",
+      "v": "rest",
+      "s": "Gemini Enterprise, GCP"
+     }
+    ],
+    "src": [
+     53,
+     54
+    ]
+   }
+  },
+  {
+   "id": "meta",
+   "name": "Meta",
+   "ticker": "NASDAQ: META",
+   "page": "meta/",
+   "group": "hyper",
+   "blurb": "Builds only for itself: ads ranking, Meta AI and its superintelligence lab.",
+   "chips": [
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB200 / GB300",
+     "s": "Main training fleet"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA Vera Rubin",
+     "s": "Incl. a $27B, five-year Nebius deal"
+    },
+    {
+     "k": "GPU",
+     "n": "AMD MI450 (Helios)",
+     "s": "Up to 6 GW agreement"
+    },
+    {
+     "k": "Custom",
+     "n": "MTIA 300 / 400 / 450 / 500",
+     "s": "Hundreds of thousands in production for ads; GenAI inference parts 2026–27"
+    }
+   ],
+   "gw": {
+    "now": null,
+    "nowT": "Prometheus (Ohio) ~1 GW coming online in 2026",
+    "tgt": 5,
+    "tgtT": "Hyperion (Louisiana) scales to 5 GW, first phase 2028"
+   },
+   "capexV": 137.5,
+   "capexT": "$130–145B in 2026",
+   "capex": [
+    "2026 guide $130–145B incl. finance leases",
+    "No 2027 guide; BofA models 5–6 GW of owned capacity in 2027 for ~$200B",
+    "1 GW El Paso data center in a JV with BlackRock"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 201.0,
+    "segs": [
+     {
+      "n": "Advertising",
+      "v": 196.2,
+      "s": "Where the AI compute pays back today",
+      "dc": true
+     },
+     {
+      "n": "Other revenue",
+      "v": 2.6
+     },
+     {
+      "n": "Reality Labs",
+      "v": 2.2
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$254.1B",
+       "$305.7B",
+       "$361.3B"
+      ],
+      "s": "Consensus"
+     }
+    ]
+   },
+   "watch": "Q2 free cash flow was ~$0.8B; total debt incl. leases now above cash.",
+   "src": [
+    12,
+    13,
+    14,
+    15
+   ],
+   "ry": [
+    {
+     "y": "2026e",
+     "p": "Calendar 2026",
+     "v": 254.1,
+     "g": 26.4,
+     "s": "Consensus"
+    },
+    {
+     "y": "2027e",
+     "p": "Calendar 2027",
+     "v": 305.7,
+     "g": 20.3,
+     "s": "Consensus"
+    }
+   ],
+   "bk": {
+    "v": null,
+    "t": "Buyer, not a seller",
+    "asof": "",
+    "note": "Meta has no cloud backlog; it buys capacity. Its biggest commitments to other providers are listed instead.",
+    "buyer": true,
+    "cl": [
+     {
+      "n": "CoreWeave",
+      "v": "~$35.2B",
+      "s": "Two agreements to 2032"
+     },
+     {
+      "n": "Nebius",
+      "v": "$27B",
+      "s": "Five years"
+     },
+     {
+      "n": "Google Cloud",
+      "v": ">$10B",
+      "s": "Six years"
+     },
+     {
+      "n": "Oracle",
+      "v": "n/d",
+      "s": "AI cloud contract"
+     }
+    ],
+    "src": [
+     58,
+     60,
+     54,
+     57
+    ]
+   }
+  },
+  {
+   "id": "orcl",
+   "name": "Oracle (OCI)",
+   "ticker": "NYSE: ORCL",
+   "page": null,
+   "group": "hyper",
+   "blurb": "The fastest-growing cloud; builds Stargate capacity for OpenAI.",
+   "chips": [
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB200 / GB300 / Vera Rubin",
+     "s": "Abilene Stargate runs GB200 for OpenAI"
+    },
+    {
+     "k": "GPU",
+     "n": "AMD MI355X / MI450",
+     "s": "MI450 in an initial 50,000-GPU cluster"
+    },
+    {
+     "k": "CPU",
+     "n": "AMD EPYC, Ampere (Arm)",
+     "s": "OCI general compute"
+    }
+   ],
+   "gw": {
+    "now": null,
+    "nowT": "Delivered ~1.2 GW in FY26 and 850 MW in Q1 FY27",
+    "tgt": null,
+    "tgtT": "Total fleet not disclosed; GPU utilization 97.9%"
+   },
+   "capexV": 92.5,
+   "capexT": "$90–95B in FY27 (to May 2027)",
+   "capex": [
+    "FY27 capex $90–95B; net cash capex no more than $70B",
+    "Q1 FY27 capex $28B; free cash flow −$5B",
+    "Customer prepayments and bring-your-own-hardware deals fund part of the build"
+   ],
+   "rev": {
+    "p": "FY26 (to May 2026)",
+    "t": 67.4,
+    "segs": [
+     {
+      "n": "Cloud (IaaS + SaaS)",
+      "v": 34.0,
+      "s": "OCI +121% to $7.4B in Q1 FY27",
+      "dc": true
+     },
+     {
+      "n": "Software (license & support)",
+      "v": 24.5
+     },
+     {
+      "n": "Services",
+      "v": 5.7
+     },
+     {
+      "n": "Hardware",
+      "v": 3.1
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "FY26",
+     "FY27e",
+     "FY28e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$67.4B",
+       "≥$90B",
+       "$131.5B"
+      ],
+      "s": "FY27 company guide; FY28 consensus"
+     },
+     {
+      "n": "OCI (infrastructure)",
+      "v": [
+       "—",
+       "$32B",
+       "$73B"
+      ],
+      "s": "Oracle's Sep-2025 OCI roadmap"
+     }
+    ]
+   },
+   "watch": "RPO $664B; about half converts to revenue within 36 months.",
+   "src": [
+    16,
+    17,
+    18
+   ],
+   "ry": [
+    {
+     "y": "FY27e",
+     "p": "Jun 2026–May 2027",
+     "v": 90.5,
+     "g": 34.3,
+     "s": "Consensus; company guides at least $90B"
+    },
+    {
+     "y": "FY28e",
+     "p": "Jun 2027–May 2028",
+     "v": 131.5,
+     "g": 45.3,
+     "s": "Consensus"
+    }
+   ],
+   "bk": {
+    "v": 664,
+    "t": "Remaining performance obligations",
+    "asof": "Aug 31, 2026",
+    "note": "Up $209B y/y; new contracts mostly prepaid or bring-your-own-hardware, recognized from FY28.",
+    "cl": [
+     {
+      "n": "OpenAI",
+      "v": "~half",
+      "s": "Stargate sites (Abilene, Michigan, New Mexico, Wisconsin)"
+     },
+     {
+      "n": "Meta",
+      "v": "n/d",
+      "s": "Named as a new AI cloud customer"
+     },
+     {
+      "n": "xAI",
+      "v": "n/d",
+      "s": "Named as a new AI cloud customer"
+     },
+     {
+      "n": "Nvidia, AMD",
+      "v": "n/d",
+      "s": "Named as new AI cloud customers"
+     }
+    ],
+    "src": [
+     55,
+     56,
+     57
+    ]
+   }
+  },
+  {
+   "id": "baba",
+   "name": "Alibaba Cloud",
+   "ticker": "NYSE: BABA",
+   "page": null,
+   "group": "hyper",
+   "blurb": "China's largest cloud, with its own T-Head AI chips.",
+   "chips": [
+    {
+     "k": "Custom",
+     "n": "T-Head Zhenwu M890 / V900",
+     "s": "V900 (216GB memory) mass production Q1 2027"
+    },
+    {
+     "k": "CPU",
+     "n": "T-Head Yitian 710 (Arm)",
+     "s": "In-house server CPU"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA (China-compliant parts)",
+     "s": "Limited by US export rules"
+    }
+   ],
+   "gw": {
+    "now": null,
+    "nowT": "Current capacity not disclosed",
+    "tgt": 20,
+    "tgtT": "More than 20 GW by 2032 (company)"
+   },
+   "capexV": 18.3,
+   "capexT": "$18.3B in FY26 (to Mar 2026)",
+   "capex": [
+    "FY26 capex RMB126B (~$18.3B); June quarter alone RMB67.7B",
+    "Three-year AI/cloud plan RMB380B, reportedly weighing RMB480B",
+    "Targets ~3-year payback on AI capex"
+   ],
+   "rev": {
+    "p": "FY26 (to Mar 2026)",
+    "t": 148.4,
+    "segs": [
+     {
+      "n": "China e-commerce",
+      "v": 67.7
+     },
+     {
+      "n": "Cloud Intelligence",
+      "v": 22.9,
+      "s": "June quarter +45%; AI products triple-digit growth",
+      "dc": true
+     },
+     {
+      "n": "International commerce",
+      "v": 20.9
+     },
+     {
+      "n": "All others",
+      "v": 36.9
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "FY26",
+     "FY27e",
+     "FY28e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$148.4B",
+       "~$162B",
+       "~$182B"
+      ],
+      "s": "FY26 actual; FY27 consensus (RMB1.12T); FY28 est. at ~12% growth"
+     },
+     {
+      "n": "Cloud revenue",
+      "v": [
+       "$22.9B",
+       "~$34.8B",
+       "~$54.7B"
+      ],
+      "s": "Est. from BofA growth of 52% (FY27) and 57% (FY28)"
+     }
+    ]
+   },
+   "watch": "Converted at ~RMB6.9 per US$. Capex is now larger than cloud revenue each quarter.",
+   "src": [
+    19,
+    20,
+    21,
+    45,
+    46
+   ],
+   "ry": [
+    {
+     "y": "FY27e",
+     "p": "Apr 2026–Mar 2027",
+     "v": 162.3,
+     "g": 9.4,
+     "s": "Consensus ~RMB1.12T"
+    },
+    {
+     "y": "FY28e",
+     "p": "Apr 2027–Mar 2028",
+     "v": 181.8,
+     "g": 12.0,
+     "s": "Est.: consensus FY27 grown at the ~12% a year consensus path"
+    }
+   ],
+   "bk": {
+    "v": null,
+    "t": "Not disclosed",
+    "asof": "",
+    "note": "Alibaba does not report a cloud backlog. AI Cloud revenue grew 45% in the June quarter, with external customers also up 45%.",
+    "cl": [
+     {
+      "n": "External enterprises",
+      "v": "n/d",
+      "s": "No customer named"
+     },
+     {
+      "n": "Alibaba group units",
+      "v": "n/d",
+      "s": "Taobao, Qwen apps"
+     }
+    ],
+    "src": [
+     64
+    ]
+   }
+  },
+  {
+   "id": "crwv",
+   "name": "CoreWeave",
+   "ticker": "NASDAQ: CRWV",
+   "page": null,
+   "group": "neo",
+   "blurb": "The largest neocloud; rents NVIDIA capacity to OpenAI, Microsoft, Meta and others.",
+   "chips": [
+    {
+     "k": "GPU",
+     "n": "NVIDIA H100 / H200",
+     "s": "Earlier fleet"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB200 / GB300 NVL72",
+     "s": "Bulk of 2025–26 deployments"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA Vera Rubin NVL72",
+     "s": "First cloud to validate it; multi-rack cluster live"
+    },
+    {
+     "k": "CPU",
+     "n": "NVIDIA Vera / Grace",
+     "s": "Inside the NVL72 racks"
+    }
+   ],
+   "gw": {
+    "now": 1.5,
+    "nowT": "1.5 GW active (Jun 2026); >1.85 GW by year-end",
+    "tgt": 8,
+    "tgtT": "4.2 GW contracted; 8 GW+ active by 2030"
+   },
+   "capexV": 37,
+   "capexT": "$35–39B in 2026",
+   "capex": [
+    "2026 capex $35–39B",
+    "Northland sees ~$47.5B in 2027",
+    "Q3 interest expense guided $860–940M"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 5.13,
+    "segs": [
+     {
+      "n": "AI cloud (GPU compute)",
+      "v": 5.13,
+      "s": "One segment; ~72% from three customers",
+      "dc": true
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$12.4–13.2B",
+       "$21–31B",
+       "—"
+      ],
+      "s": "2026 company guide; 2027 analyst range (Needham $26.6B)"
+     }
+    ]
+   },
+   "watch": "Backlog $104B plus $25B signed in early Q3. Year-end run rate guided $18.5–19.5B.",
+   "src": [
+    22,
+    23,
+    24
+   ],
+   "bk": {
+    "v": 104.2,
+    "t": "Revenue backlog",
+    "asof": "Jun 30, 2026",
+    "note": "Excludes $25B+ of commitments signed early in Q3.",
+    "cl": [
+     {
+      "n": "Meta",
+      "v": "~$35.2B",
+      "s": "Two agreements, to Dec 2032"
+     },
+     {
+      "n": "OpenAI",
+      "v": "~$22.4B",
+      "s": "Three deals in 2025"
+     },
+     {
+      "n": "Microsoft",
+      "v": "n/d",
+      "s": "~67% of 2025 revenue"
+     },
+     {
+      "n": "Jane Street",
+      "v": "$6B",
+      "s": "Apr 2026"
+     },
+     {
+      "n": "Anthropic",
+      "v": "n/d",
+      "s": "Multi-year"
+     }
+    ],
+    "src": [
+     58,
+     59
+    ]
+   }
+  },
+  {
+   "id": "nbis",
+   "name": "Nebius",
+   "ticker": "NASDAQ: NBIS",
+   "page": null,
+   "group": "neo",
+   "blurb": "Amsterdam-based neocloud with big Microsoft and Meta contracts.",
+   "chips": [
+    {
+     "k": "GPU",
+     "n": "NVIDIA H200 / B200 / B300",
+     "s": "Cloud fleet"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB300 NVL72",
+     "s": "Europe's first rack, Finland, Dec 2025"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA Vera Rubin NVL72",
+     "s": "First rack validated Jul 2026"
+    },
+    {
+     "k": "Custom",
+     "n": "Groq 3 LPX",
+     "s": "First AI cloud named for NVIDIA's inference add-on"
+    }
+   ],
+   "gw": {
+    "now": 0.9,
+    "nowT": "800 MW–1 GW connected by end-2026",
+    "tgt": 5,
+    "tgtT": "5 GW contracted by end-2026; >1 GW built a year from 2027"
+   },
+   "capexV": 22.5,
+   "capexT": "$20–25B in 2026",
+   "capex": [
+    "2026 capex $20–25B",
+    "BofA: ~$35B in 2027, ~$40B in 2028",
+    "Over $9B of customer prepayments expected in 2026"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 0.53,
+    "segs": [
+     {
+      "n": "Nebius AI cloud (+ small units)",
+      "v": 0.53,
+      "s": "Q2 2026 group revenue $582M, $575M of it AI cloud",
+      "dc": true
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$3.0–3.4B",
+       "$12.2B",
+       "$24.9B"
+      ],
+      "s": "2026 company guide; consensus"
+     }
+    ]
+   },
+   "watch": "Year-end ARR guided $7–9B, from $3B in June.",
+   "src": [
+    25,
+    26,
+    27
+   ],
+   "bk": {
+    "v": 48,
+    "t": "Signed contracts (sum of disclosed deals)",
+    "asof": "Aug 2026",
+    "note": "Nebius does not publish one backlog figure; reports range from $37.5B to $50B+. Capacity booked through 2027.",
+    "cl": [
+     {
+      "n": "Meta",
+      "v": "$27B",
+      "s": "Five years ($12B + $15B flexible)"
+     },
+     {
+      "n": "Microsoft",
+      "v": "$17.4–19.4B",
+      "s": "Five years, from Sep 2025"
+     },
+     {
+      "n": "Reflection, Cohere",
+      "v": "~$1B+ each",
+      "s": "Q2 2026"
+     },
+     {
+      "n": "US AI lab, quant firm",
+      "v": "~$1B+ each",
+      "s": "Q2 2026, unnamed"
+     }
+    ],
+    "src": [
+     60,
+     61
+    ]
+   }
+  },
+  {
+   "id": "spcx",
+   "name": "SpaceX AI (xAI)",
+   "ticker": "NASDAQ: SPCX",
+   "page": "spcx/",
+   "group": "lab",
+   "blurb": "Colossus in Memphis trains Grok and is rented out to Anthropic, Google and others.",
+   "chips": [
+    {
+     "k": "GPU",
+     "n": "NVIDIA H100 / H200",
+     "s": "Colossus 1: 150k H100, 50k H200"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB200",
+     "s": "30k at Colossus 1, 110k at Colossus 2"
+    },
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB300",
+     "s": "440k at Colossus 2, +220k tranches through Dec"
+    },
+    {
+     "k": "CPU",
+     "n": "NVIDIA Vera",
+     "s": "Planned for agent orchestration"
+    }
+   ],
+   "gw": {
+    "now": 1.4,
+    "nowT": "1.4 GW (Jun 2026); >2 GW by year-end",
+    "tgt": 10,
+    "tgtT": "5–10 GW targeted in 2027"
+   },
+   "capexV": null,
+   "capexT": "AI capex $7.7B in Q1 2026 alone",
+   "capex": [
+    "AI segment capex $12.7B in 2025, $7.7B in Q1 2026",
+    "TD Cowen models ~$160B of AI capex in 2027",
+    "Leases: Anthropic ~$1.25B/month, Google ~$920M/month"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 18.67,
+    "segs": [
+     {
+      "n": "Connectivity (Starlink)",
+      "v": 11.39
+     },
+     {
+      "n": "Space (launch)",
+      "v": 4.09
+     },
+     {
+      "n": "AI (xAI, X, compute leasing)",
+      "v": 3.2,
+      "s": "Q2 2026 AI revenue $2.6B, +247%",
+      "dc": true
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "AI compute leasing",
+      "v": [
+       "$14B",
+       "$66B",
+       "$133B"
+      ],
+      "s": "TD Cowen"
+     },
+     {
+      "n": "Total revenue",
+      "v": [
+       "~$40B",
+       "~$114B",
+       "~$205B"
+      ],
+      "s": "Implied by TD Cowen's leasing share (35%, 58%, 65%)"
+     }
+    ]
+   },
+   "watch": "Musk says ~1M GPUs online in October. Leases can be exited on 90 days' notice.",
+   "src": [
+    28,
+    29,
+    30,
+    31
+   ]
+  },
+  {
+   "id": "oai",
+   "name": "OpenAI (Stargate)",
+   "ticker": "Private",
+   "page": null,
+   "group": "lab",
+   "blurb": "Rents most of its compute from Microsoft, Oracle, CoreWeave and AWS under the Stargate banner.",
+   "chips": [
+    {
+     "k": "GPU",
+     "n": "NVIDIA GB200 / GB300",
+     "s": "Abilene Stargate (Oracle/Crusoe)"
+    },
+    {
+     "k": "GPU",
+     "n": "AMD MI450",
+     "s": "Up to 6 GW agreement"
+    },
+    {
+     "k": "Custom",
+     "n": "Broadcom custom accelerator",
+     "s": "OpenAI's first in-house chip"
+    },
+    {
+     "k": "Custom",
+     "n": "AWS Trainium",
+     "s": "Multi-GW commitment"
+    }
+   ],
+   "gw": {
+    "now": 1.9,
+    "nowT": "1.9 GW effective at end-2025 (CFO)",
+    "tgt": 10,
+    "tgtT": "More than 10 GW secured across partners"
+   },
+   "capexV": null,
+   "capexT": "~$856B of compute planned through 2030",
+   "capex": [
+    "Compute and infrastructure ~$856B through 2030 (company plan)",
+    "Cash burn ~$278B from 2026 to 2030",
+    "Abilene stays at ~1.2 GW; 2 GW expansion dropped"
+   ],
+   "rev": {
+    "p": "2026 plan",
+    "t": 36,
+    "segs": [
+     {
+      "n": "ChatGPT, enterprise and API",
+      "v": 36,
+      "s": "No segment split disclosed",
+      "dc": true
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Revenue",
+      "v": [
+       "$36B",
+       "—",
+       "—"
+      ],
+      "s": "Company plan; $350B targeted for 2030"
+     },
+     {
+      "n": "Exit run rate",
+      "v": [
+       "$70B+",
+       "—",
+       "—"
+      ],
+      "s": "~$50B at end of September"
+     }
+    ]
+   },
+   "watch": "Figures come from investor presentations reported by the press, not audited filings.",
+   "src": [
+    32,
+    33,
+    34
+   ]
+  },
+  {
+   "id": "eqix",
+   "name": "Equinix",
+   "ticker": "NASDAQ: EQIX",
+   "page": null,
+   "group": "colo",
+   "blurb": "Neutral interconnection hubs where clouds, networks and AI labs meet.",
+   "chips": [
+    {
+     "k": "Host",
+     "n": "Customer-owned hardware",
+     "s": "Leases space, power and cross-connects; does not buy GPUs"
+    }
+   ],
+   "gw": {
+    "now": 1.4,
+    "nowT": "~1.4 GW billed (est.); ~700 MW under construction",
+    "tgt": 3,
+    "tgtT": "~3 GW of land under control"
+   },
+   "capexV": 5.5,
+   "capexT": "$5–6B in 2026",
+   "capex": [
+    "2026 capex $5–6B excl. xScale and land",
+    "$5–7B a year through 2029",
+    "52 projects in 33 markets"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 9.22,
+    "segs": [
+     {
+      "n": "Colocation",
+      "v": 6.48,
+      "dc": true
+     },
+     {
+      "n": "Interconnection",
+      "v": 1.66
+     },
+     {
+      "n": "Managed infrastructure & other",
+      "v": 0.61
+     },
+     {
+      "n": "Non-recurring",
+      "v": 0.48
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$10.2–10.3B",
+       "$11.3–11.6B",
+       "$12.4–13.1B"
+      ],
+      "s": "2026 guide; 2027–28 from the 10–13% growth framework"
+     }
+    ]
+   },
+   "watch": "82% utilization on stabilized sites; record 9,700 net interconnections in Q2.",
+   "src": [
+    35,
+    36,
+    37
+   ],
+   "bk": {
+    "v": null,
+    "t": "Record, $ not disclosed",
+    "asof": "Jun 30, 2026",
+    "note": "Equinix says its backlog of sold-but-not-installed space is a record; Q2 annualized gross bookings were $424M (+23% y/y).",
+    "cl": [
+     {
+      "n": "Hyperscalers via xScale",
+      "v": "n/d",
+      "s": "134 MW of xScale leases signed in Q2"
+     },
+     {
+      "n": "Enterprises",
+      "v": "n/d",
+      "s": "Retail colocation and interconnection"
+     }
+    ],
+    "src": [
+     63
+    ]
+   }
+  },
+  {
+   "id": "dlr",
+   "name": "Digital Realty",
+   "ticker": "NYSE: DLR",
+   "page": null,
+   "group": "colo",
+   "blurb": "Wholesale landlord leasing large power blocks to hyperscalers.",
+   "chips": [
+    {
+     "k": "Host",
+     "n": "Customer-owned hardware",
+     "s": "Leases powered shells and halls"
+    }
+   ],
+   "gw": {
+    "now": 3,
+    "nowT": "~3 GW in place; 1.4 GW under construction",
+    "tgt": 12,
+    "tgtT": "12 GW incl. 9 GW of future capacity"
+   },
+   "capexV": 4.5,
+   "capexT": "$4.25–4.75B net in 2026",
+   "capex": [
+    "2026 net capex $4.25–4.75B",
+    "1.4 GW under construction at ~$20B total cost",
+    "Record $1.9B leasing backlog"
+   ],
+   "rev": {
+    "p": "2025",
+    "t": 6.11,
+    "segs": [
+     {
+      "n": "Rental & interconnection (single segment)",
+      "v": 6.11,
+      "s": "Q2 2026 bookings: 0–1 MW 42%, >1 MW 48%, interconnection 10%",
+      "dc": true
+     }
+    ]
+   },
+   "fc": {
+    "y": [
+     "2026e",
+     "2027e",
+     "2028e"
+    ],
+    "rows": [
+     {
+      "n": "Total revenue",
+      "v": [
+       "$6.85–6.95B",
+       "$7.9B",
+       "$9.0B"
+      ],
+      "s": "2026 guide; consensus"
+     }
+    ]
+   },
+   "watch": "Renewal rents up ~25% on a cash basis; double-digit FFO growth guided for 2027.",
+   "src": [
+    38,
+    39,
+    40
+   ],
+   "bk": {
+    "v": 1.9,
+    "t": "Signed-not-commenced leases (annual rent)",
+    "asof": "Jun 30, 2026",
+    "rent": true,
+    "note": "$1.9B a year of rent at 100% share ($1.4B Digital Realty's share), plus two hyperscale leases worth $410M a year signed in July.",
+    "cl": [
+     {
+      "n": "Hyperscalers",
+      "v": "n/d",
+      "s": "Not named; July leases $410M/yr"
+     },
+     {
+      "n": "Enterprises",
+      "v": "n/d",
+      "s": "0–1 MW plus interconnection"
+     }
+    ],
+    "src": [
+     62
+    ]
+   }
+  }
+ ],
+ "chipPrices": [
+  {
+   "c": "NVIDIA Vera Rubin GPU",
+   "v": "NVIDIA",
+   "p": "~$55,000",
+   "b": "Morgan Stanley est., volume price to hyperscalers"
+  },
+  {
+   "c": "NVIDIA Vera CPU",
+   "v": "NVIDIA",
+   "p": "~$5,000",
+   "b": "Morgan Stanley est."
+  },
+  {
+   "c": "Vera Rubin VR200 NVL72 rack (72 GPUs)",
+   "v": "NVIDIA / ODMs",
+   "p": "~$7.8M",
+   "b": "Morgan Stanley est.; ~$2M of it memory"
+  },
+  {
+   "c": "GB300 NVL72 rack (72 GPUs)",
+   "v": "NVIDIA / ODMs",
+   "p": "~$4.0M",
+   "b": "Morgan Stanley est."
+  },
+  {
+   "c": "NVIDIA B300",
+   "v": "NVIDIA",
+   "p": "$42–45k",
+   "b": "Street price, Mar 2026 (GPU Advisor)"
+  },
+  {
+   "c": "NVIDIA B200",
+   "v": "NVIDIA",
+   "p": "$31–33k",
+   "b": "Street price, Mar 2026"
+  },
+  {
+   "c": "NVIDIA H200",
+   "v": "NVIDIA",
+   "p": "$24–26k",
+   "b": "Street price, Mar 2026"
+  },
+  {
+   "c": "NVIDIA H100",
+   "v": "NVIDIA",
+   "p": "$20–22k",
+   "b": "Street price, Mar 2026"
+  },
+  {
+   "c": "AMD MI325X",
+   "v": "AMD",
+   "p": "$20–22k",
+   "b": "Street price, Mar 2026"
+  },
+  {
+   "c": "AMD MI300X",
+   "v": "AMD",
+   "p": "$13–15k",
+   "b": "Street price, Mar 2026"
+  },
+  {
+   "c": "Google TPU (per chip, incl. systems)",
+   "v": "Google / Broadcom",
+   "p": "~$30k",
+   "b": "Piper Sandler: ~$30B of compute capex per GW, ~1M chips per GW"
+  },
+  {
+   "c": "AMD MI450 / MI455X, Trainium3, Maia 200, MTIA, Zhenwu",
+   "v": "Various",
+   "p": "Not public",
+   "b": "No credible unit price published"
+  }
+ ],
+ "rental": [
+  {
+   "c": "GB200 NVL72",
+   "w": "CoreWeave",
+   "p": "$10.50"
+  },
+  {
+   "c": "Ironwood TPU",
+   "w": "Google, on demand / 3-yr",
+   "p": "$12.00 / $5.40"
+  },
+  {
+   "c": "B300",
+   "w": "Nebius",
+   "p": "$7.85"
+  },
+  {
+   "c": "MI355X",
+   "w": "Oracle OCI",
+   "p": "$8.60"
+  },
+  {
+   "c": "H200",
+   "w": "Nebius",
+   "p": "$4.50"
+  },
+  {
+   "c": "Trainium2",
+   "w": "AWS Capacity Blocks",
+   "p": "$2.24"
+  }
+ ],
+ "sources": [
+  {
+   "t": "Data Center Dynamics: Microsoft targets 38GW of capacity in 2032",
+   "u": "https://datacenterdynamics.com/en/news/microsoft-targets-38gw-of-data-center-capacity-in-2032-report"
+  },
+  {
+   "t": "Cloud Computing News: Microsoft 38GW plan, Fairwater and Maia 200",
+   "u": "https://cloudcomputing-news.net/news/microsoft-38gw-data-centre-capacity-2032"
+  },
+  {
+   "t": "Learn Invest: BofA cloud revenue scenarios for 2028",
+   "u": "https://learninvest.co/en/posts/3af991d6045681868defd44fc957801d"
+  },
+  {
+   "t": "Beancount: Microsoft FY2026 segment results",
+   "u": "https://beancount.io/blog/2026/07/29/microsoft-fy2026-earnings-analysis"
+  },
+  {
+   "t": "Motley Fool: Amazon Q2 2026 earnings call",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/07/amazon-amzn-q2-2026-earnings-call-transcript"
+  },
+  {
+   "t": "About Amazon: AI chips business at a $25B run rate",
+   "u": "https://aboutamazon.com/news/aws/amazon-ai-chips-business-history"
+  },
+  {
+   "t": "Data Center Dynamics: AWS added 3.8GW in a year",
+   "u": "https://www.datacenterdynamics.com/en/news/aws-added-38gw-of-data-center-capacity-in-the-last-year/"
+  },
+  {
+   "t": "Edgen: Morgan Stanley AWS capacity and revenue model",
+   "u": "https://edgen.tech/news/post/morgan-stanley-keeps-amazon-at-335-sees-500-by-2027"
+  },
+  {
+   "t": "CNBC: Alphabet Q2 2026 earnings",
+   "u": "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html"
+  },
+  {
+   "t": "Aardvark Labs: Alphabet Q2 2026 recap",
+   "u": "https://research.aardvarklabs.co/research/googl/earnings/2026-q2/googl-2026-q2-recap"
+  },
+  {
+   "t": "Data Center Dynamics: Google eighth-generation TPUs",
+   "u": "https://datacenterdynamics.com/en/news/google-unveils-eighth-generation-tpus-two-dedicated-training-and-inference-chips"
+  },
+  {
+   "t": "Yahoo Finance: Piper Sandler on Google TPU sales",
+   "u": "https://finance.yahoo.com/news/piper-sandler-sees-google-tpu-140017439.html"
+  },
+  {
+   "t": "Motley Fool: Meta Q2 2026 earnings call",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/07/meta-meta-q2-2026-earnings-call-transcript"
+  },
+  {
+   "t": "Yahoo Finance: BofA on Meta MTIA and 2027 capacity",
+   "u": "https://finance.yahoo.com/technology/ai/articles/meta-save-8-5-billion-160250310.html"
+  },
+  {
+   "t": "Cloudspress: Meta Hyperion 5GW explained",
+   "u": "https://cloudspress.com/mark-zuckerberg-says-meta-is-building-hyperion-a-planned-5gw-ai-data-center-cluster"
+  },
+  {
+   "t": "Yahoo Finance: Meta capex and El Paso JV",
+   "u": "https://finance.yahoo.com/technology/ai/articles/meta-become-mega-cloud-operator-154422140.html"
+  },
+  {
+   "t": "Oracle: Q4 and FY2026 results",
+   "u": "http://oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10"
+  },
+  {
+   "t": "Converge Digest: Oracle Q1 FY27, 850 MW and 300,000 GPUs",
+   "u": "https://convergedigest.com/oracle-q1-fy27-oci-850mw-300000-gpus-ai-infrastructure"
+  },
+  {
+   "t": "Moat Explorer: Oracle consensus and fiscal 2030 target",
+   "u": "https://moatexplorer.com/oracle/the-future-bets/225-billion-by-fiscal-2030"
+  },
+  {
+   "t": "Alibaba: March quarter and FY2026 results",
+   "u": "https://markets.ft.com/data/announce/detail?dockey=600-202605130530BIZWIRE_USPRX____20260512_BW841182-1"
+  },
+  {
+   "t": "Zacks: Alibaba 20GW target and Zhenwu V900",
+   "u": "https://zacks.com/stock/news/3005397/is-alibabas-ai-capex-push-a-catalyst-or-a-risk-for-the-stock"
+  },
+  {
+   "t": "Yahoo Finance: Jefferies on Alibaba cloud growth",
+   "u": "https://finance.yahoo.com/technology/articles/alibaba-cloud-revenue-growth-seen-182500404.html"
+  },
+  {
+   "t": "Motley Fool: CoreWeave Q2 2026 earnings call",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/18/coreweave-crwv-q2-2026-earnings-call-transcript?.tsrc=rss"
+  },
+  {
+   "t": "CoreWeave: fourth quarter and fiscal 2025 results",
+   "u": "https://wyow.marketminute.com/article/bizwire-2026-2-26-coreweave-reports-strong-fourth-quarter-and-fiscal-year-2025-results"
+  },
+  {
+   "t": "247 Wall St: CoreWeave 2027 estimate range",
+   "u": "https://247wallst.com/investing/2026/10/13/coreweave-imploded-20-over-6-months-this-analyst-predicts-it-will-triple-in-price-over-the-coming-year"
+  },
+  {
+   "t": "Motley Fool: Nebius Q2 2026 earnings call",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/19/nebius-nbis-q2-2026-earnings-call-transcript"
+  },
+  {
+   "t": "Yahoo Finance: BofA lifts Nebius estimates",
+   "u": "https://finance.yahoo.com/technology/ai/articles/nebius-gets-bofa-boost-ai-180200363.html"
+  },
+  {
+   "t": "Yahoo Finance: Nebius validates first Vera Rubin rack",
+   "u": "https://finance.yahoo.com/technology/ai/articles/nebius-validates-first-vera-rubin-133423487.html"
+  },
+  {
+   "t": "Beancount: SpaceX FY2025 segment results from the S-1",
+   "u": "https://beancount.io/blog/2026/07/12/spacex-fy2025-earnings-analysis"
+  },
+  {
+   "t": "Yahoo Finance: SpaceX could double Colossus 2 chips",
+   "u": "https://finance.yahoo.com/technology/ai/articles/spacex-could-double-number-nvidia-120757563.html"
+  },
+  {
+   "t": "BigGo Finance: TD Cowen on SpaceX AI leasing",
+   "u": "https://finance.biggo.com/news/ba8b9013-80e9-49b2-bbc5-19a8a496960d"
+  },
+  {
+   "t": "Crypto Briefing: Goldman on SpaceX compute capacity",
+   "u": "https://cryptobriefing.com/goldman-spacex-neocloud-ai-revenue-gap"
+  },
+  {
+   "t": "The Clarity: OpenAI compute and revenue plan through 2030",
+   "u": "https://theclarity.today/story/openai-forecasts-cash-burn-near-280-billion-by-2030-ft-reports-mint-4919b1a6"
+  },
+  {
+   "t": "Bloomberg: OpenAI expects $70B annualized revenue by year-end",
+   "u": "https://www.bloomberg.com/news/articles/2026-10-09/openai-expects-70-billion-in-annualized-revenue-by-end-of-2026"
+  },
+  {
+   "t": "Le Compute: Stargate secured vs built vs plugged in",
+   "u": "https://lecompute.fr/en/couts/levier-compute-remontada"
+  },
+  {
+   "t": "Equinix: 2025 results and 2026 outlook",
+   "u": "https://investor.equinix.com/news-events/press-releases/detail/1096/equinix-provides-robust-2026-outlook-driven-by-strong"
+  },
+  {
+   "t": "MarketBeat: Equinix Q2 2026 call highlights",
+   "u": "https://marketbeat.com/instant-alerts/equinix-q2-earnings-call-highlights-2026-07-29"
+  },
+  {
+   "t": "Mann Howie: Equinix revenue mix and billed MW",
+   "u": "https://finance.mannhowie.com/comparison/articles/EQIX"
+  },
+  {
+   "t": "Investing.com: Digital Realty Q2 2026 slides",
+   "u": "https://investing.com/news/company-news/digital-realty-q2-2026-slides-record-bookings-drive-guidance-raise-93CH-4810221"
+  },
+  {
+   "t": "Data Center Dynamics: colo results Q4 2025",
+   "u": "https://datacenterdynamics.com/en/news/data-center-colo-results-q4-2025-digital-realty-equinix-iron-mountain-american-tower"
+  },
+  {
+   "t": "Markets Insider: Digital Realty estimates",
+   "u": "https://markets.businessinsider.com/stocks/dlr"
+  },
+  {
+   "t": "Morgan Stanley via MarketScale: Vera Rubin rack cost",
+   "u": "https://marketscale.com/industries/software-and-technology/nvidia-vera-rubin-ai-rack-cost-memory-what-infrastructure-buyers-should-budget-for"
+  },
+  {
+   "t": "GPU Advisor: GPU street prices, Mar 2026",
+   "u": "https://gpuadvisor.com/blog/gpu-tco-calculator-guide"
+  },
+  {
+   "t": "Veso AI: accelerator specs and rental prices, Sep 2026",
+   "u": "https://veso.ai/blog/ai-accelerator-options-2026"
+  },
+  {
+   "t": "AlphaPilot: Goldman sees $1.2T hyperscaler capex in 2027",
+   "u": "https://alphapilot.tech/discover/ai-capex-2027-goldman-sees-hyperscaler-spending-soaring-to-1-2-trillion"
+  },
+  {
+   "t": "TIKR: Alibaba consensus revenue for fiscal 2027",
+   "u": "https://tikr.com/blog/alibaba-stock-is-down-nearly-27-in-2026-as-earnings-keep-missing-estimates-heres-what-the-next-report-has-to-show"
+  },
+  {
+   "t": "Business Insider: BofA forecasts Alibaba cloud growth",
+   "u": "https://markets.businessinsider.com/news/stocks/alibaba-stock-rises-over-4-as-bank-of-america-says-earnings-inflection-is-underpriced-1036613992"
+  },
+  {
+   "t": "Motley Fool/Nasdaq: Microsoft commercial RPO $678B, ~30% due within 12 months (FY26 Q4)",
+   "u": "https://nasdaq.com/articles/microsoft-has-678-billion-revenue-already-under-contract-thats-more-2-years-sales"
+  },
+  {
+   "t": "Lapaas: 45% of Microsoft's commercial RPO tied to OpenAI (Jan 2026)",
+   "u": "https://voice.lapaas.com/microsoft-openai-commercial-backlog-45-percent-2026?amp=1"
+  },
+  {
+   "t": "Windows Forum: Anthropic's $30B Azure compute commitment",
+   "u": "https://windowsforum.com/windows-news.4/microsoft-ai-backlog-surges-as-openai-concentration-rises-and-maia-200-debuts.399328"
+  },
+  {
+   "t": "Amazon Q2 2026 earnings call: AWS backlog $496B; multi-GW Trainium commitments from Anthropic and OpenAI",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/07/amazon-amzn-q2-2026-earnings-call-transcript"
+  },
+  {
+   "t": "Second Talent: Anthropic committed more than $100B to AWS over ten years (Apr 2026)",
+   "u": "https://secondtalent.com/resources/aws-statistics"
+  },
+  {
+   "t": "Edgen: Trainium commitments, OpenAI ~2 GW and Anthropic up to 5 GW",
+   "u": "https://edgen.pre.edgen.tech/news/post/amazon-aws-backlog-hits-496-billion-as-ai-demand-surges"
+  },
+  {
+   "t": "Agentic Brew: Google Cloud backlog $514B at end of Q2 2026, up from ~$460B",
+   "u": "https://agenticbrew.ai/news/8df1dac9-31ce-48ce-b03a-71a158a18847/alphabet-q2-2026-earnings-record-profit-driven-by-anthropic-and-spacex-stake-gains"
+  },
+  {
+   "t": "AI2 Work: Anthropic's ~$200B Google Cloud deal is over 40% of Google's cloud backlog",
+   "u": "https://ai2.work/blog/half-of-big-tech-s-2-trillion-cloud-backlog-traces-to-two-ai-labs"
+  },
+  {
+   "t": "Oracle Q1 FY27 earnings call: RPO $664B, up $209B y/y",
+   "u": "https://fool.com/earnings/call-transcripts/2026/09/11/oracle-orcl-q1-2027-earnings-call-transcript"
+  },
+  {
+   "t": "ERP Today: roughly half of Oracle's $664B backlog tied to OpenAI",
+   "u": "https://erp.today/oracle-q1-fy27-results-664b-backlog-ai-contracts/"
+  },
+  {
+   "t": "The Robotics Media: Oracle named OpenAI, xAI, Meta, Nvidia and AMD as AI cloud customers (Q1 FY27)",
+   "u": "https://theroboticsmedia.com/article/oracle-q1-fy27-19-billion-revenue-30-billion-ai-cloud-contracts-638-billion-rpo-september-10-2026"
+  },
+  {
+   "t": "AI Expert: CoreWeave backlog $104B at Jun 30; Meta ~$35.2B, OpenAI ~$22.4B, Jane Street $6B, Anthropic",
+   "u": "https://aiexpert.news/en/article/coreweave-revenue-doubles-on-ai-infra-boom-crwv-stock-pops-12"
+  },
+  {
+   "t": "Market Daily: CoreWeave Q2 2026, $104.2B backlog plus $25B+ signed early in Q3",
+   "u": "https://marketdaily.com/coreweave-q2-2026-earnings-revenue-doubles-ai-backlog-104-billion"
+  },
+  {
+   "t": "Yahoo Finance: Nebius contracts, Meta $27B five-year and Microsoft $17.4–19.4B",
+   "u": "https://finance.yahoo.com/technology/ai/articles/nebius-captures-pure-play-ai-144515797.html"
+  },
+  {
+   "t": "CCIR Research: Nebius Q2 2026 four deals above $1B each (Reflection, Cohere, a US AI lab, a quant firm)",
+   "u": "https://ccir.io/research/two-order-books"
+  },
+  {
+   "t": "Digital Realty Q2 2026 results: record $1.9B backlog of signed-not-commenced annual rent",
+   "u": "https://investor.digitalrealty.com/news-releases/news-release-details/digital-realty-reports-second-quarter-2026-results"
+  },
+  {
+   "t": "Equinix Q2 2026 earnings call: record backlog, $424M annualized gross bookings",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/07/equinix-eqix-q2-2026-earnings-call-transcript"
+  },
+  {
+   "t": "Alibaba June quarter 2026 results: AI Cloud revenue +45%, external customers +45%",
+   "u": "https://secure.businesswire.com/news/home/20260818525201/en/Alibaba-Group-Announces-June-Quarter-2026-Results"
+  }
+ ],
+ "chipSrc": [
+  41,
+  42,
+  11,
+  43
+ ],
+ "tiles": [
+  {
+   "k": "Companies tracked",
+   "v": "12",
+   "s": "6 hyperscalers, 2 neoclouds, 2 AI labs, 2 REITs"
+  },
+  {
+   "k": "Big-5 capex 2026",
+   "v": "~$800B",
+   "s": "Amazon, Microsoft, Alphabet, Meta, Oracle (Goldman)",
+   "src": 44
+  },
+  {
+   "k": "Big-5 capex 2027",
+   "v": "~$1.1–1.2T",
+   "s": "Street consensus ~$1.1T; Goldman ~$1.2T",
+   "src": 44
+  },
+  {
+   "k": "Vera Rubin rack",
+   "v": "~$7.8M",
+   "s": "vs ~$4M for GB300 NVL72 (Morgan Stanley)",
+   "src": 41
+  }
+ ],
+ "bkAsof": "Oct 15, 2026"
+}

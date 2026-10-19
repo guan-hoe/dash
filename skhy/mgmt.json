@@ -1,0 +1,67 @@
+{
+ "ticker": "SKHY",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-29",
+ "timing": "krx",
+ "pre_close": 130.17,
+ "react": {
+  "date": "2026-07-29",
+  "close": 126.79,
+  "pct": -2.6
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 136.49,
+  "pct": 4.9
+ },
+ "review": {
+  "en": [
+   "Record revenue of ₩79.3 trillion (+257%) and operating profit of ₩60.5 trillion (+557%, a 76% margin), yet both missed consensus of about ₩84 trillion and ₩64 trillion. Net profit of ₩93.9 trillion was swelled by gains from exiting the Kioxia stake. HBM4 entered mass shipment, long-term supply deals now cover about ten customers, and capex will land at the top of the plan. CEO Kwak Noh-jung has said the memory shortage should peak in 2027, with demand outrunning supply beyond 2030.",
+   "Seoul shares fell about 10% on the miss. The Nasdaq ADS had already dropped 9% on Jul 28 in the AI-hardware selloff and slipped another 2.6% after the results, as investors also worried about rising capex. It rebounded 17.5% on Jul 30 with chip stocks, then climbed to about $199 in early September as memory prices kept rising. Measured from the last ADS close before the report, it is up about 30%."
+  ],
+  "zh": [
+   "营收创纪录达 79.3 万亿韩元（+257%），营业利润 60.5 万亿韩元（+557%，利润率 76%），但均未达约 84 万亿和 64 万亿韩元的市场预期。退出铠侠持股的收益令净利润膨胀至 93.9 万亿韩元。HBM4 已开始量产出货，长期供货协议覆盖约十家客户，资本开支将落在计划上限。CEO 郭鲁正此前表示内存短缺将在 2027 年见顶，需求将在 2030 年后仍超过供给。",
+   "首尔股价因不及预期下跌约 10%。纳斯达克 ADS 在 7 月 28 日 AI 硬件抛售中已跌 9%，财报后再跌 2.6%，投资者同时担心资本开支上升。7 月 30 日随芯片股反弹 17.5%，9 月初在内存持续涨价带动下升至约 199 美元。以财报前最后一个 ADS 收盘价计算，目前上涨约 30%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Kwak Noh-jung",
+   "zh": "郭鲁正"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "Joined Hyundai Electronics, SK hynix's predecessor, as a process engineer and rose through manufacturing technology and safety. Co-CEO from 2022 and sole CEO since late 2023, he oversaw the HBM3 and HBM3E ramps that made SK hynix NVIDIA's main memory supplier.",
+   "zh": "以工艺研发人员身份加入 SK 海力士前身现代电子，历任制造技术与安全负责人。2022 年任联席 CEO，2023 年底起独任 CEO，主导 HBM3 与 HBM3E 量产，使 SK 海力士成为英伟达的主要内存供应商。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Kim Woo-hyun",
+   "zh": "Kim Woo-hyun"
+  },
+  "since": null,
+  "bio": {
+   "en": "Vice president, CFO and head of finance. A finance specialist who came up through SK Group affiliates; handled the SEC review for the record $26.5B US ADS listing in July 2026 and now manages a net cash pile of around ₩69 trillion.",
+   "zh": "副社长、CFO 兼财务负责人。出身 SK 集团各关联公司的财务专家，负责 2026 年 7 月创纪录的 265 亿美元美国 ADS 上市的美国证交会审核事宜，目前管理约 69 万亿韩元的净现金。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 results (CNBC)",
+   "u": "https://www.cnbc.com/2026/07/29/sk-hynix-earnings-profit-revenue-hbm-memory.html"
+  },
+  {
+   "t": "Q2 2026 call transcript",
+   "u": "https://investing.com/news/transcripts/earnings-call-transcript-sk-hynix-posts-record-q2-2026-results-as-shares-fall-93CH-4818480"
+  },
+  {
+   "t": "Miss vs. estimates (Quartz)",
+   "u": "https://qz.com/sk-hynix-q2-2026-earnings-record-profit-misses-estimates-072926"
+  }
+ ]
+}

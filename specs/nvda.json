@@ -1,0 +1,697 @@
+{
+ "dir": "nvda",
+ "ticker": "NVDA",
+ "exchange": "NASDAQ",
+ "name": "NVIDIA",
+ "shares": 24221000000.0,
+ "beta": "2.22",
+ "snapshot": {
+  "price": "$229.28",
+  "date": "Oct 9, 2026",
+  "mcap": "$5.55T",
+  "range": "$164–243"
+ },
+ "eyebrow": {
+  "en": "NVIDIA Corporation · Common stock · Santa Clara, California",
+  "zh": "英伟达 · 普通股 · 加州圣克拉拉"
+ },
+ "title": {
+  "en": "The AI build-out, <em>one quarter at a time</em>.",
+  "zh": "AI 建设浪潮，<em>一季接一季</em>。"
+ },
+ "lede": {
+  "en": "Revenue doubled to $96.2B last quarter, $89B of it from data centers, and Nvidia guides to $108B next, its first $100B+ quarter, without any China data center sales. The watch points are margins, squeezed by soaring memory prices, and cash: customers are getting longer to pay.",
+  "zh": "上季营收翻倍至 962 亿美元，其中 890 亿来自数据中心；下季指引 1080 亿，将首次突破 1000 亿，且未计入任何中国数据中心收入。需关注的是被内存涨价挤压的毛利率，以及客户付款周期拉长带来的现金流变化。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E",
+   "zh": "市盈率"
+  },
+  "v": "~23×",
+  "s": {
+   "en": "Q2 GAAP EPS $2.46 × 4",
+   "zh": "Q2 GAAP 每股 $2.46 × 4"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q3 FY27 guide",
+   "zh": "FY27 Q3 指引"
+  },
+  "v": "$108B",
+  "s": {
+   "en": "±2% · gross margin 74% ±0.5 pt",
+   "zh": "±2% · 毛利率 74% ±0.5 点"
+  }
+ },
+ "earnings": {
+  "v": "Nov 18",
+  "s": {
+   "en": "Q3 FY27 · expected, after close",
+   "zh": "FY27 第三季 · 预计，盘后"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. Nvidia ranged between about $164 and $243 over the past year.",
+  "zh": "每日收盘价与50日均线。过去一年股价在约 $164 至 $243 间。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with gross margin on the right axis. Nvidia's fiscal year ends in late January; Q2 FY27 ended July 26, 2026. Q1 FY26's 60.5% margin includes an H20 inventory charge. The last bar is guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为毛利率。英伟达财年于1月下旬结束；FY27 第二季截至 2026年7月26日。FY26 第一季 60.5% 的毛利率含 H20 库存减值。最后一根柱为指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q2 FY27",
+    "zh": "FY27 Q2"
+   },
+   "v": "$96.2B",
+   "s": {
+    "en": "+106% YoY · 13th straight record",
+    "zh": "同比 +106% · 连续第13季创纪录"
+   }
+  },
+  {
+   "k": {
+    "en": "Data center",
+    "zh": "数据中心"
+   },
+   "v": "$89.0B",
+   "s": {
+    "en": "+117% YoY",
+    "zh": "同比 +117%"
+   }
+  },
+  {
+   "k": {
+    "en": "Gross margin",
+    "zh": "毛利率"
+   },
+   "v": "75.0%",
+   "s": {
+    "en": "guided to 74%, then 71–72% in Q4",
+    "zh": "指引 74%，Q4 降至 71–72%"
+   }
+  },
+  {
+   "k": {
+    "en": "Returned",
+    "zh": "股东回报"
+   },
+   "v": "$26B",
+   "s": {
+    "en": "$20B buybacks + $6B dividends in Q2",
+    "zh": "Q2 回购 200 亿 + 股息 60 亿"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Demand outruns supply",
+    "zh": "需求超过供给"
+   },
+   "p": {
+    "en": "Q3 is guided to $108B, and Vera Rubin should be about 20% of data center revenue in Q3, with hyperscale growth re-accelerating in Q4.",
+    "zh": "Q3 指引 1080 亿美元，Vera Rubin 预计占 Q3 数据中心收入约 20%，云厂商需求将于 Q4 再度加速。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Memory costs hit margins",
+    "zh": "内存成本压低毛利率"
+   },
+   "p": {
+    "en": "Management says memory prices rose more than expected. Gross margin is guided to 74% in Q3 and 71–72% in Q4 before price increases restore 72–73% in FY28.",
+    "zh": "管理层称内存涨幅超预期。毛利率 Q3 指引 74%，Q4 为 71–72%，提价后 FY28 回到 72–73%。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Longer payment terms",
+    "zh": "付款周期拉长"
+   },
+   "p": {
+    "en": "Days sales outstanding rose to 60 as Nvidia gave big customers longer to pay, and inventory reached $32B ahead of Vera Rubin. Free cash flow fell to $21.4B from $48.6B.",
+    "zh": "英伟达给予大客户更长付款期，应收账款天数升至 60 天，库存为 Vera Rubin 增至 320 亿美元。自由现金流由 486 亿降至 214 亿。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "China and concentration",
+    "zh": "中国与客户集中"
+   },
+   "p": {
+    "en": "Guidance assumes no China data center compute revenue. A handful of hyperscalers and AI labs buy most of the output.",
+    "zh": "指引未计入中国数据中心算力收入。大部分产品由少数云厂商与 AI 实验室采购。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Nov 18, 2026",
+   "h": {
+    "en": "Q3 FY27 earnings (expected)",
+    "zh": "FY27 第三季财报（预计）"
+   },
+   "p": {
+    "en": "Guide: $108B ±2% revenue, 74% gross margin.",
+    "zh": "指引：营收 1080 亿美元 ±2%，毛利率 74%。"
+   }
+  },
+  {
+   "date": "Q4 FY27 (Jan 2027)",
+   "h": {
+    "en": "Margin trough",
+    "zh": "毛利率低点"
+   },
+   "p": {
+    "en": "Management expects gross margin to bottom at 71–72% before price increases take effect.",
+    "zh": "管理层预计毛利率在 71–72% 见底，之后提价生效。"
+   }
+  },
+  {
+   "date": "Late Feb 2027",
+   "h": {
+    "en": "Q4 and FY27 results",
+    "zh": "第四季及 FY27 业绩"
+   },
+   "p": {
+    "en": "Date not yet announced.",
+    "zh": "日期未公布。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q2 FY27 results and Q3 guidance",
+   "https://krolmarc.com/nvidia-q2-fy27-record-revenue"
+  ],
+  [
+   "Q2 FY27 call: margins, DSO, returns",
+   "https://finance.biggo.com/news/US_NVDA_2026-08-26"
+  ],
+  [
+   "Q2 FY27 net income",
+   "https://verdict.co.uk/nvidia-q2-fy27-results"
+  ],
+  [
+   "Q2 FY27 cash and borrowing",
+   "https://dvdmaru.com/articles/nvidia-q2-fy2027-earnings-en"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/nvda/financials/?p=quarterly"
+  ],
+  [
+   "Price, market cap, beta and earnings date: Financial Modeling Prep, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/NVDA"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with NVIDIA Corporation.",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 NVIDIA Corporation 无关联。"
+ },
+ "quarters": [
+  [
+   "Q3 FY22",
+   "Oct 2021",
+   7103,
+   65.2,
+   37.6,
+   0.1
+  ],
+  [
+   "Q4 FY22",
+   "Jan 2022",
+   7643,
+   65.41,
+   38.86,
+   0.12
+  ],
+  [
+   "Q1 FY23",
+   "Apr 2022",
+   8288,
+   65.53,
+   38.86,
+   0.06
+  ],
+  [
+   "Q2 FY23",
+   "Jul 2022",
+   6704,
+   43.48,
+   7.44,
+   0.03
+  ],
+  [
+   "Q3 FY23",
+   "Oct 2022",
+   5931,
+   53.57,
+   10.13,
+   0.03
+  ],
+  [
+   "Q4 FY23",
+   "Jan 2023",
+   6051,
+   63.34,
+   20.76,
+   0.06
+  ],
+  [
+   "Q1 FY24",
+   "Apr 2023",
+   7192,
+   64.63,
+   29.75,
+   0.08
+  ],
+  [
+   "Q2 FY24",
+   "Jul 2023",
+   13507,
+   70.05,
+   50.34,
+   0.25
+  ],
+  [
+   "Q3 FY24",
+   "Oct 2023",
+   18120,
+   73.95,
+   57.49,
+   0.37
+  ],
+  [
+   "Q4 FY24",
+   "Jan 2024",
+   22103,
+   75.97,
+   61.59,
+   0.49
+  ],
+  [
+   "Q1 FY25",
+   "Apr 2024",
+   26044,
+   78.35,
+   64.92,
+   0.6
+  ],
+  [
+   "Q2 FY25",
+   "Jul 2024",
+   30040,
+   75.15,
+   62.06,
+   0.67
+  ],
+  [
+   "Q3 FY25",
+   "Oct 2024",
+   35082,
+   74.56,
+   62.34,
+   0.78
+  ],
+  [
+   "Q4 FY25",
+   "Jan 2025",
+   39331,
+   73.03,
+   61.11,
+   0.9
+  ],
+  [
+   "Q1 FY26",
+   "Apr 2025",
+   44062,
+   60.52,
+   49.11,
+   0.76
+  ],
+  [
+   "Q2 FY26",
+   "Jul 2025",
+   46743,
+   72.42,
+   60.84,
+   1.08
+  ],
+  [
+   "Q3 FY26",
+   "Oct 2025",
+   57006,
+   73.41,
+   63.17,
+   1.3
+  ],
+  [
+   "Q4 FY26",
+   "Jan 2026",
+   68127,
+   75.0,
+   65.02,
+   1.76
+  ],
+  [
+   "Q1 FY27",
+   "Apr 2026",
+   81615,
+   74.93,
+   65.6,
+   2.39
+  ],
+  [
+   "Q2 FY27",
+   "Jul 2026",
+   96221,
+   74.98,
+   66.24,
+   2.46
+  ]
+ ],
+ "guide": [
+  "Q3 FY27e",
+  108000,
+  "Oct 2026 · guidance midpoint",
+  "2026年10月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q3 FY22 to Q2 FY27. Nvidia's fiscal year ends in late January. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY22 第三季至 FY27 第二季共 20 个季度。英伟达财年于1月下旬结束。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q3 FY22",
+    "Oct 2021",
+    1519,
+    222,
+    1297
+   ],
+   [
+    "Q4 FY22",
+    "Jan 2022",
+    3033,
+    273,
+    2760
+   ],
+   [
+    "Q1 FY23",
+    "Apr 2022",
+    1731,
+    361,
+    1370
+   ],
+   [
+    "Q2 FY23",
+    "Jul 2022",
+    1270,
+    433,
+    837
+   ],
+   [
+    "Q3 FY23",
+    "Oct 2022",
+    392,
+    530,
+    -138
+   ],
+   [
+    "Q4 FY23",
+    "Jan 2023",
+    2248,
+    509,
+    1739
+   ],
+   [
+    "Q1 FY24",
+    "Apr 2023",
+    2911,
+    248,
+    2663
+   ],
+   [
+    "Q2 FY24",
+    "Jul 2023",
+    6348,
+    289,
+    6059
+   ],
+   [
+    "Q3 FY24",
+    "Oct 2023",
+    7332,
+    278,
+    7054
+   ],
+   [
+    "Q4 FY24",
+    "Jan 2024",
+    11499,
+    254,
+    11245
+   ],
+   [
+    "Q1 FY25",
+    "Apr 2024",
+    15345,
+    369,
+    14976
+   ],
+   [
+    "Q2 FY25",
+    "Jul 2024",
+    14488,
+    977,
+    13511
+   ],
+   [
+    "Q3 FY25",
+    "Oct 2024",
+    17627,
+    813,
+    16814
+   ],
+   [
+    "Q4 FY25",
+    "Jan 2025",
+    16629,
+    1077,
+    15552
+   ],
+   [
+    "Q1 FY26",
+    "Apr 2025",
+    27414,
+    1227,
+    26187
+   ],
+   [
+    "Q2 FY26",
+    "Jul 2025",
+    15365,
+    1895,
+    13470
+   ],
+   [
+    "Q3 FY26",
+    "Oct 2025",
+    23751,
+    1636,
+    22115
+   ],
+   [
+    "Q4 FY26",
+    "Jan 2026",
+    36188,
+    1284,
+    34904
+   ],
+   [
+    "Q1 FY27",
+    "Apr 2026",
+    50344,
+    1757,
+    48587
+   ],
+   [
+    "Q2 FY27",
+    "Jul 2026",
+    24077,
+    2677,
+    21400
+   ]
+  ],
+  "est": [
+   [
+    "Q3 FY27",
+    "Oct 2026",
+    45000,
+    3000,
+    42000
+   ],
+   [
+    "Q4 FY27",
+    "Jan 2027",
+    55000,
+    3200,
+    51800
+   ],
+   [
+    "Q1 FY28",
+    "Apr 2027",
+    60000,
+    3500,
+    56500
+   ],
+   [
+    "Q2 FY28",
+    "Jul 2027",
+    65000,
+    3800,
+    61200
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & securities",
+    "zh": "现金及有价证券"
+   },
+   "v": "$56.6B",
+   "s": {
+    "en": "Jul 26, 2026",
+    "zh": "2026年7月26日"
+   }
+  },
+  "read": [
+   {
+    "en": "Nvidia barely needs capex, so free cash flow tracks operating cash: it went from about $1–3B a quarter in 2022 to $48.6B in Q1 FY27. Q2 dropped to $21.4B even though profit rose, because Nvidia extended payment terms for big customers and built $32B of inventory for Vera Rubin.",
+    "zh": "英伟达资本开支很小，自由现金流基本等于经营现金流：由 2022 年每季约 10–30 亿美元增至 FY27 第一季的 486 亿。第二季利润增长但自由现金流降至 214 亿，原因是给予大客户更长付款期，并为 Vera Rubin 备货 320 亿库存。"
+   },
+   {
+    "en": "With $108B of revenue guided for Q3 and roughly 60% net margins, I assume much of the working-capital build unwinds over the next year, giving $42–61B a quarter and about $212B over four quarters. Most of that goes back to shareholders: $26B was returned in Q2 alone.",
+    "zh": "Q3 营收指引 1080 亿美元、净利率约 60%，我假设营运资金占用在未来一年逐步回落，每季自由现金流 420–610 亿，四季合计约 2120 亿。其中大部分回馈股东：仅 Q2 就回馈 260 亿。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Buybacks and dividends",
+     "zh": "回购与股息"
+    },
+    "p": {
+     "en": "$20B of buybacks and $6B of dividends in Q2; the quarterly dividend is now $0.25 a share.",
+     "zh": "Q2 回购 200 亿美元、派息 60 亿；季度股息现为每股 $0.25。"
+    }
+   },
+   {
+    "h": {
+     "en": "Working capital",
+     "zh": "营运资金"
+    },
+    "p": {
+     "en": "Receivables at 60 days and $32B of inventory tie up cash ahead of the Vera Rubin ramp.",
+     "zh": "60 天应收账款与 320 亿库存在 Vera Rubin 放量前占用现金。"
+    }
+   },
+   {
+    "h": {
+     "en": "Strategic investments",
+     "zh": "战略投资"
+    },
+    "p": {
+     "en": "$15.8B of equity securities bought in Q2, up from $0.3B a year earlier.",
+     "zh": "Q2 购入股权证券 158 亿美元，一年前为 3 亿。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Data center sales",
+     "zh": "数据中心销售"
+    },
+    "p": {
+     "en": "$89B in Q2, with Q3 guided to $108B in total revenue.",
+     "zh": "Q2 数据中心 890 亿美元，Q3 总营收指引 1080 亿。"
+    }
+   },
+   {
+    "h": {
+     "en": "Debt raised",
+     "zh": "举债"
+    },
+    "p": {
+     "en": "Nvidia borrowed about $25B in the quarter, adding to its cash cushion.",
+     "zh": "本季举债约 250 亿美元，增厚现金。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & securities, Jul 2026",
+     "zh": "2026年7月现金及证券"
+    },
+    56600
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    211500
+   ],
+   [
+    {
+     "en": "Buybacks (~$20B a quarter)",
+     "zh": "回购（每季约200亿）"
+    },
+    -80000
+   ],
+   [
+    {
+     "en": "Dividends (~$6B a quarter)",
+     "zh": "股息（每季约60亿）"
+    },
+    -24000
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash & securities, Jul 2027 (est.)",
+   "zh": "2027年7月现金及证券（估）"
+  },
+  "bridgeNote": {
+   "en": "Excludes strategic investments and debt flows.",
+   "zh": "未计入战略投资与债务变动。"
+  },
+  "extraNote": {
+   "en": "",
+   "zh": ""
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/nvda/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Q2 FY27 free cash flow",
+    "https://broadbrowse.com/nvidia-q2-fy2027-free-cash-flow-receivables-guarantees"
+   ],
+   [
+    "Q2 FY27 cash and borrowing",
+    "https://dvdmaru.com/articles/nvidia-q2-fy2027-earnings-en"
+   ]
+  ]
+ }
+}

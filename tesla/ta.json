@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 354.72,
+ "bias": {
+  "en": "Bearish · on the $354 Sep 15 low",
+  "zh": "偏空 · 位于 $354 的 9月15日低点"
+ },
+ "read": [
+  {
+   "en": "Tesla fell 2.1% on Oct 16 to $354.72 on heavy volume, its fifth straight decline, after reversing from $369 to a low of $349.33. It is below the 5-day ($367.5), 30-day ($367.7), 100-day ($371.1, falling), 10-day ($373.3) and falling 200-day ($388.0) averages. MACD has been below its signal since Oct 14 and is above zero, Parabolic SAR has been bearish since Oct 15 ($387.89), and RSI is 42.",
+   "zh": "特斯拉 10月16日放量下跌 2.1%，收于 $354.72，连续第五日下跌；当日自 $369 掉头走低，最低至 $349.33。股价位于 5 日（$367.5）、30 日（$367.7）、100 日（$371.1，下行）、10 日均线（$373.3）以及下行的 200 日均线（$388.0）下方。MACD 自 10月14日起位于信号线下方，仍在零轴之上，抛物线 SAR 自 10月15日起看空（$387.89），RSI 为 42。"
+  },
+  {
+   "en": "The day's low of $349.33 undercut the $354 Sep 15 low, but the close held just above it. Resistance is $367–373 (the 5, 30, 100 and 10-day averages), then $388 (cap since March, 200-day average, SAR) and $418 (January highs). Support is $354, then $346 (Sep 30 low, bottom of the range) and $337 (Apr 7 low). A close below $346 would open $337.",
+   "zh": "当日低点 $349.33 跌破 $354 的 9月15日低点，但收盘守在其上方。阻力为 $367–373（5 日、30 日、100 日和 10 日均线），其次 $388（3月以来的上限、200 日均线、SAR）和 $418（1月高点）。支撑为 $354，其次 $346（9月30日低点，区间底部）和 $337（4月7日低点）。若收盘跌破 $346，下一目标看 $337。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    370,
+    {
+     "en": "5, 30, 100 and 10-day averages ($367.5–373.3)",
+     "zh": "5日、30日、100日和10日均线（$367.5–373.3）"
+    }
+   ],
+   [
+    388,
+    {
+     "en": "$388 cap since March plus the 200-day average and SAR",
+     "zh": "3月以来 $388 压力及200日均线、SAR"
+    }
+   ],
+   [
+    418,
+    {
+     "en": "January highs",
+     "zh": "1月高点"
+    }
+   ]
+  ],
+  "s": [
+   [
+    354,
+    {
+     "en": "Sep 15 low; Oct 16 low $349.3",
+     "zh": "9月15日低点；10月16日低点 $349.3"
+    }
+   ],
+   [
+    346,
+    {
+     "en": "Sep 30 low, bottom of the range",
+     "zh": "9月30日低点，区间底部"
+    }
+   ],
+   [
+    337,
+    {
+     "en": "Apr 7 low",
+     "zh": "4月7日低点"
+    }
+   ]
+  ]
+ }
+}

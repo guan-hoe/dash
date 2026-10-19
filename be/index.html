@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bloom Energy BE Dashboard</title>
+<meta name="description" content="Bloom Energy (NYSE: BE) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NYSE: BE</span>
+  <span class="bar-px" id="barPx">$280.50</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Bloom Energy Corporation · Class A · San Jose, California</div>
+      <h1 data-ih="title">Power for AI, <em>delivered on site</em>.</h1>
+      <p data-i="lede" class="lede">Bloom's solid oxide fuel cells let data centers make their own power instead of waiting years for a grid connection. Revenue hit $1.07B last quarter, up 166%, and 2026 guidance was raised twice to $3.9–4.2B. Oracle, AEP and all major US hyperscalers are customers or have validated the product.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$280.50</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$82.6B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$76–351</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E</span></div><div class="v">~104×</div><div class="s"><span data-i="s_val">FY26 guide EPS $2.55–2.85 (non-GAAP)</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">FY26 guide</span></div><div class="v">$3.9–4.2B</div><div class="s"><span data-i="s_an">revenue, ~2× 2025 · op. income $0.8–0.9B</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Late Oct</div><div class="s"><span data-i="s_er">Q3 2026 · date not yet announced</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. The stock ranged from about $76 to $351 over the past year, with a beta near 3.8.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="BE daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">3.78</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Bloom's revenue is lumpy and Q4-heavy because it is booked as systems are installed. The last bar is about half of the second-half revenue implied by the full-year guide.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q2 2026</span></div><div class="v">$1.07B</div><div class="s"><span data-i="sc0">+166% YoY · first $1B quarter</span></div></div><div class="cell"><div class="k"><span data-i="kc1">Product revenue</span></div><div class="v">$935M</div><div class="s"><span data-i="sc1">+215% YoY</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Gross margin</span></div><div class="v">34.3%</div><div class="s"><span data-i="sc2">non-GAAP · +6 pts YoY</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Backlog</span></div><div class="v">~$20B</div><div class="s"><span data-i="sc3">end-2025; $8B+ product orders added in H1</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">AI power crunch</h3><p data-i="w0p">Oracle went from a 100 MW pilot to a 2.8 GW plan and AEP from 100 MW to 900 MW. First-half product orders of over $8B fill capacity into 2028.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Profitable growth</h3><p data-i="w1p">Operating income rose to $240M in Q2; full-year non-GAAP operating income is guided at $800–900M.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Lumpy cash flow</h3><p data-i="w2p">Cash flow swings with installation timing: −$220M of free cash flow in Q2 2025, +$395M in Q4 2025.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w3h">Valuation and volatility</h3><p data-i="w3p">About 104× this year's guided earnings with a beta near 3.8; delays at customer sites can move quarters.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="BE" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Late Oct 2026</div><h3 data-i="c0h">Q3 2026 earnings</h3><p data-i="c0p">Date not yet announced; last year's Q3 came on Oct 28.</p></div></div><div class="item"><div><div class="date">Dec 31, 2026</div><h3 data-i="c1h">FY26 ends</h3><p data-i="c1p">Guide: revenue $3.9–4.2B, non-GAAP EPS $2.55–2.85.</p></div></div><div class="item"><div><div class="date">Feb 2027</div><h3 data-i="c2h">Q4 and FY26 results</h3><p data-i="c2p">Expected to include 2027 guidance.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://finance.biggo.com/news/US_BE_2026-07-28" target="_blank" rel="noopener">Q2 2026 call: guidance raise</a></li><li><a href="https://dolphinresearch.substack.com/p/be-delay-fears-aside-set-to-ride" target="_blank" rel="noopener">Q2 2026 orders and backlog</a></li><li><a href="https://sec-api.io/insights/financial-analysis-of-bloom-energy-q2-2026-filings-and-scenarios-to-2029" target="_blank" rel="noopener">Q2 2026 filings analysis</a></li><li><a href="https://thebuildout.co/earnings/recap/BE/CY2026Q3_FY2026Q2" target="_blank" rel="noopener">Q2 2026 recap: cash</a></li><li><a href="https://stockanalysis.com/stocks/be/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://finance.yahoo.com/quote/BE" target="_blank" rel="noopener">Price, market cap and beta: Financial Modeling Prep, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Bloom Energy Corporation.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "be", SHARES = 294530000.0, TV = "NYSE:BE";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q3 2021", "Sep 2021", 207.23, 17.8, -21.18, null], ["Q4 2021", "Dec 2021", 342.47, 20.06, -3.94, null], ["Q1 2022", "Mar 2022", 201.04, 13.9, -32.66, null], ["Q2 2022", "Jun 2022", 243.24, -0.81, -42.01, null], ["Q3 2022", "Sep 2022", 292.27, 17.43, -17.99, null], ["Q4 2022", "Dec 2022", 462.58, 5.75, -18.45, null], ["Q1 2023", "Mar 2023", 275.19, 19.72, -23.14, null], ["Q2 2023", "Jun 2023", 301.1, 18.71, -18.09, null], ["Q3 2023", "Sep 2023", 400.27, -1.3, -25.91, null], ["Q4 2023", "Dec 2023", 356.92, 24.09, 1.83, null], ["Q1 2024", "Mar 2024", 235.3, 16.18, -20.83, null], ["Q2 2024", "Jun 2024", 335.77, 20.41, -6.89, null], ["Q3 2024", "Sep 2024", 330.4, 23.83, -2.92, null], ["Q4 2024", "Dec 2024", 572.39, 38.32, 18.29, null], ["Q1 2025", "Mar 2025", 326.02, 27.21, -5.85, null], ["Q2 2025", "Jun 2025", 401.24, 26.7, -0.87, null], ["Q3 2025", "Sep 2025", 519.05, 29.22, 1.51, null], ["Q4 2025", "Dec 2025", 777.68, 32.48, 13.27, null], ["Q1 2026", "Mar 2026", 751.05, 30.03, 9.61, null], ["Q2 2026", "Jun 2026", 1065, 33.38, 17.11, null]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q3 2026e", 1000, "Sep 2026 \u00b7 ~half of H2 implied by guide", "2026\u5e749\u6708 \u00b7 \u7ea6\u4e3a\u6307\u5f15\u9690\u542b\u4e0b\u534a\u5e74\u7684\u4e00\u534a"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "2026 Q2", "sc0": "同比 +166% · 首个 10 亿季度", "kc1": "产品收入", "sc1": "同比 +215%", "kc2": "毛利率", "sc2": "非GAAP · 同比 +6 点", "kc3": "订单储备", "sc3": "2025 年底；上半年新增产品订单逾 80 亿", "w0h": "AI 电力紧缺", "w0p": "甲骨文从 100 兆瓦试点扩至 2.8 吉瓦计划，AEP 从 100 兆瓦增至 900 兆瓦。上半年逾 80 亿美元产品订单已排产至 2028 年。", "w1h": "盈利增长", "w1p": "第二季营业利润升至 2.4 亿美元；全年非GAAP营业利润指引 8–9 亿。", "w2h": "现金流波动", "w2p": "现金流随安装进度大幅波动：2025 年第二季自由现金流 −2.2 亿美元，第四季 +3.95 亿。", "w3h": "估值与波动", "w3p": "约为今年指引盈利的 104 倍，贝塔值近 3.8；客户现场延误会影响季度业绩。", "c0h": "2026 第三季财报", "c0p": "日期未公布；去年第三季于10月28日发布。", "c1h": "FY26 结束", "c1p": "指引：营收 39–42 亿美元，非GAAP每股 $2.55–2.85。", "c2h": "第四季及 FY26 业绩", "c2p": "预计给出 2027 年指引。", "eyebrow": "Bloom Energy · A类股 · 加州圣何塞", "title": "为 AI 供电，<em>现场发电</em>。", "lede": "Bloom 的固体氧化物燃料电池让数据中心自行发电，无需等待多年接入电网。上季营收增 166% 至 10.7 亿美元，2026 年指引两度上调至 39–42 亿。甲骨文、AEP 及所有美国主要云厂商均为客户或已完成验证。", "k_val": "市盈率", "s_val": "FY26 指引每股 $2.55–2.85（非GAAP）", "k_an": "FY26 指引", "s_an": "营收约为 2025 年两倍 · 营业利润 8–9 亿", "s_er": "2026 第三季 · 日期未公布", "sub_price": "每日收盘价与50日均线。过去一年股价在约 $76 至 $351 间，贝塔值近 3.8。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。Bloom 按系统安装确认收入，因此季度波动大、第四季偏高。最后一根柱约为全年指引所隐含下半年营收的一半。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Bloom Energy Corporation 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

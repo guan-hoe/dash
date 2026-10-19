@@ -1,0 +1,751 @@
+{
+ "dir": "amat",
+ "ticker": "AMAT",
+ "exchange": "NASDAQ",
+ "name": "Applied Materials",
+ "shares": 793600000.0,
+ "beta": "1.59",
+ "snapshot": {
+  "price": "$507.03",
+  "date": "Oct 9, 2026",
+  "mcap": "$402B",
+  "range": "$210–723"
+ },
+ "eyebrow": {
+  "en": "Applied Materials, Inc. · Common stock · Santa Clara, California",
+  "zh": "应用材料 · 普通股 · 加州圣克拉拉"
+ },
+ "title": {
+  "en": "AI chips need new materials, <em>and Applied sells the tools</em>.",
+  "zh": "AI 芯片需要新材料，<em>应用材料卖的正是工具</em>。"
+ },
+ "lede": {
+  "en": "Applied Materials makes the deposition, etch, inspection and packaging tools that chipmakers buy, and services the machines already in their fabs. Revenue rose 25% to a record $9.12B last quarter on leading-edge logic, DRAM for AI and advanced packaging, and the October-quarter guide of $10.25B would be up 51%. The catch: China is still 28% of sales under tightening US export rules, and the stock has nearly doubled this year.",
+  "zh": "应用材料生产芯片厂采购的沉积、刻蚀、检测与封装设备，并为晶圆厂中已装机的设备提供服务。上季营收增长 25% 至创纪录的 91.2 亿美元，动力来自先进逻辑、AI 所需 DRAM 与先进封装；10月季度指引 102.5 亿美元，同比将增长 51%。隐忧是：在日益收紧的美国出口管制下，中国仍占销售的 28%，而股价今年已接近翻倍。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E (trailing GAAP)",
+   "zh": "市盈率（GAAP 历史）"
+  },
+  "v": "~44×",
+  "s": {
+   "en": "last 4 quarters EPS $11.60 · Q4 guide × 4 ≈ 32×",
+   "zh": "近四季每股 $11.60 · Q4 指引 × 4 约 32 倍"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q4 FY26 guide",
+   "zh": "FY26 Q4 指引"
+  },
+  "v": "$10.25B",
+  "s": {
+   "en": "±$0.5B · +51% YoY · non-GAAP EPS $4.02 ±$0.20",
+   "zh": "±5 亿 · 同比 +51% · 非GAAP每股 $4.02 ±$0.20"
+  }
+ },
+ "earnings": {
+  "v": "Nov 12",
+  "s": {
+   "en": "Q4 FY26 results and Q1 FY27 guide · after the close",
+   "zh": "FY26 第四季业绩及 FY27 Q1 指引 · 美股收盘后"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. Applied peaked at $723 on Jun 30, fell to $436 by Jul 29, and has closed between about $415 and $545 since August.",
+  "zh": "每日收盘价与50日均线。应用材料于6月30日见顶 $723，7月29日跌至 $436，8月以来收盘价在约 $415 至 $545 之间。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Applied's fiscal year ends on the last Sunday of October, so Q3 FY26 is the quarter ended Jul 26, 2026. Revenue covers Semiconductor Systems, Applied Global Services and Display (reported under corporate and other). The last bar is company guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。应用材料财年于10月最后一个星期日结束，因此 FY26 第三季为截至 2026年7月26日的季度。营收包括半导体系统、应用全球服务及显示业务（列于公司及其他）。最后一根柱为公司指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q3 FY26",
+    "zh": "FY26 Q3"
+   },
+   "v": "$9.12B",
+   "s": {
+    "en": "+25% YoY · +15% QoQ · record",
+    "zh": "同比 +25% · 环比 +15% · 创纪录"
+   }
+  },
+  {
+   "k": {
+    "en": "Semiconductor Systems",
+    "zh": "半导体系统"
+   },
+   "v": "$7.04B",
+   "s": {
+    "en": "+27% YoY · 37.7% margin · DRAM 26%",
+    "zh": "同比 +27% · 利润率 37.7% · DRAM 占 26%"
+   }
+  },
+  {
+   "k": {
+    "en": "Applied Global Services",
+    "zh": "应用全球服务"
+   },
+   "v": "$1.78B",
+   "s": {
+    "en": "+22% YoY · 30.1% margin",
+    "zh": "同比 +22% · 利润率 30.1%"
+   }
+  },
+  {
+   "k": {
+    "en": "Display & other",
+    "zh": "显示及其他"
+   },
+   "v": "$294M",
+   "s": {
+    "en": "+7% YoY · operating loss $118M",
+    "zh": "同比 +7% · 营业亏损 1.18 亿"
+   }
+  },
+  {
+   "k": {
+    "en": "Gross margin",
+    "zh": "毛利率"
+   },
+   "v": "50.3%",
+   "s": {
+    "en": "GAAP · +1.5 pts YoY · 13th straight YoY gain",
+    "zh": "GAAP · 同比 +1.5 个百分点 · 连续 13 季同比提升"
+   }
+  },
+  {
+   "k": {
+    "en": "EPS",
+    "zh": "每股收益"
+   },
+   "v": "$3.17",
+   "s": {
+    "en": "GAAP, +43% YoY · non-GAAP $3.50",
+    "zh": "GAAP，同比 +43% · 非GAAP $3.50"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "AI-driven mix",
+    "zh": "AI 驱动的组合"
+   },
+   "p": {
+    "en": "Leading-edge logic, DRAM and advanced packaging are expected to drive about 80% of equipment market growth. DRAM revenue, including HBM packaging, rose 52% and packaging is guided to grow over 70% in 2026.",
+    "zh": "先进逻辑、DRAM 与先进封装预计贡献约 80% 的设备市场增长。含 HBM 封装的 DRAM 营收增长 52%，先进封装 2026 年预计增长逾 70%。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Record margins",
+    "zh": "利润率创纪录"
+   },
+   "p": {
+    "en": "Non-GAAP operating margin hit a record 34.0%, up 3.3 points in a year, and the Q4 guide of $10.25B would be the biggest quarter yet.",
+    "zh": "非GAAP营业利润率创纪录达 34.0%，一年提升 3.3 个百分点；Q4 指引 102.5 亿美元将是史上最大季度。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Fiscal 2027 outlook",
+    "zh": "FY27 展望"
+   },
+   "p": {
+    "en": "Management expects another strong growth year in 2027 and says top customers now share 8-quarter forecasts. The Nov 12 report gives the first Q1 FY27 number.",
+    "zh": "管理层预计 2027 年再度强劲增长，并称大客户已提供 8 季滚动预测。11月12日财报将首次给出 FY27 Q1 数字。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Capex build-out",
+    "zh": "扩产开支"
+   },
+   "p": {
+    "en": "Applied plans to double system output by 2028. Capex rose 35% in the first nine months of FY26, so free cash flow lagged profit growth.",
+    "zh": "应用材料计划到 2028 年将系统产能翻倍。FY26 前九个月资本开支增长 35%，自由现金流增速落后于利润。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "China and export rules",
+    "zh": "中国与出口管制"
+   },
+   "p": {
+    "en": "China was 28% of revenue, down from 35% a year ago. The US Affiliates Rule, paused since Nov 2025, is now due back after the trade truce ends Jan 10, 2027, and China is pushing fabs toward local tools.",
+    "zh": "中国占营收 28%，一年前为 35%。自 2025年11月暂停的美国“关联方规则”现定于贸易休战于 2027年1月10日结束后恢复，中国亦在推动晶圆厂采用本土设备。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Cycle and valuation",
+    "zh": "周期与估值"
+   },
+   "p": {
+    "en": "At about 44 times trailing earnings the stock prices in a long upcycle. It fell about 40% from peak to trough in just one month this summer.",
+    "zh": "按历史盈利约 44 倍，股价已反映长期上行周期。今夏仅一个月内由高点至低点跌去约 40%。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Nov 12, 2026",
+   "h": {
+    "en": "Q4 FY26 earnings",
+    "zh": "FY26 第四季财报"
+   },
+   "p": {
+    "en": "Guide: $10.25B ±$0.5B revenue, with Semiconductor Systems about $7.9B, AGS about $1.84B and other (mostly Display) about $510M.",
+    "zh": "指引：营收 102.5 亿 ±5 亿美元，其中半导体系统约 79 亿、AGS 约 18.4 亿、其他（主要为显示）约 5.1 亿。"
+   }
+  },
+  {
+   "date": "Jan 10, 2027",
+   "h": {
+    "en": "US–China truce deadline",
+    "zh": "美中休战期限"
+   },
+   "p": {
+    "en": "The truce was extended two months; the paused export Affiliates Rule is set to return when it ends unless extended again.",
+    "zh": "休战延长两个月；除非再度延期，暂停的出口“关联方规则”将在期满后恢复。"
+   }
+  },
+  {
+   "date": "Mid-Feb 2027",
+   "h": {
+    "en": "Q1 FY27 earnings",
+    "zh": "FY27 第一季财报"
+   },
+   "p": {
+    "en": "Date not yet announced; first-quarter results usually come in mid-February.",
+    "zh": "日期未公布；第一季业绩通常在2月中旬发布。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q3 FY26 results (Applied Materials)",
+   "https://investors.appliedmaterials.com/node/29551/pdf"
+  ],
+  [
+   "Q3 FY26 financial results snapshot (Applied Materials)",
+   "https://investors.appliedmaterials.com/static-files/7193b049-7b3a-4cd4-9d62-67fef9b90709"
+  ],
+  [
+   "Q3 FY26 earnings call transcript (Investing.com)",
+   "https://investing.com/news/transcripts/earnings-call-transcript-applied-materials-beats-q3-2026-estimates-shares-fall-93CH-4859444"
+  ],
+  [
+   "Q3 FY26 summary and Q4 segment guide (Zacks)",
+   "https://zacks.com/stock/news/2974848/-applied-materials-q3-earnings-beat-estimates-revenues-rise-yy"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/amat/financials/?p=quarterly"
+  ],
+  [
+   "US–China truce extension and Affiliates Rule (Crowell & Moring)",
+   "https://www.cmtradelaw.com/2026/09/u-s-china-trade-truce-extended-two-months-bis-affiliates-rule-suspension-follows/"
+  ],
+  [
+   "Price, market cap, beta and earnings date: Stock Analysis and Stocklake, as of Oct 9, 2026",
+   "https://stockanalysis.com/stocks/amat/"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Applied Materials, Inc.",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Applied Materials, Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q4 FY21",
+   "Oct 2021",
+   6123,
+   48.1,
+   32.96,
+   1.88
+  ],
+  [
+   "Q1 FY22",
+   "Jan 2022",
+   6271,
+   47.19,
+   31.45,
+   2.0
+  ],
+  [
+   "Q2 FY22",
+   "May 2022",
+   6245,
+   46.87,
+   30.33,
+   1.74
+  ],
+  [
+   "Q3 FY22",
+   "Jul 2022",
+   6520,
+   46.1,
+   29.51,
+   1.85
+  ],
+  [
+   "Q4 FY22",
+   "Oct 2022",
+   6749,
+   45.95,
+   29.54,
+   1.85
+  ],
+  [
+   "Q1 FY23",
+   "Jan 2023",
+   6739,
+   46.67,
+   29.23,
+   2.02
+  ],
+  [
+   "Q2 FY23",
+   "Apr 2023",
+   6630,
+   46.67,
+   28.82,
+   1.86
+  ],
+  [
+   "Q3 FY23",
+   "Jul 2023",
+   6425,
+   46.32,
+   28.05,
+   1.85
+  ],
+  [
+   "Q4 FY23",
+   "Oct 2023",
+   6723,
+   47.14,
+   29.32,
+   2.38
+  ],
+  [
+   "Q1 FY24",
+   "Jan 2024",
+   6707,
+   47.77,
+   29.33,
+   2.41
+  ],
+  [
+   "Q2 FY24",
+   "Apr 2024",
+   6646,
+   47.44,
+   28.77,
+   2.06
+  ],
+  [
+   "Q3 FY24",
+   "Jul 2024",
+   6778,
+   47.28,
+   28.65,
+   2.05
+  ],
+  [
+   "Q4 FY24",
+   "Oct 2024",
+   7045,
+   47.34,
+   29.04,
+   2.1
+  ],
+  [
+   "Q1 FY25",
+   "Jan 2025",
+   7166,
+   48.79,
+   30.35,
+   1.45
+  ],
+  [
+   "Q2 FY25",
+   "Apr 2025",
+   7100,
+   49.09,
+   30.55,
+   2.63
+  ],
+  [
+   "Q3 FY25",
+   "Jul 2025",
+   7302,
+   48.78,
+   30.58,
+   2.22
+  ],
+  [
+   "Q4 FY25",
+   "Oct 2025",
+   6800,
+   48.02,
+   28.44,
+   2.38
+  ],
+  [
+   "Q1 FY26",
+   "Jan 2026",
+   7012,
+   48.99,
+   29.89,
+   2.54
+  ],
+  [
+   "Q2 FY26",
+   "Apr 2026",
+   7910,
+   49.9,
+   31.9,
+   3.51
+  ],
+  [
+   "Q3 FY26",
+   "Jul 2026",
+   9115,
+   50.31,
+   33.74,
+   3.17
+  ]
+ ],
+ "guide": [
+  "Q4 FY26e",
+  10250,
+  "Oct 2026 · guidance midpoint",
+  "2026年10月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q4 FY21 to Q3 FY26. Applied's fiscal year ends on the last Sunday of October. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 FY21 第四季至 FY26 第三季共 20 个季度。应用材料财年于10月最后一个星期日结束。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q4 FY21",
+    "Oct 2021",
+    1148,
+    206,
+    942
+   ],
+   [
+    "Q1 FY22",
+    "Jan 2022",
+    2658,
+    144,
+    2514
+   ],
+   [
+    "Q2 FY22",
+    "May 2022",
+    415,
+    210,
+    205
+   ],
+   [
+    "Q3 FY22",
+    "Jul 2022",
+    1469,
+    210,
+    1259
+   ],
+   [
+    "Q4 FY22",
+    "Oct 2022",
+    857,
+    223,
+    634
+   ],
+   [
+    "Q1 FY23",
+    "Jan 2023",
+    2270,
+    287,
+    1983
+   ],
+   [
+    "Q2 FY23",
+    "Apr 2023",
+    2292,
+    255,
+    2037
+   ],
+   [
+    "Q3 FY23",
+    "Jul 2023",
+    2583,
+    255,
+    2328
+   ],
+   [
+    "Q4 FY23",
+    "Oct 2023",
+    1555,
+    309,
+    1246
+   ],
+   [
+    "Q1 FY24",
+    "Jan 2024",
+    2325,
+    229,
+    2096
+   ],
+   [
+    "Q2 FY24",
+    "Apr 2024",
+    1392,
+    257,
+    1135
+   ],
+   [
+    "Q3 FY24",
+    "Jul 2024",
+    2385,
+    297,
+    2088
+   ],
+   [
+    "Q4 FY24",
+    "Oct 2024",
+    2575,
+    407,
+    2168
+   ],
+   [
+    "Q1 FY25",
+    "Jan 2025",
+    925,
+    381,
+    544
+   ],
+   [
+    "Q2 FY25",
+    "Apr 2025",
+    1571,
+    510,
+    1061
+   ],
+   [
+    "Q3 FY25",
+    "Jul 2025",
+    2634,
+    584,
+    2050
+   ],
+   [
+    "Q4 FY25",
+    "Oct 2025",
+    2828,
+    785,
+    2043
+   ],
+   [
+    "Q1 FY26",
+    "Jan 2026",
+    1686,
+    646,
+    1040
+   ],
+   [
+    "Q2 FY26",
+    "Apr 2026",
+    845,
+    635,
+    210
+   ],
+   [
+    "Q3 FY26",
+    "Jul 2026",
+    3037,
+    707,
+    2330
+   ]
+  ],
+  "est": [
+   [
+    "Q4 FY26",
+    "Oct 2026",
+    3100,
+    750,
+    2350
+   ],
+   [
+    "Q1 FY27",
+    "Jan 2027",
+    2200,
+    750,
+    1450
+   ],
+   [
+    "Q2 FY27",
+    "Apr 2027",
+    1800,
+    750,
+    1050
+   ],
+   [
+    "Q3 FY27",
+    "Jul 2027",
+    3200,
+    800,
+    2400
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash",
+    "zh": "现金"
+   },
+   "v": "$9.2B",
+   "s": {
+    "en": "Jul 26, 2026 · incl. short-term inv. · debt $6.5B",
+    "zh": "2026年7月26日 · 含短期投资 · 债务 65 亿"
+   }
+  },
+  "read": [
+   {
+    "en": "Applied's free cash flow swings a lot from quarter to quarter: the April quarter is usually weakest (only $210M in Q2 FY26) and the July and October quarters strongest. Q3 FY26 brought $2.33B. The last four quarters add up to about $5.6B, roughly flat on a year earlier, because capex has more than doubled, from about $1.1B in FY23 to $2.8B over the last four quarters.",
+    "zh": "应用材料自由现金流季度波动大：4月季度通常最弱（FY26 第二季仅 2.1 亿美元），7月与10月季度最强。FY26 第三季为 23.3 亿美元。近四季合计约 56 亿，与一年前大致持平，原因是资本开支由 FY23 的约 11 亿增至近四季的 28 亿，增加逾一倍。"
+   },
+   {
+    "en": "My base case uses the $10.25B Q4 guide and assumes revenue stays near that level into FY27, with capex of about $750–800M a quarter for the capacity build-out. That gives about $7.3B over four quarters. The main risks are working capital tied up by fast growth, and a sharper China cut if the Affiliates Rule returns in January.",
+    "zh": "我的基准情景采用 102.5 亿美元的 Q4 指引，并假设 FY27 营收维持在该水平附近，扩产期间每季资本开支约 7.5–8 亿美元，四季合计约 73 亿。主要风险是快速增长占用营运资金，以及若“关联方规则”于1月恢复，中国业务受更大削减。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Dividends",
+     "zh": "股息"
+    },
+    "p": {
+     "en": "$0.53 a share, about $420M a quarter, raised 15% this year.",
+     "zh": "每股 $0.53，每季约 4.2 亿美元，今年上调 15%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Buybacks",
+     "zh": "回购"
+    },
+    "p": {
+     "en": "$440M in Q3, down from over $1B a quarter in early FY25 as capex rose.",
+     "zh": "Q3 回购 4.4 亿美元，随资本开支上升，低于 FY25 初每季逾 10 亿的水平。"
+    }
+   },
+   {
+    "h": {
+     "en": "Capex",
+     "zh": "资本开支"
+    },
+    "p": {
+     "en": "$707M in Q3 for new manufacturing capacity and the EPIC R&D center.",
+     "zh": "Q3 投入 7.07 亿美元，用于新增产能与 EPIC 研发中心。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Volume growth",
+     "zh": "销量增长"
+    },
+    "p": {
+     "en": "Q4 revenue is guided up 51% year on year.",
+     "zh": "Q4 营收指引同比增长 51%。"
+    }
+   },
+   {
+    "h": {
+     "en": "Higher margins",
+     "zh": "利润率提升"
+    },
+    "p": {
+     "en": "A record 34% non-GAAP operating margin turns more of each sales dollar into cash.",
+     "zh": "创纪录的 34% 非GAAP营业利润率，使每一美元销售转化为更多现金。"
+    }
+   },
+   {
+    "h": {
+     "en": "Services base",
+     "zh": "服务业务"
+    },
+    "p": {
+     "en": "AGS sells parts, upgrades and service contracts on the installed base and is expected to grow over 20% in 2026.",
+     "zh": "AGS 为已装机设备提供零件、升级与服务合约，预计 2026 年增长逾 20%。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & short-term inv., Jul 2026",
+     "zh": "2026年7月现金及短期投资"
+    },
+    9233
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    7250
+   ],
+   [
+    {
+     "en": "Dividends (est.)",
+     "zh": "股息（估）"
+    },
+    -1700
+   ],
+   [
+    {
+     "en": "Buybacks (est.)",
+     "zh": "回购（估）"
+    },
+    -2000
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash, Jul 2027 (est.)",
+   "zh": "2027年7月现金（估）"
+  },
+  "bridgeNote": {
+   "en": "Applied also holds $5.3B of long-term investments not counted here, and $1.3B of its $6.5B debt is due within a year.",
+   "zh": "应用材料另持有 53 亿美元长期投资未计入此处；65 亿美元债务中有 13 亿一年内到期。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/amat/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Balance sheet (Stock Analysis)",
+    "https://stockanalysis.com/stocks/amat/financials/balance-sheet/?p=quarterly"
+   ],
+   [
+    "Q3 FY26 results",
+    "https://investors.appliedmaterials.com/node/29551/pdf"
+   ]
+  ]
+ }
+}

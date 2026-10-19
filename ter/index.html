@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Teradyne TER Dashboard</title>
+<meta name="description" content="Teradyne (NASDAQ: TER) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: TER</span>
+  <span class="bar-px" id="barPx">$402.68</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Teradyne, Inc. · Common stock · North Reading, Massachusetts</div>
+      <h1 data-ih="title">The test every AI chip must pass, <em>now twice the business it was a year ago</em>.</h1>
+      <p data-i="lede" class="lede">Teradyne makes the machines that test chips before they ship, plus Universal Robots cobots and MiR mobile robots. AI demand doubled revenue to a record $1.33B last quarter: compute test grew nearly sixfold and memory test hit a record on HBM and DRAM. The catch is lumpiness and price: Q3 guidance of $1.20–1.30B is a step down, and the stock trades at about 55 times trailing earnings.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$402.68</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$63.0B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$132–484</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E (trailing)</span></div><div class="v">~55×</div><div class="s"><span data-i="s_val">GAAP EPS $7.29 · ~44× 2026 consensus adj. EPS $9.11</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q3 2026 guide</span></div><div class="v">$1.20–1.30B</div><div class="s"><span data-i="s_an">adj. EPS $1.85–2.15 · gross margin 58–59%</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Late Oct</div><div class="s"><span data-i="s_er">Q3 2026 and Q4 guide · date not yet announced</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. Teradyne has roughly doubled this year, but has swung between about $320 and $484 since June.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="TER daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">1.75</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Teradyne's fiscal year is the calendar year (quarters end on the Sunday nearest the month end). Revenue sat near $600–750M a quarter from 2023 to 2025, then jumped on AI test demand. The last bar is the $1.25B midpoint of Q3 2026 guidance.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q2 2026</span></div><div class="v">$1.33B</div><div class="s"><span data-i="sc0">+104% YoY · +4% QoQ · record</span></div></div><div class="cell"><div class="k"><span data-i="kc1">Semiconductor Test</span></div><div class="v">$1.12B</div><div class="s"><span data-i="sc1">+128% YoY · SoC $843M, compute ~70% of it</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Memory test</span></div><div class="v">$212M</div><div class="s"><span data-i="sc2">record · HBM, DRAM, NAND · book-to-bill >2</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Product Test</span></div><div class="v">$107M</div><div class="s"><span data-i="sc3">+26% YoY · board and optical test</span></div></div><div class="cell"><div class="k"><span data-i="kc4">Robotics</span></div><div class="v">$100M</div><div class="s"><span data-i="sc4">+33% YoY · +9% QoQ</span></div></div><div class="cell"><div class="k"><span data-i="kc5">EPS</span></div><div class="v">$2.38</div><div class="s"><span data-i="sc5">GAAP · adj. $2.47 (+333% YoY) · GM 59.8%</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">AI compute test</h3><p data-i="w0p">Compute revenue grew nearly 600% from a year ago and AI drove over 60% of sales. Teradyne qualified a second AI hyperscaler and shipped a merchant GPU order.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Memory and HBM</h3><p data-i="w1p">Memory test hit a record $212M, its third quarter above $200M, with orders over twice shipments. Management sees the 2026 memory test market more than 40% larger than 2025.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Q3 report and Q4 guide</h3><p data-i="w2p">The Q3 guide of $1.20–1.30B is below Q2's $1.33B on compute order timing and soft mobile. The market will look for Q4 guidance to show growth resuming.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Robotics turnaround</h3><p data-i="w3p">After a 2025 restructuring that cut about 150 jobs, Robotics grew 33% to $100M. A U.S. factory is due to open later this year, and a cobot dispute with Elite Robots was settled in October.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w4h">Lumpy orders</h3><p data-i="w4p">Test spending moves in big, uneven waves tied to a few chip makers. Revenue fell from $951M in Q3 2021 to $600M in Q1 2024 in the last downturn.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Valuation and swings</h3><p data-i="w5p">At about 55 times trailing GAAP earnings, the stock prices in more growth. It fell 34% from its Jun 30 record close to Jul 29 before rebounding.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="TER" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Late Oct 2026</div><h3 data-i="c0h">Q3 2026 earnings</h3><p data-i="c0p">Guidance is $1.20–1.30B of revenue and $1.85–2.15 adjusted EPS. Date not yet announced.</p></div></div><div class="item"><div><div class="date">Q4 2026</div><h3 data-i="c1h">U.S. robotics factory</h3><p data-i="c1p">Management said its U.S. manufacturing center for Robotics is on track to open later this year.</p></div></div><div class="item"><div><div class="date">Late Jan 2027</div><h3 data-i="c2h">Q4 2026 earnings</h3><p data-i="c2p">Full-year 2026 results and the first read on 2027, which management expects to be another growth year.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://investors.teradyne.com/news-events/press-releases/detail/445/teradyne-reports-second-quarter-2026-results" target="_blank" rel="noopener">Q2 2026 results (Teradyne)</a></li><li><a href="https://investing.com/news/transcripts/earnings-call-transcript-teradyne-tops-q2-2026-estimates-on-ai-demand-93CH-4820636" target="_blank" rel="noopener">Q2 2026 earnings call transcript (Investing.com)</a></li><li><a href="https://stockanalysis.com/stocks/ter/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://marketbeat.com/instant-alerts/price-teradyne-nasdaq-ter-shares-down-32-whats-next-2026-10-08" target="_blank" rel="noopener">Recent news, analyst targets and consensus (MarketBeat)</a></li><li><a href="https://www.marketbeat.com/earnings/reports/2026-10-27-teradyne-inc-stock/" target="_blank" rel="noopener">Earnings date estimate (MarketBeat)</a></li><li><a href="https://finance.yahoo.com/quote/TER" target="_blank" rel="noopener">Price, market cap, beta and daily history: Stocklake, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Teradyne, Inc.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "ter", SHARES = 156380000.0, TV = "NASDAQ:TER";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q3 2021", "Sep 2021", 950.5, 60.07, 33.98, 1.41], ["Q4 2021", "Dec 2021", 885.05, 59.55, 30.6, 1.27], ["Q1 2022", "Mar 2022", 755.37, 60.23, 26.55, 0.92], ["Q2 2022", "Jun 2022", 840.77, 60.23, 29.5, 1.16], ["Q3 2022", "Sep 2022", 827.07, 58.69, 28.14, 1.1], ["Q4 2022", "Dec 2022", 731.84, 57.45, 29.44, 1.05], ["Q1 2023", "Mar 2023", 617.53, 57.72, 15.37, 0.5], ["Q2 2023", "Jun 2023", 684.44, 58.81, 21.19, 0.73], ["Q3 2023", "Sep 2023", 703.73, 56.6, 21.02, 0.78], ["Q4 2023", "Dec 2023", 670.6, 56.6, 19.43, 0.72], ["Q1 2024", "Mar 2024", 599.82, 56.56, 13.67, 0.4], ["Q2 2024", "Jun 2024", 729.88, 58.34, 21.22, 1.14], ["Q3 2024", "Sep 2024", 737.3, 59.2, 20.96, 0.89], ["Q4 2024", "Dec 2024", 752.88, 59.41, 21.3, 0.9], ["Q1 2025", "Mar 2025", 685.68, 60.57, 19.73, 0.61], ["Q2 2025", "Jun 2025", 651.8, 57.23, 14.27, 0.49], ["Q3 2025", "Sep 2025", 769.21, 58.41, 18.89, 0.75], ["Q4 2025", "Dec 2025", 1083, 57.2, 30.35, 1.63], ["Q1 2026", "Mar 2026", 1282, 60.89, 36.9, 2.53], ["Q2 2026", "Jun 2026", 1329, 59.79, 32.94, 2.38]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q3 2026e", 1250, "Sep 2026 \u00b7 guidance midpoint", "2026\u5e749\u6708 \u00b7 \u6307\u5f15\u4e2d\u503c"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "2026 Q2", "sc0": "同比 +104% · 环比 +4% · 创纪录", "kc1": "半导体测试", "sc1": "同比 +128% · SoC 8.43 亿，其中计算约占 70%", "kc2": "存储测试", "sc2": "创纪录 · HBM、DRAM、NAND · 订单出货比 >2", "kc3": "产品测试", "sc3": "同比 +26% · 电路板与光学测试", "kc4": "机器人", "sc4": "同比 +33% · 环比 +9%", "kc5": "每股收益", "sc5": "GAAP · 调整后 $2.47（同比 +333%）· 毛利率 59.8%", "w0h": "AI 计算测试", "w0p": "计算类营收同比增长近 600%，AI 相关占销售六成以上。泰瑞达已完成第二家 AI 超大规模客户的验证，并交付一笔商用 GPU 订单。", "w1h": "存储与 HBM", "w1p": "存储测试创下 2.12 亿美元纪录，连续第三季超过 2 亿，订单为出货两倍以上。管理层预计 2026 年存储测试市场较 2025 年扩大逾 40%。", "w2h": "Q3 财报与 Q4 指引", "w2p": "因计算订单时点与手机疲软，Q3 指引 12–13 亿美元低于 Q2 的 13.3 亿。市场将关注 Q4 指引能否重回增长。", "w3h": "机器人业务扭转", "w3p": "经过 2025 年裁员约 150 人的重组，机器人营收增长 33% 至 1 亿美元。美国工厂预计今年稍后投产，与 Elite Robots 的协作机器人纠纷已于10月和解。", "w4h": "订单波动", "w4p": "测试设备支出集中于少数芯片厂，波动大且不均。上一轮下行中，营收由 2021 年 Q3 的 9.51 亿美元降至 2024 年 Q1 的 6.0 亿。", "w5h": "估值与波动", "w5p": "按过去四季 GAAP 盈利计约 55 倍，股价已反映更多增长。股价曾由 6月30日收盘纪录跌至 7月29日，跌幅 34%，之后反弹。", "c0h": "2026 第三季财报", "c0p": "指引为营收 12–13 亿美元、调整后每股 $1.85–2.15。日期未公布。", "c1h": "美国机器人工厂", "c1p": "管理层表示机器人业务的美国制造中心按计划于今年稍后启用。", "c2h": "2026 第四季财报", "c2p": "2026 全年业绩及对 2027 年的首次展望，管理层预计 2027 年继续增长。", "eyebrow": "泰瑞达 · 普通股 · 马萨诸塞州北雷丁", "title": "每颗 AI 芯片必经的测试关卡，<em>业务规模一年翻倍</em>。", "lede": "泰瑞达生产芯片出厂前所用的测试设备，另有 Universal Robots 协作机器人和 MiR 移动机器人。AI 需求使上季营收翻倍至创纪录的 13.3 亿美元：计算类测试增长近六倍，存储测试在 HBM 和 DRAM 带动下创新高。问题在于订单波动与估值：Q3 指引 12–13 亿美元，环比回落，股价约为过去四季盈利的 55 倍。", "k_val": "市盈率（过去四季）", "s_val": "GAAP 每股 $7.29 · 按 2026 年调整后每股一致预期 $9.11 约 44 倍", "k_an": "2026 Q3 指引", "s_an": "调整后每股 $1.85–2.15 · 毛利率 58–59%", "s_er": "2026 第三季及 Q4 指引 · 日期未公布", "sub_price": "每日收盘价与50日均线。泰瑞达今年股价约翻倍，但自6月以来收盘价在约 $320 至 $484 之间大幅波动。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。泰瑞达财年与日历年一致（季度结束于最接近月末的周日）。2023 至 2025 年季度营收约在 6–7.5 亿美元，之后因 AI 测试需求跃升。最后一根柱为 2026 年 Q3 指引中值 12.5 亿美元。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Teradyne, Inc. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

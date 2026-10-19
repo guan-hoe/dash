@@ -1,0 +1,63 @@
+{
+ "ticker": "TSLA",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-22",
+ "timing": "amc",
+ "pre_close": 374.01,
+ "react": {
+  "date": "2026-07-23",
+  "close": 319.69,
+  "pct": -14.5
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 354.72,
+  "pct": -5.2
+ },
+ "review": {
+  "en": [
+   "Record revenue of $28.2B (+26%) on record Q2 deliveries, but operating income fell 57% to $398M and adjusted EPS of $0.33 missed the ~$0.55 consensus. Auto margin ex-credits slipped to 16.3%, energy margin halved to 20.4% on a warranty charge, and free cash flow turned negative. Management called it a deliberate investment year: capex above $25B and rising for two to three years, up to $30B of new debt capacity, with robotaxi, Optimus, the Terafab chip project and AI compute as priorities, and car output limited by supply rather than demand.",
+   "The stock slid about 4% after hours and fell further during the call, as Musk repeated robotaxi and Optimus promises without hard targets and warned that the Optimus ramp would start slowly. It closed down 14.5% the next day, its worst session in over a year, and bottomed at $298 on Jul 29 as investors digested the EPS miss, a 1.4% operating margin and negative cash flow. Record Q3 deliveries in early October have since brought it back to roughly the pre-report price."
+  ],
+  "zh": [
+   "营收创纪录达 282 亿美元（+26%），第二季交付量也创新高，但营业利润下滑 57% 至 3.98 亿美元，经调整每股收益 0.33 美元，远低于约 0.55 美元的预期。剔除积分的汽车毛利率降至 16.3%，能源毛利率因保修计提减半至 20.4%，自由现金流转负。管理层称今年是主动投资年：资本开支超过 250 亿美元并将在未来两三年继续增加，另安排最高 300 亿美元的新增借款额度，重点投向 Robotaxi、Optimus、Terafab 芯片项目和 AI 算力；汽车产量受供应而非需求限制。",
+   "盘后股价下跌约 4%，电话会期间进一步走低：马斯克重复 Robotaxi 与 Optimus 的承诺却未给出明确目标，并提醒 Optimus 初期量产会很慢。次日收跌 14.5%，为一年多来最差单日表现，7 月 29 日见底 298 美元，市场消化每股收益不及预期、1.4% 的营业利润率和负现金流。10 月初公布创纪录的第三季交付量后，股价已大致回到财报前水平。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Elon Musk",
+   "zh": "埃隆·马斯克"
+  },
+  "since": "2008",
+  "bio": {
+   "en": "Led Tesla's early funding in 2004 and became CEO in 2008, after co-founding X.com (later PayPal) and founding SpaceX in 2002. Also runs SpaceX, which absorbed his AI company xAI in 2026, and personally sets Tesla's robotaxi, Optimus and AI agenda.",
+   "zh": "2004 年主导特斯拉早期融资，2008 年起任 CEO；此前联合创办 X.com（后来的 PayPal），并于 2002 年创立 SpaceX。他同时执掌 SpaceX（2026 年并入其 AI 公司 xAI），亲自主导特斯拉的 Robotaxi、Optimus 与 AI 战略。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Vaibhav Taneja",
+   "zh": "瓦伊巴夫·塔内贾"
+  },
+  "since": "2023",
+  "bio": {
+   "en": "Chartered accountant who spent about 17 years at PwC before joining SolarCity in 2016 and moving to Tesla with its acquisition. Chief accounting officer from 2019 and CFO since August 2023; runs the capex plan and the new debt facilities.",
+   "zh": "特许会计师，在普华永道工作约 17 年后于 2016 年加入 SolarCity，随特斯拉收购转入特斯拉。2019 年起任首席会计官，2023 年 8 月起任 CFO，负责资本开支计划与新增借款安排。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 call transcript",
+   "u": "https://www.mitrade.com/insights/news/live-news/article-8-1965053-20260805"
+  },
+  {
+   "t": "Q2 2026 analysis",
+   "u": "https://www.money365.market/articles/tesla-q2-2026-earnings-analysis"
+  }
+ ]
+}

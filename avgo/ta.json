@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 328.75,
+ "bias": {
+  "en": "Bearish · broke the September lows",
+  "zh": "偏空 · 跌破 9 月低点"
+ },
+ "read": [
+  {
+   "en": "Broadcom fell 4.5% on Oct 16 to $328.75, its third straight decline, closing near the day's low of $328.59. It is below its 5-day ($346.3), 10-day ($356.8), 30-day ($355.0), 100-day ($380.3) and 200-day ($368.2) averages, all falling. MACD crossed below its signal on Oct 15 and is below zero, Parabolic SAR has been bearish since Oct 13 ($376.1), and RSI is 34.8.",
+   "zh": "博通 10月16日下跌 4.5%，收于 $328.75，连续第三日下跌，收盘接近当日低点 $328.59。股价位于全部下行的 5 日（$346.3）、10 日（$356.8）、30 日（$355.0）、100 日（$380.3）和 200 日均线（$368.2）下方。MACD 于 10月15日下穿信号线并在零轴之下，抛物线 SAR 自 10月13日起看空（$376.1），RSI 为 34.8。"
+  },
+  {
+   "en": "The $343 Oct 1 low and the $335 zone (Sep 16, Oct 15 lows) broke and now cap. Resistance is $334.6–335.8, then $343–346 (Oct 1 low, 5-day average) and $355–357 (10 and 30-day). Support is $321–324 (Dec 17 and Oct 10, 2025 lows), then $314–316 (Jan 23 and Feb 17 lows) and $307–308.5 (March lows). A close below $321 would open $315.",
+   "zh": "$343 的 10月1日低点和 $335 区域（9月16日、10月15日低点）失守并转为阻力。阻力为 $334.6–335.8，其次 $343–346（10月1日低点、5 日均线）和 $355–357（10 日和 30 日均线）。支撑为 $321–324（2025年12月17日和 10月10日低点），其次 $314–316（1月23日和 2月17日低点）和 $307–308.5（3月低点）。若收盘跌破 $321，下一目标看 $315。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    335,
+    {
+     "en": "Sep 16 and Oct 15 lows ($334.6–335.8), now resistance",
+     "zh": "9月16日及10月15日低点（$334.6–335.8），转为阻力"
+    }
+   ],
+   [
+    344,
+    {
+     "en": "Oct 1 low and 5-day average ($343.3–346.3)",
+     "zh": "10月1日低点及5日均线（$343.3–346.3）"
+    }
+   ],
+   [
+    356,
+    {
+     "en": "10 and 30-day averages ($355–356.8)",
+     "zh": "10日和30日均线（$355–356.8）"
+    }
+   ]
+  ],
+  "s": [
+   [
+    322.5,
+    {
+     "en": "Dec 17 and Oct 10, 2025 lows ($321.4–324.1)",
+     "zh": "2025年12月17日及10月10日低点（$321.4–324.1）"
+    }
+   ],
+   [
+    315,
+    {
+     "en": "Jan 23 and Feb 17 lows ($314.1–316.3)",
+     "zh": "1月23日及2月17日低点（$314.1–316.3）"
+    }
+   ],
+   [
+    308,
+    {
+     "en": "Mar 2 and Mar 19 lows ($307.2–308.5)",
+     "zh": "3月2日及3月19日低点（$307.2–308.5）"
+    }
+   ]
+  ]
+ }
+}

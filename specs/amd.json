@@ -1,0 +1,697 @@
+{
+ "dir": "amd",
+ "ticker": "AMD",
+ "exchange": "NASDAQ",
+ "name": "Advanced Micro Devices",
+ "shares": 1630600000.0,
+ "beta": "2.45",
+ "snapshot": {
+  "price": "$608.10",
+  "date": "Oct 9, 2026",
+  "mcap": "$992B",
+  "range": "$188–659"
+ },
+ "eyebrow": {
+  "en": "Advanced Micro Devices, Inc. · Common stock · Santa Clara, California",
+  "zh": "超微半导体 · 普通股 · 加州圣克拉拉"
+ },
+ "title": {
+  "en": "The second source <em>everyone wants</em>.",
+  "zh": "人人都要的<em>第二供应商</em>。"
+ },
+ "lede": {
+  "en": "AMD grew revenue 50% to $11.5B last quarter as data center sales more than doubled to 58% of the company. Its Helios racks with MI450 GPUs ship from Q3 to OpenAI, Meta, Anthropic, Microsoft and Oracle, and management expects data center revenue to more than double again in 2027.",
+  "zh": "AMD 上季营收增 50% 至 115 亿美元，数据中心收入翻倍以上，占公司 58%。搭载 MI450 GPU 的 Helios 机架自 Q3 起交付 OpenAI、Meta、Anthropic、微软与甲骨文，管理层预计 2027 年数据中心收入将再翻倍以上。"
+ },
+ "valuation": {
+  "k": {
+   "en": "P/E",
+   "zh": "市盈率"
+  },
+  "v": "~92×",
+  "s": {
+   "en": "Q2 non-GAAP EPS $1.66 × 4",
+   "zh": "Q2 非GAAP每股 $1.66 × 4"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q3 2026 guide",
+   "zh": "2026 Q3 指引"
+  },
+  "v": "$13.0B",
+  "s": {
+   "en": "±$300M · +41% YoY · GM ~56%",
+   "zh": "±3 亿 · 同比 +41% · 毛利率约 56%"
+  }
+ },
+ "earnings": {
+  "v": "Nov 3",
+  "s": {
+   "en": "Q3 2026 · expected, after close",
+   "zh": "2026 第三季 · 预计，盘后"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. The stock more than tripled from its 52-week low of about $188.",
+  "zh": "每日收盘价与50日均线。股价较52周低点约 $188 上涨逾三倍。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with gross margin on the right axis. Q2 2025 includes an $800M MI308 export-control charge. The last bar is guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为毛利率。2025 年第二季含 8 亿美元 MI308 出口管制费用。最后一根柱为指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q2 2026",
+    "zh": "2026 Q2"
+   },
+   "v": "$11.5B",
+   "s": {
+    "en": "+50% YoY · record",
+    "zh": "同比 +50% · 创纪录"
+   }
+  },
+  {
+   "k": {
+    "en": "Data center",
+    "zh": "数据中心"
+   },
+   "v": "$6.7B",
+   "s": {
+    "en": "+107% · 58% of revenue",
+    "zh": "+107% · 占营收 58%"
+   }
+  },
+  {
+   "k": {
+    "en": "Gross margin",
+    "zh": "毛利率"
+   },
+   "v": "~56%",
+   "s": {
+    "en": "non-GAAP · Q3 guided flat",
+    "zh": "非GAAP · Q3 指引持平"
+   }
+  },
+  {
+   "k": {
+    "en": "Q2 EPS",
+    "zh": "Q2 每股收益"
+   },
+   "v": "$1.66",
+   "s": {
+    "en": "non-GAAP · GAAP $1.38",
+    "zh": "非GAAP · GAAP $1.38"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Helios customers",
+    "zh": "Helios 客户"
+   },
+   "p": {
+    "en": "OpenAI and Meta have up-to-6 GW deals each, Anthropic up to 2 GW of MI450 from the first half of 2027, and Oracle an initial 50,000-GPU cluster.",
+    "zh": "OpenAI 与 Meta 各有最多 6 吉瓦协议，Anthropic 自 2027 上半年起最多 2 吉瓦 MI450，甲骨文首批 5 万颗 GPU 集群。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Server CPUs",
+    "zh": "服务器 CPU"
+   },
+   "p": {
+    "en": "EPYC revenue grew more than 70% with a fifth straight record server CPU quarter.",
+    "zh": "EPYC 收入增逾 70%，服务器 CPU 连续第五季创纪录。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Margins not expanding",
+    "zh": "毛利率未提升"
+   },
+   "p": {
+    "en": "Q3 gross margin is guided flat at about 56% even as revenue jumps; AI GPUs carry lower margins than the corporate average.",
+    "zh": "尽管营收大增，Q3 毛利率指引持平约 56%；AI GPU 毛利率低于公司平均。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Customer deals and dilution",
+    "zh": "客户协议与稀释"
+   },
+   "p": {
+    "en": "OpenAI and Meta received warrants for 160M shares each, AMD may invest up to $5B in Anthropic, and purchase commitments rose to $30.3B.",
+    "zh": "OpenAI 与 Meta 各获 1.6 亿股认股权证，AMD 可能向 Anthropic 投资最多 50 亿美元，采购承诺增至 303 亿。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Nov 3, 2026",
+   "h": {
+    "en": "Q3 2026 earnings (expected)",
+    "zh": "2026 第三季财报（预计）"
+   },
+   "p": {
+    "en": "Guide: about $13.0B ±$0.3B revenue, ~56% non-GAAP gross margin.",
+    "zh": "指引：营收约 130 亿 ±3 亿美元，非GAAP毛利率约 56%。"
+   }
+  },
+  {
+   "date": "Q4 2026",
+   "h": {
+    "en": "Helios volume ramp",
+    "zh": "Helios 放量"
+   },
+   "p": {
+    "en": "Shipments start late in Q3 and grow substantially in Q4.",
+    "zh": "Q3 末开始出货，Q4 大幅增长。"
+   }
+  },
+  {
+   "date": "H1 2027",
+   "h": {
+    "en": "Anthropic deployment",
+    "zh": "Anthropic 部署"
+   },
+   "p": {
+    "en": "First gigawatt of MI450 for Anthropic begins.",
+    "zh": "Anthropic 首个吉瓦 MI450 开始部署。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q2 2026 call: Helios and Q3 guide",
+   "https://zacks.com/stock/news/2968659/amd-q2-earnings-call-points-to-faster-data-center-growth"
+  ],
+  [
+   "Q2 2026 filings and customer deals",
+   "https://sec-api.io/insights/financial-analysis-of-amd-q2-2026-filings-and-scenarios-to-2029"
+  ],
+  [
+   "Q2 2026 segment detail",
+   "https://corevaluequest.com/2026/10/01/amd-2q26-from-pc-to-data-centers"
+  ],
+  [
+   "$4.75B bond sale",
+   "https://fool.com/investing/2026/08/15/amd-just-borrowed-475-billion-more-than-triple-its"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/amd/financials/?p=quarterly"
+  ],
+  [
+   "Price, market cap, beta and earnings date: Financial Modeling Prep, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/AMD"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Advanced Micro Devices, Inc..",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Advanced Micro Devices, Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q3 2021",
+   "Sep 2021",
+   4313,
+   48.37,
+   22.17,
+   0.75
+  ],
+  [
+   "Q4 2021",
+   "Dec 2021",
+   4826,
+   50.27,
+   24.33,
+   0.79
+  ],
+  [
+   "Q1 2022",
+   "Mar 2022",
+   5887,
+   51.03,
+   16.15,
+   0.56
+  ],
+  [
+   "Q2 2022",
+   "Jun 2022",
+   6550,
+   52.44,
+   8.03,
+   0.27
+  ],
+  [
+   "Q3 2022",
+   "Sep 2022",
+   5565,
+   49.7,
+   -1.15,
+   0.04
+  ],
+  [
+   "Q4 2022",
+   "Dec 2022",
+   5599,
+   50.83,
+   -2.66,
+   0.01
+  ],
+  [
+   "Q1 2023",
+   "Mar 2023",
+   5353,
+   49.77,
+   -2.71,
+   -0.09
+  ],
+  [
+   "Q2 2023",
+   "Jun 2023",
+   5359,
+   49.54,
+   -0.37,
+   0.02
+  ],
+  [
+   "Q3 2023",
+   "Sep 2023",
+   5800,
+   50.98,
+   3.86,
+   0.18
+  ],
+  [
+   "Q4 2023",
+   "Dec 2023",
+   6168,
+   50.68,
+   5.54,
+   0.41
+  ],
+  [
+   "Q1 2024",
+   "Mar 2024",
+   5473,
+   50.98,
+   0.66,
+   0.07
+  ],
+  [
+   "Q2 2024",
+   "Jun 2024",
+   5835,
+   53.04,
+   4.61,
+   0.16
+  ],
+  [
+   "Q3 2024",
+   "Sep 2024",
+   6819,
+   53.56,
+   10.62,
+   0.47
+  ],
+  [
+   "Q4 2024",
+   "Dec 2024",
+   7658,
+   53.98,
+   13.8,
+   0.29
+  ],
+  [
+   "Q1 2025",
+   "Mar 2025",
+   7438,
+   53.6,
+   10.84,
+   0.44
+  ],
+  [
+   "Q2 2025",
+   "Jun 2025",
+   7685,
+   43.19,
+   -1.74,
+   0.53
+  ],
+  [
+   "Q3 2025",
+   "Sep 2025",
+   9246,
+   54.51,
+   13.74,
+   0.75
+  ],
+  [
+   "Q4 2025",
+   "Dec 2025",
+   10270,
+   56.84,
+   17.06,
+   0.92
+  ],
+  [
+   "Q1 2026",
+   "Mar 2026",
+   10253,
+   55.37,
+   14.4,
+   0.84
+  ],
+  [
+   "Q2 2026",
+   "Jun 2026",
+   11536,
+   56.03,
+   17.25,
+   1.39
+  ]
+ ],
+ "guide": [
+  "Q3 2026e",
+  13000,
+  "Sep 2026 · guidance midpoint",
+  "2026年9月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q3 2021 to Q2 2026. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 2021 年第三季至 2026 年第二季共 20 个季度。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q3 2021",
+    "Sep 2021",
+    849,
+    85,
+    764
+   ],
+   [
+    "Q4 2021",
+    "Dec 2021",
+    822,
+    86,
+    736
+   ],
+   [
+    "Q1 2022",
+    "Mar 2022",
+    995,
+    71,
+    924
+   ],
+   [
+    "Q2 2022",
+    "Jun 2022",
+    1038,
+    132,
+    906
+   ],
+   [
+    "Q3 2022",
+    "Sep 2022",
+    965,
+    123,
+    842
+   ],
+   [
+    "Q4 2022",
+    "Dec 2022",
+    567,
+    124,
+    443
+   ],
+   [
+    "Q1 2023",
+    "Mar 2023",
+    486,
+    158,
+    328
+   ],
+   [
+    "Q2 2023",
+    "Jun 2023",
+    379,
+    125,
+    254
+   ],
+   [
+    "Q3 2023",
+    "Sep 2023",
+    421,
+    124,
+    297
+   ],
+   [
+    "Q4 2023",
+    "Dec 2023",
+    381,
+    139,
+    242
+   ],
+   [
+    "Q1 2024",
+    "Mar 2024",
+    521,
+    142,
+    379
+   ],
+   [
+    "Q2 2024",
+    "Jun 2024",
+    593,
+    154,
+    439
+   ],
+   [
+    "Q3 2024",
+    "Sep 2024",
+    628,
+    132,
+    496
+   ],
+   [
+    "Q4 2024",
+    "Dec 2024",
+    1299,
+    208,
+    1091
+   ],
+   [
+    "Q1 2025",
+    "Mar 2025",
+    939,
+    212,
+    727
+   ],
+   [
+    "Q2 2025",
+    "Jun 2025",
+    1462,
+    282,
+    1180
+   ],
+   [
+    "Q3 2025",
+    "Sep 2025",
+    2159,
+    258,
+    1901
+   ],
+   [
+    "Q4 2025",
+    "Dec 2025",
+    2600,
+    222,
+    2378
+   ],
+   [
+    "Q1 2026",
+    "Mar 2026",
+    2955,
+    389,
+    2566
+   ],
+   [
+    "Q2 2026",
+    "Jun 2026",
+    2366,
+    808,
+    1558
+   ]
+  ],
+  "est": [
+   [
+    "Q3 2026",
+    "Sep 2026",
+    2800,
+    600,
+    2200
+   ],
+   [
+    "Q4 2026",
+    "Dec 2026",
+    3300,
+    650,
+    2650
+   ],
+   [
+    "Q1 2027",
+    "Mar 2027",
+    3000,
+    700,
+    2300
+   ],
+   [
+    "Q2 2027",
+    "Jun 2027",
+    3500,
+    700,
+    2800
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & ST investments",
+    "zh": "现金及短期投资"
+   },
+   "v": "$13.1B",
+   "s": {
+    "en": "Jun 2026 · before $4.75B bonds",
+    "zh": "2026年6月 · 未计 47.5 亿债券"
+   }
+  },
+  "read": [
+   {
+    "en": "AMD generates cash every quarter, but it was modest ($0.2–1.1B a quarter) through 2023 and 2024. AI GPUs and server CPUs changed that: the last four quarters produced about $8.4B. Q2's $1.56B dipped as capex doubled to $808M for the Helios ramp.",
+    "zh": "AMD 每季都有正自由现金流，但 2023–2024 年规模不大（每季 2–11 亿美元）。AI GPU 与服务器 CPU 改变了局面：近四季合计约 84 亿。Q2 因 Helios 放量、资本开支翻倍至 8.08 亿美元，自由现金流降至 15.6 亿。"
+   },
+   {
+    "en": "With Q3 guided to $13B and Helios ramping in Q4, I expect $2.2–2.8B a quarter, about $10B over four quarters. Inventory and customer commitments for rack-scale systems could make individual quarters lumpy.",
+    "zh": "Q3 指引 130 亿美元、Q4 Helios 放量，我预计每季 22–28 亿美元，四季合计约 100 亿。机架级系统的库存与客户承诺可能使单季波动较大。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Supply commitments",
+     "zh": "供应承诺"
+    },
+    "p": {
+     "en": "Unconditional purchase commitments rose to $30.3B, $17.4B of it due in the rest of 2026.",
+     "zh": "无条件采购承诺增至 303 亿美元，其中 174 亿于 2026 年余下时间到期。"
+    }
+   },
+   {
+    "h": {
+     "en": "Anthropic investment",
+     "zh": "投资 Anthropic"
+    },
+    "p": {
+     "en": "Up to $5B, tied to deployment milestones.",
+     "zh": "最多 50 亿美元，与部署里程碑挂钩。"
+    }
+   },
+   {
+    "h": {
+     "en": "Buybacks",
+     "zh": "回购"
+    },
+    "p": {
+     "en": "$0.2–0.5B a quarter recently.",
+     "zh": "近期每季 2–5 亿美元。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "Data center growth",
+     "zh": "数据中心增长"
+    },
+    "p": {
+     "en": "Data center revenue is expected to more than double in 2027.",
+     "zh": "预计 2027 年数据中心收入翻倍以上。"
+    }
+   },
+   {
+    "h": {
+     "en": "New bonds",
+     "zh": "新债"
+    },
+    "p": {
+     "en": "$4.75B of notes sold in August, lifting debt to about $8B.",
+     "zh": "8月发行 47.5 亿美元票据，债务增至约 80 亿。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & ST investments, Jun 2026",
+     "zh": "2026年6月现金及短期投资"
+    },
+    13100
+   ],
+   [
+    {
+     "en": "August bond sale",
+     "zh": "8月发债"
+    },
+    4750
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    9950
+   ],
+   [
+    {
+     "en": "Buybacks (~$0.3B a quarter)",
+     "zh": "回购（每季约3亿）"
+    },
+    -1200
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash & ST investments, Jun 2027 (est.)",
+   "zh": "2027年6月现金及短期投资（估）"
+  },
+  "bridgeNote": {
+   "en": "Excludes the up-to-$5B Anthropic investment and any debt repayment.",
+   "zh": "未计入最多 50 亿美元的 Anthropic 投资及偿债。"
+  },
+  "extraNote": {
+   "en": "Q2 2025 operating cash flow and capex are from AMD's release ($1.5B continuing operations, $1.18B free cash flow).",
+   "zh": "2025 年第二季经营现金流与资本开支取自 AMD 新闻稿（持续经营 15 亿美元，自由现金流 11.8 亿）。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/amd/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Q2 2026 cash and commitments",
+    "https://linevestnews.com/article/2026-09-19-advanced-micro-devices-amd-q2-fy2026-commitments-mount"
+   ],
+   [
+    "Q2 2025 free cash flow",
+    "https://247wallst.com/companies/amd/earnings/2025/Q2"
+   ]
+  ]
+ }
+}

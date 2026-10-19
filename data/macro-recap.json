@@ -1,0 +1,36 @@
+{
+ "session": "2026-10-16",
+ "asof": "Fri Oct 16, 2026",
+ "headline": "Oil back above $100 while bonds keep their haven rally; French yields jump again",
+ "summary": "Oil was the day's big mover, rallying 3.5% in the afternoon on supply risk while equities sold off. Bonds held on to their best week in four months: Treasuries ended the day little changed and the 2-year dipped, while European yields edged up from five-week lows, led by France. Gold stayed boxed in its range and silver lagged.",
+ "drivers": [
+  ["Oil supply shock", "Brent closed at $109.86, its highest since May 19, on Strait of Hormuz/Iran risk, Ukrainian strikes on Russian refineries and an 8.6M-barrel US crude draw. IEA and US SPR releases have not capped prices, which feeds straight into inflation expectations."],
+  ["Haven bid beats hot inflation", "September CPI (3.7%) and a four-year-high PPI pushed the US 10-year to 5.33% on Wednesday, but the AI-credit sell-off then sent money into bonds. US yields finished the week 6–17bp lower and global bonds had their best week in four months."],
+  ["Central banks on hold, for now", "Fed Chair Warsh gave no new signal, and odds of an October hike slipped to the mid-teens. Markets expect the ECB to hold on Oct 29 with a December hike largely priced, as euro-area inflation runs at 3.8%."],
+  ["France's fiscal premium", "The 10-year OAT rose about 7bp to 4.85%, near 20-year highs, taking its spread over Bunds back to about 143bp (it hit nearly 160bp on Oct 2). The 2027 budget fight continues, and the Bank of France said conditions for ECB support are not met."]
+ ],
+ "rows": {
+  "oil": "First close above $100 in a month and about +10% on the week; supply risk is outweighing emergency stock releases.",
+  "gold": "Boxed in a ~$4,075–4,220 range: a softer dollar and haven demand offset by hot inflation data and Fed-hike risk.",
+  "silver": "Down about 6% on the week, lagging gold as it trades more like a risk and industrial asset; gold/silver ratio near 73.",
+  "us2y": "Front end rallied as Warsh gave no hawkish push and October hike odds faded.",
+  "us5y": "Wednesday's post-CPI spike has fully reversed; down about 13bp on the week.",
+  "us10y": "Back near 5.09% after touching 5.33% on Wednesday; 2s10s curve about 35bp.",
+  "us30y": "Flat on the day but the week's biggest faller, well off last week's 24-year high of 5.73%.",
+  "de2y": "Steady around 3.07%; an ECB hold on Oct 29 is the base case, with December live.",
+  "de5y": "Edged up with global yields as European stocks recovered during the session.",
+  "de10y": "Up ~2bp to 3.43% from Thursday's five-week low of 3.35%; still below the late-September 3.65% peak.",
+  "de30y": "Long end steady near 3.80%; the Bund curve barely moved.",
+  "fr2y": "Rose more than Bunds as the French risk premium crept back into the front end.",
+  "fr5y": "Up ~3bp; France underperformed Germany across the whole curve.",
+  "fr10y": "Jumped ~7bp to 4.85%, near 20-year highs; spread to Bunds back to ~143bp.",
+  "fr30y": "Up ~5bp to 5.41%; long French debt carries the heaviest fiscal premium."
+ },
+ "watch": "Next: weekend oil headlines (Iran/Hormuz), the ECB on Oct 29 and the Fed's late-October decision, US data and auctions, and whether the OAT–Bund spread pushes back toward 150bp.",
+ "sources": [
+  ["Reuters via Kitco (gold)", "https://www.kitco.com/news/off-the-wire/2026-10-16/gold-set-weekly-drop-traders-assess-fed-signals"],
+  ["Reuters (euro zone bonds)", "https://www.devdiscourse.com/article/international/3993624-euro-zone-bond-yields-inch-up-after-safe-haven-rally"],
+  ["Investopedia (oil, yields)", "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10162026-12176848"],
+  ["Le Monde (France)", "https://www.lemonde.fr/en/economy/article/2026/10/16/conditions-for-eu-bank-intervention-not-met-in-french-government-bond-yields-surge-bank-of-france-head-says_6758679_19.html"]
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "session": "2026-10-16",
+ "asof": "Fri Oct 16, 2026",
+ "horizon": "1–2 weeks",
+ "headline": "Dollar snaps a four-week winning run as Fed hike bets fade; franc and pound lead, rupiah slides",
+ "summary": "The dollar index fell about 0.35% on the week to near 101.9, days after an 18-month high close to 103, as Fed Chair Warsh gave no push for an October hike and the AI-led equity sell-off sent money into Treasuries. Haven and policy-backed currencies led (franc, sterling, rupee); growth- and flow-sensitive ones lagged, with the Aussie at a three-month low and the rupiah near its record low.",
+ "drivers": [
+  [
+   "Fed hike bets fade",
+   "Hot CPI and PPI lifted the dollar mid-week, but Warsh said he does not prejudge meetings and October hike odds fell to about 15% from over 25%. The US 10-year had its biggest weekly fall in more than a year."
+  ],
+  [
+   "The AI wobble turns dollar-negative",
+   "Investors were long dollars on the AI-driven US growth story, and the chip sell-off forced an unwind: the euro ended a five-week losing run from a 17-month low, and the won rallied as foreigners returned to Seoul."
+  ],
+  [
+   "Policy walls across Asia",
+   "Tokyo threatened intervention near 159, the RBI curbed dollar demand to lift the rupee off its record low, the PBOC kept slowing the yuan's rise, and Bank Indonesia defended the rupiah after MSCI's warning."
+  ]
+ ],
+ "view": [
+  "My dollar view:",
+  "Tactically weaker into the Fed (Oct 28) and BoJ (Oct 29–30): crowded long-dollar positions are being unwound and rates have stopped helping. But 3.7% CPI and $100 oil keep a December Fed hike alive, so I expect a 1–2% dollar pullback, not a trend change. Fade the dollar against the yen, franc and euro; stay long it against the Aussie and the rupiah."
+ ],
+ "ideas": [
+  [
+   "usdjpy",
+   "Best risk/reward: Tokyo's intervention line sits around 160 and the BoJ is set to signal a December hike, so the upside is capped. About 2:1 from 158.75."
+  ],
+  [
+   "audusd",
+   "RBA hikes are now priced out after the jobs shock while the Fed still carries hike risk; sell bounces into 0.6990–0.7020."
+  ],
+  [
+   "usdidr",
+   "MSCI's 'standalone' warning means forced index selling; Bank Indonesia can slow outflows but probably not stop a test of the 18,190 record."
+  ]
+ ],
+ "rows": {
+  "eurusd": {
+   "note": "Ended a five-week losing run, bouncing from Wednesday's 17-month low near 1.115 as dollar longs were cut.",
+   "view": {
+    "dir": "up",
+    "call": "Buy dips toward 1.1180; a priced-in December ECB hike gives support.",
+    "target": 1.134,
+    "stop": 1.114
+   }
+  },
+  "gbpusd": {
+   "note": "Led the majors this week; UK GDP surprised with 0.1% growth in August.",
+   "view": {
+    "dir": "range",
+    "call": "1.3200–1.3400; fade the top unless it closes above 1.3400, which opens 1.3480."
+   }
+  },
+  "audusd": {
+   "note": "Hit 0.6894, a three-month low, on Thursday's jobs miss (−39,300; unemployment 4.7%), then bounced with risk.",
+   "view": {
+    "dir": "down",
+    "call": "Sell 0.6990–0.7020.",
+    "target": 0.686,
+    "stop": 0.707
+   }
+  },
+  "usdjpy": {
+   "note": "Flat near 158 after the finance minister's warning knocked it off 158.95; Ueda signalled more BoJ hikes.",
+   "view": {
+    "dir": "down",
+    "call": "Sell 158.50–159.00.",
+    "target": 156.8,
+    "stop": 159.6
+   }
+  },
+  "usdchf": {
+   "note": "The franc gained more than 1.4% in two sessions on haven demand and the view that the SNB stays at zero, not below.",
+   "view": {
+    "dir": "down",
+    "call": "Stretched short term; sell bounces toward 0.8300.",
+    "target": 0.818,
+    "stop": 0.836
+   }
+  },
+  "usdcad": {
+   "note": "Loonie firm on $100 oil and Macklem's warning that energy inflation is harder to look through; well off last week's 1.43 area.",
+   "view": {
+    "dir": "down",
+    "call": "Sell 1.4180–1.4220 while WTI holds above $95.",
+    "target": 1.405,
+    "stop": 1.43
+   }
+  },
+  "usdcnh": {
+   "note": "Yuan held near 6.69, its strongest since July 2022; Friday's 6.7220 fix was again weaker than estimates.",
+   "view": {
+    "dir": "down",
+    "call": "Slow grind lower; the PBOC sets the pace.",
+    "target": 6.66,
+    "stop": 6.715
+   }
+  },
+  "usdhkd": {
+   "note": "Pinned near 7.847, just shy of the 7.85 weak-side limit, with the aggregate balance near HK$54bn.",
+   "view": {
+    "dir": "range",
+    "call": "7.84–7.85, no trade; an HKMA defence would drain cash and lift HIBOR fast."
+   }
+  },
+  "usdsgd": {
+   "note": "Eased back toward 1.282 with the broad dollar after MAS's surprise hold on Oct 14; the S$NEER sits about 1.65% above its band midpoint.",
+   "view": {
+    "dir": "down",
+    "call": "Mildly lower, tracking the dollar; SGD is low-beta.",
+    "target": 1.276,
+    "stop": 1.287
+   }
+  },
+  "usdkrw": {
+   "note": "Won firmed 13.2 to 1,331.4 at the Seoul close as foreigners turned buyers after selling over 18 trillion won in eight sessions.",
+   "view": {
+    "dir": "down",
+    "call": "Sell rallies toward 1,345; needs chip stocks to stabilise.",
+    "target": 1315,
+    "stop": 1360
+   }
+  },
+  "usdidr": {
+   "note": "Rupiah slid past 18,000 to 18,070 as Jakarta stocks fell 11% on MSCI's downgrade warning; Bank Indonesia stepped in.",
+   "view": {
+    "dir": "up",
+    "call": "Stay long dollar; buy dips toward 17,950.",
+    "target": 18250,
+    "stop": 17850
+   }
+  },
+  "usdinr": {
+   "note": "Sixth straight rupee gain to about 94.9, its best week since March (about +2%), after RBI curbs on dollar demand.",
+   "view": {
+    "dir": "range",
+    "call": "94.50–95.80; the RBI wants order, not a rally, and oil is the risk."
+   }
+  },
+  "eurjpy": {
+   "note": "Little changed near 177.5; both currencies are exposed to energy costs and their central banks' next move.",
+   "view": {
+    "dir": "range",
+    "call": "176–179; the BoJ on Oct 30 is the event risk."
+   }
+  },
+  "cnhjpy": {
+   "note": "Near 23.6; yuan strength is capped by the PBOC's brake on one side and Tokyo's intervention line on the other.",
+   "view": {
+    "dir": "range",
+    "call": "23.3–23.8; no edge."
+   }
+  }
+ },
+ "watch": "Next: the Fed on Oct 28 (a hike would undo this week's dollar drop), the ECB and BoJ on Oct 29–30, the RBA on Nov 3, follow-through on MSCI's Indonesia review, and any HKMA move to defend 7.85.",
+ "sources": [
+  [
+   "Reuters (dollar)",
+   "https://uk.marketscreener.com/news/dollar-heads-for-weekly-loss-as-fed-hike-bets-fade-ai-jitters-linger-ce785cdadf89f42d"
+  ],
+  [
+   "Bloomberg (euro)",
+   "https://bloomberg.com/news/articles/2026-10-16/euro-set-to-end-five-week-losing-run-as-warsh-remarks-hit-dollar"
+  ],
+  [
+   "Reuters (rupiah)",
+   "https://thestar.com.my/business/business-news/2026/10/16/jakarta-stocks-plunge-11-as-msci-set-to-drop-indonesia-from-indexes"
+  ],
+  [
+   "Business Times (rupee)",
+   "https://businesstimes.com.sg/international/renewed-policy-support-lifts-rupee-record-low-brink-best-week-march"
+  ],
+  [
+   "Yonhap (won)",
+   "https://en.yna.co.kr/view/AEN20261016006452320"
+  ],
+  [
+   "OCBC via FXStreet (SGD)",
+   "https://fxstreet.com/news/singapore-dollar-range-risks-against-us-dollar-after-mas-hold-ocbc-202610151700"
+  ]
+ ]
+}

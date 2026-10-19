@@ -1,0 +1,521 @@
+{
+ "dir": "spcx",
+ "ticker": "SPCX",
+ "exchange": "NASDAQ",
+ "name": "SpaceX",
+ "shares": 13182000000.0,
+ "beta": "n/a",
+ "snapshot": {
+  "price": "$162.57",
+  "date": "Oct 9, 2026",
+  "mcap": "$2.14T",
+  "range": "$105–226"
+ },
+ "ttm": {
+  "v": "~$23.0B",
+  "en": "FY25 $18.7B + 1H26 growth",
+  "zh": "FY25 187 亿 + 2026 上半年增量"
+ },
+ "eyebrow": {
+  "en": "Space Exploration Technologies Corp. · Class A · Starbase, Texas",
+  "zh": "SpaceX · A类股 · 德州星港"
+ },
+ "title": {
+  "en": "Starlink pays the bills, <em>AI eats the cash</em>.",
+  "zh": "星链负责赚钱，<em>AI 负责花钱</em>。"
+ },
+ "lede": {
+  "en": "SpaceX listed in June in the largest IPO ever, raising about $86B at $135 a share. Q2 revenue grew 92% to $7.8B. Starlink, with 12M subscribers, makes the profits; the AI segment (the former xAI) grows fastest and spent $15.8B on compute in one quarter. Elon Musk holds about 82% of the votes.",
+  "zh": "SpaceX 于6月以史上最大 IPO 上市，以每股 $135 募资约 860 亿美元。第二季营收增 92% 至 78 亿美元。拥有 1200 万用户的星链贡献利润；AI 板块（原 xAI）增长最快，单季算力投入 158 亿美元。马斯克持有约 82% 投票权。"
+ },
+ "valuation": {
+  "k": {
+   "en": "Price / sales",
+   "zh": "市销率"
+  },
+  "v": "~93×",
+  "s": {
+   "en": "on ~$23B trailing revenue",
+   "zh": "按近12月约 230 亿营收"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "IPO price",
+   "zh": "IPO 价格"
+  },
+  "v": "$135",
+  "s": {
+   "en": "Jun 11, 2026 · first close $160.95",
+   "zh": "2026年6月11日 · 首日收盘 $160.95"
+  }
+ },
+ "earnings": {
+  "v": "Early Nov",
+  "s": {
+   "en": "Q3 2026 · date not yet announced",
+   "zh": "2026 第三季 · 日期未公布"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes since the June 12 listing, with the 50-day average. One-year and 200-day figures fill in as history builds.",
+  "zh": "自6月12日上市以来的每日收盘价与50日均线。一年期与200日数据将随历史累积补齐。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with gross margin on the right axis. SpaceX has published quarterly results only for the first two quarters of 2025 and 2026 (in its IPO filing and first 10-Q); full-year 2025 revenue was $18.7B. There is no guidance bar yet.",
+  "zh": "营收单位为百万美元，右轴为毛利率。SpaceX 仅公布了 2025 与 2026 年前两季的季度业绩（来自上市申报及首份10-Q）；2025 全年营收 187 亿美元。暂无指引。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q2 2026",
+    "zh": "2026 Q2"
+   },
+   "v": "$7.81B",
+   "s": {
+    "en": "+92% YoY · first public report",
+    "zh": "同比 +92% · 上市后首份财报"
+   }
+  },
+  {
+   "k": {
+    "en": "Starlink",
+    "zh": "星链"
+   },
+   "v": "$4.29B",
+   "s": {
+    "en": "+66% · $1.66B operating income",
+    "zh": "+66% · 营业利润 16.6 亿"
+   }
+  },
+  {
+   "k": {
+    "en": "AI",
+    "zh": "AI"
+   },
+   "v": "$2.56B",
+   "s": {
+    "en": "+247% · −$1.26B operating loss",
+    "zh": "+247% · 营业亏损 12.6 亿"
+   }
+  },
+  {
+   "k": {
+    "en": "Space",
+    "zh": "航天"
+   },
+   "v": "$962M",
+   "s": {
+    "en": "+29% · −$542M operating loss",
+    "zh": "+29% · 营业亏损 5.42 亿"
+   }
+  },
+  {
+   "k": {
+    "en": "Adj. EBITDA",
+    "zh": "调整后EBITDA"
+   },
+   "v": "$3.54B",
+   "s": {
+    "en": "+191% YoY · 45% margin",
+    "zh": "同比 +191% · 利润率 45%"
+   }
+  },
+  {
+   "k": {
+    "en": "Subscribers",
+    "zh": "用户数"
+   },
+   "v": "12.0M",
+   "s": {
+    "en": "Starlink, 2× YoY · +1.7M in Q2",
+    "zh": "星链，同比翻倍 · Q2 新增 170 万"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Starlink",
+    "zh": "星链"
+   },
+   "p": {
+    "en": "Subscribers doubled to 12M with ARPU steady at about $66 a month. Connectivity earns $1.66B a quarter and funds the rest of the company.",
+    "zh": "用户翻倍至 1200 万，每用户月均收入稳定在约 $66。连接业务每季营业利润 16.6 亿美元，支撑公司其他业务。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Compute leasing",
+    "zh": "算力租赁"
+   },
+   "p": {
+    "en": "AI revenue jumped 247% on compute deals with Anthropic and Google, with another $6.7B of cloud revenue under contract over six months from October. Management targets a $100B annualized revenue run rate by December.",
+    "zh": "AI 收入因与 Anthropic、Google 的算力合约增长 247%，另有自10月起六个月 67 亿美元云服务收入已签约。管理层目标在12月前达到 1000 亿美元年化收入。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Capex",
+    "zh": "资本开支"
+   },
+   "p": {
+    "en": "Capex was $18.4B in Q2, 2.4× revenue, and the CFO expects similar spending for two more quarters. He says AI compute pays back in under a year; the AI segment still lost $1.26B.",
+    "zh": "第二季资本开支 184 亿美元，为营收 2.4 倍，CFO 预计未来两季相近。他称 AI 算力回本不到一年，但 AI 板块仍亏损 12.6 亿。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Governance",
+    "zh": "公司治理"
+   },
+   "p": {
+    "en": "Musk owns about 42% of the shares but controls about 82% of the votes through super-voting stock. SpaceX is not in the S&P 500.",
+    "zh": "马斯克持股约 42%，通过超级投票权控制约 82% 投票权。SpaceX 未纳入标普500。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Launch still loses money",
+    "zh": "发射业务仍亏损"
+   },
+   "p": {
+    "en": "Space revenue of $962M came with a $542M operating loss. Starship progress drives both costs and the long-term story.",
+    "zh": "航天收入 9.62 亿美元，营业亏损 5.42 亿。星舰进展同时决定成本与长期故事。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Valuation and volatility",
+    "zh": "估值与波动"
+   },
+   "p": {
+    "en": "About $2.1T of market value on roughly $23B of trailing revenue. The stock has traded between about $105 and $226 since June, so position sizing matters.",
+    "zh": "市值约 2.1 万亿美元，近12月营收约 230 亿。自6月以来股价在约 $105 至 $226 间波动，仓位控制很重要。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Early Nov 2026",
+   "h": {
+    "en": "Q3 2026 earnings",
+    "zh": "2026 第三季财报"
+   },
+   "p": {
+    "en": "Date not yet announced; Q2 was reported on Aug 4.",
+    "zh": "日期未公布；第二季财报于8月4日发布。"
+   }
+  },
+  {
+   "date": "Oct 2026–Mar 2027",
+   "h": {
+    "en": "$6.7B cloud contract",
+    "zh": "67 亿美元云合约"
+   },
+   "p": {
+    "en": "Six months of contracted cloud services revenue, starting in October.",
+    "zh": "自10月起六个月的已签约云服务收入。"
+   }
+  },
+  {
+   "date": "Dec 2026",
+   "h": {
+    "en": "$100B run-rate target",
+    "zh": "1000 亿年化目标"
+   },
+   "p": {
+    "en": "Management's goal for annualized revenue run rate by December.",
+    "zh": "管理层目标：12月前年化收入达 1000 亿美元。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "SpaceX IPO: listing details",
+   "https://spaceodysseyhub.com/time-machine/moment/2026-06-12-spacex-ipo"
+  ],
+  [
+   "Initial public offering of SpaceX (Wikipedia)",
+   "https://en.wikipedia.org/wiki/Initial_public_offering_of_SpaceX"
+  ],
+  [
+   "Q2 2026 results and segments",
+   "https://kurums.com/spacex-first-earnings-report-analysis"
+  ],
+  [
+   "Q2 2026 capex and cash",
+   "https://tradune.com/earnings/spacex-q2-2026"
+  ],
+  [
+   "Q2 2026 call: capex outlook",
+   "https://www.nextgcomm.com/spacex-q2-earnings/"
+  ],
+  [
+   "Q2 2026 Starlink and AI detail",
+   "https://spaceq.ca/spacex-reports-first-earnings-since-going-public-makes-big-bet-on-ai"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/spcx/financials/?p=quarterly"
+  ],
+  [
+   "Price and market cap: Yahoo Finance and Financial Modeling Prep, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/SPCX"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Space Exploration Technologies Corp..",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Space Exploration Technologies Corp. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q1 2025",
+   "Mar 2025",
+   4067,
+   51.76,
+   1.35,
+   null
+  ],
+  [
+   "Q2 2025",
+   "Jun 2025",
+   4071,
+   43.95,
+   -19.04,
+   null
+  ],
+  [
+   "Q1 2026",
+   "Mar 2026",
+   4694,
+   49.13,
+   -41.63,
+   null
+  ],
+  [
+   "Q2 2026",
+   "Jun 2026",
+   7814,
+   55.27,
+   -1.8,
+   -0.09
+  ]
+ ],
+ "guide": null,
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions. SpaceX has published quarterly cash flows only for the first two quarters of 2025 and 2026, so this covers four quarters, not five years. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元。SpaceX 只公布了 2025 与 2026 年前两季的季度现金流，因此只有四个季度而非五年。浅色柱与斜体行为估算。"
+  },
+  "noTtm": true,
+  "ttmCell": {
+   "k": {
+    "en": "FCF, first half 2026",
+    "zh": "2026 上半年自由现金流"
+   },
+   "v": -25030,
+   "s": {
+    "en": "Q1 + Q2 2026",
+    "zh": "2026 Q1 + Q2"
+   }
+  },
+  "hist": [
+   [
+    "Q1 2025",
+    "Mar 2025",
+    727,
+    4140,
+    -3413
+   ],
+   [
+    "Q2 2025",
+    "Jun 2025",
+    -376,
+    2847,
+    -3223
+   ],
+   [
+    "Q1 2026",
+    "Mar 2026",
+    1047,
+    10114,
+    -9067
+   ],
+   [
+    "Q2 2026",
+    "Jun 2026",
+    2419,
+    18382,
+    -15963
+   ]
+  ],
+  "est": [
+   [
+    "Q3 2026",
+    "Sep 2026",
+    3500,
+    18400,
+    -14900
+   ],
+   [
+    "Q4 2026",
+    "Dec 2026",
+    4500,
+    18400,
+    -13900
+   ],
+   [
+    "Q1 2027",
+    "Mar 2027",
+    5500,
+    16000,
+    -10500
+   ],
+   [
+    "Q2 2027",
+    "Jun 2027",
+    6500,
+    16000,
+    -9500
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & securities",
+    "zh": "现金及证券"
+   },
+   "v": "~$100B",
+   "s": {
+    "en": "Jun 30, 2026 · mostly IPO proceeds",
+    "zh": "2026年6月30日 · 主要为 IPO 所得"
+   }
+  },
+  "read": [
+   {
+    "en": "SpaceX is spending far more than it earns. First-half 2026 operating cash flow was $3.5B against $28.5B of capex, so free cash flow was about −$25B. Starlink alone is solidly profitable; the burn comes from AI compute.",
+    "zh": "SpaceX 的支出远超收入。2026 年上半年经营现金流 35 亿美元，资本开支 285 亿，自由现金流约 −250 亿。星链本身盈利稳健，烧钱来自 AI 算力。"
+   },
+   {
+    "en": "The CFO expects capex to stay near $18.4B for the next two quarters, nearly all of it AI compute. I assume operating cash flow keeps rising as compute leasing and Starlink grow, giving about −$15B in Q3 and −$14B in Q4, then a smaller burn in 2027 if capex eases. That would use about half of the ~$100B cash pile in a year, before any new debt or equity.",
+    "zh": "CFO 预计未来两季资本开支维持在约 184 亿美元，几乎全部用于 AI 算力。我假设随算力租赁与星链增长，经营现金流持续上升，第三季约 −150 亿、第四季约 −140 亿，若 2027 年资本开支放缓则烧钱减少。照此一年将用掉约 1000 亿现金中的一半，未计任何新债或新股。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "AI compute",
+     "zh": "AI 算力"
+    },
+    "p": {
+     "en": "$15.8B of Q2's $18.4B capex went to AI. Management calls it \"almost like a COGS item\" with a payback under a year.",
+     "zh": "第二季 184 亿资本开支中 158 亿投向 AI。管理层称其\"几乎像销售成本\"，回本期不到一年。"
+    }
+   },
+   {
+    "h": {
+     "en": "Starship and launch",
+     "zh": "星舰与发射"
+    },
+    "p": {
+     "en": "The Space segment lost $542M in Q2 and spent $1.17B of capex.",
+     "zh": "第二季航天板块亏损 5.42 亿美元，资本开支 11.7 亿。"
+    }
+   },
+   {
+    "h": {
+     "en": "Starlink network",
+     "zh": "星链网络"
+    },
+    "p": {
+     "en": "Connectivity capex was $1.37B in Q2 for satellites and ground stations.",
+     "zh": "第二季连接业务资本开支 13.7 亿美元，用于卫星与地面站。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "IPO proceeds",
+     "zh": "IPO 所得"
+    },
+    "p": {
+     "en": "About $85.7B net from the June IPO, the largest ever.",
+     "zh": "6月史上最大 IPO 净募资约 857 亿美元。"
+    }
+   },
+   {
+    "h": {
+     "en": "Starlink cash",
+     "zh": "星链现金"
+    },
+    "p": {
+     "en": "Connectivity produced $2.6B of adjusted EBITDA in Q2 on $4.29B of revenue.",
+     "zh": "第二季连接业务营收 42.9 亿美元，调整后 EBITDA 26 亿。"
+    }
+   },
+   {
+    "h": {
+     "en": "Compute contracts",
+     "zh": "算力合约"
+    },
+    "p": {
+     "en": "$6.7B of cloud services revenue is under contract for six months from October, with Anthropic and Google among customers.",
+     "zh": "自10月起六个月 67 亿美元云服务收入已签约，客户包括 Anthropic 与 Google。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & securities, Jun 2026",
+     "zh": "2026年6月现金及证券"
+    },
+    100000
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    -48800
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Cash & securities, Jun 2027 (est.)",
+   "zh": "2027年6月现金及证券（估）"
+  },
+  "bridgeNote": {
+   "en": "Excludes new debt or equity and acquisitions. The cash figure is as reported in coverage of the Q2 release.",
+   "zh": "未计入新债、新股及收购。现金数字取自第二季财报相关报道。"
+  },
+  "extraNote": {
+   "en": "Q3 and Q4 2025 cash flows were not published separately, so trailing four-quarter totals are not shown.",
+   "zh": "2025 年第三、四季现金流未单独公布，因此不显示近四季合计。"
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/spcx/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Q2 2026 capex and cash",
+    "https://tradune.com/earnings/spacex-q2-2026"
+   ],
+   [
+    "Q2 2026 call: capex outlook",
+    "https://www.nextgcomm.com/spacex-q2-earnings/"
+   ],
+   [
+    "Segment capex table",
+    "https://kurums.com/spacex-first-earnings-report-analysis"
+   ]
+  ]
+ }
+}

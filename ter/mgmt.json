@@ -1,0 +1,63 @@
+{
+ "ticker": "TER",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-28",
+ "timing": "amc",
+ "pre_close": 320.65,
+ "react": {
+  "date": "2026-07-29",
+  "close": 319.41,
+  "pct": -0.4
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 325,
+  "pct": 1.4
+ },
+ "review": {
+  "en": [
+   "A second straight record: revenue rose 104% to $1.33B and non-GAAP EPS of $2.47 beat $2.06, driven by testers for AI processors and high-bandwidth memory. CEO Greg Smith said AI drove over 60% of sales, proof of the wafer-to-AI-data-center strategy. The Q3 guide of $1.2–1.3B in revenue and $1.85–2.15 of EPS came in above consensus, with first-half revenue already at $2.6B. Michelle Turner, formerly CFO of L3Harris, has been CFO since November 2025.",
+   "Shares rose 6% after hours and opened near $368, but faded all day in the late-July chip selloff to close flat. The next day they jumped 14.4% as the guide sank in, and they peaked at $443 on Aug 17, 38% above the pre-report close. The September AI-spending scare pulled the stock back to about $329, and it has since recovered to about a quarter above its pre-report price."
+  ],
+  "zh": [
+   "连续第二个季度创纪录：营收增长 104% 至 13.3 亿美元，非 GAAP 每股收益 2.47 美元高于 2.06 美元预期，主要受 AI 处理器与高带宽内存测试机需求推动。CEO 格雷格·史密斯表示 AI 贡献逾 60% 的销售额，印证了「从晶圆到 AI 数据中心」的战略。第三季指引营收 12–13 亿美元、每股收益 1.85–2.15 美元，高于预期；上半年营收已达 26 亿美元。前 L3Harris CFO 米歇尔·特纳自 2025 年 11 月起任 CFO。",
+   "盘后上涨 6%，开盘约 368 美元，但在 7 月下旬芯片抛售中全天回落，收盘持平。次日指引利好发酵，大涨 14.4%，8 月 17 日见顶 443 美元，较财报前收盘高 38%。9 月 AI 开支恐慌令股价回落至约 329 美元，此后回升，目前较财报前高约四分之一。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Greg Smith",
+   "zh": "格雷格·史密斯"
+  },
+  "since": "2023",
+  "bio": {
+   "en": "Joined Teradyne in 2006 in semiconductor test marketing, ran the semiconductor test division from 2016 and the robotics group from 2020. President from 2022 and CEO since February 2023.",
+   "zh": "2006 年加入泰瑞达，从事半导体测试市场工作，2016 年起执掌半导体测试部门，2020 年起负责机器人业务。2022 年任总裁，2023 年 2 月起任 CEO。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Michelle Turner",
+   "zh": "米歇尔·特纳"
+  },
+  "since": "2025",
+  "bio": {
+   "en": "CFO since November 2025, replacing Sanjay Mehta. Previously CFO of defense-technology group L3Harris, with earlier senior finance roles at Johnson & Johnson, BHP Billiton, Raytheon and Honeywell.",
+   "zh": "2025 年 11 月接替桑杰·梅塔出任 CFO。此前任国防科技集团 L3Harris 的 CFO，更早在强生、必和必拓、雷神和霍尼韦尔担任财务要职。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 call transcript",
+   "u": "https://investing.com/news/transcripts/earnings-call-transcript-teradyne-tops-q2-2026-estimates-on-ai-demand-93CH-4820636"
+  },
+  {
+   "t": "CFO appointment",
+   "u": "https://investors.teradyne.com/news-events/press-releases/detail/428/teradyne-announces-chief-financial-officer-transition"
+  }
+ ]
+}

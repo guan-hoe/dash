@@ -1,0 +1,665 @@
+{
+ "dir": "aaoi",
+ "ticker": "AAOI",
+ "exchange": "NASDAQ",
+ "name": "Applied Optoelectronics",
+ "shares": 80240000.0,
+ "beta": "3.84",
+ "snapshot": {
+  "price": "$109.64",
+  "date": "Oct 9, 2026",
+  "mcap": "$8.80B",
+  "range": "$18.50–234"
+ },
+ "eyebrow": {
+  "en": "Applied Optoelectronics, Inc. · Common stock · Sugar Land, Texas",
+  "zh": "Applied Optoelectronics · 普通股 · 德州糖城"
+ },
+ "title": {
+  "en": "Racing to build <em>800G and 1.6T</em> capacity.",
+  "zh": "全力扩建 <em>800G 与 1.6T</em> 产能。"
+ },
+ "lede": {
+  "en": "AOI makes optical transceivers and lasers, now mostly for AI data centers. Revenue rose 86% to a record $192M last quarter and is guided to $255–290M. To meet demand it is building over 1.6M sq ft of factories in Texas, paid for largely by selling new shares.",
+  "zh": "AOI 生产光模块与激光器，现主要供应 AI 数据中心。上季营收增 86% 至创纪录的 1.92 亿美元，本季指引 2.55–2.9 亿。为满足需求，公司在德州兴建逾 160 万平方英尺厂房，资金主要来自增发新股。"
+ },
+ "valuation": {
+  "k": {
+   "en": "Price / sales",
+   "zh": "市销率"
+  },
+  "v": "~15×",
+  "s": {
+   "en": "on $596M trailing revenue",
+   "zh": "按近12月 5.96 亿营收"
+  }
+ },
+ "analysts": {
+  "k": {
+   "en": "Q3 2026 guide",
+   "zh": "2026 Q3 指引"
+  },
+  "v": "$255–290M",
+  "s": {
+   "en": "non-GAAP EPS $0.11–0.26",
+   "zh": "非GAAP每股 $0.11–0.26"
+  }
+ },
+ "earnings": {
+  "v": "Early Nov",
+  "s": {
+   "en": "Q3 2026 · date not yet announced",
+   "zh": "2026 第三季 · 日期未公布"
+  }
+ },
+ "sub_price": {
+  "en": "Daily closes with the 50-day average. The stock went from about $19 to $234 within the year and now sits near $110; beta is about 3.8.",
+  "zh": "每日收盘价与50日均线。一年内股价由约 $19 涨至 $234，现约 $110；贝塔值约 3.8。"
+ },
+ "sub_rev": {
+  "en": "Revenue in US$ millions, with GAAP gross margin on the right axis. Q4 2024 GAAP EPS of −$2.60 reflects a one-time non-cash charge. The last bar is guidance at the midpoint.",
+  "zh": "营收单位为百万美元，右轴为 GAAP 毛利率。2024 年第四季 GAAP 每股 −$2.60 反映一次性非现金费用。最后一根柱为指引中值。"
+ },
+ "rev_cells": [
+  {
+   "k": {
+    "en": "Q2 2026",
+    "zh": "2026 Q2"
+   },
+   "v": "$192M",
+   "s": {
+    "en": "+86% YoY · 5th straight record",
+    "zh": "同比 +86% · 连续第5季创纪录"
+   }
+  },
+  {
+   "k": {
+    "en": "Data center",
+    "zh": "数据中心"
+   },
+   "v": "$108M",
+   "s": {
+    "en": "+140% YoY",
+    "zh": "同比 +140%"
+   }
+  },
+  {
+   "k": {
+    "en": "800G revenue",
+    "zh": "800G 收入"
+   },
+   "v": "$12.8M",
+   "s": {
+    "en": ">10× YoY · ~5× more guided for Q3",
+    "zh": "同比逾10倍 · Q3 指引再增约5倍"
+   }
+  },
+  {
+   "k": {
+    "en": "1.6T orders",
+    "zh": "1.6T 订单"
+   },
+   "v": ">$200M",
+   "s": {
+    "en": "firm; Q4 1.6T revenue $70–80M",
+    "zh": "确定订单；Q4 1.6T 收入 7000–8000 万"
+   }
+  }
+ ],
+ "watch": [
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Hyperscaler 1.6T win",
+    "zh": "云厂商 1.6T 订单"
+   },
+   "p": {
+    "en": "AOI holds more than $200M of firm 1.6T orders and expected to finish qualification with a major hyperscaler, its fourth approved supplier slot.",
+    "zh": "AOI 持有逾 2 亿美元 1.6T 确定订单，预计完成一家大型云厂商认证，成为其第四家合格供应商。"
+   }
+  },
+  {
+   "kind": "plus",
+   "h": {
+    "en": "Capacity ramp",
+    "zh": "产能扩张"
+   },
+   "p": {
+    "en": "800G/1.6T capacity goes from about 200,000 units a month to over 650,000 by end-2026 and 930,000 by end-2027, more than half in Texas.",
+    "zh": "800G/1.6T 月产能将由约 20 万件增至 2026 年底逾 65 万、2027 年底 93 万，半数以上在德州。"
+   }
+  },
+  {
+   "kind": "watch",
+   "h": {
+    "en": "Component shortages",
+    "zh": "零部件短缺"
+   },
+   "p": {
+    "en": "DSP and TIA chip supply, not demand, limits 1.6T shipments; memory shortages cost $20–25M of 100G revenue in Q3.",
+    "zh": "DSP 与 TIA 芯片供应（而非需求）限制 1.6T 出货；内存短缺使 Q3 的 100G 收入减少 2000–2500 万美元。"
+   }
+  },
+  {
+   "kind": "risk",
+   "h": {
+    "en": "Dilution and cash burn",
+    "zh": "稀释与烧钱"
+   },
+   "p": {
+    "en": "Capex was $565M in Q2, funded by $539M of at-the-market share sales. More issuance is likely while the build-out continues.",
+    "zh": "第二季资本开支 5.65 亿美元，由 5.39 亿美元市价增发支持。扩建期间可能继续增发。"
+   }
+  }
+ ],
+ "calendar": [
+  {
+   "date": "Early Nov 2026",
+   "h": {
+    "en": "Q3 2026 earnings",
+    "zh": "2026 第三季财报"
+   },
+   "p": {
+    "en": "Guide: revenue $255–290M, gross margin 29–30.5%, EPS $0.11–0.26.",
+    "zh": "指引：营收 2.55–2.9 亿美元，毛利率 29–30.5%，每股 $0.11–0.26。"
+   }
+  },
+  {
+   "date": "Q4 2026",
+   "h": {
+    "en": "1.6T revenue ramp",
+    "zh": "1.6T 收入放量"
+   },
+   "p": {
+    "en": "Target: $70–80M of 1.6T revenue, limited by component supply.",
+    "zh": "目标：1.6T 收入 7000–8000 万美元，受零部件供应限制。"
+   }
+  },
+  {
+   "date": "Early 2027",
+   "h": {
+    "en": "New Texas plants",
+    "zh": "德州新厂"
+   },
+   "p": {
+    "en": "Pearland and Houston facilities come online.",
+    "zh": "Pearland 与休斯敦工厂投产。"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Q2 2026 call: capacity, 1.6T orders, capex",
+   "https://finance.biggo.com/news/US_AAOI_2026-08-06"
+  ],
+  [
+   "Q2 2026 call highlights",
+   "https://gurufocus.com/news/9015363/applied-optoelectronics-inc-aaoi-q2-2026-earnings-call-highlights-record-revenue-and-aidriven-growth-propel-return-to-profitability"
+  ],
+  [
+   "Q3 2026 guidance",
+   "https://zacks.com/stock/news/2970813/aaoi-q2-earnings-call-focuses-on-capacity-led-800g-ramp"
+  ],
+  [
+   "Quarterly income statement (Stock Analysis)",
+   "https://stockanalysis.com/stocks/aaoi/financials/?p=quarterly"
+  ],
+  [
+   "Price, market cap and beta: Financial Modeling Prep, as of Oct 9, 2026",
+   "https://finance.yahoo.com/quote/AAOI"
+  ]
+ ],
+ "foot": {
+  "en": "Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Applied Optoelectronics, Inc..",
+  "zh": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Applied Optoelectronics, Inc. 无关联。"
+ },
+ "quarters": [
+  [
+   "Q3 2021",
+   "Sep 2021",
+   53.27,
+   15.25,
+   -29.01,
+   -0.58
+  ],
+  [
+   "Q4 2021",
+   "Dec 2021",
+   54.41,
+   14.88,
+   -25.04,
+   -0.54
+  ],
+  [
+   "Q1 2022",
+   "Mar 2022",
+   52.24,
+   17.27,
+   -27.26,
+   -0.58
+  ],
+  [
+   "Q2 2022",
+   "Jun 2022",
+   52.3,
+   16.5,
+   -24.66,
+   -0.52
+  ],
+  [
+   "Q3 2022",
+   "Sep 2022",
+   56.69,
+   17.2,
+   -23.8,
+   -0.56
+  ],
+  [
+   "Q4 2022",
+   "Dec 2022",
+   61.59,
+   10.11,
+   -29.82,
+   -0.71
+  ],
+  [
+   "Q1 2023",
+   "Mar 2023",
+   53.03,
+   17.43,
+   -26.71,
+   -0.56
+  ],
+  [
+   "Q2 2023",
+   "Jun 2023",
+   41.62,
+   18.98,
+   -38.36,
+   -0.57
+  ],
+  [
+   "Q3 2023",
+   "Sep 2023",
+   62.55,
+   32.25,
+   -10.69,
+   -0.27
+  ],
+  [
+   "Q4 2023",
+   "Dec 2023",
+   60.45,
+   35.74,
+   -7.5,
+   -0.38
+  ],
+  [
+   "Q1 2024",
+   "Mar 2024",
+   40.67,
+   18.66,
+   -53.22,
+   -0.6
+  ],
+  [
+   "Q2 2024",
+   "Jun 2024",
+   43.27,
+   22.1,
+   -60.65,
+   -0.66
+  ],
+  [
+   "Q3 2024",
+   "Sep 2024",
+   65.15,
+   24.43,
+   -25.4,
+   -0.42
+  ],
+  [
+   "Q4 2024",
+   "Dec 2024",
+   100.27,
+   28.65,
+   -6.46,
+   -2.6
+  ],
+  [
+   "Q1 2025",
+   "Mar 2025",
+   99.86,
+   30.59,
+   -8.95,
+   -0.18
+  ],
+  [
+   "Q2 2025",
+   "Jun 2025",
+   102.95,
+   30.27,
+   -15.52,
+   -0.16
+  ],
+  [
+   "Q3 2025",
+   "Sep 2025",
+   118.63,
+   28.04,
+   -15.33,
+   -0.28
+  ],
+  [
+   "Q4 2025",
+   "Dec 2025",
+   134.27,
+   31.24,
+   -8.57,
+   -0.03
+  ],
+  [
+   "Q1 2026",
+   "Mar 2026",
+   151.14,
+   29.06,
+   -8.6,
+   -0.19
+  ],
+  [
+   "Q2 2026",
+   "Jun 2026",
+   191.92,
+   27.72,
+   -12.88,
+   -0.28
+  ]
+ ],
+ "guide": [
+  "Q3 2026e",
+  272.5,
+  "Sep 2026 · guidance midpoint",
+  "2026年9月 · 指引中值"
+ ],
+ "fcf": {
+  "sub": {
+   "en": "Free cash flow is operating cash flow minus capital spending, in US$ millions, for the 20 quarters from Q3 2021 to Q2 2026. Shaded bars and italic rows are estimates.",
+   "zh": "自由现金流 = 经营现金流 − 资本开支，单位百万美元，涵盖 2021 年第三季至 2026 年第二季共 20 个季度。浅色柱与斜体行为估算。"
+  },
+  "hist": [
+   [
+    "Q3 2021",
+    "Sep 2021",
+    3.5,
+    3.84,
+    -0.34
+   ],
+   [
+    "Q4 2021",
+    "Dec 2021",
+    -0.26,
+    2.51,
+    -2.77
+   ],
+   [
+    "Q1 2022",
+    "Mar 2022",
+    -3.6,
+    1.05,
+    -4.66
+   ],
+   [
+    "Q2 2022",
+    "Jun 2022",
+    2.25,
+    0.83,
+    1.42
+   ],
+   [
+    "Q3 2022",
+    "Sep 2022",
+    -9.19,
+    1.06,
+    -10.24
+   ],
+   [
+    "Q4 2022",
+    "Dec 2022",
+    -3.48,
+    0.8,
+    -4.28
+   ],
+   [
+    "Q1 2023",
+    "Mar 2023",
+    -9.39,
+    0.74,
+    -10.13
+   ],
+   [
+    "Q2 2023",
+    "Jun 2023",
+    15.26,
+    0.99,
+    14.27
+   ],
+   [
+    "Q3 2023",
+    "Sep 2023",
+    -15.35,
+    3.14,
+    -18.49
+   ],
+   [
+    "Q4 2023",
+    "Dec 2023",
+    1.55,
+    9.45,
+    -7.9
+   ],
+   [
+    "Q1 2024",
+    "Mar 2024",
+    -28.48,
+    7.95,
+    -36.43
+   ],
+   [
+    "Q2 2024",
+    "Jun 2024",
+    -1.99,
+    3.98,
+    -5.96
+   ],
+   [
+    "Q3 2024",
+    "Sep 2024",
+    -14.44,
+    9.13,
+    -23.57
+   ],
+   [
+    "Q4 2024",
+    "Dec 2024",
+    -24.62,
+    29.15,
+    -53.76
+   ],
+   [
+    "Q1 2025",
+    "Mar 2025",
+    -50.92,
+    28.39,
+    -79.3
+   ],
+   [
+    "Q2 2025",
+    "Jun 2025",
+    -65.47,
+    46.66,
+    -112.13
+   ],
+   [
+    "Q3 2025",
+    "Sep 2025",
+    -28.46,
+    50.35,
+    -78.82
+   ],
+   [
+    "Q4 2025",
+    "Dec 2025",
+    -29.58,
+    84.83,
+    -114.41
+   ],
+   [
+    "Q1 2026",
+    "Mar 2026",
+    -85.35,
+    58.23,
+    -143.58
+   ],
+   [
+    "Q2 2026",
+    "Jun 2026",
+    11.57,
+    575.23,
+    -563.66
+   ]
+  ],
+  "est": [
+   [
+    "Q3 2026",
+    "Sep 2026",
+    -20,
+    300,
+    -320
+   ],
+   [
+    "Q4 2026",
+    "Dec 2026",
+    30,
+    300,
+    -270
+   ],
+   [
+    "Q1 2027",
+    "Mar 2027",
+    60,
+    200,
+    -140
+   ],
+   [
+    "Q2 2027",
+    "Jun 2027",
+    80,
+    150,
+    -70
+   ]
+  ],
+  "cash": {
+   "k": {
+    "en": "Cash & investments",
+    "zh": "现金及投资"
+   },
+   "v": "$509M",
+   "s": {
+    "en": "Jun 30, 2026 · after $539M share sales",
+    "zh": "2026年6月30日 · 已计 5.39 亿增发"
+   }
+  },
+  "read": [
+   {
+    "en": "AOI has burned cash in 18 of the last 20 quarters. The burn turned into a flood in Q2 2026: $575M of capex (including $280M of equipment prepayments) against barely positive operating cash flow, for free cash flow of −$564M.",
+    "zh": "过去 20 个季度中 AOI 有 18 个季度烧钱。2026 年第二季烧钱规模剧增：资本开支 5.75 亿美元（含 2.8 亿设备预付款），经营现金流仅略为正，自由现金流 −5.64 亿。"
+   },
+   {
+    "en": "Management says second-half capital intensity will be even higher. I assume about $300M of capex in each of Q3 and Q4, easing in 2027 as plants open, and operating cash flow turning positive with revenue. That is about −$800M over four quarters, more than the $509M in the bank, so expect more share sales or borrowing.",
+    "zh": "管理层称下半年资本强度将更高。我假设 Q3、Q4 各约 3 亿美元资本开支，2027 年随工厂投产回落，经营现金流随营收转正。四季合计约 −8 亿美元，超过账上 5.09 亿现金，因此预计将继续增发或借款。"
+   }
+  ],
+  "out": [
+   {
+    "h": {
+     "en": "Texas factories",
+     "zh": "德州工厂"
+    },
+    "p": {
+     "en": "Over 1.6M sq ft of space; a 210,000 sq ft plant starts production late in Q3, with more sites in early 2027.",
+     "zh": "逾 160 万平方英尺厂房；21 万平方英尺工厂于 Q3 末投产，更多厂区 2027 年初启用。"
+    }
+   },
+   {
+    "h": {
+     "en": "Equipment prepayments",
+     "zh": "设备预付款"
+    },
+    "p": {
+     "en": "$280M of Q2's capex was prepayments to lock in equipment.",
+     "zh": "第二季资本开支中 2.8 亿美元为锁定设备的预付款。"
+    }
+   }
+  ],
+  "in": [
+   {
+    "h": {
+     "en": "At-the-market share sales",
+     "zh": "市价增发"
+    },
+    "p": {
+     "en": "$646M of stock sold in Q2 and $382M in Q1 2026.",
+     "zh": "2026 年第二季发行股票 6.46 亿美元，第一季 3.82 亿。"
+    }
+   },
+   {
+    "h": {
+     "en": "Data center orders",
+     "zh": "数据中心订单"
+    },
+    "p": {
+     "en": "Revenue guided to $255–290M in Q3, with 800G up about five-fold.",
+     "zh": "Q3 营收指引 2.55–2.9 亿美元，800G 约增五倍。"
+    }
+   }
+  ],
+  "bridge": [
+   [
+    {
+     "en": "Cash & investments, Jun 2026",
+     "zh": "2026年6月现金及投资"
+    },
+    509
+   ],
+   [
+    {
+     "en": "Free cash flow, 4 quarters (est.)",
+     "zh": "4季自由现金流（估）"
+    },
+    -800
+   ]
+  ],
+  "bridgeEnd": {
+   "en": "Funding gap, Jun 2027 (est.)",
+   "zh": "2027年6月资金缺口（估）"
+  },
+  "bridgeNote": {
+   "en": "A negative result means AOI would need more equity or debt; it has been selling shares every quarter.",
+   "zh": "结果为负意味着 AOI 需要更多股权或债务融资；公司每季都在增发。"
+  },
+  "extraNote": {
+   "en": "",
+   "zh": ""
+  },
+  "src": [
+   [
+    "Quarterly cash flow statement (Stock Analysis)",
+    "https://stockanalysis.com/stocks/aaoi/financials/cash-flow-statement/?p=quarterly"
+   ],
+   [
+    "Q2 2026 call: capex and ATM",
+    "https://finance.biggo.com/news/US_AAOI_2026-08-06"
+   ]
+  ]
+ }
+}
