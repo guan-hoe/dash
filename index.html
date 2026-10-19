@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Stock Dashboards</title>
+<meta name="description" content="Investor dashboards for Arm (ARM), Tesla (TSLA), Sandisk (SNDK), Intel (INTC), SpaceX (SPCX), Micron (MU), Lumentum (LITE), Coherent (COHR), Alphabet (GOOGL) and Meta (META), NVIDIA (NVDA), Zscaler (ZS), Bloom Energy (BE), Applied Optoelectronics (AAOI), AMD, MP Materials (MP), Amazon (AMZN), Microsoft (MSFT), Marvell (MRVL), SK hynix (SKHY), TSMC (TSM), Broadcom (AVGO), Rockwell Automation (ROK), Applied Materials (AMAT), ASML, Palantir (PLTR), Corning (GLW) and Teradyne (TER).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{--bg:#f3f5f7;--panel:#fff;--line:#d9dee5;--ink:#141a22;--muted:#5a6573;--accent:#0b6fb8;--accent-soft:#e3eff8;--up:#13804b;--down:#c2362b;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;--f-body:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1117;--panel:#141b24;--line:#26303c;--ink:#e7ecf2;--muted:#93a0b0;--accent:#4fa8e8;--accent-soft:#132a3d;--up:#3ccf86;--down:#f0675b;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:48px 16px}
+.shell{display:block}
+.movers-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.movers-in aside{min-width:0}
+@media (max-width:760px){.movers-in{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:1500px){
+  .shell{display:grid;grid-template-columns:350px minmax(0,1fr) 350px;gap:24px;max-width:1960px;margin:0 auto;padding:0 16px}
+  .shell>.wrap{max-width:none;margin:0;padding:48px 0;min-width:0}
+  .shell>aside{padding-top:48px;min-width:0}
+}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--line);margin:-20px 0 28px}
+.tabs a{font:600 13px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:10px 14px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs a:hover,.tabs a:focus-visible{color:var(--accent);outline:none}
+.eyebrow{font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,5vw,48px)/1.05 var(--f-display);margin:.25em 0 .4em}
+.lede{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+a.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px;color:inherit;text-decoration:none;transition:border-color .15s}
+a.card:hover,a.card:focus-visible{border-color:var(--accent);outline:none}
+.tick{display:inline-block;font:600 13px var(--f-mono);letter-spacing:.04em;background:var(--ink);color:var(--bg);padding:3px 8px;border-radius:4px}
+.name{font:600 17px var(--f-body);margin:12px 0 2px}
+.desc{color:var(--muted);font-size:13.5px;margin:0 0 14px}
+.px{font:600 26px var(--f-mono);font-variant-numeric:tabular-nums}
+.chg{font:500 13px var(--f-mono);margin-left:8px}
+.xp{font:500 12px var(--f-mono);font-variant-numeric:tabular-nums;margin-top:4px}.xp b{font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.up{color:var(--up)}.down{color:var(--down)}
+.go{font:500 12px var(--f-mono);color:var(--accent);margin-top:10px}
+footer{font-size:12px;color:var(--muted);margin-top:32px;padding-top:16px;border-top:1px solid var(--line)}
+section#news{margin-top:40px}
+h2{font:700 24px/1.15 var(--f-display);margin:0 0 4px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 14px;max-width:72ch}
+.rank-h{margin-top:4px}
+a.card{position:relative;border-top:3px solid var(--line)}
+a.card.t-bull{border-top-color:var(--up)}
+a.card.t-con{border-top-color:color-mix(in srgb,var(--up) 45%,var(--line))}
+a.card.t-neu{border-top-color:var(--muted)}
+a.card.t-cau{border-top-color:var(--down)}
+.rk{display:block;font:600 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+a.card.t-bull .rk{color:var(--up)}a.card.t-cau .rk{color:var(--down)}
+.why{font-size:12.5px;line-height:1.45;margin:0 0 12px;color:var(--ink)}
+.recap{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--down);border-radius:6px;padding:18px 20px;margin:0 0 32px}
+.recap.t-up{border-left-color:var(--up)}.recap.t-mixed{border-left-color:var(--muted)}
+.recap h2{font-size:20px;margin:6px 0 6px}
+.rc-sum{margin:0 0 14px;max-width:80ch}
+.rc-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin:0 0 14px}
+.rc-s{border:1px solid var(--line);border-radius:4px;padding:7px 9px;min-width:0}
+.rc-n{display:block;font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rc-v{font:600 14px var(--f-mono);font-variant-numeric:tabular-nums;margin-right:6px}
+.rc-c{font:500 12px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted)}
+.rc-c.up{color:var(--up)}.rc-c.down{color:var(--down)}
+.rc-dr{margin:0 0 10px;padding-left:18px;font-size:14px}.rc-dr li{margin:0 0 6px}
+.rc-note{font-size:13.5px;color:var(--muted);margin:0 0 6px;max-width:90ch}
+.rc-src{font-size:12px;color:var(--muted);margin:8px 0 0}.rc-src a{color:var(--accent)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside id="sideL" aria-label="Top gainers, and the Pelosi and Trump portfolios"><div id="moversL"></div><div id="pfL"></div><div id="pfL2"></div></aside>
+<main class="wrap">
+  <nav class="tabs" aria-label="Dashboard sections"><a href="./" aria-current="page">Stocks</a><a href="macro/">Macro</a><a href="fx/">FX</a><a href="datacenter/">Datacenter</a><a href="robotics/">Robotics</a><a href="merger/">SpaceX vs Tesla</a><a href="portfolio/">Portfolio</a><a href="options/">Options</a></nav>
+  <div class="eyebrow">Investor dashboards · EN / 中文</div>
+  <h1>Stock dashboards</h1>
+  <p class="lede">Price, technical analysis, revenue, cash flow, watch list, news and calendar for each stock, plus live charts of the latest session's five biggest gainers (left) and five biggest losers (right). Prices refresh about every 10 minutes during US market hours; outside them each card also shows the pre-market or after-hours price, refreshed about every 15 minutes.</p>
+  <section id="recap" class="recap" data-src="data/market-recap.json" aria-label="Previous US session recap" hidden></section>
+  <h2 class="rank-h">Most to least bullish</h2>
+  <p class="sub">Ranked by Claude as of Oct 16, 2026, weighing the latest results and guidance, estimate momentum, the price trend and analyst upside. A judgment call, not advice; it changes as the facts do.</p>
+  <div class="grid">
+    <a class="card t-bull" href="nvda/" data-q="nvda/data/quote.json"><span class="rk">#1 · Bullish</span><span class="tick">NASDAQ: NVDA</span><div class="name">NVIDIA</div><p class="desc">GPUs and networking at the center of the AI build-out.</p><p class="why">Q3 guide $108B and ~70% growth seen next year; sitting on its 100-day average in the sell-off.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-bull" href="msft/" data-q="msft/data/quote.json"><span class="rk">#2 · Bullish</span><span class="tick">NASDAQ: MSFT</span><div class="name">Microsoft</div><p class="desc">Azure, Office and Copilot, still throwing off cash.</p><p class="why">Azure accelerated to 43% and guided 45%; still above its 30, 100 and 200-day averages.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-bull" href="mu/" data-q="mu/data/quote.json"><span class="rk">#3 · Bullish</span><span class="tick">NASDAQ: MU</span><div class="name">Micron Technology</div><p class="desc">DRAM, HBM and NAND memory at the heart of AI servers.</p><p class="why">Guided $4B above consensus at ~7× run-rate earnings; lost its 100-day on China DRAM fears.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-bull" href="tsm/" data-q="tsm/data/quote.json"><span class="rk">#4 · Bullish</span><span class="tick">NYSE: TSM</span><div class="name">TSMC</div><p class="desc">The foundry that makes nearly every leading AI chip.</p><p class="why">Q3 beat and Q4 guided +58% YoY at ~19× forward; slipped below its 100-day average.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-bull" href="amzn/" data-q="amzn/data/quote.json"><span class="rk">#5 · Bullish</span><span class="tick">NASDAQ: AMZN</span><div class="name">Amazon</div><p class="desc">Retail, ads and AWS, with a huge AI capex plan.</p><p class="why">AWS re-accelerated to 37%; back inside its range, holding the 200-day average.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-bull" href="mrvl/" data-q="mrvl/data/quote.json"><span class="rk">#6 · Bullish</span><span class="tick">NASDAQ: MRVL</span><div class="name">Marvell Technology</div><p class="desc">Optical DSPs, switches and custom AI chips for data centers.</p><p class="why">Raised outlook twice, FY28 target lifted to $20B; pulled back below its 100-day average.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-bull" href="googl/" data-q="googl/data/quote.json"><span class="rk">#7 · Bullish</span><span class="tick">NASDAQ: GOOGL</span><div class="name">Alphabet</div><p class="desc">Search, YouTube and a fast-growing Google Cloud.</p><p class="why">Cloud +82% with 36% margins; sitting on its 200-day average.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-bull" href="meta/" data-q="meta/data/quote.json"><span class="rk">#8 · Bullish</span><span class="tick">NASDAQ: META</span><div class="name">Meta Platforms</div><p class="desc">Facebook, Instagram and WhatsApp ads funding a huge AI build-out.</p><p class="why">Muse AI re-rated the stock; still above all its key averages into Oct 21 results.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-con" href="lite/" data-q="lite/data/quote.json"><span class="rk">#9 · Constructive</span><span class="tick">NASDAQ: LITE</span><div class="name">Lumentum</div><p class="desc">Lasers, transceivers and optical switches for AI data centers.</p><p class="why">Lasers booked into 2029, guide well above consensus; fell 25% in a week, below the 100-day.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-con" href="skhy/" data-q="skhy/data/quote.json"><span class="rk">#10 · Constructive</span><span class="tick">NASDAQ: SKHY</span><div class="name">SK hynix</div><p class="desc">The HBM memory leader, now with a Nasdaq ADS.</p><p class="why">Record HBM profits and 84% analyst upside, but hit hardest by China DRAM fears; RSI ~28.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-con" href="avgo/" data-q="avgo/data/quote.json"><span class="rk">#11 · Constructive</span><span class="tick">NASDAQ: AVGO</span><div class="name">Broadcom</div><p class="desc">Custom AI accelerators, networking and VMware software.</p><p class="why">AI revenue targets $115B/$230B, ~60% upside; stuck below the 200-day after the CEO’s warning.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-con" href="pltr/" data-q="pltr/data/quote.json"><span class="rk">#12 · Constructive</span><span class="tick">NASDAQ: PLTR</span><div class="name">Palantir</div><p class="desc">AI software for governments and companies.</p><p class="why">Growth +93% and guide raised, but richly valued; down 13% from its Oct 12 record.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-con" href="amd/" data-q="amd/data/quote.json"><span class="rk">#13 · Constructive</span><span class="tick">NASDAQ: AMD</span><div class="name">AMD</div><p class="desc">EPYC server CPUs and Instinct AI GPUs.</p><p class="why">Data center +107%, passed $1T; little analyst upside left, back on its 100-day average.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-con" href="zs/" data-q="zs/data/quote.json"><span class="rk">#14 · Constructive</span><span class="tick">NASDAQ: ZS</span><div class="name">Zscaler</div><p class="desc">Zero trust cloud security, now including AI security.</p><p class="why">Momentum since Sep 14 still above the 30-day, but growth slowing and little target upside.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="sndk/" data-q="sndk/data/quote.json"><span class="rk">#15 · Neutral</span><span class="tick">NASDAQ: SNDK</span><div class="name">Sandisk</div><p class="desc">NAND flash for data centers, devices and consumers.</p><p class="why">Long-term deals cover most FY27–28 bits; broke $1,325 support as memory sold off.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="asml/" data-q="asml/data/quote.json"><span class="rk">#16 · Neutral</span><span class="tick">NASDAQ: ASML</span><div class="name">ASML</div><p class="desc">The only maker of EUV lithography machines.</p><p class="why">Record Q3, Q4 guide beat; 2027–28 supply short of demand. ~27× forward.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="ter/" data-q="ter/data/quote.json"><span class="rk">#17 · Neutral</span><span class="tick">NASDAQ: TER</span><div class="name">Teradyne</div><p class="desc">Test systems for AI chips and HBM, plus robots.</p><p class="why">AI test demand doubled revenue; now below its 200-day average.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="spcx/" data-q="spcx/data/quote.json"><span class="rk">#18 · Neutral</span><span class="tick">NASDAQ: SPCX</span><div class="name">SpaceX</div><p class="desc">Starlink, launch and the AI compute build-out.</p><p class="why">Revenue +92%, but $18B quarterly capex and still loss-making.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="be/" data-q="be/data/quote.json"><span class="rk">#19 · Neutral</span><span class="tick">NYSE: BE</span><div class="name">Bloom Energy</div><p class="desc">Fuel cells that power AI data centers on site.</p><p class="why">Power-shortage winner, still +34% since results; fell 22% in five days.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="glw/" data-q="glw/data/quote.json"><span class="rk">#20 · Neutral</span><span class="tick">NYSE: GLW</span><div class="name">Corning</div><p class="desc">Optical fiber for AI data centers, plus specialty glass.</p><p class="why">AI fiber deals with Amazon and NVIDIA, but guidance light; broke its September lows.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="amat/" data-q="amat/data/quote.json"><span class="rk">#21 · Neutral</span><span class="tick">NASDAQ: AMAT</span><div class="name">Applied Materials</div><p class="desc">Chipmaking tools for logic, DRAM and advanced packaging.</p><p class="why">Record guide, but flat margins and China mix; back below its 200-day average.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-neu" href="cohr/" data-q="cohr/data/quote.json"><span class="rk">#22 · Neutral</span><span class="tick">NYSE: COHR</span><div class="name">Coherent</div><p class="desc">Optical transceivers, indium phosphide lasers and industrial lasers.</p><p class="why">Beat, but margins disappointed; broke its summer lows, down 27% in 20 days.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-cau" href="arm/" data-q="arm/data/quote.json"><span class="rk">#23 · Cautious</span><span class="tick">NASDAQ: ARM</span><div class="name">Arm Holdings</div><p class="desc">CPU designs and a royalty on every chip shipped.</p><p class="why">Phone royalties slowing on memory costs; short-term bearish chart.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-cau" href="aaoi/" data-q="aaoi/data/quote.json"><span class="rk">#24 · Cautious</span><span class="tick">NASDAQ: AAOI</span><div class="name">Applied Optoelectronics</div><p class="desc">800G and 1.6T optical transceivers built in Texas.</p><p class="why">Dilution, a light guide and a B. Riley target cut to $92; down 31% in five days.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-cau" href="intc/" data-q="intc/data/quote.json"><span class="rk">#25 · Cautious</span><span class="tick">NASDAQ: INTC</span><div class="name">Intel</div><p class="desc">PC and server CPUs, plus a foundry business in the making.</p><p class="why">Turnaround in revenue, but foundry losses, cash burn and Hold ratings.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-cau" href="rok/" data-q="rok/data/quote.json"><span class="rk">#26 · Cautious</span><span class="tick">NYSE: ROK</span><div class="name">Rockwell Automation</div><p class="desc">Factory automation for fabs, data centers and warehouses.</p><p class="why">Beat and raised, but cost inflation and margin dip; testing support.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-cau" href="tesla/" data-q="tesla/data/quote.json"><span class="rk">#27 · Cautious</span><span class="tick">NASDAQ: TSLA</span><div class="name">Tesla</div><p class="desc">EVs, energy storage, and the robotaxi and AI bet.</p><p class="why">EPS miss, 1.4% operating margin and ~164× earnings; little target upside.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+    <a class="card t-cau" href="mp/" data-q="mp/data/quote.json"><span class="rk">#28 · Cautious</span><span class="tick">NYSE: MP</span><div class="name">MP Materials</div><p class="desc">US rare earth mining and magnets, with a government price floor.</p><p class="why">Volumes up but still losing money; bearish trend trying to base.</p><span class="px">—</span><span class="chg"></span><div class="go">Open dashboard →</div></a>
+  </div>
+  <div class="movers-in" id="moversHere"></div>
+  <section id="news" data-src="data/news.json" data-tickers="ARM,TSLA,SNDK,INTC,SPCX,MU,LITE,COHR,GOOGL,META,NVDA,ZS,BE,AAOI,AMD,MP,AMZN,MSFT,MRVL,SKHY,TSM,AVGO,ROK,AMAT,ASML,PLTR,GLW,TER" aria-label="Latest news"></section>
+  <footer>For information only, not investment advice. Not affiliated with any company shown.</footer>
+</main>
+<aside id="sideR" aria-label="Top losers, and the Druckenmiller and Thiel portfolios"><div id="moversR"></div><div id="pfR"></div><div id="pfR2"></div></aside>
+</div>
+<script>
+// Card prices: last regular-session price and change, plus the extended-hours price
+// (pre-market / after-hours / overnight) from quote.json "ext" when the market is closed.
+const EXT={pre:"Pre-market",post:"After-hours",overnight:"Overnight"};
+async function cardPx(a){
+  try{
+    const q=await fetch(a.dataset.q+"?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null);
+    if(!q||!q.price)return;
+    const pct=(q.price/q.prevClose-1)*100, up=pct>=0, m=x=>"$"+x.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+    a.querySelector(".px").textContent=m(q.price);
+    const c=a.querySelector(".chg");c.textContent=(up?"+":"−")+Math.abs(pct).toFixed(2)+"%";c.className="chg "+(up?"up":"down");
+    let x=a.querySelector(".xp");if(!x){x=document.createElement("div");x.className="xp";c.insertAdjacentElement("afterend",x);}
+    const e=q.ext, fresh=e&&q.state!=="REGULAR"&&Date.now()/1000-e.time<72000;
+    x.hidden=!fresh;
+    if(fresh){const eu=e.chg>=0;x.innerHTML=`<b>${EXT[e.session]||e.session}</b> ${m(e.price)} <span class="${eu?"up":"down"}">${eu?"+":"−"}${Math.abs(e.chg).toFixed(2)}%</span>`;}
+  }catch(e){}
+}
+const cards=[...document.querySelectorAll("a.card")];
+const refresh=()=>cards.forEach(cardPx);
+refresh();setInterval(refresh,60000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh();});
+</script>
+<script src="assets/market-recap.js?v=1"></script>
+<script src="assets/news.js?v=5"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<script>
+// Movers sit beside the main column on wide screens and under the stock cards otherwise.
+(function(){const L=document.getElementById("sideL"),R=document.getElementById("sideR"),shell=document.querySelector(".shell"),here=document.getElementById("moversHere"),main=shell.querySelector("main"),mq=matchMedia("(min-width:1500px)");
+function place(){if(mq.matches){shell.insertBefore(L,main);shell.appendChild(R);}else{here.appendChild(L);here.appendChild(R);}}
+place();mq.addEventListener("change",place);})();
+</script>
+<script src="assets/movers.js?v=4"></script>
+<script src="assets/portfolios.js?v=2"></script>
+<script src="assets/stock-picker.js?v=1"></script>
+<script src="assets/card-chart.js?v=1"></script>
+</body>
+</html>
