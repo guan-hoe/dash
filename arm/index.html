@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arm Holdings ARM Dashboard</title>
+<meta name="description" content="Arm Holdings (Nasdaq: ARM) investor dashboard: price, royalty and licensing revenue, guidance, valuation, risks and catalysts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: sticky ticker bar, then a die-floorplan grid — one wide "core" panel per section with small "IP block" stat cells beside it. */
+:root{
+  --bg:#f3f5f7; --panel:#ffffff; --line:#d9dee5; --ink:#141a22; --muted:#5a6573;
+  --accent:#0b6fb8; --accent-soft:#e3eff8; --copper:#b4622d; --copper-soft:#f6e9df;
+  --up:#13804b; --down:#c2362b; --warn:#a86a00;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1117; --panel:#141b24; --line:#26303c; --ink:#e7ecf2; --muted:#93a0b0;
+  --accent:#4fa8e8; --accent-soft:#132a3d; --copper:#e08a52; --copper-soft:#33221a;
+  --up:#3ccf86; --down:#f0675b; --warn:#e3a43a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1117; --panel:#141b24; --line:#26303c; --ink:#e7ecf2; --muted:#93a0b0;
+  --accent:#4fa8e8; --accent-soft:#132a3d; --copper:#e08a52; --copper-soft:#33221a;
+  --up:#3ccf86; --down:#f0675b; --warn:#e3a43a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.tick{font:600 13px var(--f-mono);letter-spacing:.04em;background:var(--ink);color:var(--bg);padding:3px 8px;border-radius:4px}
+.bar-px{font:600 18px var(--f-mono);font-variant-numeric:tabular-nums}
+.chg{font:500 13px var(--f-mono)}
+.up{color:var(--up)}.down{color:var(--down)}
+nav.sec{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.sec a{font-size:13px;color:var(--muted);text-decoration:none;padding:4px 8px;border-radius:4px}
+nav.sec a:hover,nav.sec a:focus-visible{background:var(--accent-soft);color:var(--ink);outline:none}
+.tools{display:flex;gap:6px}
+button.tg{font:500 12px var(--f-mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:4px 9px;cursor:pointer}
+button.tg:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hero{padding-block:36px 20px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:end}
+.eyebrow{font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,5vw,52px)/1.02 var(--f-display);margin:.25em 0 .3em;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{color:var(--muted);max-width:60ch;margin:0}
+.pxbox{border-left:3px solid var(--accent);padding-left:18px}
+.pxbig{font:600 clamp(40px,6vw,60px)/1 var(--f-mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.pxnote{font-size:12px;color:var(--muted);margin-top:6px}
+section{padding-block:28px;border-top:1px solid var(--line);scroll-margin-top:64px}
+h2{font:700 24px/1.15 var(--f-display);margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px;max-width:72ch}
+.grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0}
+.cells{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;align-content:start}
+.cell{background:var(--panel);padding:12px 14px;min-width:0}
+.cell .k{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cell .v{font:600 20px var(--f-mono);font-variant-numeric:tabular-nums;margin-top:2px}
+.cell .s{font-size:12px;color:var(--muted)}
+.chart{position:relative;height:320px}
+.chart.sm{height:260px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:8px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.range{display:flex;gap:4px;margin-bottom:10px}
+.range button{font:500 12px var(--f-mono);border:1px solid var(--line);background:transparent;color:var(--muted);padding:3px 9px;border-radius:4px;cursor:pointer}
+.range button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tr.guide td{color:var(--muted);font-style:italic}
+.wl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;gap:12px;min-width:0}
+.pill{flex:none;font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:3px;height:fit-content}
+.p-risk{background:color-mix(in srgb,var(--down) 15%,transparent);color:var(--down)}
+.p-watch{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.p-plus{background:color-mix(in srgb,var(--up) 15%,transparent);color:var(--up)}
+.item h3{font:600 15px var(--f-body);margin:0 0 3px}
+.item p{margin:0;font-size:13.5px;color:var(--muted)}
+.cal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.date{font:600 13px var(--f-mono);color:var(--accent)}
+ol.src{font-size:13px;color:var(--muted);padding-left:20px;columns:2;column-gap:32px}
+ol.src li{break-inside:avoid;margin-bottom:4px}
+footer{font-size:12px;color:var(--muted);padding-top:20px;border-top:1px solid var(--line)}
+#tv{min-height:0}
+.live{display:inline-flex;align-items:center;gap:6px;font:500 12px var(--f-mono);color:var(--muted)}
+.live .dot{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.live.on .dot{background:var(--up);box-shadow:0 0 0 0 var(--up);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--up) 60%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (max-width:860px){.hero,.grid{grid-template-columns:minmax(0,1fr)}.cal{grid-template-columns:minmax(0,1fr)}nav.sec{display:none}}
+@media (max-width:620px){.wl{grid-template-columns:minmax(0,1fr)}ol.src{columns:1}.chart{height:260px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: ARM</span>
+  <span class="bar-px" id="barPx">$275.29</span>
+  <span class="chg down" id="barChg">−6.48%</span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#annual" data-i="n_ann">Financials</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div class="eyebrow" data-i="eyebrow">Arm Holdings plc · ADR · Cambridge, UK</div>
+      <h1 data-ih="title">The royalty on <em>every chip</em>, priced for perfection.</h1>
+      <p class="lede" data-i="lede">Arm licenses CPU designs and collects a royalty on each chip shipped. Revenue is growing above 20% a year with ~97% gross margin, while the stock trades near 90× forward earnings and swings with a beta near 3.8.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 8, 2026</div>
+      <div class="pxbig" id="pxBig">$275.29</div>
+      <div class="chg down" id="pxChg">−19.08 (−6.48%)</div>
+      <div class="pxnote" id="pxNote">YTD +151.8% · 1Y +61.3%</div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k" data-i="k_mcap">Market cap</div><div class="v" id="mcap">$287.5B</div><div class="s" data-i="s_mcap">at current price</div></div>
+    <div class="cell"><div class="k" data-i="k_52">52-week range</div><div class="v">$100–453</div><div class="s" data-i="s_52">intraday low / high</div></div>
+    <div class="cell"><div class="k" data-i="k_pe">Forward P/E</div><div class="v">~90×</div><div class="s" data-i="s_pe">trailing GAAP ~284×</div></div>
+    <div class="cell"><div class="k" data-i="k_ttm">Revenue TTM</div><div class="v">$5.16B</div><div class="s" data-i="s_ttm">+22% YoY</div></div>
+    <div class="cell"><div class="k" data-i="k_an">Analysts</div><div class="v">Buy</div><div class="s" data-i="s_an">40 · mean target $290.71</div></div>
+    <div class="cell"><div class="k" data-i="k_er">Next earnings</div><div class="v">Nov 4</div><div class="s" data-i="s_er">Q2 FY27, after close</div></div>
+  </div>
+
+  <section id="price">
+    <h2 data-i="h_price">Price, last 12 months</h2>
+    <p class="sub" data-i="sub_price">Daily closes with the 50-day average. The stock roughly quadrupled from the January low to the June peak, then gave back about a third.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="ARM daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k" data-i="k_hi">1Y closing high</div><div class="v">$439.75</div><div class="s">Jun 18, 2026</div></div>
+        <div class="cell"><div class="k" data-i="k_lo">1Y closing low</div><div class="v">$104.12</div><div class="s">Jan 14, 2026</div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v">$269</div><div class="s" data-i="s_sma50">price above</div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v">$219</div><div class="s" data-i="s_sma200">price above</div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v">46.7</div><div class="s" data-i="s_rsi">neutral</div></div>
+        <div class="cell"><div class="k">ATR 20</div><div class="v">$19.1</div><div class="s" data-i="s_atr">~7% daily range</div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">3.79</div><div class="s" data-i="s_beta">vs. S&amp;P 500</div></div>
+        <div class="cell"><div class="k" data-i="k_dd">From peak</div><div class="v down" id="ddv">−37%</div><div class="s" data-i="s_dd">vs. Jun 18 close</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2 data-i="h_rev">Royalty vs. licensing, by quarter</h2>
+    <p class="sub" data-i="sub_rev">Royalties are the recurring stream paid per chip shipped. Licensing is lumpier, tied to the timing of large deals. Q2 FY27 is company guidance at the midpoint. Arm's fiscal year ends March 31.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_roy">Royalty</span></span><span><i class="sw" style="background:var(--copper)"></i><span data-i="l_lic">License &amp; other</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart"><canvas id="cRev" aria-label="Quarterly revenue by stream"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k">Q1 FY27</div><div class="v">$1,289M</div><div class="s" data-i="s_q1">+22% YoY, record Q1</div></div>
+        <div class="cell"><div class="k" data-i="k_roy">Royalty</div><div class="v">$715M</div><div class="s" data-i="s_roy">+22% · DC more than 2×</div></div>
+        <div class="cell"><div class="k" data-i="k_lic">License</div><div class="v">$574M</div><div class="s" data-i="s_lic">+23% · $193M SoftBank</div></div>
+        <div class="cell"><div class="k">ACV</div><div class="v">$1,732M</div><div class="s" data-i="s_acv">+13% YoY</div></div>
+        <div class="cell"><div class="k" data-i="k_q2g">Q2 guide</div><div class="v">$1.38B</div><div class="s">±$50M · EPS $0.47</div></div>
+        <div class="cell"><div class="k" data-i="k_gm">Gross margin</div><div class="v">~98%</div><div class="s" data-i="s_gm">non-GAAP</div></div>
+      </div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th data-i="t_q">Quarter</th><th data-i="t_end">Ended</th><th data-i="l_roy">Royalty</th><th data-i="l_lic">License &amp; other</th><th data-i="t_tot">Total</th><th data-i="t_yoy">Total YoY</th><th data-i="t_eps">Non-GAAP EPS</th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="annual">
+    <h2 data-i="h_ann">Fiscal-year financials</h2>
+    <p class="sub" data-i="sub_ann">Revenue in US$ millions. FY26 GAAP net income was $904M ($0.85 diluted EPS) on $4.92B revenue; R&amp;D alone was 56% of revenue.</p>
+    <div class="grid">
+      <div class="panel"><div class="chart sm"><canvas id="cAnn" aria-label="Annual revenue by stream"></canvas></div></div>
+      <div class="panel tbl">
+        <table>
+          <thead><tr><th>FY26</th><th>US$M</th><th data-i="t_pct">% rev</th></tr></thead>
+          <tbody>
+            <tr><td data-i="r_rev">Revenue</td><td>4,920</td><td>100%</td></tr>
+            <tr><td data-i="r_gp">Gross profit</td><td>4,799</td><td>97.5%</td></tr>
+            <tr><td>R&amp;D</td><td>2,776</td><td>56.4%</td></tr>
+            <tr><td>SG&amp;A</td><td>1,115</td><td>22.7%</td></tr>
+            <tr><td data-i="r_oi">Operating income (GAAP)</td><td>908</td><td>18.5%</td></tr>
+            <tr><td data-i="r_ni">Net income (GAAP)</td><td>904</td><td>18.4%</td></tr>
+            <tr><td data-i="r_eps">Non-GAAP EPS</td><td>$1.77</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2 data-i="h_watch">Watch list</h2>
+    <p class="sub" data-i="sub_watch">What moves the thesis, sorted by direction.</p>
+    <div class="wl">
+      <div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Data center royalties</h3><p data-i="w1p">Data center royalties more than doubled YoY for a third straight quarter as hyperscalers ship custom Arm CPUs.</p></div></div>
+      <div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w2h">Higher royalty rates per chip</h3><p data-i="w2p">Armv9 and Compute Subsystems carry higher rates. Over 70% of forecast royalties through FY31 are already under contract.</p></div></div>
+      <div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Royalty growth slowing</h3><p data-i="w3p">FY27 royalty growth outlook cut from ~20% to high teens; Q2 guided to low teens on a double-digit smartphone decline.</p></div></div>
+      <div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w4h">SoftBank concentration</h3><p data-i="w4p">The SoftBank licensing and design-services deal was $193M of Q1 licensing, with ~$200M a quarter expected. Related parties were ~30% of revenue.</p></div></div>
+      <div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">FTC probe</h3><p data-i="w5p">The stock fell after the July 29 report on news of a US FTC investigation, despite beating estimates.</p></div></div>
+      <div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w6h">Valuation and volatility</h3><p data-i="w6p">Near 90× forward earnings with a beta of ~3.8. Average daily range is about $19, so position sizing matters.</p></div></div>
+    </div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="ARM" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2 data-i="h_cal">Calendar</h2>
+    <div class="cal">
+      <div class="item"><div><div class="date">Nov 4, 2026</div><h3 data-i="c1h">Q2 FY27 earnings</h3><p data-i="c1p">After US close (Nov 5 morning SGT). Guide: $1.38B ±$50M, EPS $0.47 ±$0.04.</p></div></div>
+      <div class="item"><div><div class="date">Feb 2027</div><h3 data-i="c2h">Q3 FY27 earnings</h3><p data-i="c2p">Date not yet announced; Q3 reports have come in early February.</p></div></div>
+      <div class="item"><div><div class="date">Mar 31, 2027</div><h3 data-i="c3h">FY27 ends</h3><p data-i="c3p">Full-year results usually follow in early May.</p></div></div>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2 data-i="h_src">Sources</h2>
+    <ol class="src">
+      <li><a href="https://investors.arm.com" target="_blank" rel="noopener">Arm Investor Relations</a> — quarterly releases, slides, transcripts</li>
+      <li><a href="https://stocktitan.net/sec-filings/ARM/6-k-arm-holdings-plc-uk-current-report-foreign-issuer-c85c22de28cb.html" target="_blank" rel="noopener">Q1 FY27 Form 6-K</a> (Jul 29, 2026)</li>
+      <li><a href="https://fool.com/earnings/call-transcripts/2026/08/07/arm-arm-q1-2027-earnings-call-transcript" target="_blank" rel="noopener">Q1 FY27 earnings call transcript</a></li>
+      <li><a href="https://investing.com/news/company-news/arm-q1-fy27-slides-ai-surge-drives-record-results-25b-revenue-target-93CH-4821969" target="_blank" rel="noopener">Q1 FY27 slides summary</a></li>
+      <li><a href="https://datacenterdynamics.com/en/news/arm-posts-recording-breaking-revenue-for-full-year-and-q4-26-with-its-share-of-hyperscaler-cpu-compute-hitting-50" target="_blank" rel="noopener">Q4 FY26 and full-year results</a></li>
+      <li><a href="https://research.aardvarklabs.co/research/arm/earnings/2027-fq1/arm-2027-fq1-recap" target="_blank" rel="noopener">Q1 FY27 revenue mix analysis</a></li>
+      <li><a href="https://techtimes.com/articles/322135/20260729/arm-holdings-q1-beat-sends-free-cash-flow-343-ftc-probe-bigger-story.htm" target="_blank" rel="noopener">FTC probe coverage</a></li>
+      <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001973239" target="_blank" rel="noopener">SEC EDGAR filings (CIK 1973239)</a></li>
+      <li>Price history, technicals, analyst consensus: Stocklake and Financial Modeling Prep, as of Oct 9, 2026</li>
+    </ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Arm Holdings plc.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const P = {"d":["2025-10-09","2025-10-10","2025-10-13","2025-10-14","2025-10-15","2025-10-16","2025-10-17","2025-10-20","2025-10-21","2025-10-22","2025-10-23","2025-10-24","2025-10-27","2025-10-28","2025-10-29","2025-10-30","2025-10-31","2025-11-03","2025-11-04","2025-11-05","2025-11-06","2025-11-07","2025-11-10","2025-11-11","2025-11-12","2025-11-13","2025-11-14","2025-11-17","2025-11-18","2025-11-19","2025-11-20","2025-11-21","2025-11-24","2025-11-25","2025-11-26","2025-11-28","2025-12-01","2025-12-02","2025-12-03","2025-12-04","2025-12-05","2025-12-08","2025-12-09","2025-12-10","2025-12-11","2025-12-12","2025-12-15","2025-12-16","2025-12-17","2025-12-18","2025-12-19","2025-12-22","2025-12-23","2025-12-24","2025-12-26","2025-12-29","2025-12-30","2025-12-31","2026-01-02","2026-01-05","2026-01-06","2026-01-07","2026-01-08","2026-01-09","2026-01-12","2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15","2026-07-16","2026-07-17","2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-10","2026-08-11","2026-08-12","2026-08-13","2026-08-14","2026-08-17","2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-08","2026-09-09","2026-09-10","2026-09-11","2026-09-14","2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-28","2026-09-29","2026-09-30","2026-10-01","2026-10-02","2026-10-05","2026-10-06","2026-10-07","2026-10-08"],"c":[170.66,154.81,171.94,168.16,170.67,171.19,165.61,171.5,169.38,165.71,166.6,170.68,178.62,173.09,170.39,165.45,169.82,168.68,160.73,160.19,158.25,152.38,154.84,149.74,148.75,140.31,139.77,140.26,136.04,136.99,132.53,131.57,134.71,131.44,132.61,135.56,135.01,136.48,139.19,140.49,141.31,139.78,141.93,141.52,136.14,130.89,124.37,121.1,114.58,113.51,114.03,113.29,112.02,111.55,110.27,110.51,110.86,109.31,114.73,116.11,115.53,115.68,113.08,111.79,111.14,107.84,104.12,108.33,106.96,107.85,114.79,120.97,116.1,114.73,114.94,109.96,108.43,105.37,106.96,104.53,104.93,110.88,123.7,124.59,125.95,125.28,122.14,125.34,126.89,127.24,126.94,125.58,123.83,128.06,131.74,129.26,127.45,124.37,121.72,124.1,120.65,114.43,117.63,120.56,120.1,115.09,115.75,121.7,127.31,128.36,129.82,132.43,136.88,135.02,157.01,154.64,144.27,137.0,151.22,155.07,149.09,148.77,143.86,148.98,149.82,148.93,157.58,161.26,159.35,162.27,166.73,175.09,175.47,196.57,204.61,234.81,215.85,198.66,201.7,210.32,211.23,203.15,208.84,237.12,213.34,213.26,212.6,207.82,221.37,228.55,209.16,215.11,223.14,256.59,298.13,306.51,321.22,302.52,335.2,353.32,408.85,402.55,411.98,393.36,342.49,346.31,324.96,307.25,342.32,380.81,412.55,396.13,418.77,439.75,407.68,366.43,359.16,347.5,334.16,343.58,354.57,337.47,315.5,322.19,298.49,300.23,328.08,323.6,298.99,280.9,277.0,262.01,267.19,269.61,289.73,283.4,283.04,260.01,266.33,244.74,224.89,241.54,239.69,239.06,280.56,274.58,286.68,282.57,267.85,268.93,271.87,278.65,279.44,271.43,253.32,249.34,250.72,243.32,238.78,241.56,251.06,255.21,239.05,241.91,234.82,234.86,242.59,252.09,261.53,264.23,254.18,264.79,239.01,241.83,243.98,264.9,275.61,322.9,333.2,332.56,306.34,310.32,283.33,293.67,289.66,292.34,307.49,302.9,302.56,294.37,275.29]};
+const Q = [
+ ["Q1 FY25","Jun 2024",472,467,null,null],
+ ["Q2 FY25","Sep 2024",514,330,null,null],
+ ["Q3 FY25","Dec 2024",580,403,null,null],
+ ["Q4 FY25","Mar 2025",607,634,null,0.55],
+ ["Q1 FY26","Jun 2025",585,468,null,0.35],
+ ["Q2 FY26","Sep 2025",620,515,null,0.39],
+ ["Q3 FY26","Dec 2025",737,505,null,0.43],
+ ["Q4 FY26","Mar 2026",671,819,null,0.60],
+ ["Q1 FY27","Jun 2026",715,574,null,0.45],
+];
+const G = ["Q2 FY27","Sep 2026 (guide)",1380,0.47];
+const A = [["FY24",1802,1431],["FY25",2168,1839],["FY26",2610,2310]];
+
+const T = {
+ zh:{n_home:"全部股票",n_over:"概览",n_price:"股价",n_rev:"营收",n_ann:"财务",n_fcf:"现金流",n_watch:"关注点",n_news:"新闻",n_src:"来源",
+  eyebrow:"Arm Holdings plc · 美国存托凭证 · 英国剑桥",
+  title:"每颗芯片都收<em>授权费</em>，估值已按完美定价。",
+  lede:"Arm 授权 CPU 设计，并对每颗出货芯片收取版税。营收年增逾 20%，毛利率约 97%；但股价约为预期市盈率 90 倍，贝塔值近 3.8。",
+  lastclose:"最近收盘 · 2026年10月8日",pxnote:"10月9日盘中（开盘后15分钟）：$269.19。年初至今 +151.8% · 一年 +61.3%。",
+  k_mcap:"市值",s_mcap:"按当前股价",k_52:"52周区间",s_52:"盘中低 / 高",k_pe:"预期市盈率",s_pe:"GAAP 历史约 284 倍",k_ttm:"近12月营收",s_ttm:"同比 +22%",k_an:"分析师",s_an:"40 位 · 平均目标 $290.71",k_er:"下次财报",s_er:"FY27 第二季，盘后",
+  h_price:"近12个月股价",sub_price:"每日收盘价与50日均线。股价从1月低点到6月高点约涨了四倍，之后回吐约三分之一。",
+  k_hi:"一年收盘最高",k_lo:"一年收盘最低",s_sma50:"股价在上方",s_sma200:"股价在上方",s_rsi:"中性",s_atr:"日波幅约7%",s_beta:"相对标普500",k_dd:"距高点",s_dd:"相对6月18日收盘",
+  h_rev:"版税与授权收入（按季度）",sub_rev:"版税按每颗出货芯片收取，属经常性收入；授权收入随大额交易时点波动。FY27 第二季为公司指引中值。Arm 财年截至3月31日。",
+  l_roy:"版税",l_lic:"授权及其他",l_g:"指引",s_q1:"同比 +22%，Q1 新高",k_roy:"版税",s_roy:"+22% · 数据中心翻倍以上",k_lic:"授权",s_lic:"+23% · 软银 $193M",s_acv:"同比 +13%",k_q2g:"Q2 指引",k_gm:"毛利率",s_gm:"非GAAP",
+  t_q:"季度",t_end:"截至",t_tot:"合计",t_yoy:"合计同比",t_eps:"非GAAP每股收益",
+  h_ann:"财年财务",sub_ann:"营收单位为百万美元。FY26 GAAP 净利润 9.04 亿美元（摊薄每股 $0.85），营收 49.2 亿美元；研发占营收 56%。",
+  t_pct:"占营收",r_rev:"营收",r_gp:"毛利",r_oi:"营业利润（GAAP）",r_ni:"净利润（GAAP）",r_eps:"非GAAP每股收益",
+  h_watch:"关注点",sub_watch:"影响投资逻辑的因素，按方向分类。",pl_plus:"利好",pl_watch:"留意",pl_risk:"风险",
+  w1h:"数据中心版税",w1p:"随着云厂商出货自研 Arm CPU，数据中心版税连续三个季度同比翻倍以上。",
+  w2h:"单颗芯片版税率提高",w2p:"Armv9 与计算子系统 (CSS) 费率更高。至 FY31 的预测版税中，逾 70% 已按合同费率锁定。",
+  w3h:"版税增速放缓",w3p:"FY27 版税增长预期由约 20% 下调至十几个百分点高段；因智能手机市场预计两位数下滑，Q2 指引为十几个百分点低段。",
+  w4h:"软银集中度",w4p:"软银授权与设计服务协议占 Q1 授权收入 $193M，预计每季约 $200M。关联方约占总营收 30%。",
+  w5h:"美国联邦贸易委员会调查",w5p:"7月29日财报虽优于预期，但因 FTC 调查消息，股价下跌。",
+  w6h:"估值与波动",w6p:"预期市盈率近 90 倍，贝塔约 3.8。日均波幅约 $19，仓位控制很重要。",
+  h_cal:"日程",c1h:"FY27 第二季财报",c1p:"美股收盘后（新加坡时间11月5日早上）。指引：$1.38B ±$50M，每股 $0.47 ±$0.04。",c2h:"FY27 第三季财报",c2p:"日期未公布；第三季财报通常在2月初。",c3h:"FY27 结束",c3p:"全年业绩通常在5月初公布。",
+  h_src:"来源",foot:"基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Arm Holdings plc 无关联。"}
+};
+const EN = {};
+document.querySelectorAll("[data-i],[data-ih]").forEach(el=>{const k=el.dataset.i||el.dataset.ih; if(!(k in EN)) EN[k]=el.innerHTML;});
+let lang="en";
+function setLang(l){lang=l;document.documentElement.lang=l==="zh"?"zh-Hans":"en";
+  document.querySelectorAll("[data-i],[data-ih]").forEach(el=>{const k=el.dataset.i||el.dataset.ih;const v=l==="zh"?(T.zh[k]??EN[k]):EN[k];el.innerHTML=v;});
+  document.getElementById("langBtn").textContent=l==="zh"?"EN":"中文";
+  try{localStorage.setItem("arm-lang",l)}catch(e){}
+  buildCharts();}
+document.getElementById("langBtn").onclick=()=>setLang(lang==="en"?"zh":"en");
+
+const modes=["auto","light","dark"];let mode="auto";
+function setTheme(m){mode=m;const r=document.documentElement;if(m==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",m);
+  document.getElementById("themeBtn").textContent=m==="auto"?"◐ Auto":m==="light"?"☀ Light":"☾ Dark";
+  try{localStorage.setItem("arm-theme",m)}catch(e){} buildCharts();}
+document.getElementById("themeBtn").onclick=()=>setTheme(modes[(modes.indexOf(mode)+1)%3]);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>buildCharts());
+
+// quarterly table
+(function(){const b=document.getElementById("qBody");const f=n=>n.toLocaleString("en-US");
+  Q.forEach((q,i)=>{const tot=q[2]+q[3];const prev=i>=4?Q[i-4][2]+Q[i-4][3]:null;
+    const yoy=prev?((tot/prev-1)*100).toFixed(0)+"%":"—";
+    b.insertAdjacentHTML("afterbegin",`<tr><td>${q[0]}</td><td>${q[1]}</td><td>${f(q[2])}</td><td>${f(q[3])}</td><td><b>${f(tot)}</b></td><td>${yoy}</td><td>${q[5]!=null?"$"+q[5].toFixed(2):"—"}</td></tr>`);});
+  b.insertAdjacentHTML("afterbegin",`<tr class="guide"><td>${G[0]}</td><td>${G[1]}</td><td>—</td><td>—</td><td>${f(G[2])}</td><td>${((G[2]/1135-1)*100).toFixed(0)}%</td><td>$${G[3].toFixed(2)}</td></tr>`);
+})();
+
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let charts=[],range=0;
+function sma(a,n){return a.map((_,i)=>i<n-1?null:a.slice(i-n+1,i+1).reduce((s,x)=>s+x,0)/n);}
+function buildCharts(){
+  if(!window.Chart) return;
+  charts.forEach(c=>c.destroy());charts=[];
+  const ink=css("--ink"),mut=css("--muted"),line=css("--line"),acc=css("--accent"),cop=css("--copper");
+  Chart.defaults.font.family=css("--f-mono");Chart.defaults.font.size=11;Chart.defaults.color=mut;
+  const grid={color:line,drawTicks:false},nobox={border:{display:false}};
+  const n=range?range:P.d.length, d=P.d.slice(-n), c=P.c.slice(-n), s=sma(P.c,50).slice(-n);
+  const ctx=document.getElementById("cPrice").getContext("2d");
+  const gr=ctx.createLinearGradient(0,0,0,320);gr.addColorStop(0,acc+"40");gr.addColorStop(1,acc+"00");
+  charts.push(new Chart(ctx,{type:"line",data:{labels:d,datasets:[
+    {label:lang==="zh"?"收盘":"Close",data:c,borderColor:acc,backgroundColor:gr,fill:true,borderWidth:1.8,pointRadius:c.map((_,i)=>i===c.length-1?4:0),pointBackgroundColor:acc,tension:.15},
+    {label:"SMA 50",data:s,borderColor:cop,borderWidth:1.2,borderDash:[4,3],pointRadius:0,fill:false}]},
+    options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},
+      plugins:{legend:{labels:{boxWidth:10,color:mut}},tooltip:{callbacks:{label:t=>`${t.dataset.label}: $${t.parsed.y?.toFixed(2)}`}}},
+      scales:{x:{...nobox,grid:{display:false},ticks:{maxTicksLimit:7,callback:function(v){const s=this.getLabelForValue(v);return s.slice(5,7)+"/"+s.slice(2,4);}}},
+              y:{...nobox,grid,ticks:{callback:v=>"$"+v}}}}}));
+  const ql=Q.map(q=>q[0]).concat([G[0]]);
+  charts.push(new Chart(document.getElementById("cRev"),{type:"bar",data:{labels:ql,datasets:[
+    {label:lang==="zh"?"版税":"Royalty",data:Q.map(q=>q[2]).concat([null]),backgroundColor:acc,stack:"s",borderRadius:2},
+    {label:lang==="zh"?"授权及其他":"License & other",data:Q.map(q=>q[3]).concat([null]),backgroundColor:cop,stack:"s",borderRadius:2},
+    {label:lang==="zh"?"指引":"Guidance",data:Q.map(()=>null).concat([G[2]]),backgroundColor:line,borderColor:mut,borderWidth:1,borderDash:[3,3],stack:"s",borderRadius:2}]},
+    options:{maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:t=>t.parsed.y!=null?`${t.dataset.label}: $${t.parsed.y}M`:""}}},
+      scales:{x:{...nobox,grid:{display:false},stacked:true,ticks:{maxRotation:0,autoSkip:true,callback:function(v){return this.getLabelForValue(v).replace(" ","\n").split("\n");}}},
+              y:{...nobox,stacked:true,grid,ticks:{callback:v=>"$"+v+"M"}}}}}));
+  charts.push(new Chart(document.getElementById("cAnn"),{type:"bar",data:{labels:A.map(a=>a[0]),datasets:[
+    {label:lang==="zh"?"版税":"Royalty",data:A.map(a=>a[1]),backgroundColor:acc,stack:"s",borderRadius:2},
+    {label:lang==="zh"?"授权及其他":"License & other",data:A.map(a=>a[2]),backgroundColor:cop,stack:"s",borderRadius:2}]},
+    options:{maintainAspectRatio:false,animation:false,plugins:{legend:{labels:{boxWidth:10,color:mut}},tooltip:{callbacks:{footer:it=>"Total: $"+it.reduce((s,x)=>s+x.parsed.y,0).toLocaleString()+"M"}}},
+      scales:{x:{...nobox,grid:{display:false},stacked:true},y:{...nobox,stacked:true,grid,ticks:{callback:v=>"$"+(v/1000).toFixed(1)+"B"}}}}}));
+}
+document.querySelectorAll(".range button").forEach(b=>b.onclick=()=>{range=+b.dataset.r;
+  document.querySelectorAll(".range button").forEach(x=>x.setAttribute("aria-pressed",x===b));buildCharts();});
+
+let sl="en",st="auto";try{sl=localStorage.getItem("arm-lang")||"en";st=localStorage.getItem("arm-theme")||"auto"}catch(e){}
+mode=st;if(st!=="auto")document.documentElement.setAttribute("data-theme",st);
+document.getElementById("themeBtn").textContent=st==="auto"?"◐ Auto":st==="light"?"☀ Light":"☾ Dark";
+
+// ---- live quote: data/quote.json + data/history.json, refreshed by GitHub Actions ----
+const SHARES = 1.068e9; // ADR-equivalent shares, from market cap / price
+let LQ = null;
+const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const sgn = v => (v>=0?"+":"−") + Math.abs(v).toFixed(2);
+function renderQuote(){
+  const c = P.c, last = LQ ? LQ.price : c[c.length-1];
+  const prev = LQ ? LQ.prevClose : c[c.length-2];
+  const ch = last - prev, pct = ch / prev * 100, up = ch >= 0;
+  const zh = lang === "zh";
+  ["barPx","pxBig"].forEach(id => document.getElementById(id).textContent = fmt$(last));
+  const bc = document.getElementById("barChg"), pc = document.getElementById("pxChg");
+  bc.textContent = sgn(pct) + "%"; pc.textContent = `${sgn(ch)} (${sgn(pct)}%)`;
+  [bc,pc].forEach(e => { e.classList.toggle("up",up); e.classList.toggle("down",!up); });
+  // YTD vs last close of prior year, 1Y vs first point
+  const yr = String(new Date().getFullYear()); let base = null;
+  for (let i = 0; i < P.d.length; i++) { if (P.d[i] < yr) base = c[i]; }
+  const ytd = base ? (last/base-1)*100 : null, y1 = (last/c[0]-1)*100;
+  const peak = Math.max(...c, last), dd = (last/peak-1)*100;
+  document.getElementById("pxNote").textContent = (ytd!=null ? (zh?"年初至今 ":"YTD ")+sgn(ytd).replace(/\.\d+$/, m=>m.slice(0,2))+"% · " : "") + (zh?"一年 ":"1Y ") + sgn(y1).replace(/\.\d+$/, m=>m.slice(0,2)) + "%";
+  document.getElementById("mcap").textContent = "$" + (last*SHARES/1e9).toFixed(1) + "B";
+  const ddv = document.getElementById("ddv"); ddv.textContent = (dd<0?"−":"") + Math.abs(dd).toFixed(0) + "%";
+  ddv.classList.toggle("down", dd < -0.5);
+  // label + status
+  const t = LQ ? new Date(LQ.time*1000) : null;
+  const sgt = d => d.toLocaleString(zh?"zh-CN":"en-SG",{timeZone:"Asia/Singapore",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false});
+  const open = LQ && LQ.state === "REGULAR";
+  document.getElementById("pxLabel").textContent = open ? (zh?"盘中 · 美股交易中":"Intraday · market open") : (zh?"最近收盘":"Last close") + (t ? " · " + t.toLocaleDateString(zh?"zh-CN":"en-US",{timeZone:"America/New_York",month:"short",day:"numeric",year:"numeric"}) : "");
+  const bl = document.getElementById("barLive"); bl.classList.toggle("on", !!open);
+  document.getElementById("barTime").textContent = t ? (open ? (zh?"实时 ":"Live ") : (zh?"收盘 ":"Closed ")) + sgt(t) + " SGT" : (zh?"快照":"snapshot");
+  document.getElementById("footTime").textContent = t ? (zh?"股价更新于 ":"Price updated ") + sgt(t) + " SGT (" + (zh?"约每10分钟刷新":"refreshes about every 10 min") + ")." : "";
+}
+async function loadLive(){
+  try {
+    const bust = "?t=" + Date.now();
+    const [q, hist] = await Promise.all([
+      fetch("data/quote.json"+bust,{cache:"no-store"}).then(r => r.ok ? r.json() : null),
+      fetch("data/history.json"+bust,{cache:"no-store"}).then(r => r.ok ? r.json() : null)]);
+    let changed = false;
+    if (hist && hist.d && hist.d.length > 50 && hist.d[hist.d.length-1] >= P.d[P.d.length-1]) { P.d = hist.d; P.c = hist.c; changed = true; }
+    if (q && q.price) {
+      if (!LQ || q.time !== LQ.time) changed = true;
+      LQ = q;
+      // keep the chart's last point in step with the quote
+      if (q.date) { const i = P.d.indexOf(q.date); if (i >= 0) P.c[i] = q.price; else if (q.date > P.d[P.d.length-1]) { P.d.push(q.date); P.c.push(q.price); } }
+    }
+    if (changed) { renderQuote(); buildCharts(); }
+  } catch (e) { /* stay on embedded snapshot */ }
+}
+const _setLang = setLang; setLang = l => { _setLang(l); renderQuote(); };
+loadLive(); setInterval(loadLive, 60000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) loadLive(); });
+setLang(sl);
+</script>
+<script>
+(function(){var s=document.createElement("script");s.src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js";s.async=true;
+s.text=JSON.stringify({symbol:"NASDAQ:ARM",width:"100%",isTransparent:true,colorTheme:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",locale:"en"});
+document.querySelector("#tv .tradingview-widget-container").appendChild(s);})();
+</script>
+
+<script src="fcf-data.js?v=2"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+ "ticker": "ASML",
+ "asof": "2026-10-15",
+ "quarter": {
+  "en": "Q3 2026",
+  "zh": "2026年第三季"
+ },
+ "reported": "2026-10-14",
+ "timing": "bmo",
+ "pre_close": 1717.76,
+ "react": {
+  "date": "2026-10-14",
+  "close": 1650.0,
+  "pct": -3.9
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 1641.52,
+  "pct": -4.4
+ },
+ "review": {
+  "en": [
+   "Record sales of €11.7B (+55%) came near the top of guidance but a touch below the LSEG consensus of €11.85B; EPS of €12.95 beat easily, lifted by a ~€0.5B gain on the Mistral AI stake. Upgrade demand pushed installed-base sales to €3.3B and gross margin to a record 57.5%. Q4 guidance is €14.2–15.2B and the 2026 outlook rose to €44–45B at ~56% margin. CEO Christophe Fouquet said planned supply will not meet 2027–28 demand, with customers eyeing 2029–30 slots, so ASML is studying capacity beyond the extra 30% eyed for 2028.",
+   "The US shares had already dropped 1.9% on Oct 13 in a chip selloff. After mixed overnight trading and early gains in Amsterdam, they briefly rose above the prior close, then faded to finish the first session down 3.9% at $1,650, near the day's low, on heavy volume. Analysts said the raised outlook only caught up with expectations and wanted more detail on 2027 and the 2028 capacity plan, while a widening semiconductor selloff over valuations and AI-spending doubts hit the group."
+  ],
+  "zh": [
+   "销售额创纪录达 117 亿欧元（+55%），接近指引上限，但略低于 LSEG 统计的 118.5 亿欧元预期；每股收益 12.95 欧元大幅超预期，其中包含 Mistral AI 持股约 5 亿欧元的估值收益。升级需求推动装机基础业务销售额达 33 亿欧元，毛利率创纪录达 57.5%。第四季指引为 142–152 亿欧元，2026 年展望上调至 440–450 亿欧元，毛利率约 56%。CEO 傅恪礼表示，按现有计划的供应无法满足 2027–28 年需求，已有客户询问 2029–30 年的交货档期，因此 ASML 正研究在 2028 年原拟再扩 30% 的基础上进一步扩产。",
+   "美股 ADR 在 10 月 13 日芯片股抛售中已下跌 1.9%。财报公布后隔夜交易涨跌互现，阿姆斯特丹早盘走高；美股盘中一度升穿前收盘价，随后回落，首个交易日收跌 3.9% 至 1,650 美元，接近当日低点，成交量放大。分析师认为上调后的展望只是追上市场预期，并希望看到更多关于 2027 年及 2028 年扩产计划的细节；与此同时，围绕估值与 AI 支出的疑虑令半导体板块抛售扩大，拖累整个板块。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Christophe Fouquet",
+   "zh": "傅恪礼"
+  },
+  "since": "2024",
+  "bio": {
+   "en": "CEO since April 2024. Joined ASML in 2008 and ran its EUV business, the machines only ASML can make, after earlier roles at KLA and Applied Materials.",
+   "zh": "2024 年 4 月起任 CEO。2008 年加入 ASML，曾执掌只有 ASML 能制造的 EUV 业务，此前在科磊和应用材料任职。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Roger Dassen",
+   "zh": "罗杰·达森"
+  },
+  "since": "2018",
+  "bio": {
+   "en": "CFO since 2018. Spent more than three decades at Deloitte in senior audit and leadership roles before joining ASML.",
+   "zh": "2018 年起任 CFO。加入 ASML 前在德勤工作三十多年，担任审计与管理要职。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q3 2026 results release",
+   "u": "https://finance.yahoo.com/markets/stocks/articles/asml-reports-11-7-billion-050000954.html"
+  },
+  {
+   "t": "Q3 2026 call transcript",
+   "u": "https://investing.com/news/transcripts/earnings-call-transcript-asml-posts-q3-2026-profit-beat-on-record-demand-93CH-4949583"
+  },
+  {
+   "t": "Reaction (MarketWatch)",
+   "u": "https://morningstar.com/news/marketwatch/2026101485/chip-bellwether-asml-says-customers-are-already-asking-to-place-orders-for-2030"
+  }
+ ]
+}

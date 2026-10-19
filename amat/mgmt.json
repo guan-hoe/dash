@@ -1,0 +1,63 @@
+{
+ "ticker": "AMAT",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q3 FY2026 (July quarter)",
+  "zh": "2026 财年第三季（7 月季度）"
+ },
+ "reported": "2026-08-13",
+ "timing": "amc",
+ "pre_close": 534.54,
+ "react": {
+  "date": "2026-08-14",
+  "close": 507.18,
+  "pct": -5.1
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 409.29,
+  "pct": -23.4
+ },
+ "review": {
+  "en": [
+   "Record revenue of $9.12B (+25%) and non-GAAP EPS of $3.50 (+41%) both beat, with the biggest sequential growth in the company's history. The Q4 guide of $10.25B ±$0.5B and $4.02 EPS was about $700M above consensus. CEO Gary Dickerson said customers have found ways around cleanroom shortages and pulled in tool deliveries, supporting multi-year AI-driven growth. China was 28% of revenue and is expected to grow this year on 28nm foundry spending, while gross margin is guided flat at about 50%.",
+   "The stock fell 2.5% on report day and 5.1% the next, as the flat margin outlook and heavy China mix took the shine off the guide. Chip-equipment stocks kept sliding into mid-September, and AMAT bottomed near $415 on Sep 16, 22% below the pre-report close, after AI-spending warnings hit the sector. The late-September recovery brought it back to about the post-report level, roughly 5% below the pre-report price."
+  ],
+  "zh": [
+   "营收创纪录达 91.2 亿美元（+25%），非 GAAP 每股收益 3.50 美元（+41%），均超预期，环比增幅为公司史上最大。第四季指引营收 102.5 亿美元（±5 亿）、每股收益 4.02 美元，较预期高约 7 亿美元。CEO 盖瑞·迪克森表示客户已设法解决洁净室不足问题并提前提货，支撑多年的 AI 驱动增长。中国占营收 28%，今年在 28 纳米代工投资带动下预计增长；毛利率指引持平于约 50%。",
+   "财报当天股价下跌 2.5%，次日再跌 5.1%，毛利率展望持平和较高的中国占比冲淡了指引的亮点。半导体设备股持续下跌至 9 月中旬，AI 开支警告冲击板块，应用材料在 9 月 16 日见底约 415 美元，较财报前收盘低 22%。9 月下旬回升至财报后水平，目前较财报前低约 5%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Gary Dickerson",
+   "zh": "盖瑞·迪克森"
+  },
+  "since": "2013",
+  "bio": {
+   "en": "CEO since 2013. Previously CEO of Varian Semiconductor, which Applied bought in 2011, and earlier spent 18 years at KLA-Tencor. Has pushed Applied toward materials engineering for AI chips, such as gate-all-around transistors and advanced packaging.",
+   "zh": "2013 年起任 CEO。此前任瓦里安半导体 CEO（应用材料于 2011 年收购），更早在科磊工作 18 年。推动应用材料聚焦 AI 芯片材料工程，如环绕栅极晶体管和先进封装。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Brice Hill",
+   "zh": "布莱斯·希尔"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "CFO since March 2022, joining from Xilinx, where he was CFO. Spent most of his 25-year career at Intel, leading finance for many of its largest businesses and functions.",
+   "zh": "2022 年 3 月起任 CFO，此前任赛灵思 CFO。25 年职业生涯大部分在英特尔，负责多个最大业务与职能部门的财务。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q3 FY26 results and guide",
+   "u": "https://earningsdispatch.com/applied-materials-fq3-2026-record-quarter-flat-margin-guide-after-hours"
+  },
+  {
+   "t": "Q3 FY26 call transcript",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/20/applied-materials-amat-q3-2026-earnings-call-transcript"
+  }
+ ]
+}

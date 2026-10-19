@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Applied Materials AMAT Dashboard</title>
+<meta name="description" content="Applied Materials (NASDAQ: AMAT) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: AMAT</span>
+  <span class="bar-px" id="barPx">$507.03</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Applied Materials, Inc. · Common stock · Santa Clara, California</div>
+      <h1 data-ih="title">AI chips need new materials, <em>and Applied sells the tools</em>.</h1>
+      <p data-i="lede" class="lede">Applied Materials makes the deposition, etch, inspection and packaging tools that chipmakers buy, and services the machines already in their fabs. Revenue rose 25% to a record $9.12B last quarter on leading-edge logic, DRAM for AI and advanced packaging, and the October-quarter guide of $10.25B would be up 51%. The catch: China is still 28% of sales under tightening US export rules, and the stock has nearly doubled this year.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$507.03</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$402B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$210–723</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E (trailing GAAP)</span></div><div class="v">~44×</div><div class="s"><span data-i="s_val">last 4 quarters EPS $11.60 · Q4 guide × 4 ≈ 32×</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q4 FY26 guide</span></div><div class="v">$10.25B</div><div class="s"><span data-i="s_an">±$0.5B · +51% YoY · non-GAAP EPS $4.02 ±$0.20</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Nov 12</div><div class="s"><span data-i="s_er">Q4 FY26 results and Q1 FY27 guide · after the close</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. Applied peaked at $723 on Jun 30, fell to $436 by Jul 29, and has closed between about $415 and $545 since August.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="AMAT daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">1.59</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Applied's fiscal year ends on the last Sunday of October, so Q3 FY26 is the quarter ended Jul 26, 2026. Revenue covers Semiconductor Systems, Applied Global Services and Display (reported under corporate and other). The last bar is company guidance at the midpoint.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q3 FY26</span></div><div class="v">$9.12B</div><div class="s"><span data-i="sc0">+25% YoY · +15% QoQ · record</span></div></div><div class="cell"><div class="k"><span data-i="kc1">Semiconductor Systems</span></div><div class="v">$7.04B</div><div class="s"><span data-i="sc1">+27% YoY · 37.7% margin · DRAM 26%</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Applied Global Services</span></div><div class="v">$1.78B</div><div class="s"><span data-i="sc2">+22% YoY · 30.1% margin</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Display & other</span></div><div class="v">$294M</div><div class="s"><span data-i="sc3">+7% YoY · operating loss $118M</span></div></div><div class="cell"><div class="k"><span data-i="kc4">Gross margin</span></div><div class="v">50.3%</div><div class="s"><span data-i="sc4">GAAP · +1.5 pts YoY · 13th straight YoY gain</span></div></div><div class="cell"><div class="k"><span data-i="kc5">EPS</span></div><div class="v">$3.17</div><div class="s"><span data-i="sc5">GAAP, +43% YoY · non-GAAP $3.50</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">AI-driven mix</h3><p data-i="w0p">Leading-edge logic, DRAM and advanced packaging are expected to drive about 80% of equipment market growth. DRAM revenue, including HBM packaging, rose 52% and packaging is guided to grow over 70% in 2026.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Record margins</h3><p data-i="w1p">Non-GAAP operating margin hit a record 34.0%, up 3.3 points in a year, and the Q4 guide of $10.25B would be the biggest quarter yet.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Fiscal 2027 outlook</h3><p data-i="w2p">Management expects another strong growth year in 2027 and says top customers now share 8-quarter forecasts. The Nov 12 report gives the first Q1 FY27 number.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Capex build-out</h3><p data-i="w3p">Applied plans to double system output by 2028. Capex rose 35% in the first nine months of FY26, so free cash flow lagged profit growth.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w4h">China and export rules</h3><p data-i="w4p">China was 28% of revenue, down from 35% a year ago. The US Affiliates Rule, paused since Nov 2025, is now due back after the trade truce ends Jan 10, 2027, and China is pushing fabs toward local tools.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Cycle and valuation</h3><p data-i="w5p">At about 44 times trailing earnings the stock prices in a long upcycle. It fell about 40% from peak to trough in just one month this summer.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="AMAT" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Nov 12, 2026</div><h3 data-i="c0h">Q4 FY26 earnings</h3><p data-i="c0p">Guide: $10.25B ±$0.5B revenue, with Semiconductor Systems about $7.9B, AGS about $1.84B and other (mostly Display) about $510M.</p></div></div><div class="item"><div><div class="date">Jan 10, 2027</div><h3 data-i="c1h">US–China truce deadline</h3><p data-i="c1p">The truce was extended two months; the paused export Affiliates Rule is set to return when it ends unless extended again.</p></div></div><div class="item"><div><div class="date">Mid-Feb 2027</div><h3 data-i="c2h">Q1 FY27 earnings</h3><p data-i="c2p">Date not yet announced; first-quarter results usually come in mid-February.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://investors.appliedmaterials.com/node/29551/pdf" target="_blank" rel="noopener">Q3 FY26 results (Applied Materials)</a></li><li><a href="https://investors.appliedmaterials.com/static-files/7193b049-7b3a-4cd4-9d62-67fef9b90709" target="_blank" rel="noopener">Q3 FY26 financial results snapshot (Applied Materials)</a></li><li><a href="https://investing.com/news/transcripts/earnings-call-transcript-applied-materials-beats-q3-2026-estimates-shares-fall-93CH-4859444" target="_blank" rel="noopener">Q3 FY26 earnings call transcript (Investing.com)</a></li><li><a href="https://zacks.com/stock/news/2974848/-applied-materials-q3-earnings-beat-estimates-revenues-rise-yy" target="_blank" rel="noopener">Q3 FY26 summary and Q4 segment guide (Zacks)</a></li><li><a href="https://stockanalysis.com/stocks/amat/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://www.cmtradelaw.com/2026/09/u-s-china-trade-truce-extended-two-months-bis-affiliates-rule-suspension-follows/" target="_blank" rel="noopener">US–China truce extension and Affiliates Rule (Crowell &amp; Moring)</a></li><li><a href="https://stockanalysis.com/stocks/amat/" target="_blank" rel="noopener">Price, market cap, beta and earnings date: Stock Analysis and Stocklake, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Applied Materials, Inc.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "amat", SHARES = 793600000.0, TV = "NASDAQ:AMAT";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q4 FY21", "Oct 2021", 6123, 48.1, 32.96, 1.88], ["Q1 FY22", "Jan 2022", 6271, 47.19, 31.45, 2.0], ["Q2 FY22", "May 2022", 6245, 46.87, 30.33, 1.74], ["Q3 FY22", "Jul 2022", 6520, 46.1, 29.51, 1.85], ["Q4 FY22", "Oct 2022", 6749, 45.95, 29.54, 1.85], ["Q1 FY23", "Jan 2023", 6739, 46.67, 29.23, 2.02], ["Q2 FY23", "Apr 2023", 6630, 46.67, 28.82, 1.86], ["Q3 FY23", "Jul 2023", 6425, 46.32, 28.05, 1.85], ["Q4 FY23", "Oct 2023", 6723, 47.14, 29.32, 2.38], ["Q1 FY24", "Jan 2024", 6707, 47.77, 29.33, 2.41], ["Q2 FY24", "Apr 2024", 6646, 47.44, 28.77, 2.06], ["Q3 FY24", "Jul 2024", 6778, 47.28, 28.65, 2.05], ["Q4 FY24", "Oct 2024", 7045, 47.34, 29.04, 2.1], ["Q1 FY25", "Jan 2025", 7166, 48.79, 30.35, 1.45], ["Q2 FY25", "Apr 2025", 7100, 49.09, 30.55, 2.63], ["Q3 FY25", "Jul 2025", 7302, 48.78, 30.58, 2.22], ["Q4 FY25", "Oct 2025", 6800, 48.02, 28.44, 2.38], ["Q1 FY26", "Jan 2026", 7012, 48.99, 29.89, 2.54], ["Q2 FY26", "Apr 2026", 7910, 49.9, 31.9, 3.51], ["Q3 FY26", "Jul 2026", 9115, 50.31, 33.74, 3.17]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q4 FY26e", 10250, "Oct 2026 \u00b7 guidance midpoint", "2026\u5e7410\u6708 \u00b7 \u6307\u5f15\u4e2d\u503c"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "FY26 Q3", "sc0": "同比 +25% · 环比 +15% · 创纪录", "kc1": "半导体系统", "sc1": "同比 +27% · 利润率 37.7% · DRAM 占 26%", "kc2": "应用全球服务", "sc2": "同比 +22% · 利润率 30.1%", "kc3": "显示及其他", "sc3": "同比 +7% · 营业亏损 1.18 亿", "kc4": "毛利率", "sc4": "GAAP · 同比 +1.5 个百分点 · 连续 13 季同比提升", "kc5": "每股收益", "sc5": "GAAP，同比 +43% · 非GAAP $3.50", "w0h": "AI 驱动的组合", "w0p": "先进逻辑、DRAM 与先进封装预计贡献约 80% 的设备市场增长。含 HBM 封装的 DRAM 营收增长 52%，先进封装 2026 年预计增长逾 70%。", "w1h": "利润率创纪录", "w1p": "非GAAP营业利润率创纪录达 34.0%，一年提升 3.3 个百分点；Q4 指引 102.5 亿美元将是史上最大季度。", "w2h": "FY27 展望", "w2p": "管理层预计 2027 年再度强劲增长，并称大客户已提供 8 季滚动预测。11月12日财报将首次给出 FY27 Q1 数字。", "w3h": "扩产开支", "w3p": "应用材料计划到 2028 年将系统产能翻倍。FY26 前九个月资本开支增长 35%，自由现金流增速落后于利润。", "w4h": "中国与出口管制", "w4p": "中国占营收 28%，一年前为 35%。自 2025年11月暂停的美国“关联方规则”现定于贸易休战于 2027年1月10日结束后恢复，中国亦在推动晶圆厂采用本土设备。", "w5h": "周期与估值", "w5p": "按历史盈利约 44 倍，股价已反映长期上行周期。今夏仅一个月内由高点至低点跌去约 40%。", "c0h": "FY26 第四季财报", "c0p": "指引：营收 102.5 亿 ±5 亿美元，其中半导体系统约 79 亿、AGS 约 18.4 亿、其他（主要为显示）约 5.1 亿。", "c1h": "美中休战期限", "c1p": "休战延长两个月；除非再度延期，暂停的出口“关联方规则”将在期满后恢复。", "c2h": "FY27 第一季财报", "c2p": "日期未公布；第一季业绩通常在2月中旬发布。", "eyebrow": "应用材料 · 普通股 · 加州圣克拉拉", "title": "AI 芯片需要新材料，<em>应用材料卖的正是工具</em>。", "lede": "应用材料生产芯片厂采购的沉积、刻蚀、检测与封装设备，并为晶圆厂中已装机的设备提供服务。上季营收增长 25% 至创纪录的 91.2 亿美元，动力来自先进逻辑、AI 所需 DRAM 与先进封装；10月季度指引 102.5 亿美元，同比将增长 51%。隐忧是：在日益收紧的美国出口管制下，中国仍占销售的 28%，而股价今年已接近翻倍。", "k_val": "市盈率（GAAP 历史）", "s_val": "近四季每股 $11.60 · Q4 指引 × 4 约 32 倍", "k_an": "FY26 Q4 指引", "s_an": "±5 亿 · 同比 +51% · 非GAAP每股 $4.02 ±$0.20", "s_er": "FY26 第四季业绩及 FY27 Q1 指引 · 美股收盘后", "sub_price": "每日收盘价与50日均线。应用材料于6月30日见顶 $723，7月29日跌至 $436，8月以来收盘价在约 $415 至 $545 之间。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。应用材料财年于10月最后一个星期日结束，因此 FY26 第三季为截至 2026年7月26日的季度。营收包括半导体系统、应用全球服务及显示业务（列于公司及其他）。最后一根柱为公司指引中值。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Applied Materials, Inc. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

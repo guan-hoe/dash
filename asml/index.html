@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ASML ASML Dashboard</title>
+<meta name="description" content="ASML (NASDAQ: ASML) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: ASML</span>
+  <span class="bar-px" id="barPx">$1,657.44</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">ASML Holding N.V. · NASDAQ-listed shares (1 ADR = 1 share) · Veldhoven, Netherlands</div>
+      <h1 data-ih="title">The only company that makes <em>the machines that print AI chips</em>.</h1>
+      <p data-i="lede" class="lede">ASML is the only maker of EUV lithography machines, the tools needed to print the most advanced chips. Sales rose 55% to a record €11.7B (about $13.4B) last quarter, and management says planned supply will not meet customer demand in 2027 or 2028. The catches: China is still about a fifth of sales and faces tighter US export rules, and the stock trades at about 41 times trailing earnings, flattered by a one-off gain.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 15, 2026</div>
+      <div class="pxbig" id="pxBig">$1,657.44</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$637B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$967–1,989</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E (trailing)</span></div><div class="v">~41×</div><div class="s"><span data-i="s_val">TTM EPS ~$40.6 · forward ~27×</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q4 2026 guide</span></div><div class="v">€14.2–15.2B</div><div class="s"><span data-i="s_an">~$15.9–17.0B · GM ~57% · FY €44–45B</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Late Jan</div><div class="s"><span data-i="s_er">Q4 2026 results · date not yet confirmed</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes of the NASDAQ-listed shares with the 50-day average. Each ADR is one ordinary share. ASML has closed between about $1,550 and $1,990 since June.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="ASML daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">1.30</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. ASML reports in euros on a calendar year; each quarter is converted at that quarter's average EUR/USD rate (from about 1.01 in Q3 2022 to about 1.15–1.17 in 2025–26), so part of the dollar growth since 2025 is the stronger euro. EPS is per share (1 ADR = 1 share), converted the same way. The last bar is the midpoint of the €14.2–15.2B Q4 2026 guide at about 1.12 $/€.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q3 2026</span></div><div class="v">$13.4B</div><div class="s"><span data-i="sc0">€11.66B · +55% YoY · near top of guide</span></div></div><div class="cell"><div class="k"><span data-i="kc1">EUV systems</span></div><div class="v">$4.7B</div><div class="s"><span data-i="sc1">€4.1B · 49% of system sales · incl. 1 High NA</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Installed base</span></div><div class="v">$3.8B</div><div class="s"><span data-i="sc2">€3.29B · ~€400M above guide on upgrades</span></div></div><div class="cell"><div class="k"><span data-i="kc3">China share</span></div><div class="v">23%</div><div class="s"><span data-i="sc3">of system sales · 14% in Q2 · ~20% of FY sales</span></div></div><div class="cell"><div class="k"><span data-i="kc4">Bookings</span></div><div class="v">n/a</div><div class="s"><span data-i="sc4">not reported · order book up every quarter in 2026</span></div></div><div class="cell"><div class="k"><span data-i="kc5">EPS (diluted)</span></div><div class="v">$14.90</div><div class="s"><span data-i="sc5">€12.95 · +136% YoY · incl. ~€0.5B Mistral gain</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">Demand outruns supply</h3><p data-i="w0p">Management now expects planned supply to fall short of demand in both 2027 and 2028, and some customers want to place orders for 2029–30. ASML is adding about 30% EUV and DUV capacity in 2027 and is studying more than the 30% planned for 2028.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Upgrades and pricing</h3><p data-i="w1p">Installed base sales of €3.29B beat guidance by about €400M as customers bought productivity upgrades, lifting gross margin to a record 57.5%. Installed base sales should grow about 50% this year.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">No bookings number</h3><p data-i="w2p">ASML stopped reporting quarterly orders in 2026; the last figure was €13.2B in Q4 2025. Management says order momentum has risen every quarter this year, and Q3 free cash flow of €11.4B shows large down payments arrived.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">A big Q4</h3><p data-i="w3p">The €14.2–15.2B Q4 guide is about 51% above last year's €9.7B at the midpoint, with gross margin around 57%. LSEG consensus had been €14.19B, and the 2026 range narrowed to €44–45B.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w4h">China and the MATCH Act</h3><p data-i="w4p">China was 23% of Q3 system sales (14% in Q2) and should be about 20% of full-year sales. The proposed US MATCH Act would block immersion DUV sales to China and could limit servicing there.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Valuation</h3><p data-i="w5p">At about 41 times trailing earnings (27 forward) the stock prices in strong growth. It fell 3.9% on results day even though the Q4 guide beat, and sits about 17% below its 52-week high.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="ASML" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Oct 27, 2026</div><h3 data-i="c0h">Interim dividend (Nasdaq ex-date)</h3><p data-i="c0p">€1.88 per share, announced with Q3 results on Oct 14 and paid Nov 4.</p></div></div><div class="item"><div><div class="date">Late Jan 2027</div><h3 data-i="c1h">Q4 2026 earnings</h3><p data-i="c1p">Full-year results and the 2027 outlook, including any update on 2028 capacity. Guide: €14.2–15.2B sales, ~57% gross margin. ASML has not confirmed the date.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026" target="_blank" rel="noopener">Q3 2026 results and Q4 guidance (ASML)</a></li><li><a href="https://fool.com/earnings/call-transcripts/2026/10/14/asml-asml-q3-2026-earnings-call-transcript" target="_blank" rel="noopener">Q3 2026 earnings call transcript (Motley Fool)</a></li><li><a href="https://investing.com/news/company-news/asml-q3-2026-slides-record-results-but-shares-fall-on-valuation-93CH-4948137" target="_blank" rel="noopener">Q3 2026 slides: mix, regions and cash flow (Investing.com)</a></li><li><a href="https://wtaq.com/2026/10/14/asml-forecasts-q4-sales-above-expectations-on-ai-chip-demand" target="_blank" rel="noopener">Q4 guide vs LSEG consensus (Reuters)</a></li><li><a href="https://zacks.com/stock/news/3006983/asml-q3-earnings-beat-on-strong-upgrade-demand-revenues-miss" target="_blank" rel="noopener">Q3 2026 vs estimates (Zacks)</a></li><li><a href="https://stockanalysis.com/stocks/asml/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement in euros (Stock Analysis)</a></li><li><a href="https://finance.yahoo.com/quote/ASML" target="_blank" rel="noopener">Price, market cap, forward P/E and 52-week range: Stocklake; EUR/USD averages: FMP, as of Oct 15, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 15, 2026 (Q3 2026 results). For information only, not investment advice. Not affiliated with ASML Holding N.V.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "asml", SHARES = 384100000.0, TV = "NASDAQ:ASML";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q3 2021", "Sep 2021", 6176, 51.73, 36.62, 5.02], ["Q4 2021", "Dec 2021", 5700, 54.17, 36.46, 5.01], ["Q1 2022", "Mar 2022", 3964, 48.98, 22.2, 1.94], ["Q2 2022", "Jun 2022", 5781, 49.07, 30.44, 3.74], ["Q3 2022", "Sep 2022", 5816, 51.82, 33.56, 4.32], ["Q4 2022", "Dec 2022", 6571, 51.49, 33.03, 4.7], ["Q1 2023", "Mar 2023", 7238, 50.59, 32.69, 5.31], ["Q2 2023", "Jun 2023", 7514, 51.35, 32.79, 5.37], ["Q3 2023", "Sep 2023", 7259, 51.88, 32.7, 5.23], ["Q4 2023", "Dec 2023", 7789, 51.36, 33.05, 5.6], ["Q1 2024", "Mar 2024", 5744, 50.98, 26.29, 3.38], ["Q2 2024", "Jun 2024", 6721, 51.45, 29.39, 4.32], ["Q3 2024", "Sep 2024", 8204, 50.8, 32.69, 5.8], ["Q4 2024", "Dec 2024", 9882, 51.71, 36.22, 7.31], ["Q1 2025", "Mar 2025", 8155, 53.99, 35.37, 6.32], ["Q2 2025", "Jun 2025", 8730, 53.69, 34.63, 6.7], ["Q3 2025", "Sep 2025", 8785, 51.62, 32.84, 6.41], ["Q4 2025", "Dec 2025", 11313, 52.16, 35.31, 8.54], ["Q1 2026", "Mar 2026", 10261, 52.98, 36.02, 8.37], ["Q2 2026", "Jun 2026", 10841, 53.98, 37.05, 8.81], ["Q3 2026", "Sep 2026", 13417, 57.5, 44.4, 14.9]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q4 2026e", 16460, "Dec 2026 \u00b7 \u20ac14.2\u201315.2B guide midpoint at ~1.12 $/\u20ac", "2026\u5e7412\u6708 \u00b7 142\u2013152 \u4ebf\u6b27\u5143\u6307\u5f15\u4e2d\u503c\uff0c\u6309\u7ea6 1.12 \u7f8e\u5143/\u6b27\u5143\u6362\u7b97"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "2026 Q3", "sc0": "116.6 亿欧元 · 同比 +55% · 接近指引上限", "kc1": "EUV 系统", "sc1": "41 亿欧元 · 占系统销售 49% · 含 1 台 High NA", "kc2": "装机服务", "sc2": "32.9 亿欧元 · 升级带动，高于指引约 4 亿", "kc3": "中国占比", "sc3": "系统销售占比 · Q2 为 14% · 约占全年销售 20%", "kc4": "订单", "sc4": "不再披露 · 2026 年订单逐季增长", "kc5": "每股收益（摊薄）", "sc5": "12.95 欧元 · 同比 +136% · 含约 5 亿欧元 Mistral 收益", "w0h": "需求超过供应", "w0p": "管理层现预计按计划的供应在 2027 和 2028 年都无法满足需求，部分客户希望下 2029–30 年的订单。阿斯麦 2027 年将 EUV 与 DUV 产能提高约 30%，并研究在 2028 年原定 30% 的基础上进一步扩产。", "w1h": "升级与定价", "w1p": "客户购买提升产能的升级，装机服务销售 32.9 亿欧元，高于指引约 4 亿，推动毛利率创纪录达 57.5%。今年装机服务销售预计增长约 50%。", "w2h": "不再公布订单", "w2p": "阿斯麦自 2026 年起停止披露季度订单，最后一次为 2025 Q4 的 132 亿欧元。管理层称今年订单势头逐季增强，Q3 自由现金流 114 亿欧元显示已收到大额预付款。", "w3h": "Q4 大幅跃升", "w3p": "Q4 指引 142–152 亿欧元，中值较去年同期 97 亿欧元高约 51%，毛利率约 57%。LSEG 一致预期为 141.9 亿欧元，2026 年区间收窄至 440–450 亿欧元。", "w4h": "中国与 MATCH 法案", "w4p": "中国占 Q3 系统销售的 23%（Q2 为 14%），预计约占全年销售 20%。拟议中的美国 MATCH 法案将禁止向中国出售浸没式 DUV，并可能限制在华服务。", "w5h": "估值", "w5p": "按历史盈利约 41 倍（预期约 27 倍），股价已反映强劲增长。即使 Q4 指引超预期，财报当日仍下跌 3.9%，目前较 52 周高点低约 17%。", "c0h": "中期股息（纳斯达克除息日）", "c0p": "每股 1.88 欧元，已于 10月14日随 Q3 业绩公布，11月4日派发。", "c1h": "2026 第四季财报", "c1p": "全年业绩及 2027 年展望，或更新 2028 年产能计划。指引：销售 142–152 亿欧元，毛利率约 57%。阿斯麦尚未确认日期。", "eyebrow": "阿斯麦控股 · 纳斯达克上市股份（1 ADR = 1 股）· 荷兰费尔德霍芬", "title": "全球唯一一家制造<em>印刷 AI 芯片机器</em>的公司。", "lede": "阿斯麦是全球唯一的 EUV 光刻机制造商，最先进的芯片都需要这种设备来印刷。上季销售增长 55% 至创纪录的 117 亿欧元（约 134 亿美元），管理层表示按现有计划的供应无法满足 2027 和 2028 年的客户需求。隐忧在于：中国仍约占销售的五分之一，并面临更严格的美国出口管制；股价约为过去十二个月盈利的 41 倍，且盈利含一次性收益。", "k_val": "市盈率（历史）", "s_val": "过去四季每股收益约 $40.6 · 预期约 27 倍", "k_an": "2026 Q4 指引", "s_an": "约 159–170 亿美元 · 毛利率约 57% · 全年 440–450 亿欧元", "s_er": "2026 Q4 业绩 · 日期尚未确认", "sub_price": "纳斯达克上市股份每日收盘价与50日均线。每份 ADR 即一股普通股。阿斯麦自6月以来收盘价在约 $1,550 至 $1,990 之间。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。阿斯麦以欧元报告、财年为自然年；各季度按当季平均欧元兑美元汇率换算（由 2022 Q3 约 1.01 至 2025–26 年约 1.15–1.17），因此 2025 年以来的美元增长部分来自欧元走强。每股收益按每股计算（1 ADR = 1 股），同样换算。最后一根柱为 2026 Q4 指引 142–152 亿欧元的中值，按约 1.12 美元/欧元换算。", "foot": "基本面数据截至 2026年10月15日（2026 年第三季业绩）。仅供参考，不构成投资建议。与 ASML Holding N.V. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

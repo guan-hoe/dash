@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 227.8,
+ "bias": {
+  "en": "Bearish · back on the Sep 3 low and 200-day",
+  "zh": "偏空 · 回到 9 月 3 日低点和 200 日均线"
+ },
+ "read": [
+  {
+   "en": "Arm fell 6.9% on Oct 16 to $227.80, giving back the previous day's rebound, and is down 14.5% over five sessions. It is below the 5-day ($244.3), 10-day ($266.3), 30-day ($276.6) and falling 100-day ($295.2) averages and just above the rising 200-day ($223.4). MACD has been below its signal since Oct 7 and below zero, Parabolic SAR has been bearish since Sep 28 ($290.5), and RSI is 34.5.",
+   "zh": "Arm 10月16日下跌 6.9%，收于 $227.80，回吐前一日反弹，五个交易日累计下跌 14.5%。股价位于 5 日（$244.3）、10 日（$266.3）、30 日（$276.6）和下行的 100 日均线（$295.2）下方，略高于上行的 200 日均线（$223.4）。MACD 自 10月7日起位于信号线下方并在零轴之下，抛物线 SAR 自 9月28日起看空（$290.5），RSI 为 34.5。"
+  },
+  {
+   "en": "The $237.5 support reclaimed on Oct 15 broke on the close and is now resistance; the day's low of $226.65 held the $225.5–226.5 zone (Sep 3 and Oct 15 lows). Resistance is $237.5–239.4, then $244.3–244.8 (5-day average, Oct 15 close) and $266 (10-day). Support is $225.5–226.5, then $223.4 (200-day) and $219.4 (Aug 3 low). A close below $223.4 would open $219.4.",
+   "zh": "10月15日收复的 $237.5 支撑在收盘时失守并转为阻力；当日低点 $226.65 守住 $225.5–226.5 区域（9月3日和 10月15日低点）。阻力为 $237.5–239.4，其次 $244.3–244.8（5 日均线、10月15日收盘）和 $266（10 日均线）。支撑为 $225.5–226.5，其次 $223.4（200 日均线）和 $219.4（8月3日低点）。若收盘跌破 $223.4，下一目标看 $219.4。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    238,
+    {
+     "en": "Support since July, now resistance; Oct 16 high $239.4",
+     "zh": "7月以来的支撑，转为阻力；10月16日高点 $239.4"
+    }
+   ],
+   [
+    244.5,
+    {
+     "en": "5-day average ($244.3) and Oct 15 close",
+     "zh": "5日均线（$244.3）及10月15日收盘价"
+    }
+   ],
+   [
+    266,
+    {
+     "en": "10-day average",
+     "zh": "10日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    226,
+    {
+     "en": "Sep 3, Oct 15 and Oct 16 lows ($225.5–226.7)",
+     "zh": "9月3日、10月15日及10月16日低点（$225.5–226.7）"
+    }
+   ],
+   [
+    223.4,
+    {
+     "en": "200-day average",
+     "zh": "200日均线"
+    }
+   ],
+   [
+    219.4,
+    {
+     "en": "Aug 3 low",
+     "zh": "8月3日低点"
+    }
+   ]
+  ]
+ }
+}

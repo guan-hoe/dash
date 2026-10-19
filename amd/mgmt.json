@@ -1,0 +1,63 @@
+{
+ "ticker": "AMD",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-08-04",
+ "timing": "amc",
+ "pre_close": 518.58,
+ "react": {
+  "date": "2026-08-05",
+  "close": 482.05,
+  "pct": -7.0
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 528.75,
+  "pct": 2.0
+ },
+ "review": {
+  "en": [
+   "Record revenue of $11.5B (+50%) beat the $11.3B estimate, and non-GAAP EPS of $1.66 topped $1.62. Data center more than doubled (+107%) to $6.7B, now 58% of sales, with a 31% operating margin as EPYC server CPUs and Instinct AI GPUs both grew. The Q3 guide of about $13.0B was above consensus. CEO Lisa Su called it an excellent quarter of record revenue and profitability; CFO Jean Hu highlighted data center's rising share of the business.",
+   "AMD had climbed 7% on report day, then fell almost 9% after hours and closed 7.0% lower the next day: after a huge AI run, a clean beat was not enough. It drifted to $457 by Aug 24, 12% below the pre-report close. September reversed that: as AI agents such as Meta's Muse lifted demand for server CPUs, the stock rose 10% on Sep 21 and passed $1 trillion in market value. It sits well above its pre-report level."
+  ],
+  "zh": [
+   "营收创纪录达 115 亿美元（+50%），高于 113 亿美元预期，非 GAAP 每股收益 1.66 美元高于 1.62 美元。数据中心营收翻倍以上（+107%）至 67 亿美元，占总营收 58%，营业利润率 31%，EPYC 服务器 CPU 与 Instinct AI GPU 均有增长。第三季营收指引约 130 亿美元，高于预期。CEO 苏姿丰称这是营收与盈利双双创纪录的出色季度；CFO Jean Hu强调数据中心占比持续提升。",
+   "财报当天股价上涨 7%，盘后下跌近 9%，次日收跌 7.0%：在 AI 大涨之后，单纯超预期已不够。8 月 24 日回落至 457 美元，较财报前收盘低 12%。9 月形势逆转：Meta 的 Muse 等 AI 智能体带动服务器 CPU 需求，9 月 21 日股价大涨 10%，市值突破 1 万亿美元，目前远高于财报前水平。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Lisa Su",
+   "zh": "苏姿丰"
+  },
+  "since": "2014",
+  "bio": {
+   "en": "MIT-trained engineer who spent years at IBM and Freescale before joining AMD in 2012. CEO since 2014, she rebuilt AMD around Ryzen and EPYC processors and is now pushing Instinct AI accelerators against NVIDIA.",
+   "zh": "毕业于麻省理工的工程师，曾在 IBM 和飞思卡尔任职多年，2012 年加入 AMD。2014 年起任 CEO，以 Ryzen 和 EPYC 处理器重振 AMD，目前以 Instinct AI 加速器挑战英伟达。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Jean Hu",
+   "zh": "Jean Hu"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "CFO since 2022. Previously CFO of Marvell for six years and before that of QLogic and Conexant; holds a PhD in economics.",
+   "zh": "2022 年起任 CFO。此前任 Marvell CFO 六年，更早担任 QLogic 和 Conexant 的 CFO；拥有经济学博士学位。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 results and reaction",
+   "u": "https://financefeeds.com/amd-earnings-bullish-544-bearish-425"
+  },
+  {
+   "t": "Sep 21 move (INDmoney)",
+   "u": "https://indmoney.com/blog/us-stocks/why-amd-stock-is-rising-1-trillion-valuation"
+  }
+ ]
+}

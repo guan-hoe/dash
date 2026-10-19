@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 528.75,
+ "bias": {
+  "en": "Uptrend under pressure · on the 100-day average",
+  "zh": "上升趋势承压 · 位于 100 日均线"
+ },
+ "read": [
+  {
+   "en": "AMD fell 6.0% on Oct 16 to $528.75, its third straight decline. It is below the 5-day ($572.3), 10-day ($601.7) and 30-day ($578.2) averages, just above the rising 100-day ($525.7), and well above the 200-day ($394.3). MACD has been below its signal since Oct 9 and is still above zero with a widening gap, Parabolic SAR has been bearish since Oct 8 ($624.3), and RSI is 37.8.",
+   "zh": "AMD 10月16日下跌 6.0%，收于 $528.75，连续第三日下跌。股价位于 5 日（$572.3）、10 日（$601.7）和 30 日均线（$578.2）下方，略高于上行的 100 日均线（$525.7），并远高于 200 日均线（$394.3）。MACD 自 10月9日起位于信号线下方，仍在零轴之上，差距扩大，抛物线 SAR 自 10月8日起看空（$624.3），RSI 为 37.8。"
+  },
+  {
+   "en": "The $530 Oct 15 low broke and is now first resistance, but the drop stopped at the $525–527 zone (100-day average, August pivot). Above $530 are $568–572 (Oct 14 low, 5-day average) and $578 (30-day). Support is $525, then $495–498 (late-June and early-July lows) and $480 (Sep 14 low). A close below $525 would open $497; a close above $572 would target $578.",
+   "zh": "$530 的 10月15日低点失守并成为第一阻力，但跌势止于 $525–527 区域（100 日均线、8月转折点）。$530 上方为 $568–572（10月14日低点、5 日均线）和 $578（30 日均线）。支撑为 $525，其次 $495–498（6月下旬和 7月初低点）和 $480（9月14日低点）。若收盘跌破 $525，下一目标看 $497；若收盘站上 $572，目标看 $578。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    530,
+    {
+     "en": "Oct 15 low, now resistance",
+     "zh": "10月15日低点，转为阻力"
+    }
+   ],
+   [
+    570,
+    {
+     "en": "Oct 14 low and 5-day average ($567–572)",
+     "zh": "10月14日低点及5日均线（$567–572）"
+    }
+   ],
+   [
+    578,
+    {
+     "en": "30-day average",
+     "zh": "30日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    525,
+    {
+     "en": "100-day average ($525.7) and August pivot; Oct 16 low $526.8",
+     "zh": "100日均线（$525.7）及8月转折点；10月16日低点 $526.8"
+    }
+   ],
+   [
+    497,
+    {
+     "en": "Late-June and early-July lows ($495–498)",
+     "zh": "6月下旬和7月初低点（$495–498）"
+    }
+   ],
+   [
+    480,
+    {
+     "en": "Sep 14 low",
+     "zh": "9月14日低点"
+    }
+   ]
+  ]
+ }
+}

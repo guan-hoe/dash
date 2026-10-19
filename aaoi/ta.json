@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 75.57,
+ "bias": {
+  "en": "Bearish · broke the July low",
+  "zh": "偏空 · 跌破 7 月低点"
+ },
+ "read": [
+  {
+   "en": "AAOI fell 9.7% on Oct 16 to $75.57 on heavier volume, its fifth straight decline and down 31.1% over five sessions. It is below the 5-day ($88.8), 10-day ($103.4), 30-day ($103.2) and 100-day ($125.1) averages and the rising 200-day ($112.2). MACD has been below its signal since Oct 13 and below zero with a widening gap, Parabolic SAR has been bearish since Oct 12 ($122.5), and RSI is 32.8.",
+   "zh": "AAOI 10月16日放量下跌 9.7%，收于 $75.57，连续第五日下跌，五个交易日累计下跌 31.1%。股价位于 5 日（$88.8）、10 日（$103.4）、30 日（$103.2）和 100 日均线（$125.1）以及上行的 200 日均线（$112.2）下方。MACD 自 10月13日起位于信号线下方并在零轴之下，差距扩大，抛物线 SAR 自 10月12日起看空（$122.5），RSI 为 32.8。"
+  },
+  {
+   "en": "The close broke the $78.6 Mar 31 and $76 Jul 29 lows, which now cap, with the $84.6 March low and $88.8 (5-day average) above. Below the day's $75.43 low there is little trading history until the Feb 27 gap low ($65.6), then $59 (Feb 25 high). A close back above $78.6 would reopen $84.6; a close below $75.4 would open $65.6.",
+   "zh": "收盘同时跌破 $78.6 的 3月31日低点和 $76 的 7月29日低点，两者转为阻力，上方为 $84.6 的 3月低点。再上方阻力为 $88.8（5 日均线）。当日低点 $75.43 下方直到 2月27日跳空缺口低点（$65.6）前成交历史很少，其次为 $59（2月25日高点）。若收盘重回 $78.6 上方，将重新打开 $84.6；若收盘跌破 $75.4，下一目标看 $65.6。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    76,
+    {
+     "en": "Jul 29 low, now resistance; Mar 31 low $78.6",
+     "zh": "7月29日低点，转为阻力；3月31日低点 $78.6"
+    }
+   ],
+   [
+    84.6,
+    {
+     "en": "March low; Oct 15 high $85.02",
+     "zh": "3月低点；10月15日高点 $85.02"
+    }
+   ],
+   [
+    88.8,
+    {
+     "en": "5-day average",
+     "zh": "5日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    75.4,
+    {
+     "en": "Oct 16 low",
+     "zh": "10月16日低点"
+    }
+   ],
+   [
+    65.6,
+    {
+     "en": "Feb 27 gap low",
+     "zh": "2月27日跳空缺口低点"
+    }
+   ],
+   [
+    59,
+    {
+     "en": "Feb 25 high, top of the February base",
+     "zh": "2月25日高点，2月整理区顶部"
+    }
+   ]
+  ]
+ }
+}

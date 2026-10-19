@@ -1,0 +1,59 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 409.29,
+ "bias": {
+  "en": "Bearish · broke the September lows",
+  "zh": "偏空 · 跌破 9 月低点"
+ },
+ "read": [
+  {
+   "en": "Applied Materials fell 4.8% on Oct 16 to $409.29, its ninth straight decline and down 19.3% over five sessions. It is below the 5-day ($449.5), 10-day ($485.8), 30-day ($474.6), 100-day ($516.8) and 200-day ($439.0) averages. MACD has been below its signal since Oct 13 and below zero with a widening gap, Parabolic SAR has been bearish since Oct 8 ($519.3), and RSI is 29.2, in oversold territory.",
+   "zh": "应用材料 10月16日下跌 4.8%，收于 $409.29，连续第九日下跌，五个交易日累计下跌 19.3%。股价位于 5 日（$449.5）、10 日（$485.8）、30 日（$474.6）、100 日（$516.8）和 200 日均线（$439.0）下方。MACD 自 10月13日起位于信号线下方并在零轴之下，差距扩大，抛物线 SAR 自 10月8日起看空（$519.3），RSI 为 29.2，处于超卖区。"
+  },
+  {
+   "en": "The $426 Sep 3 and $411.5 Sep 16 lows both broke on the close and now cap. Resistance is $411.5–418 (Sep 16 low, Oct 15 low), then $426–430 (Sep 3 low, Oct 15 close) and $439 (200-day). Support is $397 (May 19 low), then $377–380 (April lows). A close below $397 would open $377–380; a close above $430 would target $439.",
+   "zh": "$426 的 9月3日低点和 $411.5 的 9月16日低点均在收盘时失守并转为阻力。阻力为 $411.5–418（9月16日低点、10月15日低点），其次 $426–430（9月3日低点、10月15日收盘）和 $439（200 日均线）。支撑为 $397（5月19日低点），其次 $377–380（4月低点）。若收盘跌破 $397，下一目标看 $377–380；若收盘站上 $430，目标看 $439。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    415,
+    {
+     "en": "Sep 16 low and Oct 15 low ($411.5–418.2), now resistance",
+     "zh": "9月16日低点及10月15日低点（$411.5–418.2），转为阻力"
+    }
+   ],
+   [
+    428,
+    {
+     "en": "Sep 3 low and Oct 15 close ($426–430)",
+     "zh": "9月3日低点及10月15日收盘价（$426–430）"
+    }
+   ],
+   [
+    439,
+    {
+     "en": "200-day average",
+     "zh": "200日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    397,
+    {
+     "en": "May 19 low",
+     "zh": "5月19日低点"
+    }
+   ],
+   [
+    378,
+    {
+     "en": "Apr 15 and Apr 29 lows ($377.1–379.7)",
+     "zh": "4月15日及4月29日低点（$377.1–379.7）"
+    }
+   ]
+  ]
+ }
+}

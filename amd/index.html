@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Advanced Micro Devices AMD Dashboard</title>
+<meta name="description" content="Advanced Micro Devices (NASDAQ: AMD) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: AMD</span>
+  <span class="bar-px" id="barPx">$608.10</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Advanced Micro Devices, Inc. · Common stock · Santa Clara, California</div>
+      <h1 data-ih="title">The second source <em>everyone wants</em>.</h1>
+      <p data-i="lede" class="lede">AMD grew revenue 50% to $11.5B last quarter as data center sales more than doubled to 58% of the company. Its Helios racks with MI450 GPUs ship from Q3 to OpenAI, Meta, Anthropic, Microsoft and Oracle, and management expects data center revenue to more than double again in 2027.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$608.10</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$992B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$188–659</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E</span></div><div class="v">~92×</div><div class="s"><span data-i="s_val">Q2 non-GAAP EPS $1.66 × 4</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q3 2026 guide</span></div><div class="v">$13.0B</div><div class="s"><span data-i="s_an">±$300M · +41% YoY · GM ~56%</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Nov 3</div><div class="s"><span data-i="s_er">Q3 2026 · expected, after close</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. The stock more than tripled from its 52-week low of about $188.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="AMD daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">2.45</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with gross margin on the right axis. Q2 2025 includes an $800M MI308 export-control charge. The last bar is guidance at the midpoint.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q2 2026</span></div><div class="v">$11.5B</div><div class="s"><span data-i="sc0">+50% YoY · record</span></div></div><div class="cell"><div class="k"><span data-i="kc1">Data center</span></div><div class="v">$6.7B</div><div class="s"><span data-i="sc1">+107% · 58% of revenue</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Gross margin</span></div><div class="v">~56%</div><div class="s"><span data-i="sc2">non-GAAP · Q3 guided flat</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Q2 EPS</span></div><div class="v">$1.66</div><div class="s"><span data-i="sc3">non-GAAP · GAAP $1.38</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">Helios customers</h3><p data-i="w0p">OpenAI and Meta have up-to-6 GW deals each, Anthropic up to 2 GW of MI450 from the first half of 2027, and Oracle an initial 50,000-GPU cluster.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Server CPUs</h3><p data-i="w1p">EPYC revenue grew more than 70% with a fifth straight record server CPU quarter.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Margins not expanding</h3><p data-i="w2p">Q3 gross margin is guided flat at about 56% even as revenue jumps; AI GPUs carry lower margins than the corporate average.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w3h">Customer deals and dilution</h3><p data-i="w3p">OpenAI and Meta received warrants for 160M shares each, AMD may invest up to $5B in Anthropic, and purchase commitments rose to $30.3B.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="AMD" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Nov 3, 2026</div><h3 data-i="c0h">Q3 2026 earnings (expected)</h3><p data-i="c0p">Guide: about $13.0B ±$0.3B revenue, ~56% non-GAAP gross margin.</p></div></div><div class="item"><div><div class="date">Q4 2026</div><h3 data-i="c1h">Helios volume ramp</h3><p data-i="c1p">Shipments start late in Q3 and grow substantially in Q4.</p></div></div><div class="item"><div><div class="date">H1 2027</div><h3 data-i="c2h">Anthropic deployment</h3><p data-i="c2p">First gigawatt of MI450 for Anthropic begins.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://zacks.com/stock/news/2968659/amd-q2-earnings-call-points-to-faster-data-center-growth" target="_blank" rel="noopener">Q2 2026 call: Helios and Q3 guide</a></li><li><a href="https://sec-api.io/insights/financial-analysis-of-amd-q2-2026-filings-and-scenarios-to-2029" target="_blank" rel="noopener">Q2 2026 filings and customer deals</a></li><li><a href="https://corevaluequest.com/2026/10/01/amd-2q26-from-pc-to-data-centers" target="_blank" rel="noopener">Q2 2026 segment detail</a></li><li><a href="https://fool.com/investing/2026/08/15/amd-just-borrowed-475-billion-more-than-triple-its" target="_blank" rel="noopener">$4.75B bond sale</a></li><li><a href="https://stockanalysis.com/stocks/amd/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://finance.yahoo.com/quote/AMD" target="_blank" rel="noopener">Price, market cap, beta and earnings date: Financial Modeling Prep, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Advanced Micro Devices, Inc..</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "amd", SHARES = 1630600000.0, TV = "NASDAQ:AMD";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q3 2021", "Sep 2021", 4313, 48.37, 22.17, 0.75], ["Q4 2021", "Dec 2021", 4826, 50.27, 24.33, 0.79], ["Q1 2022", "Mar 2022", 5887, 51.03, 16.15, 0.56], ["Q2 2022", "Jun 2022", 6550, 52.44, 8.03, 0.27], ["Q3 2022", "Sep 2022", 5565, 49.7, -1.15, 0.04], ["Q4 2022", "Dec 2022", 5599, 50.83, -2.66, 0.01], ["Q1 2023", "Mar 2023", 5353, 49.77, -2.71, -0.09], ["Q2 2023", "Jun 2023", 5359, 49.54, -0.37, 0.02], ["Q3 2023", "Sep 2023", 5800, 50.98, 3.86, 0.18], ["Q4 2023", "Dec 2023", 6168, 50.68, 5.54, 0.41], ["Q1 2024", "Mar 2024", 5473, 50.98, 0.66, 0.07], ["Q2 2024", "Jun 2024", 5835, 53.04, 4.61, 0.16], ["Q3 2024", "Sep 2024", 6819, 53.56, 10.62, 0.47], ["Q4 2024", "Dec 2024", 7658, 53.98, 13.8, 0.29], ["Q1 2025", "Mar 2025", 7438, 53.6, 10.84, 0.44], ["Q2 2025", "Jun 2025", 7685, 43.19, -1.74, 0.53], ["Q3 2025", "Sep 2025", 9246, 54.51, 13.74, 0.75], ["Q4 2025", "Dec 2025", 10270, 56.84, 17.06, 0.92], ["Q1 2026", "Mar 2026", 10253, 55.37, 14.4, 0.84], ["Q2 2026", "Jun 2026", 11536, 56.03, 17.25, 1.39]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q3 2026e", 13000, "Sep 2026 \u00b7 guidance midpoint", "2026\u5e749\u6708 \u00b7 \u6307\u5f15\u4e2d\u503c"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "2026 Q2", "sc0": "同比 +50% · 创纪录", "kc1": "数据中心", "sc1": "+107% · 占营收 58%", "kc2": "毛利率", "sc2": "非GAAP · Q3 指引持平", "kc3": "Q2 每股收益", "sc3": "非GAAP · GAAP $1.38", "w0h": "Helios 客户", "w0p": "OpenAI 与 Meta 各有最多 6 吉瓦协议，Anthropic 自 2027 上半年起最多 2 吉瓦 MI450，甲骨文首批 5 万颗 GPU 集群。", "w1h": "服务器 CPU", "w1p": "EPYC 收入增逾 70%，服务器 CPU 连续第五季创纪录。", "w2h": "毛利率未提升", "w2p": "尽管营收大增，Q3 毛利率指引持平约 56%；AI GPU 毛利率低于公司平均。", "w3h": "客户协议与稀释", "w3p": "OpenAI 与 Meta 各获 1.6 亿股认股权证，AMD 可能向 Anthropic 投资最多 50 亿美元，采购承诺增至 303 亿。", "c0h": "2026 第三季财报（预计）", "c0p": "指引：营收约 130 亿 ±3 亿美元，非GAAP毛利率约 56%。", "c1h": "Helios 放量", "c1p": "Q3 末开始出货，Q4 大幅增长。", "c2h": "Anthropic 部署", "c2p": "Anthropic 首个吉瓦 MI450 开始部署。", "eyebrow": "超微半导体 · 普通股 · 加州圣克拉拉", "title": "人人都要的<em>第二供应商</em>。", "lede": "AMD 上季营收增 50% 至 115 亿美元，数据中心收入翻倍以上，占公司 58%。搭载 MI450 GPU 的 Helios 机架自 Q3 起交付 OpenAI、Meta、Anthropic、微软与甲骨文，管理层预计 2027 年数据中心收入将再翻倍以上。", "k_val": "市盈率", "s_val": "Q2 非GAAP每股 $1.66 × 4", "k_an": "2026 Q3 指引", "s_an": "±3 亿 · 同比 +41% · 毛利率约 56%", "s_er": "2026 第三季 · 预计，盘后", "sub_price": "每日收盘价与50日均线。股价较52周低点约 $188 上涨逾三倍。", "sub_rev": "营收单位为百万美元，右轴为毛利率。2025 年第二季含 8 亿美元 MI308 出口管制费用。最后一根柱为指引中值。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Advanced Micro Devices, Inc. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

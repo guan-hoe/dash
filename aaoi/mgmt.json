@@ -1,0 +1,67 @@
+{
+ "ticker": "AAOI",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-08-06",
+ "timing": "amc",
+ "pre_close": 124.22,
+ "react": {
+  "date": "2026-08-07",
+  "close": 135.63,
+  "pct": 9.2
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 75.57,
+  "pct": -39.2
+ },
+ "review": {
+  "en": [
+   "A fifth straight record: revenue rose 86% to $191.9M and non-GAAP EPS of $0.06 beat, though the GAAP loss was $22.8M. 800G revenue more than doubled from Q1, and cable TV hit a record $80.6M. The Q3 guide of $255–290M was roughly in line, with one customer's 100G switch shortage costing $20–25M. CEO Thompson Lin and CFO Stefan Murry said growth is limited by capacity and parts, not demand: 800G/1.6T output should rise from about 200,000 units a month to over 650,000 by year-end, and 2026 revenue is still seen near $1.1B.",
+   "Shares fell 7.5% after hours on the light guide but reversed, rising 9.2% the next day and reaching $155 by Aug 17, 25% above the pre-report close. On Aug 24 the stock dropped 13.8% when AOI filed a $600M at-the-market share sale, its latest of several 2026 raises, and it slid to about $95 in mid-September with the AI selloff before an October rebound. It remains below the pre-report price."
+  ],
+  "zh": [
+   "连续第五个季度创纪录：营收增长 86% 至 1.919 亿美元，非 GAAP 每股收益 0.06 美元超预期，但 GAAP 亏损 2,280 万美元。800G 营收较上季翻倍以上，有线电视业务创纪录达 8,060 万美元。第三季营收指引 2.55–2.9 亿美元，基本符合预期，其中一家客户 100G 交换机短缺将减少 2,000–2,500 万美元。CEO Thompson Lin与 CFO 斯特凡·默里表示增长受产能和零部件而非需求限制：800G/1.6T 月产能将由约 20 万只增至年底的 65 万只以上，2026 年营收仍预计约 11 亿美元。",
+   "盘后因指引偏弱下跌 7.5%，但随即反转，次日上涨 9.2%，8 月 17 日升至 155 美元，较财报前收盘高 25%。8 月 24 日公司提交 6 亿美元按市价增发计划（为 2026 年多次融资之一），股价下跌 13.8%；9 月中旬随 AI 抛售跌至约 95 美元，10 月反弹，目前仍低于财报前价位。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Thompson Lin",
+   "zh": "Thompson Lin"
+  },
+  "since": "1997",
+  "bio": {
+   "en": "Founded AOI in 1997 in Sugar Land, Texas, and has led it as chairman and CEO since; holds a PhD in electrical engineering. Built a vertically integrated laser and transceiver maker with plants in Texas, Taiwan and China.",
+   "zh": "1997 年在得州糖城创立 AOI，此后一直任董事长兼 CEO，拥有电子工程博士学位。将公司打造成垂直整合的激光器与光模块制造商，工厂分布在得州、台湾和中国大陆。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Stefan Murry",
+   "zh": "斯特凡·默里"
+  },
+  "since": "2014",
+  "bio": {
+   "en": "A company lifer: joined AOI in 1997 as a device packaging engineer, ran sales and marketing, became chief strategy officer in 2012 and CFO in 2014. Holds a PhD in electrical engineering from the University of Houston.",
+   "zh": "公司元老：1997 年以器件封装工程师身份加入，曾负责销售与市场，2012 年任首席战略官，2014 年起任 CFO。拥有休斯敦大学电子工程博士学位。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 call highlights",
+   "u": "https://zacks.com/stock/news/2970813/aaoi-q2-earnings-call-focuses-on-capacity-led-800g-ramp"
+  },
+  {
+   "t": "Q2 2026 results",
+   "u": "https://marketbeat.com/earnings/reports/2026-8-6-applied-optoelectronics-inc-stock"
+  },
+  {
+   "t": "Aug 24 share sale",
+   "u": "https://fool.com/investing/2026/08/24/why-applied-optoelectronics-stock-dived-by-almost"
+  }
+ ]
+}

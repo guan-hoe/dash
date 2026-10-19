@@ -1,0 +1,63 @@
+{
+ "ticker": "AMZN",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-30",
+ "timing": "amc",
+ "pre_close": 235.5,
+ "react": {
+  "date": "2026-07-31",
+  "close": 271.58,
+  "pct": 15.3
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 250,
+  "pct": 6.2
+ },
+ "review": {
+  "en": [
+   "Sales rose 20% to $200.6B, ahead of forecasts. AWS grew 37% to $42.2B, its fastest pace since 2021, with a 39% operating margin. Net income of $62.6B included a $53.4B gain on the Anthropic stake. Free cash flow turned negative (−$7.6B) on heavy AI capex, and the Q3 sales guide of $197–202B was below consensus. CEO Andy Jassy said even with more spending Amazon won't have enough capacity for 2026 or likely 2027, and called demand already lined up for 2028 striking.",
+   "Shares jumped 9% after hours and closed up 15.3% the next day, against an options-implied move of about 4.6%: AWS reaccelerating mattered more than cash flow or the soft guide. The rally reached $284 on Aug 3, 21% above the pre-report close, then much of it faded through September toward $246 as AI-spending worries returned. The stock is still about 11% above its pre-report level."
+  ],
+  "zh": [
+   "销售额增长 20% 至 2,006 亿美元，高于预期。AWS 增长 37% 至 422 亿美元，为 2021 年以来最快，营业利润率 39%。626 亿美元净利润中包含对 Anthropic 持股的 534 亿美元收益。大规模 AI 资本开支令自由现金流转负（−76 亿美元），第三季销售指引 1,970–2,020 亿美元低于预期。CEO 安迪·贾西表示即使加大投入，2026 年乃至 2027 年产能仍将不足，并称已锁定的 2028 年需求相当惊人。",
+   "盘后大涨 9%，次日收涨 15.3%，远超期权隐含的约 4.6% 波动：AWS 重新加速比现金流和偏弱指引更重要。涨势在 8 月 3 日达到 284 美元，较财报前收盘高 21%，9 月 AI 开支担忧再起，涨幅大部分回吐至约 246 美元。目前仍较财报前高约 11%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Andy Jassy",
+   "zh": "安迪·贾西"
+  },
+  "since": "2021",
+  "bio": {
+   "en": "Joined Amazon in 1997, wrote the plan for AWS and ran it from its 2006 launch until 2021, when he succeeded Jeff Bezos as CEO. Now running a capex program of roughly $200B a year, mostly for AI capacity.",
+   "zh": "1997 年加入亚马逊，撰写了 AWS 的商业计划，并从 2006 年推出一直执掌至 2021 年，随后接替贝索斯出任 CEO。目前主导每年约 2,000 亿美元的资本开支，主要用于 AI 算力。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Brian Olsavsky",
+   "zh": "布莱恩·奥尔萨夫斯基"
+  },
+  "since": "2015",
+  "bio": {
+   "en": "CFO since 2015. Joined Amazon in 2002 and was CFO of its global consumer business; earlier finance roles at Fisher Scientific and BFGoodrich.",
+   "zh": "2015 年起任 CFO。2002 年加入亚马逊，曾任全球消费者业务 CFO；更早在 Fisher Scientific 和 BFGoodrich 担任财务职务。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 results (CNBC)",
+   "u": "https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html"
+  },
+  {
+   "t": "Priced vs. actual move",
+   "u": "https://movesurge.com/insights/amazon-amzn-options-priced-move-vs-actual-2026-07-30"
+  }
+ ]
+}

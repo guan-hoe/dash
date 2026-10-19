@@ -1,0 +1,63 @@
+{
+ "ticker": "ARM",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q1 FY2027 (June quarter)",
+  "zh": "2027 财年第一季（6 月季度）"
+ },
+ "reported": "2026-07-29",
+ "timing": "amc",
+ "pre_close": 224.89,
+ "react": {
+  "date": "2026-07-30",
+  "close": 241.54,
+  "pct": 7.4
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 227.8,
+  "pct": 1.3
+ },
+ "review": {
+  "en": [
+   "Record first-quarter revenue of $1.29B (+22%), with royalties of $715M (+22%) led by data-center royalties that more than doubled, and licensing up 23%. Adjusted EPS of $0.45 beat, though GAAP operating margin fell to 7% as R&D and stock pay rose. The Q2 guide of $1.38B and $0.47 EPS topped estimates. CFO Jason Child flagged slower smartphone royalty growth of about 10–15%, as high memory prices hurt phone demand, and said Arm's own chips will be reported as a separate line from fiscal 2028.",
+   "Arm had lost about a third of its value in July's AI-chip selloff, including 8% on report day before the release, and it dipped about 7% after hours on the phone-royalty warning. The beat and guide won out the next day (+7.4%), and on Aug 4 the stock jumped 17% as chip stocks rallied broadly. It has held most of that gain since."
+  ],
+  "zh": [
+   "第一季营收创同期纪录，达 12.9 亿美元（+22%）；版税收入 7.15 亿美元（+22%），其中数据中心版税翻倍以上，授权收入增长 23%。经调整每股收益 0.45 美元超预期，但研发与股权激励增加，GAAP 营业利润率降至 7%。第二季指引营收 13.8 亿美元、每股收益 0.47 美元，均高于预期。CFO 杰森·柴尔德提示，内存涨价拖累手机需求，智能手机版税增速将放缓至约 10–15%；Arm 自研芯片将自 2028 财年起单独披露。",
+   "Arm 在 7 月 AI 芯片抛售中市值已跌去约三分之一，财报当天发布前就跌了 8%，盘后又因手机版税预警下挫约 7%。次日业绩与指引的利好占上风，收涨 7.4%；8 月 4 日随芯片股普涨大涨 17%，此后大部分涨幅得以保持。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Rene Haas",
+   "zh": "雷内·哈斯"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "Joined Arm in 2013 after seven years at NVIDIA running its computing products business, and led Arm's IP products group before becoming CEO in 2022. Took Arm public in 2023 and is moving it from licensing designs toward selling its own chips.",
+   "zh": "在英伟达负责计算产品业务七年后，于 2013 年加入 Arm，曾掌管 IP 产品部门，2022 年出任 CEO。2023 年带领 Arm 上市，正推动公司从授权设计转向销售自研芯片。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Jason Child",
+   "zh": "杰森·柴尔德"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "Joined Arm in 2022 ahead of its 2023 IPO. Previously CFO of Splunk from 2019 and of Groupon, which he took public in 2011, and earlier CFO of Amazon International.",
+   "zh": "2022 年加入 Arm，为 2023 年上市做准备。此前 2019 年起任 Splunk CFO，也曾任 Groupon CFO 并于 2011 年带领其上市，更早时担任亚马逊国际业务 CFO。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q1 FY27 results coverage",
+   "u": "https://news.talivio.com/a/arm-shares-drop-7-despite-q1-beat-weak-phone-outlook"
+  },
+  {
+   "t": "Q1 FY27 call transcript",
+   "u": "https://fool.com/earnings/call-transcripts/2026/08/07/arm-arm-q1-2027-earnings-call-transcript"
+  }
+ ]
+}
