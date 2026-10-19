@@ -39,14 +39,9 @@ Usage: python3 scripts/options-backtest.py [PRICE_DIR] [--text]
   PRICE_DIR holds <TICKER>/history.json with long history (the Action fetches
   5 years there, plus ^VIX, ^IRX and SPY); missing tickers fall back to
   <folder>/data/history.json in the repo.
-"""
-import json, math, os, sys
-from datetime import date, timedelta
-
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "data", "options-book.json")
-
-STOCKS = [  # folder, ticker, name
+  Exclude LITE and AAOI
+  Exclude MP and META and BE
+  STOCKS = [  # folder, ticker, name
     ("aaoi", "AAOI", "Applied Optoelectronics"), ("amat", "AMAT", "Applied Materials"),
     ("amd", "AMD", "AMD"), ("amzn", "AMZN", "Amazon"), ("arm", "ARM", "Arm Holdings"),
     ("asml", "ASML", "ASML"), ("avgo", "AVGO", "Broadcom"), ("be", "BE", "Bloom Energy"),
@@ -58,6 +53,25 @@ STOCKS = [  # folder, ticker, name
     ("spcx", "SPCX", "SpaceX"), ("ter", "TER", "Teradyne"), ("tesla", "TSLA", "Tesla"),
     ("tsm", "TSM", "TSMC"), ("zs", "ZS", "Zscaler"),
 ]
+"""
+import json, math, os, sys
+from datetime import date, timedelta
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, "data", "options-book.json")
+
+STOCKS = [  # folder, ticker, name
+    ("amat", "AMAT", "Applied Materials"),
+    ("amd", "AMD", "AMD"), ("amzn", "AMZN", "Amazon"), ("arm", "ARM", "Arm Holdings"),
+    ("asml", "ASML", "ASML"), ("avgo", "AVGO", "Broadcom"), 
+    ("cohr", "COHR", "Coherent"), ("glw", "GLW", "Corning"), ("googl", "GOOGL", "Alphabet"),
+    ("intc", "INTC", "Intel"), ("mrvl", "MRVL", "Marvell Technology"), ("msft", "MSFT", "Microsoft"),
+    ("mu", "MU", "Micron Technology"), ("nvda", "NVDA", "NVIDIA"), ("pltr", "PLTR", "Palantir"),
+    ("rok", "ROK", "Rockwell Automation"), ("skhy", "SKHY", "SK hynix"), ("sndk", "SNDK", "Sandisk"),
+    ("spcx", "SPCX", "SpaceX"), ("ter", "TER", "Teradyne"), ("tesla", "TSLA", "Tesla"),
+    ("tsm", "TSM", "TSMC"), ("zs", "ZS", "Zscaler"),
+]
+
 
 CAPITAL = 1_000_000.0
 YEARS = 2
