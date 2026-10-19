@@ -1,0 +1,63 @@
+{
+ "ticker": "MP",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-08-06",
+ "timing": "amc",
+ "pre_close": 47.49,
+ "react": {
+  "date": "2026-08-07",
+  "close": 51.11,
+  "pct": 7.6
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 40.17,
+  "pct": -15.4
+ },
+ "review": {
+  "en": [
+   "Revenue roughly doubled to about $126M, including $17.6M of price-floor payments from the Department of War deal. NdPr oxide output rose 41% to 840 tonnes and sales jumped 127% to 1,006 tonnes, lifting the materials segment's adjusted EBITDA to $32.5M. Adjusted EPS of −$0.01 missed a small expected profit, as start-up costs for the magnet business weighed. CEO James Litinsky's focus is the magnet ramp, backed by a $110/kg NdPr price floor, with capex of $500–600M this year and Q3 output above 1,000 tonnes.",
+   "The stock barely moved after hours, then rose 7.6% the next day as investors looked past the small miss to the volume growth. The rally ran to about $60 by Aug 21, 26% above the pre-report close, but the gains faded through September, and the stock now trades slightly below where it was before the report."
+  ],
+  "zh": [
+   "营收约翻倍至约 1.26 亿美元，其中包括「战争部」协议下的 1,760 万美元价格保底补贴。氧化镨钕产量增长 41% 至 840 吨，销量大增 127% 至 1,006 吨，带动材料业务经调整 EBITDA 达 3,250 万美元。经调整每股收益 −0.01 美元，未达小幅盈利的预期，磁体业务启动成本拖累利润。CEO 詹姆斯·利廷斯基的重点是磁体量产，并有每公斤 110 美元的镨钕价格保底支撑；今年资本开支 5–6 亿美元，第三季产量将超过 1,000 吨。",
+   "盘后股价几乎不动，次日上涨 7.6%，投资者看重销量增长而非小幅亏损。涨势延续至 8 月 21 日的约 60 美元，较财报前收盘高 26%，但 9 月涨幅逐步回吐，目前略低于财报前水平。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "James Litinsky",
+   "zh": "詹姆斯·利廷斯基"
+  },
+  "since": "2017",
+  "bio": {
+   "en": "Hedge-fund founder (JHL Capital Group) who led the group that bought the bankrupt Mountain Pass mine in 2017. Chairman and CEO since; took MP public in 2020 and struck the 2025 Department of War price-floor and magnet agreement.",
+   "zh": "对冲基金 JHL Capital Group 创始人，2017 年牵头收购破产的芒廷帕斯稀土矿。此后任董事长兼 CEO，2020 年带领 MP 上市，并于 2025 年与「战争部」达成价格保底及磁体协议。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Ryan Corbett",
+   "zh": "瑞安·科贝特"
+  },
+  "since": "2019",
+  "bio": {
+   "en": "CFO since 2019. Previously a managing director at JHL Capital, working on its MP investment, and earlier at Brahman Capital and King Street Capital in special-situations investing. Led the push into magnet making.",
+   "zh": "2019 年起任 CFO。此前任 JHL Capital 董事总经理，负责 MP 投资，更早在 Brahman Capital 和 King Street Capital 从事特殊机会投资。主导公司进军磁体制造。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 call transcript",
+   "u": "https://www.fool.com/earnings/call-transcripts/2026/08/13/mp-materials-mp-q2-2026-earnings-call-transcript/"
+  },
+  {
+   "t": "Q2 2026 slides",
+   "u": "https://investing.com/news/company-news/mp-materials-q2-2026-slides-ndpr-volumes-surge-revenue-doubles-yoy-93CH-4844881"
+  }
+ ]
+}

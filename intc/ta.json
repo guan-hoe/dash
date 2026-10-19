@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 89.85,
+ "bias": {
+  "en": "Bearish · lost $94.5, testing the July low",
+  "zh": "偏空 · 失守 $94.5，测试 7 月低点"
+ },
+ "read": [
+  {
+   "en": "Intel fell 5.8% on Oct 16 to $89.85 and is down 14% in five sessions. It is below its 5-day ($97.5), 10-day ($104.1), 30-day ($109.1) and falling 100-day ($107.1) averages, and above the 200-day ($84.6). MACD has been below its signal since Oct 5 and is below zero, Parabolic SAR has been bearish since Oct 5 ($109.3), and RSI is 31.",
+   "zh": "英特尔 10月16日下跌 5.8%，收于 $89.85，五个交易日累计下跌 14%。股价位于 5 日（$97.5）、10 日（$104.1）、30 日（$109.1）和下行的 100 日均线（$107.1）下方，仍在 200 日均线（$84.6）之上。MACD 自 10月5日起位于信号线及零轴下方，抛物线 SAR 自 10月5日起看空（$109.3），RSI 为 31。"
+  },
+  {
+   "en": "The $94.5 September low broke on the close; the day's low of $89.19 undercut the Jul 17 low ($89.6), but the close held just above it. Resistance is $94.5, then $97.5–98.3 (5-day average, June pivot) and $104 (10-day). Support is $89.2–89.6, then $85 (Aug 24 low, 200-day) and $81.8 (Jul 29 low). A close below $89.2 would open $85.",
+   "zh": "$94.5 的 9月低点收盘失守；当日低点 $89.19 跌破 7月17日低点（$89.6），但收盘守在其上方一线。阻力为 $94.5，其次 $97.5–98.3（5 日均线、6月转折点）和 $104（10 日均线）。支撑为 $89.2–89.6，其次 $85（8月24日低点、200 日均线）和 $81.8（7月29日低点）。若收盘跌破 $89.2，下一目标看 $85。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    94.5,
+    {
+     "en": "September low, now resistance; Oct 15 close $95.4",
+     "zh": "9月低点，转为阻力；10月15日收盘价 $95.4"
+    }
+   ],
+   [
+    98,
+    {
+     "en": "5-day average $97.5; June pivot $98.3",
+     "zh": "5日均线 $97.5；6月转折点 $98.3"
+    }
+   ],
+   [
+    104,
+    {
+     "en": "10-day average",
+     "zh": "10日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    89.2,
+    {
+     "en": "Oct 16 low; Jul 17 low $89.6",
+     "zh": "10月16日低点；7月17日低点 $89.6"
+    }
+   ],
+   [
+    85,
+    {
+     "en": "Aug 24 low $85.1; 200-day average $84.6",
+     "zh": "8月24日低点 $85.1；200日均线 $84.6"
+    }
+   ],
+   [
+    81.8,
+    {
+     "en": "Jul 29 low",
+     "zh": "7月29日低点"
+    }
+   ]
+  ]
+ }
+}

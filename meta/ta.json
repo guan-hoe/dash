@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 709.33,
+ "bias": {
+  "en": "Uptrend under pressure · SAR flipped, on the 30-day",
+  "zh": "上升趋势承压 · SAR 翻空，回踩 30 日均线"
+ },
+ "read": [
+  {
+   "en": "Meta fell 3.7% on Oct 16 to $709.33 after a low of $702.71. It is below its rising 5-day ($737.8) and 10-day ($733.1) averages, just above the 30-day ($708.3), and well above the 200-day ($632.0) and 100-day ($627.9). MACD has been below its signal since Oct 2 and is above zero, Parabolic SAR flipped bearish on Oct 16 ($771.3, the Oct 13 high), and RSI is 50.",
+   "zh": "Meta 10月16日下跌 3.7%，盘中低见 $702.71，收于 $709.33。股价位于上行的 5 日（$737.8）和 10 日均线（$733.1）下方，略高于 30 日均线（$708.3），并远高于 200 日（$632.0）和 100 日均线（$627.9）。MACD 自 10月2日起位于信号线下方，仍在零轴之上，抛物线 SAR 于 10月16日转为看空（$771.3，10月13日高点），RSI 为 50。"
+  },
+  {
+   "en": "The $735 (10-day) and $712–714 (Oct 8 low, SAR) supports broke on the close, though the close held the 30-day average. Resistance is $711.7 (Oct 8 low), then $733–738 (10 and 5-day averages) and $771 (SAR, Oct 13 high). Support is $708 (30-day), then $702.7 (Oct 16 low) and $680 (Sep 21 gap). A close below $702.7 would open $680.",
+   "zh": "$735（10 日均线）和 $712–714（10月8日低点、SAR）支撑收盘失守，但收盘守住 30 日均线。阻力为 $711.7（10月8日低点），其次 $733–738（10 日和 5 日均线）和 $771（SAR、10月13日高点）。支撑为 $708（30 日均线），其次 $702.7（10月16日低点）和 $680（9月21日跳空缺口）。若收盘跌破 $702.7，下一目标看 $680。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    711.7,
+    {
+     "en": "Oct 8 low, now resistance",
+     "zh": "10月8日低点，转为阻力"
+    }
+   ],
+   [
+    735,
+    {
+     "en": "10 and 5-day averages ($733–738)",
+     "zh": "10日和5日均线（$733–738）"
+    }
+   ],
+   [
+    771,
+    {
+     "en": "Parabolic SAR, Oct 13 high",
+     "zh": "抛物线SAR，10月13日高点"
+    }
+   ]
+  ],
+  "s": [
+   [
+    708,
+    {
+     "en": "30-day average ($708.3)",
+     "zh": "30日均线（$708.3）"
+    }
+   ],
+   [
+    702.7,
+    {
+     "en": "Oct 16 low",
+     "zh": "10月16日低点"
+    }
+   ],
+   [
+    680,
+    {
+     "en": "Top of the Sep 21 gap ($679.6)",
+     "zh": "9月21日跳空缺口上沿（$679.6）"
+    }
+   ]
+  ]
+ }
+}

@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Intel INTC Dashboard</title>
+<meta name="description" content="Intel (Nasdaq: INTC) investor dashboard: price, PC, server and foundry revenue, margins, guidance, valuation, risks and catalysts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Same system as the ARM dashboard: sticky ticker bar, one wide panel per section with stat cells beside it. */
+:root{
+  --bg:#f3f5f7; --panel:#ffffff; --line:#d9dee5; --ink:#141a22; --muted:#5a6573;
+  --accent:#0b6fb8; --accent-soft:#e3eff8; --copper:#b4622d; --copper-soft:#f6e9df; --slate:#7d8a9c;
+  --up:#13804b; --down:#c2362b; --warn:#a86a00;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1117; --panel:#141b24; --line:#26303c; --ink:#e7ecf2; --muted:#93a0b0;
+  --accent:#4fa8e8; --accent-soft:#132a3d; --copper:#e08a52; --copper-soft:#33221a; --slate:#8e9cb0;
+  --up:#3ccf86; --down:#f0675b; --warn:#e3a43a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1117; --panel:#141b24; --line:#26303c; --ink:#e7ecf2; --muted:#93a0b0;
+  --accent:#4fa8e8; --accent-soft:#132a3d; --copper:#e08a52; --copper-soft:#33221a; --slate:#8e9cb0;
+  --up:#3ccf86; --down:#f0675b; --warn:#e3a43a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.tick{font:600 13px var(--f-mono);letter-spacing:.04em;background:var(--ink);color:var(--bg);padding:3px 8px;border-radius:4px}
+.bar-px{font:600 18px var(--f-mono);font-variant-numeric:tabular-nums}
+.chg{font:500 13px var(--f-mono)}
+.up{color:var(--up)}.down{color:var(--down)}
+nav.sec{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.sec a{font-size:13px;color:var(--muted);text-decoration:none;padding:4px 8px;border-radius:4px}
+nav.sec a:hover,nav.sec a:focus-visible{background:var(--accent-soft);color:var(--ink);outline:none}
+.tools{display:flex;gap:6px}
+button.tg{font:500 12px var(--f-mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:4px 9px;cursor:pointer}
+button.tg:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hero{padding-block:36px 20px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:end}
+.eyebrow{font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,5vw,52px)/1.02 var(--f-display);margin:.25em 0 .3em;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{color:var(--muted);max-width:60ch;margin:0}
+.pxbox{border-left:3px solid var(--accent);padding-left:18px}
+.pxbig{font:600 clamp(40px,6vw,60px)/1 var(--f-mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.pxnote{font-size:12px;color:var(--muted);margin-top:6px}
+section{padding-block:28px;border-top:1px solid var(--line);scroll-margin-top:64px}
+h2{font:700 24px/1.15 var(--f-display);margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px;max-width:72ch}
+.grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0}
+.cells{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;align-content:start}
+.cell{background:var(--panel);padding:12px 14px;min-width:0}
+.grid>.cells{align-self:start}
+.cell .k{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cell .v{font:600 20px var(--f-mono);font-variant-numeric:tabular-nums;margin-top:2px}
+.cell .s{font-size:12px;color:var(--muted)}
+.chart{position:relative;height:320px}
+.chart.sm{height:260px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:8px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.range{display:flex;gap:4px;margin-bottom:10px}
+.range button{font:500 12px var(--f-mono);border:1px solid var(--line);background:transparent;color:var(--muted);padding:3px 9px;border-radius:4px;cursor:pointer}
+.range button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tr.guide td{color:var(--muted);font-style:italic}
+.wl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;gap:12px;min-width:0}
+.pill{flex:none;font:600 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:3px;height:fit-content}
+.p-risk{background:color-mix(in srgb,var(--down) 15%,transparent);color:var(--down)}
+.p-watch{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.p-plus{background:color-mix(in srgb,var(--up) 15%,transparent);color:var(--up)}
+.item h3{font:600 15px var(--f-body);margin:0 0 3px}
+.item p{margin:0;font-size:13.5px;color:var(--muted)}
+.cal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.date{font:600 13px var(--f-mono);color:var(--accent)}
+ol.src{font-size:13px;color:var(--muted);padding-left:20px;columns:2;column-gap:32px}
+ol.src li{break-inside:avoid;margin-bottom:4px}
+footer{font-size:12px;color:var(--muted);padding-top:20px;border-top:1px solid var(--line)}
+#tv{min-height:0}
+.live{display:inline-flex;align-items:center;gap:6px;font:500 12px var(--f-mono);color:var(--muted)}
+.live .dot{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.live.on .dot{background:var(--up);box-shadow:0 0 0 0 var(--up);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--up) 60%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (max-width:860px){.hero,.grid{grid-template-columns:minmax(0,1fr)}.cal{grid-template-columns:minmax(0,1fr)}nav.sec{display:none}}
+@media (max-width:620px){.wl{grid-template-columns:minmax(0,1fr)}ol.src{columns:1}.chart{height:260px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NASDAQ: INTC</span>
+  <span class="bar-px" id="barPx">$107.08</span>
+  <span class="chg down" id="barChg">−5.34%</span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#annual" data-i="n_ann">Financials</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div class="eyebrow" data-i="eyebrow">Intel Corporation · Common stock · Santa Clara, California</div>
+      <h1 data-ih="title">The comeback is in the numbers, <em>and in the price</em>.</h1>
+      <p class="lede" data-i="lede">Q2 revenue rose 25%, Intel's fastest growth since 2011, as AI pushed up demand for server CPUs faster than Intel can supply them. The stock has nearly tripled this year. GAAP results swing with a US government share deal, and the foundry still serves mostly Intel itself.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 8, 2026</div>
+      <div class="pxbig" id="pxBig">$107.08</div>
+      <div class="chg down" id="pxChg">−6.04 (−5.34%)</div>
+      <div class="pxnote" id="pxNote">YTD +190.2% · 1Y +183.3%</div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k" data-i="k_mcap">Market cap</div><div class="v" id="mcap">$540B</div><div class="s" data-i="s_mcap">at current price</div></div>
+    <div class="cell"><div class="k" data-i="k_52">52-week range</div><div class="v">$32.89–142.35</div><div class="s" data-i="s_52">intraday low / high</div></div>
+    <div class="cell"><div class="k" data-i="k_pe">P/E</div><div class="v">~70×</div><div class="s" data-i="s_pe">Q3 guide EPS $0.38 × 4 · trailing non-GAAP ~98×</div></div>
+    <div class="cell"><div class="k" data-i="k_ttm">Revenue TTM</div><div class="v">$57.0B</div><div class="s" data-i="s_ttm">+7% YoY</div></div>
+    <div class="cell"><div class="k" data-i="k_an">Analysts</div><div class="v">Hold</div><div class="s" data-i="s_an">21 buy · 26 hold · 3 sell · target $109</div></div>
+    <div class="cell"><div class="k" data-i="k_er">Next earnings</div><div class="v">Oct 29</div><div class="s" data-i="s_er">Q3 2026, after close</div></div>
+  </div>
+
+  <section id="price">
+    <h2 data-i="h_price">Price, last 12 months</h2>
+    <p class="sub" data-i="sub_price">Daily closes with the 50-day average. The stock rose from about $34 last November to a $140.94 close in June, fell 42% by late July, then rallied back above $120 in September.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="INTC daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k" data-i="k_hi">1Y closing high</div><div class="v">$140.94</div><div class="s">Jun 22, 2026</div></div>
+        <div class="cell"><div class="k" data-i="k_lo">1Y closing low</div><div class="v">$33.62</div><div class="s">Nov 20, 2025</div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v">$102.81</div><div class="s" data-i="s_sma50">price above</div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v">$82.69</div><div class="s" data-i="s_sma200">price above</div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v">45.8</div><div class="s" data-i="s_rsi">neutral</div></div>
+        <div class="cell"><div class="k">ATR 20</div><div class="v">$6.39</div><div class="s" data-i="s_atr">~6% daily range</div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">2.23</div><div class="s" data-i="s_beta">vs. S&amp;P 500</div></div>
+        <div class="cell"><div class="k" data-i="k_dd">From peak</div><div class="v down" id="ddv">−24%</div><div class="s" data-i="s_dd">vs. Jun 22 close</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2 data-i="h_rev">Revenue by segment, by quarter</h2>
+    <p class="sub" data-i="sub_rev">CCG is PC chips (renamed CCPG in Q2 2026). DCAI is server CPUs and AI. Foundry &amp; other is Intel Foundry's outside revenue plus Mobileye and other businesses, after removing the wafers Foundry sells to Intel's own product groups. Altera left the consolidated results in September 2025. Q3 2026 is company guidance at the midpoint.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_auto">CCG (PC)</span></span><span><i class="sw" style="background:var(--copper)"></i><span data-i="l_en">DCAI (server)</span></span><span><i class="sw" style="background:var(--slate)"></i><span data-i="l_svc">Foundry &amp; other</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart"><canvas id="cRev" aria-label="Quarterly revenue by segment"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k">Q2 2026</div><div class="v">$16.13B</div><div class="s" data-i="s_q2">+25% YoY, fastest since 2011</div></div>
+        <div class="cell"><div class="k" data-i="k_auto">CCG (PC)</div><div class="v">$8.88B</div><div class="s" data-i="s_auto">+13% YoY</div></div>
+        <div class="cell"><div class="k" data-i="k_en">DCAI (server)</div><div class="v">$6.26B</div><div class="s" data-i="s_en">+59% YoY</div></div>
+        <div class="cell"><div class="k" data-i="k_svc">Intel Foundry</div><div class="v">$5.77B</div><div class="s" data-i="s_svc">+31% · mostly internal</div></div>
+        <div class="cell"><div class="k" data-i="k_gm">Gross margin</div><div class="v">41.8%</div><div class="s" data-i="s_gm">non-GAAP · 29.7% a year ago</div></div>
+        <div class="cell"><div class="k" data-i="k_om">GAAP EPS</div><div class="v down">−$2.16</div><div class="s" data-i="s_om">$12.5B share mark-to-market</div></div>
+        <div class="cell"><div class="k" data-i="k_del">Q3 guide</div><div class="v">$16.3B</div><div class="s" data-i="s_del">±$0.5B · +19% YoY</div></div>
+        <div class="cell"><div class="k" data-i="k_sto">Guide EPS</div><div class="v">$0.38</div><div class="s" data-i="s_sto">non-GAAP · margin 42%</div></div>
+      </div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th data-i="t_q">Quarter</th><th data-i="l_auto">CCG (PC)</th><th data-i="l_en">DCAI (server)</th><th data-i="l_svc">Foundry &amp; other</th><th data-i="t_tot">Total</th><th data-i="t_yoy">Total YoY</th><th data-i="t_gm">Gross margin</th><th data-i="t_eps">Non-GAAP EPS</th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="annual">
+    <h2 data-i="h_ann">Fiscal-year financials</h2>
+    <p class="sub" data-i="sub_ann">Revenue in US$ millions; Intel's fiscal year ends in late December. 2025 revenue was flat at $52.9B, its lowest since 2010, and the GAAP result was a small loss after $2.2B of restructuring charges. The recovery shows up in 2026 quarters, not yet in a full year.</p>
+    <div class="grid">
+      <div class="panel"><div class="chart sm"><canvas id="cAnn" aria-label="Annual revenue by segment"></canvas></div></div>
+      <div class="panel tbl">
+        <table>
+          <thead><tr><th>FY25</th><th>US$M</th><th data-i="t_pct">% rev</th></tr></thead>
+          <tbody>
+            <tr><td data-i="r_rev">Revenue</td><td>52,853</td><td>100%</td></tr>
+            <tr><td data-i="r_gp">Gross profit (GAAP)</td><td>18,375</td><td>34.8%</td></tr>
+            <tr><td>R&amp;D</td><td>13,774</td><td>26.1%</td></tr>
+            <tr><td>MG&amp;A</td><td>4,624</td><td>8.7%</td></tr>
+            <tr><td data-i="r_opex">Restructuring &amp; other</td><td>2,191</td><td>4.1%</td></tr>
+            <tr><td data-i="r_oi">Operating income (GAAP)</td><td>−2,214</td><td>−4.2%</td></tr>
+            <tr><td data-i="r_ni">Net income (GAAP)</td><td>−267</td><td>−0.5%</td></tr>
+            <tr><td data-i="r_eps">Non-GAAP EPS</td><td>$0.42</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2 data-i="h_watch">Watch list</h2>
+    <p class="sub" data-i="sub_watch">What moves the thesis, sorted by direction.</p>
+    <div class="wl">
+      <div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">AI pulls server CPUs</h3><p data-i="w1p">DCAI revenue jumped 59% to $6.26B. Intel has signed 10 long-term contracts with server CPU buyers and says data center demand is running ahead of what it can supply.</p></div></div>
+      <div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w2h">18A in production</h3><p data-i="w2p">Xeon 6+ is the first server product on Intel 18A, and 18A-P has entered risk production. Non-GAAP gross margin rose from 29.7% to 41.8% in a year.</p></div></div>
+      <div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Foundry needs outside customers</h3><p data-i="w3p">Intel Foundry revenue grew 31% to $5.77B, but almost all of it comes from Intel's own products. Landing named external customers, especially for 14A, is the open question.</p></div></div>
+      <div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w4h">Capex and balance sheet</h3><p data-i="w4p">Intel is "meaningfully increasing" spending on equipment, clean rooms and substrates. Adjusted free cash flow was −$8.4B in Q2, with $50.5B of debt against $29.7B of cash and investments.</p></div></div>
+      <div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">GAAP swings from the US stake</h3><p data-i="w5p">A $12.5B mark-to-market loss on escrowed CHIPS Act shares turned Q2 into an $11.0B GAAP loss. Those charges move with the share price, so GAAP earnings will stay noisy.</p></div></div>
+      <div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w6h">Supply and valuation</h3><p data-i="w6p">Substrate and memory shortages cap shipments. At ~70× annualized guided EPS the stock is priced for the recovery, and it fell 42% in five weeks after the June peak.</p></div></div>
+    </div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="INTC" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2 data-i="h_cal">Calendar</h2>
+    <div class="cal">
+      <div class="item"><div><div class="date">Oct 29, 2026</div><h3 data-i="c1h">Q3 2026 earnings</h3><p data-i="c1p">After US close; call 2pm PT (Oct 30, 5am SGT). Guide: $15.8–16.8B revenue, 42% gross margin, EPS $0.38.</p></div></div>
+      <div class="item"><div><div class="date">Late Jan 2027</div><h3 data-i="c2h">Q4 and FY26 results</h3><p data-i="c2p">Date not yet announced; Q4 2025 was reported on Jan 22.</p></div></div>
+      <div class="item"><div><div class="date">Late Apr 2027</div><h3 data-i="c3h">Q1 2027 earnings</h3><p data-i="c3p">Date not yet announced; Q1 2026 was reported on Apr 23.</p></div></div>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2 data-i="h_src">Sources</h2>
+    <ol class="src">
+      <li><a href="https://www.intc.com" target="_blank" rel="noopener">Intel Investor Relations</a> — releases, slides, webcasts</li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm" target="_blank" rel="noopener">Q2 2026 earnings release and Q3 guidance</a> (Jul 23, 2026)</li>
+      <li><a href="https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results/" target="_blank" rel="noopener">Q1 2026 results</a> (Apr 23, 2026)</li>
+      <li><a href="https://www.intc.com/news-events/press-releases/detail/1759/intel-reports-fourth-quarter-and-full-year-2025-financial-results" target="_blank" rel="noopener">Q4 and full-year 2025 results</a></li>
+      <li><a href="https://finance.yahoo.com/markets/stocks/articles/intel-q2-2026-earnings-revenue-205531105.html" target="_blank" rel="noopener">Q2 2026 coverage: CHIPS Act share loss, supply limits</a></li>
+      <li><a href="https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results" target="_blank" rel="noopener">Q3 2026 earnings date</a></li>
+      <li><a href="https://www.marketbeat.com/stocks/NASDAQ/INTC/price-target" target="_blank" rel="noopener">Analyst ratings and price targets</a> (MarketBeat)</li>
+      <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0000050863" target="_blank" rel="noopener">SEC EDGAR filings (CIK 50863)</a></li>
+      <li>Price history and technicals: Yahoo Finance daily closes; market cap and beta: Financial Modeling Prep. As of Oct 9, 2026</li>
+    </ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Intel Corporation.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// Daily closes, two years (embedded snapshot, replaced by data/history.json when the live feed loads).
+const P = {"d":["2024-10-09","2024-10-10","2024-10-11","2024-10-14","2024-10-15","2024-10-16","2024-10-17","2024-10-18","2024-10-21","2024-10-22","2024-10-23","2024-10-24","2024-10-25","2024-10-28","2024-10-29","2024-10-30","2024-10-31","2024-11-01","2024-11-04","2024-11-05","2024-11-06","2024-11-07","2024-11-08","2024-11-11","2024-11-12","2024-11-13","2024-11-14","2024-11-15","2024-11-18","2024-11-19","2024-11-20","2024-11-21","2024-11-22","2024-11-25","2024-11-26","2024-11-27","2024-11-29","2024-12-02","2024-12-03","2024-12-04","2024-12-05","2024-12-06","2024-12-09","2024-12-10","2024-12-11","2024-12-12","2024-12-13","2024-12-16","2024-12-17","2024-12-18","2024-12-19","2024-12-20","2024-12-23","2024-12-24","2024-12-26","2024-12-27","2024-12-30","2024-12-31","2025-01-02","2025-01-03","2025-01-06","2025-01-07","2025-01-08","2025-01-10","2025-01-13","2025-01-14","2025-01-15","2025-01-16","2025-01-17","2025-01-21","2025-01-22","2025-01-23","2025-01-24","2025-01-27","2025-01-28","2025-01-29","2025-01-30","2025-01-31","2025-02-03","2025-02-04","2025-02-05","2025-02-06","2025-02-07","2025-02-10","2025-02-11","2025-02-12","2025-02-13","2025-02-14","2025-02-18","2025-02-19","2025-02-20","2025-02-21","2025-02-24","2025-02-25","2025-02-26","2025-02-27","2025-02-28","2025-03-03","2025-03-04","2025-03-05","2025-03-06","2025-03-07","2025-03-10","2025-03-11","2025-03-12","2025-03-13","2025-03-14","2025-03-17","2025-03-18","2025-03-19","2025-03-20","2025-03-21","2025-03-24","2025-03-25","2025-03-26","2025-03-27","2025-03-28","2025-03-31","2025-04-01","2025-04-02","2025-04-03","2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-05","2025-05-06","2025-05-07","2025-05-08","2025-05-09","2025-05-12","2025-05-13","2025-05-14","2025-05-15","2025-05-16","2025-05-19","2025-05-20","2025-05-21","2025-05-22","2025-05-23","2025-05-27","2025-05-28","2025-05-29","2025-05-30","2025-06-02","2025-06-03","2025-06-04","2025-06-05","2025-06-06","2025-06-09","2025-06-10","2025-06-11","2025-06-12","2025-06-13","2025-06-16","2025-06-17","2025-06-18","2025-06-20","2025-06-23","2025-06-24","2025-06-25","2025-06-26","2025-06-27","2025-06-30","2025-07-01","2025-07-02","2025-07-03","2025-07-07","2025-07-08","2025-07-09","2025-07-10","2025-07-11","2025-07-14","2025-07-15","2025-07-16","2025-07-17","2025-07-18","2025-07-21","2025-07-22","2025-07-23","2025-07-24","2025-07-25","2025-07-28","2025-07-29","2025-07-30","2025-07-31","2025-08-01","2025-08-04","2025-08-05","2025-08-06","2025-08-07","2025-08-08","2025-08-11","2025-08-12","2025-08-13","2025-08-14","2025-08-15","2025-08-18","2025-08-19","2025-08-20","2025-08-21","2025-08-22","2025-08-25","2025-08-26","2025-08-27","2025-08-28","2025-08-29","2025-09-02","2025-09-03","2025-09-04","2025-09-05","2025-09-08","2025-09-09","2025-09-10","2025-09-11","2025-09-12","2025-09-15","2025-09-16","2025-09-17","2025-09-18","2025-09-19","2025-09-22","2025-09-23","2025-09-24","2025-09-25","2025-09-26","2025-09-29","2025-09-30","2025-10-01","2025-10-02","2025-10-03","2025-10-06","2025-10-07","2025-10-08","2025-10-09","2025-10-10","2025-10-13","2025-10-14","2025-10-15","2025-10-16","2025-10-17","2025-10-20","2025-10-21","2025-10-22","2025-10-23","2025-10-24","2025-10-27","2025-10-28","2025-10-29","2025-10-30","2025-10-31","2025-11-03","2025-11-04","2025-11-05","2025-11-06","2025-11-07","2025-11-10","2025-11-11","2025-11-12","2025-11-13","2025-11-14","2025-11-17","2025-11-18","2025-11-19","2025-11-20","2025-11-21","2025-11-24","2025-11-25","2025-11-26","2025-11-28","2025-12-01","2025-12-02","2025-12-03","2025-12-04","2025-12-05","2025-12-08","2025-12-09","2025-12-10","2025-12-11","2025-12-12","2025-12-15","2025-12-16","2025-12-17","2025-12-18","2025-12-19","2025-12-22","2025-12-23","2025-12-24","2025-12-26","2025-12-29","2025-12-30","2025-12-31","2026-01-02","2026-01-05","2026-01-06","2026-01-07","2026-01-08","2026-01-09","2026-01-12","2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15","2026-07-16","2026-07-17","2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-10","2026-08-11","2026-08-12","2026-08-13","2026-08-14","2026-08-17","2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-08","2026-09-09","2026-09-10","2026-09-11","2026-09-14","2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-28","2026-09-29","2026-09-30","2026-10-01","2026-10-02","2026-10-05","2026-10-06","2026-10-07","2026-10-08"],"c":[23.46,23.22,23.56,23.44,22.66,22.31,22.44,22.77,22.84,22.4,21.98,22.34,22.68,22.92,22.9,22.3,21.52,23.2,22.52,23.32,25.05,26.23,26.2,25.05,24.16,24.92,25.03,24.35,24.84,24.2,24.01,24.44,24.5,24.87,24.05,23.65,24.05,23.93,22.47,21.96,20.8,20.92,20.81,20.16,20.12,20.78,20.34,20.83,20.44,19.3,19.06,19.52,20.2,20.4,20.44,20.3,19.82,20.05,20.22,20.56,19.87,20.01,19.88,19.15,19.2,19.2,19.72,19.67,21.49,21.77,21.86,21.57,20.83,20.29,19.8,19.75,20.01,19.43,19.38,19.29,19.65,19.38,19.1,19.77,20.97,22.48,24.13,23.6,27.39,25.72,26.09,24.87,24.27,22.99,23.52,23.09,23.73,22.74,21.33,20.81,20.75,20.64,19.93,19.78,20.68,23.7,24.05,25.69,25.92,24.12,23.96,24.26,24.22,24.2,23.42,23.62,22.71,22.71,22.05,21.98,22.43,19.85,19.57,18.13,21.53,19.88,19.74,20.31,19.85,19.23,18.93,18.84,19.51,20.59,21.49,20.05,20.51,20.34,20.1,19.98,20.62,20.27,19.94,20.31,21.0,21.42,22.18,22.56,21.52,21.55,21.66,21.38,21.27,20.69,20.55,20.05,20.55,20.37,20.25,19.55,19.74,20.29,20.25,19.99,20.06,20.48,22.08,20.68,20.77,20.14,20.74,20.8,21.49,21.08,21.19,22.55,22.2,22.5,22.69,22.4,22.85,21.88,22.49,22.0,23.59,23.44,23.82,23.43,23.3,22.92,22.69,22.8,23.1,23.26,23.24,23.49,22.63,20.7,20.68,20.41,20.34,19.8,19.31,19.5,20.19,20.41,19.77,19.95,20.65,21.81,22.22,23.86,24.56,23.66,25.31,23.54,23.5,24.8,24.55,24.35,24.85,24.93,24.35,24.21,24.0,24.61,24.49,24.48,24.44,24.77,24.61,24.08,24.77,25.27,24.9,30.57,29.58,28.76,29.34,31.22,33.99,35.5,34.48,33.55,35.94,37.3,36.83,36.59,37.17,37.43,37.8,36.37,37.22,35.63,37.15,36.84,37.01,38.1,38.12,36.92,38.16,38.28,39.54,41.53,41.34,40.16,39.99,39.5,37.03,38.38,37.24,38.13,38.45,37.88,37.89,35.91,35.52,34.71,34.33,35.11,33.62,34.5,35.79,35.83,36.81,40.56,40.01,43.47,43.76,40.5,41.41,40.3,40.5,40.78,39.51,37.81,37.51,37.31,36.05,36.28,36.82,36.37,36.35,36.16,36.2,36.68,37.3,36.9,39.38,39.37,40.04,42.63,41.11,45.55,44.06,47.29,48.72,48.32,46.96,48.56,54.25,54.32,45.07,42.49,43.93,48.78,48.66,46.47,48.81,49.25,48.6,48.24,50.59,50.24,47.13,48.29,46.48,46.79,46.18,45.46,44.62,44.11,43.63,46.12,46.88,45.46,45.61,45.5,43.1,45.58,45.95,43.42,45.58,46.78,47.98,45.25,45.77,45.76,44.06,45.03,46.18,43.87,44.01,44.06,47.18,44.1,43.13,41.19,44.13,48.03,50.38,50.78,52.91,58.95,61.72,62.38,65.18,63.81,64.94,68.5,68.5,65.7,66.26,65.27,66.78,82.54,84.99,84.52,94.75,94.48,99.62,95.78,108.15,113.01,109.62,124.92,129.44,120.61,120.29,115.93,108.77,108.17,110.8,118.96,118.5,119.84,123.52,121.77,120.89,114.68,109.33,107.93,112.71,111.78,99.17,110.27,107.92,107.04,116.96,124.57,127.86,117.05,121.1,133.99,140.94,132.28,131.65,132.87,128.32,131.72,139.63,127.02,120.35,122.2,110.39,110.24,112.54,109.84,103.12,107.76,102.99,96.98,95.04,97.06,105.45,102.62,100.23,92.32,91.67,86.3,81.88,91.13,90.2,91.0,100.86,101.06,99.81,101.65,97.52,97.71,100.95,104.56,102.5,103.49,96.69,92.8,92.13,90.07,87.26,87.48,88.24,92.09,89.47,89.51,88.97,90.05,91.67,95.8,104.47,106.24,100.32,102.94,97.19,97.14,101.05,108.8,108.6,121.78,123.86,122.6,127.39,123.0,116.03,115.93,120.23,120.0,119.33,116.19,112.5,113.12,107.08]};
+const WIN = 251; // trading days in the 1Y view
+// [quarter, CCG, DCAI, foundry & other net of intersegment eliminations, total revenue a year earlier, non-GAAP gross margin %, non-GAAP EPS]
+const Q = [
+ ["Q1 2025",7629,4126,912,12724,39.2,0.13],
+ ["Q2 2025",7871,3939,1049,12833,29.7,-0.10],
+ ["Q3 2025",8535,4117,1001,13284,40.0,0.23],
+ ["Q4 2025",8193,4737,744,14260,37.9,0.15],
+ ["Q1 2026",7727,5052,798,12667,41.0,0.29],
+ ["Q2 2026",8877,6262,989,12859,41.8,0.42],
+];
+const G = ["Q3 2026","(guide)",16300,13653,42.0,0.38];
+const A = [["FY24",33346,16125,3630],["FY25",32228,16919,3706]];
+
+const T = {
+ zh:{n_home:"全部股票",n_over:"概览",n_price:"股价",n_rev:"营收",n_ann:"财务",n_fcf:"现金流",n_watch:"关注点",n_news:"新闻",n_src:"来源",
+  eyebrow:"Intel Corporation · 普通股 · 美国加州圣克拉拉",
+  title:"复苏已体现在业绩上，<em>也体现在股价上</em>。",
+  lede:"第二季营收增长 25%，为 2011 年以来最快；AI 推高服务器 CPU 需求，增速快过英特尔的供货能力。股价今年几乎涨了两倍。GAAP 业绩受美国政府持股安排影响而大幅波动，代工业务的客户仍主要是英特尔自己。",
+  k_mcap:"市值",s_mcap:"按当前股价",k_52:"52周区间",s_52:"盘中低 / 高",k_pe:"市盈率",s_pe:"Q3 指引 EPS $0.38 × 4 · 非GAAP 历史约 98 倍",k_ttm:"近12月营收",s_ttm:"同比 +7%",k_an:"分析师",s_an:"21 买入 · 26 持有 · 3 卖出 · 目标 $109",k_er:"下次财报",s_er:"2026 第三季，盘后",
+  h_price:"近12个月股价",sub_price:"每日收盘价与50日均线。股价从去年11月约 $34 涨至6月收盘 $140.94，7月底前回落 42%，9月又反弹至 $120 以上。",
+  k_hi:"一年收盘最高",k_lo:"一年收盘最低",s_sma50:"股价在上方",s_sma200:"股价在上方",s_rsi:"中性",s_atr:"日波幅约6%",s_beta:"相对标普500",k_dd:"距高点",s_dd:"相对6月22日收盘",
+  h_rev:"按季度分部营收",sub_rev:"CCG 为电脑芯片（2026 第二季起更名为 CCPG）；DCAI 为服务器 CPU 与 AI；代工及其他为英特尔代工的外部收入加上 Mobileye 等业务，已扣除代工卖给英特尔自家产品部门的晶圆。Altera 自 2025 年9月起不再并表。2026 第三季为公司指引中值。",
+  l_auto:"CCG（电脑）",l_en:"DCAI（服务器）",l_svc:"代工及其他",l_g:"指引",s_q2:"同比 +25%，2011 年以来最快",k_auto:"CCG（电脑）",s_auto:"同比 +13%",k_en:"DCAI（服务器）",s_en:"同比 +59%",k_svc:"英特尔代工",s_svc:"+31% · 主要为内部",k_gm:"毛利率",s_gm:"非GAAP · 一年前 29.7%",k_om:"GAAP 每股收益",s_om:"125 亿美元股份按市值计价",k_del:"Q3 指引",s_del:"±5 亿美元 · 同比 +19%",k_sto:"指引 EPS",s_sto:"非GAAP · 毛利率 42%",
+  t_q:"季度",t_tot:"合计",t_yoy:"合计同比",t_gm:"毛利率",t_eps:"非GAAP每股收益",
+  h_ann:"财年财务",sub_ann:"营收单位为百万美元；英特尔财年在12月底结束。2025 年营收持平于 529 亿美元，为 2010 年以来最低；计入 22 亿美元重组费用后 GAAP 小幅亏损。复苏体现在 2026 年各季，尚未体现在全年数字。",
+  t_pct:"占营收",r_rev:"营收",r_gp:"毛利（GAAP）",r_opex:"重组及其他",r_oi:"营业利润（GAAP）",r_ni:"净利润（GAAP）",r_eps:"非GAAP每股收益",
+  h_watch:"关注点",sub_watch:"影响投资逻辑的因素，按方向分类。",pl_plus:"利好",pl_watch:"留意",pl_risk:"风险",
+  w1h:"AI 拉动服务器 CPU",w1p:"DCAI 营收大增 59% 至 62.6 亿美元。英特尔已与服务器 CPU 买家签署 10 份长期合约，并称数据中心需求超过供货能力。",
+  w2h:"18A 已投产",w2p:"Xeon 6+ 是首款采用 Intel 18A 的服务器产品，18A-P 已进入风险生产。非GAAP 毛利率一年内由 29.7% 升至 41.8%。",
+  w3h:"代工需要外部客户",w3p:"英特尔代工营收增长 31% 至 57.7 亿美元，但几乎全部来自英特尔自家产品。能否拿下具名外部客户（尤其是 14A）仍是关键问题。",
+  w4h:"资本开支与资产负债表",w4p:"英特尔正“大幅增加”设备、洁净室和基板投资。Q2 调整后自由现金流为 −84 亿美元，债务 505 亿美元，现金及投资 297 亿美元。",
+  w5h:"美国政府持股带来的 GAAP 波动",w5p:"CHIPS 法案托管股份按市值计价亏损 125 亿美元，使 Q2 GAAP 亏损 110 亿美元。这类费用随股价变动，GAAP 盈利将持续波动。",
+  w6h:"供应与估值",w6p:"基板和内存短缺限制出货。按年化指引 EPS 计约 70 倍，股价已反映复苏预期；6月高点后五周内曾下跌 42%。",
+  h_cal:"日程",c1h:"2026 第三季财报",c1p:"美股收盘后；电话会议太平洋时间下午2点（新加坡时间10月30日早上5点）。指引：营收 158–168 亿美元，毛利率 42%，EPS $0.38。",c2h:"第四季及 2026 全年业绩",c2p:"日期未公布；2025 第四季于1月22日公布。",c3h:"2027 第一季财报",c3p:"日期未公布；2026 第一季于4月23日公布。",
+  h_src:"来源",foot:"基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Intel Corporation 无关联。"}
+};
+const EN = {};
+document.querySelectorAll("[data-i],[data-ih]").forEach(el=>{const k=el.dataset.i||el.dataset.ih; if(!(k in EN)) EN[k]=el.innerHTML;});
+let lang="en";
+function setLang(l){lang=l;document.documentElement.lang=l==="zh"?"zh-Hans":"en";
+  document.querySelectorAll("[data-i],[data-ih]").forEach(el=>{const k=el.dataset.i||el.dataset.ih;const v=l==="zh"?(T.zh[k]??EN[k]):EN[k];el.innerHTML=v;});
+  document.getElementById("langBtn").textContent=l==="zh"?"EN":"中文";
+  try{localStorage.setItem("intc-lang",l)}catch(e){}
+  buildCharts();}
+document.getElementById("langBtn").onclick=()=>setLang(lang==="en"?"zh":"en");
+
+const modes=["auto","light","dark"];let mode="auto";
+function setTheme(m){mode=m;const r=document.documentElement;if(m==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",m);
+  document.getElementById("themeBtn").textContent=m==="auto"?"◐ Auto":m==="light"?"☀ Light":"☾ Dark";
+  try{localStorage.setItem("intc-theme",m)}catch(e){} buildCharts();}
+document.getElementById("themeBtn").onclick=()=>setTheme(modes[(modes.indexOf(mode)+1)%3]);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>buildCharts());
+
+// quarterly table, newest first
+(function(){const b=document.getElementById("qBody");const f=n=>n.toLocaleString("en-US");
+  const pct=(a,b)=>{if(b==null)return "—";const v=(a/b-1)*100;if(Math.abs(v)<0.5)return "0%";return (v>0?"+":v<0?"−":"")+Math.abs(v).toFixed(0)+"%";};
+  Q.forEach(q=>{const tot=q[1]+q[2]+q[3];
+    b.insertAdjacentHTML("afterbegin",`<tr><td>${q[0]}</td><td>${f(q[1])}</td><td>${f(q[2])}</td><td>${f(q[3])}</td><td><b>${f(tot)}</b></td><td>${pct(tot,q[4])}</td><td>${q[5].toFixed(1)}%</td><td>${q[6]<0?"−":""}$${Math.abs(q[6]).toFixed(2)}</td></tr>`);});
+  b.insertAdjacentHTML("afterbegin",`<tr class="guide"><td>${G[0]} ${G[1]}</td><td>—</td><td>—</td><td>—</td><td>${f(G[2])}</td><td>${pct(G[2],G[3])}</td><td>${G[4].toFixed(1)}%</td><td>$${G[5].toFixed(2)}</td></tr>`);
+})();
+
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let charts=[],range=0;
+function sma(a,n){return a.map((_,i)=>i<n-1?null:a.slice(i-n+1,i+1).reduce((s,x)=>s+x,0)/n);}
+function buildCharts(){
+  if(!window.Chart) return;
+  charts.forEach(c=>c.destroy());charts=[];
+  const mut=css("--muted"),line=css("--line"),acc=css("--accent"),cop=css("--copper"),sl=css("--slate");
+  Chart.defaults.font.family=css("--f-mono");Chart.defaults.font.size=11;Chart.defaults.color=mut;
+  const grid={color:line,drawTicks:false},nobox={border:{display:false}};
+  const n=range?range:WIN, d=P.d.slice(-n), c=P.c.slice(-n), s=sma(P.c,50).slice(-n);
+  const ctx=document.getElementById("cPrice").getContext("2d");
+  const gr=ctx.createLinearGradient(0,0,0,320);gr.addColorStop(0,acc+"40");gr.addColorStop(1,acc+"00");
+  charts.push(new Chart(ctx,{type:"line",data:{labels:d,datasets:[
+    {label:lang==="zh"?"收盘":"Close",data:c,borderColor:acc,backgroundColor:gr,fill:true,borderWidth:1.8,pointRadius:c.map((_,i)=>i===c.length-1?4:0),pointBackgroundColor:acc,tension:.15},
+    {label:"SMA 50",data:s,borderColor:cop,borderWidth:1.2,borderDash:[4,3],pointRadius:0,fill:false}]},
+    options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},
+      plugins:{legend:{labels:{boxWidth:10,color:mut}},tooltip:{callbacks:{label:t=>`${t.dataset.label}: $${t.parsed.y?.toFixed(2)}`}}},
+      scales:{x:{...nobox,grid:{display:false},ticks:{maxTicksLimit:7,callback:function(v){const s=this.getLabelForValue(v);return s.slice(5,7)+"/"+s.slice(2,4);}}},
+              y:{...nobox,grid,ticks:{callback:v=>"$"+v.toLocaleString("en-US")}}}}}));
+  const L={a:lang==="zh"?"CCG（电脑）":"CCG (PC)",e:lang==="zh"?"DCAI（服务器）":"DCAI (server)",s:lang==="zh"?"代工及其他":"Foundry & other",g:lang==="zh"?"指引":"Guidance"};
+  const ql=Q.map(q=>q[0]).concat([G[0]+"G"]);
+  charts.push(new Chart(document.getElementById("cRev"),{type:"bar",data:{labels:ql,datasets:[
+    {label:L.a,data:Q.map(q=>q[1]).concat([null]),backgroundColor:acc,stack:"s",borderRadius:2},
+    {label:L.e,data:Q.map(q=>q[2]).concat([null]),backgroundColor:cop,stack:"s",borderRadius:2},
+    {label:L.s,data:Q.map(q=>q[3]).concat([null]),backgroundColor:sl,stack:"s",borderRadius:2},
+    {label:L.g,data:Q.map(()=>null).concat([G[2]]),backgroundColor:line,borderColor:mut,borderWidth:1,borderDash:[3,3],stack:"s",borderRadius:2}]},
+    options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},
+      plugins:{legend:{display:false},tooltip:{filter:t=>t.parsed.y!=null,callbacks:{label:t=>`${t.dataset.label}: $${(t.parsed.y/1000).toFixed(2)}B`,
+        footer:it=>it.length>1?"Total: $"+(it.reduce((s,x)=>s+x.parsed.y,0)/1000).toFixed(2)+"B":""}}},
+      scales:{x:{...nobox,grid:{display:false},stacked:true,ticks:{maxRotation:0,autoSkip:true,callback:function(v){return this.getLabelForValue(v).split(" ");}}},
+              y:{...nobox,stacked:true,grid,ticks:{callback:v=>"$"+(v/1000)+"B"}}}}}));
+  charts.push(new Chart(document.getElementById("cAnn"),{type:"bar",data:{labels:A.map(a=>a[0]),datasets:[
+    {label:L.a,data:A.map(a=>a[1]),backgroundColor:acc,stack:"s",borderRadius:2},
+    {label:L.e,data:A.map(a=>a[2]),backgroundColor:cop,stack:"s",borderRadius:2},
+    {label:L.s,data:A.map(a=>a[3]),backgroundColor:sl,stack:"s",borderRadius:2}]},
+    options:{maintainAspectRatio:false,animation:false,interaction:{mode:"index",intersect:false},
+      plugins:{legend:{labels:{boxWidth:10,color:mut}},tooltip:{callbacks:{label:t=>`${t.dataset.label}: $${t.parsed.y.toLocaleString()}M`,footer:it=>"Total: $"+it.reduce((s,x)=>s+x.parsed.y,0).toLocaleString()+"M"}}},
+      scales:{x:{...nobox,grid:{display:false},stacked:true},y:{...nobox,stacked:true,grid,ticks:{callback:v=>"$"+(v/1000)+"B"}}}}}));
+}
+document.querySelectorAll(".range button").forEach(b=>b.onclick=()=>{range=+b.dataset.r;
+  document.querySelectorAll(".range button").forEach(x=>x.setAttribute("aria-pressed",x===b));buildCharts();});
+
+let sl0="en",st="auto";try{sl0=localStorage.getItem("intc-lang")||"en";st=localStorage.getItem("intc-theme")||"auto"}catch(e){}
+mode=st;if(st!=="auto")document.documentElement.setAttribute("data-theme",st);
+document.getElementById("themeBtn").textContent=st==="auto"?"◐ Auto":st==="light"?"☀ Light":"☾ Dark";
+
+// ---- live quote: data/quote.json + data/history.json, refreshed by GitHub Actions ----
+const SHARES = 5.044e9; // from market cap / price
+let LQ = null;
+const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const sgn = v => (v>=0?"+":"−") + Math.abs(v).toFixed(2);
+const sgn1 = v => (v>=0?"+":"−") + Math.abs(v).toFixed(1);
+function renderQuote(){
+  const c = P.c, last = LQ ? LQ.price : c[c.length-1];
+  const prev = LQ ? LQ.prevClose : c[c.length-2];
+  const ch = last - prev, pct = ch / prev * 100, up = ch >= 0;
+  const zh = lang === "zh";
+  ["barPx","pxBig"].forEach(id => document.getElementById(id).textContent = fmt$(last));
+  const bc = document.getElementById("barChg"), pc = document.getElementById("pxChg");
+  bc.textContent = sgn(pct) + "%"; pc.textContent = `${sgn(ch)} (${sgn(pct)}%)`;
+  [bc,pc].forEach(e => { e.classList.toggle("up",up); e.classList.toggle("down",!up); });
+  // YTD vs last close of prior year; 1Y and peak over the 1Y window
+  const yr = String(new Date().getFullYear()); let base = null;
+  for (let i = 0; i < P.d.length; i++) { if (P.d[i] < yr) base = c[i]; }
+  const w = c.slice(-WIN), ytd = base ? (last/base-1)*100 : null, y1 = (last/w[0]-1)*100;
+  const peak = Math.max(...w, last), dd = (last/peak-1)*100;
+  document.getElementById("pxNote").textContent = (ytd!=null ? (zh?"年初至今 ":"YTD ")+sgn1(ytd)+"% · " : "") + (zh?"一年 ":"1Y ") + sgn1(y1) + "%";
+  document.getElementById("mcap").textContent = "$" + (last*SHARES/1e9).toFixed(0) + "B";
+  const ddv = document.getElementById("ddv"); ddv.textContent = (dd<0?"−":"") + Math.abs(dd).toFixed(0) + "%";
+  ddv.classList.toggle("down", dd < -0.5);
+  const t = LQ ? new Date(LQ.time*1000) : null;
+  const sgt = d => d.toLocaleString(zh?"zh-CN":"en-SG",{timeZone:"Asia/Singapore",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false});
+  const open = LQ && LQ.state === "REGULAR";
+  document.getElementById("pxLabel").textContent = open ? (zh?"盘中 · 美股交易中":"Intraday · market open") : (zh?"最近收盘":"Last close") + (t ? " · " + t.toLocaleDateString(zh?"zh-CN":"en-US",{timeZone:"America/New_York",month:"short",day:"numeric",year:"numeric"}) : "");
+  document.getElementById("barLive").classList.toggle("on", !!open);
+  document.getElementById("barTime").textContent = t ? (open ? (zh?"实时 ":"Live ") : (zh?"收盘 ":"Closed ")) + sgt(t) + " SGT" : (zh?"快照":"snapshot");
+  document.getElementById("footTime").textContent = t ? (zh?"股价更新于 ":"Price updated ") + sgt(t) + " SGT (" + (zh?"约每10分钟刷新":"refreshes about every 10 min") + ")." : "";
+}
+async function loadLive(){
+  try {
+    const bust = "?t=" + Date.now();
+    const [q, hist] = await Promise.all([
+      fetch("data/quote.json"+bust,{cache:"no-store"}).then(r => r.ok ? r.json() : null),
+      fetch("data/history.json"+bust,{cache:"no-store"}).then(r => r.ok ? r.json() : null)]);
+    let changed = false;
+    if (hist && hist.d && hist.d.length > 50 && hist.d[hist.d.length-1] >= P.d[P.d.length-1]) { P.d = hist.d; P.c = hist.c; changed = true; }
+    if (q && q.price) {
+      if (!LQ || q.time !== LQ.time) changed = true;
+      LQ = q;
+      if (q.date) { const i = P.d.indexOf(q.date); if (i >= 0) P.c[i] = q.price; else if (q.date > P.d[P.d.length-1]) { P.d.push(q.date); P.c.push(q.price); } }
+    }
+    if (changed) { renderQuote(); buildCharts(); }
+  } catch (e) { /* stay on embedded snapshot */ }
+}
+const _setLang = setLang; setLang = l => { _setLang(l); renderQuote(); };
+loadLive(); setInterval(loadLive, 60000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) loadLive(); });
+setLang(sl0);
+</script>
+<script>
+(function(){var s=document.createElement("script");s.src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js";s.async=true;
+s.text=JSON.stringify({symbol:"NASDAQ:INTC",width:"100%",isTransparent:true,colorTheme:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",locale:"en"});
+document.querySelector("#tv .tradingview-widget-container").appendChild(s);})();
+</script>
+
+<script src="fcf-data.js?v=2"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

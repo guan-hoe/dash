@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 824.13,
+ "bias": {
+  "en": "Bearish · lost $832, holding the Sep 3 low",
+  "zh": "偏空 · 失守 $832，守住 9月3日低点"
+ },
+ "read": [
+  {
+   "en": "Lumentum fell 5.2% on Oct 16 to $824.13 and is down 25% in five sessions. It is below its 5-day ($914.7), 10-day ($1,006.2), 30-day ($963.2) and falling 100-day ($874.9) averages and above the 200-day ($777.5). MACD has been below its signal since Oct 13 and is now below zero, Parabolic SAR has been bearish since Oct 12 ($1,095.2), and RSI is 37.",
+   "zh": "Lumentum 10月16日下跌 5.2%，收于 $824.13，五个交易日累计下跌 25%。股价位于 5 日（$914.7）、10 日（$1,006.2）、30 日（$963.2）和下行的 100 日均线（$874.9）下方，仍在 200 日均线（$777.5）之上。MACD 自 10月13日起位于信号线下方，现已跌破零轴，抛物线 SAR 自 10月12日起看空（$1,095.2），RSI 为 37。"
+  },
+  {
+   "en": "The Sep 15 low ($832) broke on the close and is now first resistance, then $875–881 (100-day average, Sep 28 low) and $914.7 (5-day). The day's low of $822 held the Sep 3 low ($819). Support is $819, then $800 (Oct 15 low) and $784–787 (August lows). A close below $800 would open $785; a close back above $832 would target $875.",
+   "zh": "9月15日低点（$832）收盘失守，现为第一阻力，其次 $875–881（100 日均线、9月28日低点）和 $914.7（5 日均线）。当日低点 $822 守住 9月3日低点（$819）。支撑为 $819，其次 $800（10月15日低点）和 $784–787（8月低点）。若收盘跌破 $800，下一目标看 $785；若重新站上 $832，目标看 $875。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    832,
+    {
+     "en": "Sep 15 low, now resistance",
+     "zh": "9月15日低点，转为阻力"
+    }
+   ],
+   [
+    878,
+    {
+     "en": "100-day average and Sep 28 low ($875–881)",
+     "zh": "100日均线及9月28日低点（$875–881）"
+    }
+   ],
+   [
+    914.7,
+    {
+     "en": "5-day average",
+     "zh": "5日均线"
+    }
+   ]
+  ],
+  "s": [
+   [
+    819,
+    {
+     "en": "Sep 3 low; Oct 16 low $822",
+     "zh": "9月3日低点；10月16日低点 $822"
+    }
+   ],
+   [
+    800,
+    {
+     "en": "Oct 15 low, round number",
+     "zh": "10月15日低点，整数关口"
+    }
+   ],
+   [
+    785,
+    {
+     "en": "Aug 11 and Aug 24 lows ($784–787)",
+     "zh": "8月11日及8月24日低点（$784–787）"
+    }
+   ]
+  ]
+ }
+}

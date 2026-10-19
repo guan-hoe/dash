@@ -1,0 +1,63 @@
+{
+ "ticker": "INTC",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-23",
+ "timing": "amc",
+ "pre_close": 100.23,
+ "react": {
+  "date": "2026-07-24",
+  "close": 92.32,
+  "pct": -7.9
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 89.85,
+  "pct": -10.4
+ },
+ "review": {
+  "en": [
+   "Revenue of $16.1B rose 25%, Intel's fastest growth since 2011, and came in $1.8B above the guide midpoint; non-GAAP EPS of $0.42 doubled the ~$0.21 consensus and gross margin reached 41.8%. Data Center and AI grew 59% to $6.3B. But Intel booked an $11.0B GAAP loss, the foundry still lost about $2.1B, and free cash flow was negative as capex rose. CEO Lip-Bu Tan credited AI demand and better manufacturing; the Q3 guide is $0.38 EPS, with flat PC sales because of the memory shortage.",
+   "The stock had risen about 160% in the year before the report. It rose 3% after hours, then fell 7.9% the next day and kept sliding to $81.88 by Jul 29, 18% below the pre-report close, as investors focused on foundry losses, cash burn and valuation, and several analysts moved to Hold. It bounced 11% with the chip rally on Jul 30 and has since climbed back above the pre-report price."
+  ],
+  "zh": [
+   "营收 161 亿美元，增长 25%，为 2011 年以来最快增速，较指引中值高出 18 亿美元；非 GAAP 每股收益 0.42 美元，是约 0.21 美元预期的两倍，毛利率 41.8%。数据中心与 AI 业务增长 59% 至 63 亿美元。但 GAAP 净亏损 110 亿美元，代工业务仍亏损约 21 亿美元，资本开支上升令自由现金流为负。CEO 陈立武将成绩归功于 AI 需求与制造执行改善；第三季指引每股收益 0.38 美元，并预计内存短缺下 PC 销量持平。",
+   "财报前一年股价已上涨约 160%。盘后上涨 3%，但次日下跌 7.9%，并持续走低至 7 月 29 日的 81.88 美元，较财报前收盘低 18%：投资者聚焦代工亏损、现金消耗和估值，多家券商下调至「持有」。7 月 30 日随芯片股反弹 11%，此后已重回财报前价位之上。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Lip-Bu Tan",
+   "zh": "陈立武"
+  },
+  "since": "2025",
+  "bio": {
+   "en": "Founded venture firm Walden International in 1987 and was CEO of Cadence Design Systems from 2009 to 2021, reviving its growth and margins. Joined Intel's board in 2022, left in 2024, and returned as CEO in March 2025 to fix manufacturing and win foundry customers.",
+   "zh": "1987 年创立创投公司华登国际，2009–2021 年任 Cadence CEO，带动其增长与利润率回升。2022 年加入英特尔董事会，2024 年离任，2025 年 3 月回归出任 CEO，致力改善制造并争取代工客户。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "David Zinsner",
+   "zh": "大卫·津斯纳"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "CFO since January 2022 and co-interim CEO from December 2024 to March 2025. Previously CFO of Micron, and earlier president and COO of Affirmed Networks and CFO of Analog Devices.",
+   "zh": "2022 年 1 月起任 CFO，2024 年 12 月至 2025 年 3 月曾任联席临时 CEO。此前任美光 CFO，更早担任 Affirmed Networks 总裁兼 COO 及亚德诺（ADI）CFO。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 results (CNBC)",
+   "u": "https://www.cnbc.com/2026/07/23/intel-intc-earnings-report-q2-2026.html"
+  },
+  {
+   "t": "Q2 2026 slides and reaction",
+   "u": "https://investing.com/news/company-news/intel-q2-2026-slides-revenue-surges-25-ai-drives-record-growth-93CH-4810222"
+  }
+ ]
+}

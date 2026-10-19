@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MP Materials MP Dashboard</title>
+<meta name="description" content="MP Materials (NYSE: MP) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NYSE: MP</span>
+  <span class="bar-px" id="barPx">$46.14</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">MP Materials Corp. · Class A · Las Vegas, Nevada</div>
+      <h1 data-ih="title">America's rare earth mine, <em>backed by Washington</em>.</h1>
+      <p data-i="lede" class="lede">MP owns Mountain Pass, the only scaled US rare earth mine, and is building magnet factories. A Department of War deal sets a $110/kg price floor for its NdPr and fully contracts its new 10X magnet plant. NdPr output rose 41% last quarter, but the company is still losing money while it spends $500–600M on capex this year.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$46.14</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$8.21B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$38–100</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">Price / sales</span></div><div class="v">~20×</div><div class="s"><span data-i="s_val">on $416M trailing revenue</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">NdPr floor</span></div><div class="v">$110/kg</div><div class="s"><span data-i="s_an">price protection from the Department of War</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Early Nov</div><div class="s"><span data-i="s_er">Q3 2026 · date not yet announced</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. The stock fell by more than half from its high near $100.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="MP daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">1.99</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions, with GAAP gross margin on the right axis. Since mid-2025 revenue includes price-protection income from the Department of War ($17.6M in Q2 2026); reported product revenue was $108.5M. MP gives no revenue guidance, so there is no guidance bar.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q2 2026</span></div><div class="v">$126M</div><div class="s"><span data-i="sc0">incl. $17.6M price protection</span></div></div><div class="cell"><div class="k"><span data-i="kc1">NdPr produced</span></div><div class="v">840 t</div><div class="s"><span data-i="sc1">+41% YoY · Q3 to exceed 1,000 t</span></div></div><div class="cell"><div class="k"><span data-i="kc2">NdPr sold</span></div><div class="v">1,006 t</div><div class="s"><span data-i="sc2">+127% YoY</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Q3 NdPr price</span></div><div class="v">high $90s/kg</div><div class="s"><span data-i="sc3">market ~$110; floor tops up the gap</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">Government backing</h3><p data-i="w0p">The Department of War price floor of $110/kg and a fully contracted 10X magnet plant reduce commodity-price risk.</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Volume ramp</h3><p data-i="w1p">NdPr sales topped 1,000 t for the second straight quarter and production should exceed 1,000 t in Q3.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Heavy capex</h3><p data-i="w2p">2026 capex is guided at $500–600M, including the $80M 10X site. Free cash flow was −$223M in Q2.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w3h">Still unprofitable</h3><p data-i="w3p">Operating losses continue while magnet plants are built; the magnetics segment's revenue fell 17% during the transition.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="MP" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Early Nov 2026</div><h3 data-i="c0h">Q3 2026 earnings</h3><p data-i="c0p">Management expects NdPr production above 1,000 t and realized prices in the high $90s/kg.</p></div></div><div class="item"><div><div class="date">Late 2026</div><h3 data-i="c1h">NdPr run-rate target</h3><p data-i="c1p">Targeted year-end production run rate.</p></div></div><div class="item"><div><div class="date">2027–2028</div><h3 data-i="c2h">10X magnet plant</h3><p data-i="c2p">Vertical construction has started; output is fully contracted.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://fool.com/earnings/call-transcripts/2026/08/13/mp-materials-mp-q2-2026-earnings-call-transcript" target="_blank" rel="noopener">Q2 2026 call transcript</a></li><li><a href="https://themarketsdaily.com/2026/08/10/mp-materials-q2-earnings-call-highlights.html" target="_blank" rel="noopener">Q2 2026 call: capex and cash</a></li><li><a href="https://panabee.com/news/mp-materials-earnings-q2-2026-report" target="_blank" rel="noopener">Q2 2026 results and price floor</a></li><li><a href="https://stockanalysis.com/stocks/mp/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://finance.yahoo.com/quote/MP" target="_blank" rel="noopener">Price, market cap and beta: Financial Modeling Prep, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with MP Materials Corp..</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "mp", SHARES = 178020000.0, TV = "NYSE:MP";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q3 2021", "Sep 2021", 99.75, 78.04, 57.15, 0.23], ["Q4 2021", "Dec 2021", 99.11, 81.38, 54.92, 0.26], ["Q1 2022", "Mar 2022", 166.26, 86.06, 69.34, 0.45], ["Q2 2022", "Jun 2022", 143.56, 84.61, 67.27, 0.38], ["Q3 2022", "Sep 2022", 124.45, 81.99, 64.73, 0.33], ["Q4 2022", "Dec 2022", 93.25, 73.69, 44.45, 0.35], ["Q1 2023", "Mar 2023", 95.7, 74.7, 41.92, 0.2], ["Q2 2023", "Jun 2023", 64.02, 64.54, 10.81, 0.04], ["Q3 2023", "Sep 2023", 52.52, 57.69, -17.84, -0.02], ["Q4 2023", "Dec 2023", 41.21, 42.78, -66.36, -0.1], ["Q1 2024", "Mar 2024", 48.68, 26.89, -66.32, -0.08], ["Q2 2024", "Jun 2024", 31.26, -32.65, -170.64, -0.21], ["Q3 2024", "Sep 2024", 62.93, 9.0, -59.8, -0.16], ["Q4 2024", "Dec 2024", 60.99, 4.46, -68.66, -0.14], ["Q1 2025", "Mar 2025", 60.81, 19.7, -52.3, -0.14], ["Q2 2025", "Jun 2025", 57.39, 12.13, -77.08, -0.19], ["Q3 2025", "Sep 2025", 53.55, 9.48, -108.41, -0.24], ["Q4 2025", "Dec 2025", 103.7, 56.56, -0.92, 0.05], ["Q1 2026", "Mar 2026", 132.92, 44.14, -7.88, -0.04], ["Q2 2026", "Jun 2026", 126.07, 42.66, -14.72, -0.11]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = null;
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "2026 Q2", "sc0": "含 1760 万价格保障收入", "kc1": "NdPr 产量", "sc1": "同比 +41% · Q3 将超 1000 吨", "kc2": "NdPr 销量", "sc2": "同比 +127%", "kc3": "Q3 NdPr 价格", "sc3": "市价约 $110；下限补足差额", "w0h": "政府支持", "w0p": "战争部每公斤 110 美元价格下限及包销的 10X 磁材工厂降低了商品价格风险。", "w1h": "产量爬升", "w1p": "NdPr 销量连续两季超 1000 吨，Q3 产量预计超 1000 吨。", "w2h": "资本开支高", "w2p": "2026 年资本开支指引 5–6 亿美元，含 8000 万美元 10X 厂址。第二季自由现金流 −2.23 亿。", "w3h": "仍未盈利", "w3p": "磁材工厂建设期间仍有营业亏损；转型期间磁材板块收入下降 17%。", "c0h": "2026 第三季财报", "c0p": "管理层预计 NdPr 产量超 1000 吨，实现价格每公斤 90 多美元。", "c1h": "NdPr 产能目标", "c1p": "年底目标产量水平。", "c2h": "10X 磁材工厂", "c2p": "主体建设已开工；产出已全部包销。", "eyebrow": "MP Materials · A类股 · 内华达州拉斯维加斯", "title": "美国的稀土矿，<em>华盛顿撑腰</em>。", "lede": "MP 拥有美国唯一规模化稀土矿 Mountain Pass，并在兴建磁材工厂。与战争部的协议为其 NdPr 设定每公斤 110 美元价格下限，并包销新建的 10X 磁材工厂。上季 NdPr 产量增 41%，但今年资本开支 5–6 亿美元，公司仍在亏损。", "k_val": "市销率", "s_val": "按近12月 4.16 亿营收", "k_an": "NdPr 价格下限", "s_an": "战争部价格保障", "s_er": "2026 第三季 · 日期未公布", "sub_price": "每日收盘价与50日均线。股价较近 $100 的高点下跌逾一半。", "sub_rev": "营收单位为百万美元，右轴为 GAAP 毛利率。自 2025 年中起营收含战争部价格保障收入（2026 年第二季 1760 万美元）；产品收入为 1.085 亿。MP 不提供营收指引，故无指引柱。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 MP Materials Corp. 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>

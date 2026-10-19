@@ -1,0 +1,63 @@
+{
+ "ticker": "LITE",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q4 FY2026 (June quarter)",
+  "zh": "2026 财年第四季（6 月季度）"
+ },
+ "reported": "2026-08-11",
+ "timing": "amc",
+ "pre_close": 820.59,
+ "react": {
+  "date": "2026-08-12",
+  "close": 932.47,
+  "pct": 13.6
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 824.13,
+  "pct": 0.4
+ },
+ "review": {
+  "en": [
+   "Revenue more than doubled to $1.01B, its first billion-dollar quarter, and non-GAAP gross margin passed 50% for the first time; EPS of $3.23 beat ~$2.95. The Q1 guide of $1.225–1.275B and $4.05–4.35 EPS was well above the ~$1.16B consensus. CEO Michael Hurlston said Lumentum will hit its $1.25B quarterly target more than a quarter early, pump lasers are effectively sold out, 1.6T transceivers have started shipping, and optical circuit switches should pass $100M of revenue this quarter.",
+   "Shares rose only 1.5% after hours but jumped 13.6% the next day, up 15% at one point, as the guide sank in, extending a 123% year-to-date run. The stock then swung with the optical group, slipping back near $830 on Aug 19 and Sep 14 when AI-spending worries hit, before breaking above $1,100 in October, about a third above the pre-report close."
+  ],
+  "zh": [
+   "营收增长逾一倍至 10.1 亿美元，首次单季突破十亿；非 GAAP 毛利率首次超过 50%，每股收益 3.23 美元，高于约 2.95 美元的预期。第一季指引营收 12.25–12.75 亿美元、每股收益 4.05–4.35 美元，远高于约 11.6 亿美元的预期。CEO 迈克尔·赫尔斯顿表示公司将提前一个多季度达成单季 12.5 亿美元目标，泵浦激光器基本售罄，1.6T 光模块已开始出货，光路交换机本季营收有望突破 1 亿美元。",
+   "盘后仅涨 1.5%，次日在指引提振下大涨 13.6%（盘中一度涨 15%），年内涨幅扩大至 123%。之后随光通信板块震荡，8 月 19 日和 9 月 14 日 AI 开支担忧来袭时两度回落至约 830 美元，10 月突破 1,100 美元，较财报前收盘高约三分之一。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Michael Hurlston",
+   "zh": "迈克尔·赫尔斯顿"
+  },
+  "since": "2025",
+  "bio": {
+   "en": "CEO since February 2025 after five years running Synaptics. Spent most of his career at Broadcom, where he led the wireless and mobile connectivity businesses. Has refocused Lumentum on AI data-center optics: lasers, transceivers and optical circuit switches.",
+   "zh": "2025 年 2 月出任 CEO，此前执掌 Synaptics 五年。职业生涯大部分在博通，负责无线与移动连接业务。上任后将 Lumentum 重心转向 AI 数据中心光器件：激光器、光模块和光路交换机。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Wajid Ali",
+   "zh": "瓦吉德·阿里"
+  },
+  "since": "2019",
+  "bio": {
+   "en": "CFO since February 2019. Previously CFO of Synaptics, vice president and controller of Teledyne Technologies, and CFO of DALSA, a public chipmaker that Teledyne acquired.",
+   "zh": "2019 年 2 月起任 CFO。此前任 Synaptics CFO、Teledyne Technologies 副总裁兼财务总监，以及被 Teledyne 收购的上市芯片公司 DALSA 的 CFO。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q4 FY26 results and guide",
+   "u": "https://marketbeat.com/earnings/reports/2026-8-11-lumentum-holdings-inc-stock"
+  },
+  {
+   "t": "Next-day move (Yahoo Finance)",
+   "u": "https://finance.yahoo.com/markets/stocks/articles/lumentum-rockets-15-blowout-earnings-172227881.html"
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "ticker": "GLW",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-28",
+ "timing": "bmo",
+ "pre_close": 143.09,
+ "react": {
+  "date": "2026-07-28",
+  "close": 125.77,
+  "pct": -12.1
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 132,
+  "pct": -7.8
+ },
+ "review": {
+  "en": [
+   "Core sales rose 17% to $4.74B and EPS of $0.78 beat, both above Corning's own range; Optical Communications grew 32% to $2.07B, operating margin rose to 20.9% and free cash flow was $1.42B. Corning signed a multiyear, multibillion-dollar fiber deal with Amazon and a partnership with NVIDIA to expand US optical connectivity capacity tenfold. But the Q3 core sales guide of $4.9–5.0B came in below the ~$5.0B consensus. CEO Wendell Weeks reaffirmed the Springboard targets of a $20B sales run rate by the end of 2026.",
+   "The guide sank the stock, which fell as much as 18% intraday, on pace for its worst day since 2002, and closed 12% lower; it dragged down optical peers including Lumentum, Coherent and Marvell. Shares had already roughly halved from their late-June peak, so buyers returned fast: by Aug 4 the stock was 11% above the pre-report close and it peaked near $173 on Aug 17. It has since traded with the optical group and sits about 10% above its pre-report level."
+  ],
+  "zh": [
+   "核心销售额增长 17% 至 47.4 亿美元，每股收益 0.78 美元超预期，均高于公司自身指引；光通信业务增长 32% 至 20.7 亿美元，营业利润率升至 20.9%，自由现金流 14.2 亿美元。康宁与亚马逊签订多年期、价值数十亿美元的光纤协议，并与英伟达合作将美国光连接产能扩大十倍。但第三季核心销售指引 49–50 亿美元低于约 50 亿美元的预期。CEO 温德尔·威克斯重申 Springboard 计划：2026 年底实现 200 亿美元年化销售额。",
+   "指引令股价重挫，盘中一度下跌 18%，有望创 2002 年以来最差单日表现，最终收跌 12%，并拖累 Lumentum、Coherent、Marvell 等光通信股。股价此前已较 6 月下旬高点腰斩，买盘很快回流：8 月 4 日已较财报前收盘高 11%，8 月 17 日见顶约 173 美元。此后随光通信板块波动，目前较财报前高约 10%。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Wendell Weeks",
+   "zh": "温德尔·威克斯"
+  },
+  "since": "2005",
+  "bio": {
+   "en": "Joined Corning in 1983 and has been CEO since 2005 and chairman since 2007. Championed Gorilla Glass for smartphones and now the optical-fiber build-out for AI data centers under the Springboard plan.",
+   "zh": "1983 年加入康宁，2005 年起任 CEO，2007 年兼任董事长。曾力推智能手机用大猩猩玻璃，目前在 Springboard 计划下主导面向 AI 数据中心的光纤扩产。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Ed Schlesinger",
+   "zh": "埃德·施莱辛格"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "CFO since February 2022. Joined Corning in 2013 as CFO of the Optical Communications segment and was corporate controller from 2015, after more than 20 years in finance roles elsewhere.",
+   "zh": "2022 年 2 月起任 CFO。2013 年加入康宁任光通信事业部 CFO，2015 年起任公司财务总监，此前在其他公司从事财务工作二十多年。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Jul 28 selloff (CNBC)",
+   "u": "https://www.cnbc.com/2026/07/28/corning-glw-stock-optical-ai.html"
+  },
+  {
+   "t": "Q2 2026 call transcript",
+   "u": "https://news.alphastreet.com/corning-incorporated-glw-q2-2026-earnings-call-transcript"
+  },
+  {
+   "t": "Amazon and NVIDIA deals",
+   "u": "https://finance.yahoo.com/markets/stocks/articles/corning-q2-2026-earnings-beat-113418264.html"
+  }
+ ]
+}

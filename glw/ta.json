@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 132,
+ "bias": {
+  "en": "Bearish · below the Oct 15 low",
+  "zh": "偏空 · 跌破 10月15日低点"
+ },
+ "read": [
+  {
+   "en": "Corning fell 4.6% on Oct 16 to $132.00 and is down 16% in five sessions. It is below all its averages: the 5-day ($141.4), 10-day ($150.8), 200-day ($153.6) and the falling 30-day ($154.3) and 100-day ($167.0). MACD has been below its signal since Oct 12 and is below zero with the histogram widening, Parabolic SAR has been bearish since Oct 12 ($164.4), and RSI is 36.",
+   "zh": "康宁 10月16日下跌 4.6%，收于 $132.00，五个交易日累计下跌 16%。股价位于所有均线下方：5 日（$141.4）、10 日（$150.8）、200 日均线（$153.6）以及下行的 30 日（$154.3）和 100 日均线（$167.0）。MACD 自 10月12日起位于信号线及零轴下方，柱状图继续扩大，抛物线 SAR 自 10月12日起看空（$164.4），RSI 为 36。"
+  },
+  {
+   "en": "The Oct 15 low ($132.75) broke on the close after a day's low of $131.63; it now caps at $132.75, then $139.3 (Sep 3 low) and $141.4 (5-day average, Aug 24 low). Support is $130 (Jul 30 low), then $122.6 (Jul 29 low) and $114.5 (Jul 28 low). A close below $130 would open $122.6; a close back above $139.3 would target $141.4.",
+   "zh": "10月15日低点（$132.75）在当日低见 $131.63 后收盘失守，现为 $132.75 阻力，其次 $139.3（9月3日低点）和 $141.4（5 日均线、8月24日低点）。支撑为 $130（7月30日低点），其次 $122.6（7月29日低点）和 $114.5（7月28日低点）。若收盘跌破 $130，下一目标看 $122.6；若重新站上 $139.3，目标看 $141.4。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    132.75,
+    {
+     "en": "Oct 15 low, now resistance",
+     "zh": "10月15日低点，转为阻力"
+    }
+   ],
+   [
+    139.3,
+    {
+     "en": "Sep 3 low ($139.25)",
+     "zh": "9月3日低点（$139.25）"
+    }
+   ],
+   [
+    141.4,
+    {
+     "en": "5-day average; Aug 24 low $141.6",
+     "zh": "5日均线；8月24日低点 $141.6"
+    }
+   ]
+  ],
+  "s": [
+   [
+    130,
+    {
+     "en": "Jul 30 low; Oct 16 low $131.6",
+     "zh": "7月30日低点；10月16日低点 $131.6"
+    }
+   ],
+   [
+    122.6,
+    {
+     "en": "Jul 29 low",
+     "zh": "7月29日低点"
+    }
+   ],
+   [
+    114.5,
+    {
+     "en": "Jul 28 low",
+     "zh": "7月28日低点"
+    }
+   ]
+  ]
+ }
+}

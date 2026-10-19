@@ -1,0 +1,63 @@
+{
+ "ticker": "GOOGL",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-22",
+ "timing": "amc",
+ "pre_close": 342.09,
+ "react": {
+  "date": "2026-07-23",
+  "close": 317.69,
+  "pct": -7.1
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 340.59,
+  "pct": -0.4
+ },
+ "review": {
+  "en": [
+   "Revenue rose 24% to $119.8B, ahead of forecasts, and operating income grew 30% to $40.8B. Google Cloud was the standout: revenue up 82% to $24.8B with a 35.6% operating margin. Headline EPS was inflated by about $98B of unrealized gains on equity stakes. Capex hit $44.9B in the quarter and the 2026 plan was raised again, to $195–205B from $180–190B, pushing free cash flow slightly negative. CFO Anat Ashkenazi said Alphabet is still supply-constrained, with strong demand from cloud customers and internal teams.",
+   "Shares fell 3.5% after hours and closed down 7.1% the next day, as the capex increase and negative free cash flow overshadowed the cloud beat. The selloff reversed quickly: by Aug 4 the stock was 10% above the pre-report close as investors warmed to cloud growth and margins and peers' results eased AI-spending worries. It then drifted back into the $340–350 range."
+  ],
+  "zh": [
+   "营收增长 24% 至 1,198 亿美元，高于预期，营业利润增长 30% 至 408 亿美元。谷歌云表现最突出：营收增长 82% 至 248 亿美元，营业利润率 35.6%。每股收益因约 980 亿美元股权投资未实现收益而被抬高。本季资本开支 449 亿美元，2026 年计划再次上调至 1,950–2,050 亿美元（原为 1,800–1,900 亿），自由现金流转为小幅负值。CFO 阿纳特·阿什肯纳齐表示公司仍受产能制约，云客户与内部需求都很强。",
+   "盘后下跌 3.5%，次日收跌 7.1%，资本开支上调与负自由现金流盖过了云业务亮眼表现。抛售很快逆转：至 8 月 4 日股价已较财报前收盘高 10%，投资者认可云业务的增长和利润率，同业财报也缓解了 AI 开支担忧。之后股价回落至 340–350 美元区间。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Sundar Pichai",
+   "zh": "桑达尔·皮查伊"
+  },
+  "since": "2015",
+  "bio": {
+   "en": "Joined Google in 2004 and led Chrome, Chrome OS and Android. CEO of Google since 2015 and of Alphabet since 2019; now steering about $200B a year of capex into Gemini, Google Cloud and custom TPU chips.",
+   "zh": "2004 年加入谷歌，曾主导 Chrome、Chrome OS 与安卓。2015 年起任谷歌 CEO，2019 年起兼任 Alphabet CEO；目前每年投入约 2,000 亿美元资本开支于 Gemini、谷歌云和自研 TPU 芯片。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Anat Ashkenazi",
+   "zh": "阿纳特·阿什肯纳齐"
+  },
+  "since": "2024",
+  "bio": {
+   "en": "CFO since July 2024. Spent more than two decades at Eli Lilly, the last years as CFO, with a reputation for cost discipline. Owns Alphabet's capex guidance, which she raised to $195–205B for 2026.",
+   "zh": "2024 年 7 月起任 CFO。此前在礼来工作二十多年，最后几年任 CFO，以成本管控著称。负责 Alphabet 资本开支指引，并将 2026 年指引上调至 1,950–2,050 亿美元。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 live coverage (CNBC)",
+   "u": "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html"
+  },
+  {
+   "t": "Q2 2026 slides",
+   "u": "https://www.investing.com/news/company-news/alphabet-q2-2026-slides-24-revenue-growth-cloud-surges-despite-capex-93CH-4807148"
+  }
+ ]
+}

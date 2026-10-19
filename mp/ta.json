@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 40.17,
+ "bias": {
+  "en": "Bearish · clinging to $40",
+  "zh": "偏空 · 勉强守住 $40"
+ },
+ "read": [
+  {
+   "en": "MP Materials fell 3.5% on Oct 16 to $40.17 after failing at $42.51 and trading as low as $39.88. It remains below all its falling averages: the 5-day ($41.5), 10-day ($44.2), 30-day ($47.8), 100-day ($52.3) and 200-day ($56.3). MACD has been below its signal since Aug 31 and is below zero, Parabolic SAR has been bearish since Oct 12 ($46.99), and RSI is 32.",
+   "zh": "MP Materials 10月16日在 $42.51 受阻，盘中低见 $39.88，收盘下跌 3.5%，报 $40.17。股价仍位于所有下行均线下方：5 日（$41.5）、10 日（$44.2）、30 日（$47.8）、100 日（$52.3）和 200 日均线（$56.3）。MACD 自 8月31日起位于信号线下方并在零轴之下，抛物线 SAR 自 10月12日起看空（$46.99），RSI 为 32。"
+  },
+  {
+   "en": "The rebound stalled near the 5-day average and gave back most of Oct 15's gain, but the close held the $40 round number. Resistance is $41.5–41.6 (5-day average, Oct 15 close), then $44.2–44.5 (10-day average, Oct 1 low) and $47 (SAR, Sep 18 low). Support is $40, then $37.8 (Jul 29 52-week low) and $35. A close below $37.8 would set a new 52-week low.",
+   "zh": "反弹在 5 日均线附近受阻，回吐了 10月15日的大部分涨幅，但收盘守住 $40 整数关口。阻力为 $41.5–41.6（5 日均线、10月15日收盘价），其次 $44.2–44.5（10 日均线、10月1日低点）和 $47（SAR、9月18日低点）。支撑为 $40，其次 $37.8（7月29日 52 周低点）和 $35。若收盘跌破 $37.8，将创 52 周新低。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    41.5,
+    {
+     "en": "5-day average; Oct 15 close $41.6",
+     "zh": "5日均线；10月15日收盘价 $41.6"
+    }
+   ],
+   [
+    44.3,
+    {
+     "en": "10-day average $44.2; Oct 1 low $44.5",
+     "zh": "10日均线 $44.2；10月1日低点 $44.5"
+    }
+   ],
+   [
+    47,
+    {
+     "en": "Parabolic SAR; Sep 18 low $47.3",
+     "zh": "抛物线SAR；9月18日低点 $47.3"
+    }
+   ]
+  ],
+  "s": [
+   [
+    40,
+    {
+     "en": "Round number; Oct 16 low $39.9",
+     "zh": "整数关口；10月16日低点 $39.9"
+    }
+   ],
+   [
+    37.8,
+    {
+     "en": "52-week low, Jul 29; Oct 15 low $38.6",
+     "zh": "7月29日52周低点；10月15日低点 $38.6"
+    }
+   ],
+   [
+    35,
+    {
+     "en": "Round number",
+     "zh": "整数关口"
+    }
+   ]
+  ]
+ }
+}

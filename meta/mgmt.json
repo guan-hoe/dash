@@ -1,0 +1,67 @@
+{
+ "ticker": "META",
+ "asof": "2026-10-11",
+ "quarter": {
+  "en": "Q2 2026",
+  "zh": "2026年第二季"
+ },
+ "reported": "2026-07-29",
+ "timing": "amc",
+ "pre_close": 585.61,
+ "react": {
+  "date": "2026-07-30",
+  "close": 539.03,
+  "pct": -8.0
+ },
+ "since": {
+  "date": "2026-10-16",
+  "close": 709.33,
+  "pct": 21.1
+ },
+ "review": {
+  "en": [
+   "Revenue grew 28% to $60.8B, a beat, but EPS of $6.18 missed ~$7.2 after $3.58B of legal and severance charges; excluding them, operating income rose 9%. Capex of $31.1B ate nearly all operating cash flow, leaving free cash flow of $784M versus $8.55B a year earlier. The Q3 revenue guide of $61–64B was below consensus and 2026 capex was narrowed to $130–145B. Mark Zuckerberg hinted at renting out compute to other companies, and CFO Susan Li said industry capacity will stay tight for the foreseeable future.",
+   "Shares fell almost 10% after hours and closed down 8.0% the next day on the soft guide and the collapse in free cash flow. They recovered to about the pre-report price within a week, sagged again to $544 in mid-August, then re-rated after the Sep 8 launch of the Muse AI agent topped app-store charts; a Wells Fargo target increase added 11% on Sep 21. The stock now sits well above where it was before the report."
+  ],
+  "zh": [
+   "营收增长 28% 至 608 亿美元，超出预期；但受 35.8 亿美元法律与裁员费用影响，每股收益 6.18 美元，低于约 7.2 美元的预期，剔除这些费用营业利润增长 9%。资本开支 311 亿美元，几乎耗尽经营现金流，自由现金流仅 7.84 亿美元（去年同期 85.5 亿）。第三季营收指引 610–640 亿美元低于预期，2026 年资本开支区间收窄至 1,300–1,450 亿美元。扎克伯格暗示将向外部出租算力，CFO Susan Li表示行业算力在可预见未来仍将紧张。",
+   "盘后下跌近 10%，次日因指引偏弱和自由现金流骤降收跌 8.0%。一周内回到财报前价位，8 月中旬再跌至 544 美元；9 月 8 日推出的 AI 智能体 Muse 登顶应用商店，带动重新估值，9 月 21 日富国银行上调目标价后大涨 11%。目前股价远高于财报前。"
+  ]
+ },
+ "ceo": {
+  "name": {
+   "en": "Mark Zuckerberg",
+   "zh": "马克·扎克伯格"
+  },
+  "since": "2004",
+  "bio": {
+   "en": "Founded Facebook at Harvard in 2004 and has run it ever since; renamed it Meta in 2021. Controls the majority of votes through Class B shares, and is now betting on AI superintelligence, giant data centers and the Muse AI agent.",
+   "zh": "2004 年在哈佛创办 Facebook 并一直执掌，2021 年更名为 Meta。通过 B 类股掌握多数投票权，目前押注 AI 超级智能、超大型数据中心和 Muse AI 智能体。"
+  }
+ },
+ "cfo": {
+  "name": {
+   "en": "Susan Li",
+   "zh": "Susan Li"
+  },
+  "since": "2022",
+  "bio": {
+   "en": "CFO since November 2022. Joined Facebook's finance team in 2008, before the IPO, and spent years leading business finance and planning. Manages the 2026 capex guidance of $130–145B.",
+   "zh": "2022 年 11 月起任 CFO。2008 年加入 Facebook 财务团队（早于上市），多年负责业务财务与规划。主管 2026 年 1,300–1,450 亿美元的资本开支指引。"
+  }
+ },
+ "sources": [
+  {
+   "t": "Q2 2026 results (CNBC)",
+   "u": "https://cnbc.com/2026/07/29/meta-q2-earnings-report-2026.html"
+  },
+  {
+   "t": "Free cash flow (Fortune)",
+   "u": "https://fortune.com/2026/07/29/meta-earnings-zuckerberg-hints-cloud-business-free-cash-flow-capex"
+  },
+  {
+   "t": "Sep 21 move",
+   "u": "https://markets.businessinsider.com/news/stocks/why-meta-stock-jumped-over-11-today-september-21-2026-1036562410"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "asof": "Oct 16, 2026",
+ "close": 340.59,
+ "bias": {
+  "en": "Neutral turning bearish · MACD and SAR flipped",
+  "zh": "中性转弱 · MACD 与 SAR 翻空"
+ },
+ "read": [
+  {
+   "en": "Alphabet fell 2.5% on Oct 16 to $340.59 after a low of $339.08. It closed just under the rising 200-day average ($340.9) and below the 30-day ($344.7), 5-day ($348.8), 10-day ($348.9) and falling 100-day ($350.9). MACD crossed below its signal on Oct 16 while still above zero, Parabolic SAR flipped bearish the same day ($359.4, the Oct 14 high), and RSI is 44.",
+   "zh": "Alphabet 10月16日下跌 2.5%，盘中低见 $339.08，收于 $340.59。股价收在上行的 200 日均线（$340.9）下方一线，并位于 30 日（$344.7）、5 日（$348.8）、10 日（$348.9）和下行的 100 日均线（$350.9）下方。MACD 于 10月16日下穿信号线，仍在零轴之上，抛物线 SAR 同日转为看空（$359.4，10月14日高点），RSI 为 44。"
+  },
+  {
+   "en": "The $345 support (30-day average) broke on the close, but the day's low held above the Oct 1 low ($335.5). Resistance is $344.7 (30-day), then $349–352 (5, 10 and 100-day averages, Oct 15 high) and $359.4 (SAR). Support is $335.5, then $327.7 (Sep 10 low) and $315 (Jul 23 low). A close below $335.5 would open $327.7; a close back above $345 would target $352.",
+   "zh": "$345 支撑（30 日均线）收盘失守，但当日低点守在 10月1日低点（$335.5）之上。阻力为 $344.7（30 日均线），其次 $349–352（5 日、10 日和 100 日均线、10月15日高点）和 $359.4（SAR）。支撑为 $335.5，其次 $327.7（9月10日低点）和 $315（7月23日低点）。若收盘跌破 $335.5，下一目标看 $327.7；若重新站上 $345，目标看 $352。"
+  }
+ ],
+ "levels": {
+  "r": [
+   [
+    344.7,
+    {
+     "en": "30-day average, now resistance; 200-day $340.9",
+     "zh": "30日均线，转为阻力；200日均线 $340.9"
+    }
+   ],
+   [
+    352,
+    {
+     "en": "5, 10 and 100-day averages; Oct 15 high $352.15",
+     "zh": "5日、10日和100日均线；10月15日高点 $352.15"
+    }
+   ],
+   [
+    359.4,
+    {
+     "en": "Parabolic SAR, Oct 14 high",
+     "zh": "抛物线SAR，10月14日高点"
+    }
+   ]
+  ],
+  "s": [
+   [
+    335.5,
+    {
+     "en": "Oct 1 low",
+     "zh": "10月1日低点"
+    }
+   ],
+   [
+    327.7,
+    {
+     "en": "Sep 10 low",
+     "zh": "9月10日低点"
+    }
+   ],
+   [
+    315,
+    {
+     "en": "Jul 23 low ($314.9)",
+     "zh": "7月23日低点（$314.9）"
+    }
+   ]
+  ]
+ }
+}

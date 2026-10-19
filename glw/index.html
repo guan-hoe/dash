@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Corning GLW Dashboard</title>
+<meta name="description" content="Corning (NYSE: GLW) investor dashboard: price, quarterly revenue and margins, free cash flow, watch list, news and calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/stock.css?v=2">
+<style>.chart.rev{height:320px} tr.guide td{color:var(--muted);font-style:italic}</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <span class="tick">NYSE: GLW</span>
+  <span class="bar-px" id="barPx">$156.68</span>
+  <span class="chg" id="barChg"></span>
+  <span class="live" id="barLive"><i class="dot"></i><span id="barTime">snapshot</span></span>
+  <nav class="sec" aria-label="Sections">
+    <a href="../" data-i="n_home">All stocks</a>
+    <a href="#overview" data-i="n_over">Overview</a>
+    <a href="#price" data-i="n_price">Price</a>
+    <a href="#revenue" data-i="n_rev">Revenue</a>
+    <a href="#cashflow" data-i="n_fcf">Cash flow</a>
+    <a href="#watch" data-i="n_watch">Watch list</a>
+    <a href="#news" data-i="n_news">News</a>
+    <a href="#sources" data-i="n_src">Sources</a>
+  </nav>
+  <div class="tools">
+    <button class="tg" id="langBtn" type="button" aria-label="Switch language">中文</button>
+    <button class="tg" id="themeBtn" type="button" aria-label="Switch theme">◐ Auto</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="hero" id="overview">
+    <div>
+      <div data-i="eyebrow" class="eyebrow">Corning Incorporated · Common stock · Corning, New York</div>
+      <h1 data-ih="title">A 175-year-old glassmaker, <em>rewired for AI data centers</em>.</h1>
+      <p data-i="lede" class="lede">Corning makes specialty glass, ceramics and optical fiber. AI data centers are now the engine: Optical Communications sales rose 32% to $2.07B last quarter, and the upgraded Springboard plan targets a $20B annual sales run rate by the end of 2026 and $40B by 2030. The catch is the cost of getting there, with about $2B of capex this year and a new $2B share-sale program, and a stock that went from $255 to $124 and back to $157 since late June.</p>
+    </div>
+    <div class="pxbox">
+      <div class="eyebrow" id="pxLabel">Last close · Oct 9, 2026</div>
+      <div class="pxbig" id="pxBig">$156.68</div>
+      <div class="chg" id="pxChg"></div>
+      <div class="pxnote" id="pxNote"></div>
+      <div id="tv" style="margin-top:12px"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div>
+    </div>
+  </div>
+
+  <div class="cells" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:8px">
+    <div class="cell"><div class="k"><span data-i="k_mcap">Market cap</span></div><div class="v" id="mcap">$135.0B</div><div class="s"><span data-i="s_mcap">at current price</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_52">52-week range</span></div><div class="v" id="r52">$78–255</div><div class="s"><span data-i="s_52">closing low / high</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_val">P/E (2026)</span></div><div class="v">~48×</div><div class="s"><span data-i="s_val">core EPS consensus $3.28 · GAAP trailing ~72×</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_ttm">Revenue TTM</span></div><div class="v" id="ttmV"></div><div class="s" id="ttmS"></div></div>
+    <div class="cell"><div class="k"><span data-i="k_an">Q3 2026 guide</span></div><div class="v">$4.9–5.0B</div><div class="s"><span data-i="s_an">core sales +16% · core EPS $0.85–0.89</span></div></div>
+    <div class="cell"><div class="k"><span data-i="k_er">Next earnings</span></div><div class="v">Oct 27</div><div class="s"><span data-i="s_er">Q3 2026 results and Q4 outlook</span></div></div>
+  </div>
+
+  <section id="price">
+    <h2><span data-i="h_price">Price, last 12 months</span></h2>
+    <p data-i="sub_price" class="sub">Daily closes with the 50-day average. Corning nearly tripled from about $86 a year ago to a $255 close on Jun 29, then fell to $124 on Jul 29 after its Q2 report. Since August it has traded mostly between $143 and $170.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="range" role="group" aria-label="Range">
+          <button type="button" data-r="66" aria-pressed="false">3M</button>
+          <button type="button" data-r="128" aria-pressed="false">6M</button>
+          <button type="button" data-r="0" aria-pressed="true">1Y</button>
+        </div>
+        <div class="chart"><canvas id="cPrice" aria-label="GLW daily close price chart"></canvas></div>
+      </div>
+      <div class="cells">
+        <div class="cell"><div class="k"><span data-i="k_hi">1Y closing high</span></div><div class="v" id="hiV">—</div><div class="s" id="hiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_lo">1Y closing low</span></div><div class="v" id="loV">—</div><div class="s" id="loS"></div></div>
+        <div class="cell"><div class="k">SMA 50</div><div class="v" id="s50V">—</div><div class="s" id="s50S"></div></div>
+        <div class="cell"><div class="k">SMA 200</div><div class="v" id="s200V">—</div><div class="s" id="s200S"></div></div>
+        <div class="cell"><div class="k">RSI 14</div><div class="v" id="rsiV">—</div><div class="s" id="rsiS"></div></div>
+        <div class="cell"><div class="k"><span data-i="k_move">Avg daily move</span></div><div class="v" id="mvV">—</div><div class="s"><span data-i="s_move">last 20 sessions</span></div></div>
+        <div class="cell"><div class="k">Beta</div><div class="v">1.12</div><div class="s"><span data-i="s_beta">vs. S&P 500</span></div></div>
+        <div class="cell"><div class="k"><span data-i="k_dd">From peak</span></div><div class="v" id="ddv">—</div><div class="s" id="ddS"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technicals" aria-label="Technical analysis"></section>
+
+  <section id="options" aria-label="Options"></section>
+
+  <section id="revenue">
+    <h2><span data-i="h_rev">Revenue and margins, by quarter</span></h2>
+    <p data-i="sub_rev" class="sub">Revenue in US$ millions (GAAP net sales), with GAAP gross margin on the right axis. Corning's fiscal year is the calendar year. Corning guides on "core" sales, which use fixed or hedged currency rates and have run about $180–230M above GAAP sales in recent quarters. The last bar is my GAAP estimate for Q3 2026: the $4.9–5.0B core guide minus that gap.</p>
+    <div class="grid">
+      <div class="panel">
+        <div class="legend"><span><i class="sw" style="background:var(--accent)"></i><span data-i="l_rev">Revenue</span></span><span><i class="sw" style="background:var(--copper);height:3px;vertical-align:3px"></i><span data-i="l_gm">Gross margin (right axis)</span></span><span><i class="sw" style="background:var(--line)"></i><span data-i="l_g">Guidance</span></span></div>
+        <div class="chart rev"><canvas id="cRev" aria-label="Quarterly revenue and gross margin"></canvas></div>
+      </div>
+      <div class="cells"><div class="cell"><div class="k"><span data-i="kc0">Q2 2026</span></div><div class="v">$4.51B</div><div class="s"><span data-i="sc0">GAAP +17% YoY · core $4.74B</span></div></div><div class="cell"><div class="k"><span data-i="kc1">Optical Communications</span></div><div class="v">$2.07B</div><div class="s"><span data-i="sc1">+32% YoY · net income $438M (+77%)</span></div></div><div class="cell"><div class="k"><span data-i="kc2">Glass Innovations</span></div><div class="v">$1.46B</div><div class="s"><span data-i="sc2">+1% YoY · Display + Specialty Materials</span></div></div><div class="cell"><div class="k"><span data-i="kc3">Solar (incl. Hemlock)</span></div><div class="v">$438M</div><div class="s"><span data-i="sc3">+90% YoY · net loss $7M</span></div></div><div class="cell"><div class="k"><span data-i="kc4">Gross margin</span></div><div class="v">36.1%</div><div class="s"><span data-i="sc4">GAAP · core 39.6% (+120 bp)</span></div></div><div class="cell"><div class="k"><span data-i="kc5">EPS</span></div><div class="v">$0.64</div><div class="s"><span data-i="sc5">GAAP +19% · core $0.78 (+30%)</span></div></div></div>
+    </div>
+    <div class="panel tbl" style="margin-top:16px">
+      <table>
+        <thead><tr><th><span data-i="t_q">Quarter</span></th><th><span data-i="t_end">Ended</span></th><th><span data-i="t_rev">Revenue, US$M</span></th><th><span data-i="t_yoy">YoY</span></th><th><span data-i="t_gm">Gross margin</span></th><th><span data-i="t_om">Op. margin</span></th><th><span data-i="t_eps">EPS (GAAP)</span></th></tr></thead>
+        <tbody id="qBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cashflow" aria-label="Free cash flow"></section>
+
+  <section id="holders" aria-label="Top shareholders"></section>
+
+  <section id="analysts" aria-label="Analyst ratings"></section>
+
+  <section id="watch">
+    <h2><span data-i="h_watch">Watch list</span></h2>
+    <p data-i="sub_watch" class="sub">What moves the thesis, sorted by direction.</p>
+    <div class="wl"><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w0h">AI fiber demand</h3><p data-i="w0p">Enterprise Networks sales rose 65% to $1.27B, with Gen AI products growing faster. Corning has multiyear supply deals with Meta (up to $6B), Amazon, NVIDIA and, since September, AT&T (over $3B).</p></div></div><div class="item"><span class="pill p-plus" data-i="pl_plus">Tailwind</span><div><h3 data-i="w1h">Margins rising</h3><p data-i="w1p">Core operating margin rose 190 bp to 20.9% and Optical net income grew 77%, faster than sales.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w2h">Solar ramp</h3><p data-i="w2p">Solar (Hemlock polysilicon plus US wafers) grew 90% but lost $7M after a plant shutdown. Management expects better profit from Q3, building toward more than $3B of revenue.</p></div></div><div class="item"><span class="pill p-watch" data-i="pl_watch">Watch</span><div><h3 data-i="w3h">Funding the build-out</h3><p data-i="w3p">Capex is set at about $2B for 2026. Corning took a $1.0B customer prepayment, sold $500M of warrants to NVIDIA and set up a $2B at-the-market share program in September.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w4h">High expectations</h3><p data-i="w4p">At about 48 times 2026 core EPS consensus, little room is left for misses. In July an in-line guide sent the stock down 12% in a day.</p></div></div><div class="item"><span class="pill p-risk" data-i="pl_risk">Risk</span><div><h3 data-i="w5h">Concentration and legacy units</h3><p data-i="w5p">The top two Optical customers were 28% of segment sales in 2025. Management expects handheld units to fall about 15% this year on memory prices, a drag on Gorilla Glass, and Life Sciences sales fell 15%.</p></div></div></div>
+  </section>
+
+  <section id="news" data-src="../data/news.json" data-tickers="GLW" aria-label="Latest news"></section>
+
+  <section id="calendar">
+    <h2><span data-i="h_cal">Calendar</span></h2>
+    <div class="cal"><div class="item"><div><div class="date">Oct 27, 2026</div><h3 data-i="c0h">Q3 2026 earnings</h3><p data-i="c0p">Guide is $4.9–5.0B core sales and $0.85–0.89 core EPS; Q3 should reach the $20B annualized run rate a quarter early.</p></div></div><div class="item"><div><div class="date">Nov 13, 2026</div><h3 data-i="c1h">Ex-dividend</h3><p data-i="c1p">$0.28 a share, paid Dec 11. The dividend has been flat since 2023.</p></div></div><div class="item"><div><div class="date">Late Jan 2027</div><h3 data-i="c2h">Q4 2026 earnings</h3><p data-i="c2p">Full-year results, the 2027 capex plan and a check on the end-2026 Springboard target. Last year's report came on Feb 3.</p></div></div></div>
+  </section>
+
+  <section id="sources">
+    <h2><span data-i="h_src">Sources</span></h2>
+    <ol class="src"><li><a href="https://businesswire.com/news/home/20260727590976/en/Cornings-Strong-Second-Quarter-2026-Financial-Results1-Demonstrate-Progress-on-Recently-Upgraded-Springboard-Plan" target="_blank" rel="noopener">Q2 2026 results (Corning, via Business Wire)</a></li><li><a href="https://quartr.com/events/corning-incorporated-glw-q2-2026_oz31t9oR" target="_blank" rel="noopener">Q2 2026 segment results (Quartr)</a></li><li><a href="https://drillr.ai/article/glw-corning-q3-2026-earnings-preview-ai-optical-fiber-capex-funding" target="_blank" rel="noopener">Q3 2026 earnings preview: capex, funding, risks (Drillr)</a></li><li><a href="https://stockanalysis.com/stocks/glw/financials/?p=quarterly" target="_blank" rel="noopener">Quarterly income statement (Stock Analysis)</a></li><li><a href="https://about.att.com/story/2026/att-corning-engineer-connected-world.html" target="_blank" rel="noopener">AT&amp;T and Corning fiber agreement (AT&amp;T)</a></li><li><a href="https://www.stocktitan.net/sec-filings/GLW/8-k-corning-inc-ny-reports-material-event-448a5103dd2d.html" target="_blank" rel="noopener">$2B at-the-market program, 8-K (Stock Titan)</a></li><li><a href="https://marketbeat.com/instant-alerts/analyst-corning-nyse-glw-upgraded-to-buy-at-wall-street-zen-2026-10-10" target="_blank" rel="noopener">Price, market cap, beta and analyst data: MarketBeat and Stocklake, as of Oct 9, 2026</a></li></ol>
+  </section>
+
+  <footer><span id="footTime"></span> <span data-i="foot">Fundamentals as of Oct 9, 2026. For information only, not investment advice. Not affiliated with Corning Incorporated.</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const KEY = "glw", SHARES = 861390000.0, TV = "NYSE:GLW";
+// [quarter, ended, revenue US$M, gross margin %, operating margin %, GAAP EPS]  oldest first
+const Q = [["Q3 2021", "Sep 2021", 3615, 36.54, 16.07, 0.43], ["Q4 2021", "Dec 2021", 3676, 36.75, 16.0, 0.56], ["Q1 2022", "Mar 2022", 3680, 34.86, 16.14, 0.68], ["Q2 2022", "Jun 2022", 3615, 34.47, 13.58, 0.66], ["Q3 2022", "Sep 2022", 3488, 30.45, 9.15, 0.24], ["Q4 2022", "Dec 2022", 3406, 36.76, 14.71, -0.04], ["Q1 2023", "Mar 2023", 3178, 31.56, 9.31, 0.2], ["Q2 2023", "Jun 2023", 3243, 31.24, 8.57, 0.33], ["Q3 2023", "Sep 2023", 3173, 33.63, 9.08, 0.19], ["Q4 2023", "Dec 2023", 2994, 33.33, 5.48, -0.05], ["Q1 2024", "Mar 2024", 2975, 33.38, 8.64, 0.24], ["Q2 2024", "Jun 2024", 3251, 33.53, 10.18, 0.12], ["Q3 2024", "Sep 2024", 3391, 34.92, 11.32, -0.14], ["Q4 2024", "Dec 2024", 3501, 34.02, 10.68, 0.35], ["Q1 2025", "Mar 2025", 3452, 35.17, 13.06, 0.18], ["Q2 2025", "Jun 2025", 3862, 36.04, 14.97, 0.54], ["Q3 2025", "Sep 2025", 4100, 37.07, 14.56, 0.5], ["Q4 2025", "Dec 2025", 4215, 35.54, 16.56, 0.62], ["Q1 2026", "Mar 2026", 4144, 36.87, 15.66, 0.43], ["Q2 2026", "Jun 2026", 4505, 36.14, 15.65, 0.64]];
+// guidance or consensus for the next quarter: [label, revenue US$M, note en, note zh] or null
+const G = ["Q3 2026e", 4720, "Sep 2026 \u00b7 $4.95B core guide midpoint less ~$230M core-to-GAAP gap (my estimate)", "2026\u5e749\u6708 \u00b7 \u6838\u5fc3\u6307\u5f15\u4e2d\u503c 49.5 \u4ebf\u51cf\u7ea6 2.3 \u4ebf\u6838\u5fc3\u4e0e GAAP \u5dee\u989d\uff08\u672c\u4eba\u4f30\u7b97\uff09"];
+// optional fixed TTM revenue cell when quarters are not consecutive
+const TTM = null;
+let P = {d:[],c:[]};
+const T = {zh:{"n_home": "全部股票", "n_over": "概览", "n_price": "股价", "n_rev": "营收", "n_fcf": "现金流", "n_watch": "关注点", "n_news": "新闻", "n_src": "来源", "k_mcap": "市值", "s_mcap": "按当前股价", "k_52": "52周区间", "s_52": "收盘低 / 高", "k_ttm": "近12月营收", "k_er": "下次财报", "h_price": "近12个月股价", "k_hi": "一年收盘最高", "k_lo": "一年收盘最低", "k_move": "日均波幅", "s_move": "近20个交易日", "s_beta": "相对标普500", "k_dd": "距高点", "h_rev": "季度营收与利润率", "l_rev": "营收", "l_gm": "毛利率（右轴）", "l_g": "指引", "t_q": "季度", "t_end": "截至", "t_rev": "营收（百万美元）", "t_yoy": "同比", "t_gm": "毛利率", "t_om": "营业利润率", "t_eps": "每股收益（GAAP）", "h_watch": "关注点", "sub_watch": "影响投资逻辑的因素，按方向分类。", "pl_plus": "利好", "pl_watch": "留意", "pl_risk": "风险", "h_cal": "日程", "h_src": "来源", "kc0": "2026 Q2", "sc0": "GAAP 同比 +17% · 核心 47.4 亿", "kc1": "光通信", "sc1": "同比 +32% · 净利 4.38 亿（+77%）", "kc2": "玻璃创新", "sc2": "同比 +1% · 显示 + 特种材料", "kc3": "太阳能（含 Hemlock）", "sc3": "同比 +90% · 净亏 700 万", "kc4": "毛利率", "sc4": "GAAP · 核心 39.6%（+120 基点）", "kc5": "每股收益", "sc5": "GAAP +19% · 核心 $0.78（+30%）", "w0h": "AI 光纤需求", "w0p": "企业网络销售增长 65% 至 12.7 亿美元，生成式 AI 产品增长更快。康宁已与 Meta（最高 60 亿美元）、亚马逊、英伟达签订多年供货协议，9月又与 AT&T 签下逾 30 亿美元合约。", "w1h": "利润率上升", "w1p": "核心营业利润率提升 190 基点至 20.9%，光通信净利增长 77%，快于销售增速。", "w2h": "太阳能爬坡", "w2p": "太阳能业务（Hemlock 多晶硅加美国硅片）增长 90%，但因工厂停机检修亏损 700 万美元。管理层预计 Q3 起利润改善，目标收入逾 30 亿美元。", "w3h": "扩产资金", "w3p": "2026 年资本开支约 20 亿美元。康宁收取了 10 亿美元客户预付款，向英伟达出售 5 亿美元认股权证，并于9月设立 20 亿美元的市价增发计划。", "w4h": "预期偏高", "w4p": "按 2026 年核心每股收益一致预期计约 48 倍，容错空间很小。7月仅符合预期的指引就令股价单日下跌 12%。", "w5h": "客户集中与传统业务", "w5p": "2025 年光通信前两大客户占该部门销售 28%。管理层预计今年手机等手持设备出货因内存涨价下降约 15%，拖累大猩猩玻璃；生命科学销售下降 15%。", "c0h": "2026 Q3 财报", "c0p": "指引为核心销售 49–50 亿美元、核心每股 $0.85–0.89；Q3 有望提前一季达到 200 亿美元年化销售。", "c1h": "除息日", "c1p": "每股 $0.28，12月11日派发。股息自 2023 年以来未变。", "c2h": "2026 Q4 财报", "c2p": "全年业绩、2027 年资本开支计划及 Springboard 2026 年底目标的检验。去年财报于 2月3日发布。", "eyebrow": "康宁公司 · 普通股 · 纽约州康宁", "title": "一家 175 年历史的玻璃制造商，<em>为 AI 数据中心重新布线</em>。", "lede": "康宁生产特种玻璃、陶瓷和光纤。AI 数据中心已成为增长引擎：上季光通信销售增长 32% 至 20.7 亿美元，升级后的 Springboard 计划目标是 2026 年底年化销售达 200 亿美元、2030 年达 400 亿美元。代价是扩张成本：今年资本开支约 20 亿美元，并新设 20 亿美元的增发计划；股价自6月底以来由 $255 跌至 $124，再回到 $157。", "k_val": "市盈率（2026）", "s_val": "核心每股收益一致预期 $3.28 · GAAP 滚动约 72 倍", "k_an": "2026 Q3 指引", "s_an": "核心销售 +16% · 核心每股 $0.85–0.89", "s_er": "2026 Q3 业绩及 Q4 展望", "sub_price": "每日收盘价与50日均线。康宁由一年前约 $86 涨近两倍至 6月29日收盘 $255，Q2 财报后于 7月29日跌至 $124。8月以来大致在 $143 至 $170 之间波动。", "sub_rev": "营收单位为百万美元（GAAP 净销售额），右轴为 GAAP 毛利率。康宁财年即日历年。公司以“核心”销售给出指引，核心销售采用固定或对冲汇率，近几季比 GAAP 销售高约 1.8–2.3 亿美元。最后一根柱为我对 2026 年第三季 GAAP 销售的估算：49–50 亿美元核心指引减去该差额。", "foot": "基本面数据截至 2026年10月9日。仅供参考，不构成投资建议。与 Corning Incorporated 无关联。"}};
+</script>
+<script src="../assets/stock-page.js?v=1"></script>
+<script src="fcf-data.js?v=1"></script>
+<script src="../assets/fcf.js?v=4"></script>
+<script src="../assets/news.js?v=2"></script>
+<script src="../assets/technicals.js?v=1"></script>
+<script src="../assets/holders.js?v=3"></script>
+<script src="../assets/options.js?v=1"></script>
+<script src="../assets/analysts.js?v=1"></script>
+<script src="../assets/mgmt.js?v=1"></script>
+<script src="../assets/ext-hours.js?v=1"></script>
+<script src="../assets/stock-picker.js?v=1"></script>
+</body>
+</html>
