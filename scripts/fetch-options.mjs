@@ -23,7 +23,7 @@ const STOCKS = [
   ["amat", "AMAT"], ["asml", "ASML"], ["pltr", "PLTR"], ["glw", "GLW"], ["ter", "TER"],
 ];
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
-const MAX_EXP = 18, MAX_DAYS = 400, LO = 0.6, HI = 1.6;
+const MAX_EXP = 18, MAX_DAYS = 800, LO = 0.6, HI = 1.6;
 const summary = (s) => { if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, s + "\n"); };
 const r4 = (x) => (x == null || !isFinite(x) ? null : Math.round(x * 1e4) / 1e4);
 const r2 = (x) => (x == null || !isFinite(x) ? null : Math.round(x * 100) / 100);
